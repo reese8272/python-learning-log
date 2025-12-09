@@ -6,7 +6,7 @@
 
 ---
 
-## WHO I AM (Reference)
+## WHO I AM
 
 **Role:** Junior Python Developer at Cognizant  
 **Day Job:** Data Science, ML, and Data Analytics pipelines  
@@ -24,24 +24,6 @@
 - Multi-agent software team (dev, tester, security lead, team lead)
 - MCP servers for file/directory read-write
 - Customer data pipelines for insights on repeat callers and workflows
-
----
-
-## CURRENT WEEK
-
-### Week of: [DATE]
-
-**What I Actually Did:**
-- 
-
-**Attempted WITHOUT AI:**
-- 
-
-**Where I Froze / Needed Help:**
-- 
-
-**What Clicked:**
-- 
 
 ---
 
@@ -81,7 +63,7 @@
 
 ## ACTIVE STRUGGLES
 
-*What's blocking you RIGHT NOW. When resolved, move to "Resolved" section below.*
+*What's blocking you RIGHT NOW. When resolved, delete and update Skills Tracker.*
 
 ### [Struggle Name] - Added: [DATE]
 
@@ -96,34 +78,42 @@
 
 ---
 
-### Resolved Struggles
+## WEEKLY LOG
 
-*Move struggles here when figured out. This is your proof of growth.*
+*Newest week at top. Add a new section each week.*
 
 ---
 
-## WEEKLY REFLECTION (Do this every Friday)
-
 ### Week of: [DATE]
 
-**Hours actually spent learning:** 
+**What I Actually Did:**
+- 
 
-**Solo attempts vs AI-assisted ratio:** 
+**Attempted WITHOUT AI:**
+- 
 
-**Progress toward 3-month goal (honest 1-10):**
+**Where I Froze / Needed Help:**
+- 
 
-**What went well:**
+**What Clicked:**
+- 
 
+**Weekly Reflection:**
 
-**What I avoided or half-assed:**
-
-
-**One thing to do differently next week:**
-
+- **Hours actually spent learning:** 
+- **Solo attempts vs AI-assisted ratio:** 
+- **Progress toward 3-month goal (honest 1-10):**
+- **What went well:**
+- **What I avoided or half-assed:**
+- **One thing to do differently next week:**
 
 ---
 
 ## MONTHLY CHECK-IN
+
+*Newest month at top. Add a new section each month.*
+
+---
 
 ### Month: [MONTH YEAR]
 
