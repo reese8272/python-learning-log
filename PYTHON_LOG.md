@@ -94,6 +94,18 @@
 - with some help with Gemini, was able to build a tokenizer generator, with m length of words and n window size, yield the tokens of length n and then generate the next sequence until we hit the end of the list.
 - Implemented some core loop logic in C and started building some structs as well.
 - Identified C structs and initializers. Got introduced to typedef. Introduced to the basics of a pointer.
+- Understood the foundations of different major AI concepts, such as Prompt Engineering, XAI, evaluation, inferences, etc. Some things that I learned:
+    - xml tags help you with better prompting, and to put the critical instructions at the beginning or end.
+    - for evals, you can actually use ANOTHER LLM to evalutate the answers of another LLM. LLM-as-Judge actually does really well when given a criteria.
+    - use a hybrid searching method for RAG for best results. (semantic and keyword)
+    - when using few-shot, fewer great examples are better than many "okay" examples
+    - inferences are the runtime costs of using LLMs
+    - quantization is reducing the model precision to help save memory and inference speed
+    - continuous batching is when you dynamically load new requests as others are being answered or completed (A STAPLE FOR PRODUCTION)
+    - XAI uses pseudo-xai or chain-of-thought, source citing in RAG, and confidence scores
+    - attention does not equal explanation
+    - more context means more quality but also means more latency and cost
+    - 95% of an inference that's 10x cheaper is better than the 100% model that 10x more expensive.
 
 **Attempted WITHOUT AI:**
 - basic loops and structures, typedef, super basic pointer variables in C
@@ -107,12 +119,12 @@
 
 **Weekly Reflection:**
 
-- **Hours actually spent learning:** 
-- **Solo attempts vs AI-assisted ratio:** 
-- **Progress toward 3-month goal (honest 1-10):**
+- **Hours actually spent learning:** roughly 4-5
+- **Solo attempts vs AI-assisted ratio:** most of my learning was purely theoretical, but the two things I did by myself was basically 50/50.
+- **Progress toward 3-month goal (honest 1-10):** 3/10, could be better
 - **What went well:** I was able to maintain good progression in the week despite my company laptop being down, continuing with boot.dev instead of the DS course. I was able to implement basic C concepts without AI
-- **What I avoided or half-assed:**
-- **One thing to do differently next week:**
+- **What I avoided or half-assed:** The actual learning part I avoided, I need to block more time next week
+- **One thing to do differently next week:** Prepare the week fully before I go into the week.
 
 ---
 
