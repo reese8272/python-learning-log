@@ -47,6 +47,7 @@
 | Python basics (loops, functions, classes) | Can do independently | **LEVELED UP:** Implemented functional programming patterns solo (generators, higher-order functions, composition) | 2025-12-13 |
 | Generators & yield | Can do independently | Built lazy iterators from scratch (map_iter, filter_iter) | 2025-12-13 |
 | Higher-order functions | Can use with reference | Implemented compose and pipe functions; understand concept but need more practice | 2025-12-13 |
+| argparse CLI basics | Can use with reference | Understand parser hierarchy (ArgumentParser → subparsers → arguments), dest parameter, args namespace | 2025-12-16 |
 | pandas | Exposed | Used in work, need AI help | - |
 | numpy | Exposed | Used in work, need AI help | - |
 | Data structures (lists, dicts) | Can use | Don't know when to pick which | - |
@@ -70,6 +71,7 @@
 |------|--------------|------------|-------------------|--------|-------|
 | 12/09/25 | sliding n-grams window | 5/10 | ~15 minutes | Needed AI | was sort of unsure of the question, and then gemini helped me understand that in a window problem, you can do for range(len(what you're sliding over) - <window size> + 1 to catch the last bit of the window), because then if the window size is larger than the thing were sliding, it'll auto detect it and return nothing (empty list or empty string more likely) |
 | 12/13/25 | **Functional Data Pipeline (map_iter, filter_iter, compose, pipe)** | **10/10** | ~15 minutes | **Solved solo** | **BREAKTHROUGH:** Built lazy iterators with yield, implemented right-to-left function composition, threaded values through pipe. First 10/10 problem solved completely independently. Strategy: broke problem into pieces, tackled one function at a time. Almost missed "right-to-left" detail in compose but caught it. Minor edge case bug (returned tuple instead of function when len==1) but passed all tests. Key learning: slow down, read carefully, solve incrementally. |
+| 12/16/25 | argparse CLI implementation | 4/10 | ~5 minutes | Solved with hints | Needed walkthrough of boilerplate to understand the parser hierarchy, but wrote the implementation (`print(f"Searching for: {args.query}")`) solo. Asked good "why" questions before coding — understood the system instead of just copy/pasting. |
 
 **Result options:** Solved solo, Solved with hints, Needed AI, Gave up
 
@@ -94,25 +96,29 @@
 **What I Actually Did:**
 - **MAJOR WIN:** Solved 10/10 difficulty functional programming challenge (Boot.dev) completely solo in ~15 minutes - map_iter, filter_iter, compose, pipe
 - Started Boot.dev RAG course on personal device
+- Learned argparse CLI fundamentals — parser hierarchy, subcommands vs arguments, dest parameter, args namespace
 
 **Attempted WITHOUT AI:**
 - Functional Data Pipeline implementation (generators, higher-order functions, function composition)
+- argparse CLI print statement (small but solo)
 
 **Where I Froze / Needed Help:**
 - None on the functional programming challenge - brief confusion on compose, but figured it out by breaking down requirements
+- argparse boilerplate — needed line-by-line walkthrough to understand structure before implementing
 
 **What Clicked:**
 - Generators with `yield` - already understood the concept, just needed to apply it
 - Right-to-left vs left-to-right execution (compose vs pipe) - caught the detail by reading carefully
 - **Process that worked:** Read part A → implement function A → read part B → implement function B. One small problem at a time.
 - **Key insight:** I can solve hard problems when I slow down and decompose them instead of panicking
+- **argparse mental model:** `dest="command"` just names the slot where the chosen subcommand is stored — not magic. Subcommands (`search`, `index`) are separate from their arguments (`query`, `filepath`) so each command can have independent argument sets. `args` only contains user-provided values, not CLI structure.
 
 **Weekly Reflection:**
 
 - **Hours actually spent learning:** [FILL IN END OF WEEK]
 - **Solo attempts vs AI-assisted ratio:** [FILL IN END OF WEEK]
 - **Progress toward 3-month goal (honest 1-10):** 8/10 - Crushed a 10/10 problem solo in 15 minutes, exactly what the goal is about
-- **What went well:** Stayed focused on Python (Boot.dev RAG course), didn't drift to C or theory. Proved I can solve complex problems independently.
+- **What went well:** Stayed focused on Python (Boot.dev RAG course), didn't drift to C or theory. Proved I can solve complex problems independently. Asked "why" questions on argparse before coding — building understanding first.
 - **What I avoided or half-assed:** [FILL IN END OF WEEK]
 - **One thing to do differently next week:** [FILL IN END OF WEEK]
 
@@ -161,9 +167,11 @@
 **Boot.dev Progress:**
 - RAG course started (12/13/25)
 - Functional programming challenge completed solo (10/10 difficulty, 15 minutes)
+- argparse CLI basics learned (12/16/25)
 
 **Independence Growth:**
 - Problems solved solo this month: 1 (Functional Data Pipeline - 10/10)
+- Problems solved with hints: 1 (argparse CLI - 4/10)
 - Hardest thing I did without AI: **Functional Data Pipeline** - generators, higher-order functions, composition - all from scratch in 15 minutes
 
 **Am I closer to the 3-month goal?**
