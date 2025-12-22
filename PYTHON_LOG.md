@@ -114,6 +114,8 @@
 |12/09/25|sliding n-grams window                                             |5/10      |~15 minutes      |Needed AI        |was sort of unsure of the question, and then gemini helped me understand that in a window problem, you can do for range(len(what you’re sliding over) - <window size> + 1 to catch the last bit of the window), because then if the window size is larger than the thing were sliding, it’ll auto detect it and return nothing (empty list or empty string more likely)                                                                                                           |
 |12/13/25|**Functional Data Pipeline (map_iter, filter_iter, compose, pipe)**|**10/10** |~15 minutes      |**Solved solo**  |**BREAKTHROUGH:** Built lazy iterators with yield, implemented right-to-left function composition, threaded values through pipe. First 10/10 problem solved completely independently. Strategy: broke problem into pieces, tackled one function at a time. Almost missed “right-to-left” detail in compose but caught it. Minor edge case bug (returned tuple instead of function when len==1) but passed all tests. Key learning: slow down, read carefully, solve incrementally.|
 |12/16/25|argparse CLI implementation                                        |4/10      |~5 minutes       |Solved with hints|Needed walkthrough of boilerplate to understand the parser hierarchy, but wrote the implementation (`print(f"Searching for: {args.query}")`) solo. Asked good “why” questions before coding — understood the system instead of just copy/pasting.                                                                                                                                                                                                                                 |
+12/22/25 | Build Inventory Status Map (dict transformation) | 3/10 | ~2 minutes | Solved soloWarmup rep. Loop + conditionals + dict building — no hesitation. | Minor cleanup: removed unnecessary continue statements.
+
 
 **Result options:** Solved solo, Solved with hints, Needed AI, Gave up
 
@@ -132,6 +134,21 @@
 *Newest week at top. Add a new section each week.*
 
 -----
+### Week of: [12/22/25 - 12/28/25]
+
+**What I Actually Did:**
+**Attempted WITHOUT AI:**
+**Where I Froze / Needed Help:**
+**What Clicked:**
+
+**Weekly Reflection:**
+
+- **Hours actually spent learning:**
+- **Solo attempts vs AI-assisted ratio:**
+- **Progress toward 3-month goal (honest 1-10):**
+- **What went well:**
+- **What I avoided or half-assed:**
+- **One thing to do differently next week:**
 
 ### Week of: [12/15/25 - 12/19/25]
 
@@ -161,12 +178,12 @@
 
 **Weekly Reflection:**
 
-- **Hours actually spent learning:** [FILL IN END OF WEEK]
-- **Solo attempts vs AI-assisted ratio:** [FILL IN END OF WEEK]
+- **Hours actually spent learning:** Roughly 4-5 hours
+- **Solo attempts vs AI-assisted ratio:** roughly 50% of the things I did were solo, but nearly all of it were significantly easier
 - **Progress toward 3-month goal (honest 1-10):** 8/10 - Crushed a 10/10 problem solo in 15 minutes, exactly what the goal is about
 - **What went well:** Stayed focused on Python (Boot.dev RAG course), didn’t drift to C or theory. Proved I can solve complex problems independently. Asked “why” questions on argparse before coding — building understanding first.
-- **What I avoided or half-assed:** [FILL IN END OF WEEK]
-- **One thing to do differently next week:** [FILL IN END OF WEEK]
+- **What I avoided or half-assed:** Architectual logic of the RAG course, needed to redo the file structure.
+- **One thing to do differently next week:** Implement a foundational training period in the morning, to keep reps of the foundations (keep foundations strong, and build up the floor).
 
 -----
 
