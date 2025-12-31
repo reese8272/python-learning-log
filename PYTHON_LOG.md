@@ -91,6 +91,7 @@
 | argparse CLI basics | Can use with reference | Understand parser hierarchy (ArgumentParser → subparsers → arguments), dest parameter, args namespace | 2025-12-16 |
 | Dict transformation & aggregation | Can do independently | Loop + conditionals + dict building, grouping/aggregation with nested dicts | 2025-12-22 |
 | DSA (algorithms) | Can implement with reasoning | **LEVELED UP:** DFS from scratch — recursion, cycle prevention with set, base case handling | 2025-12-22 |
+| Binary search | Can implement with reasoning | Descending order variant with duplicate handling. Key: `low` converges to insertion point, `<=` ensures convergence check | 2025-12-31 |
 | pandas | Exposed | Used in work, need AI help | - |
 | numpy | Exposed | Used in work, need AI help | - |
 | Data structures (lists, dicts) | Can use | Don't know when to pick which | - |
@@ -112,12 +113,13 @@
 
 | Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
 |------|--------------|------------|-------------------|--------|-------|
-| 12/09/25 | sliding n-grams window | 5/10 | ~15 minutes | Needed AI | was sort of unsure of the question, and then gemini helped me understand that in a window problem, you can do for range(len(what you're sliding over) - <window size> + 1 to catch the last bit of the window), because then if the window size is larger than the thing were sliding, it'll auto detect it and return nothing (empty list or empty string more likely) |
-| 12/13/25 | **Functional Data Pipeline (map_iter, filter_iter, compose, pipe)** | **10/10** | ~15 minutes | **Solved solo** | **BREAKTHROUGH:** Built lazy iterators with yield, implemented right-to-left function composition, threaded values through pipe. First 10/10 problem solved completely independently. Strategy: broke problem into pieces, tackled one function at a time. Almost missed "right-to-left" detail in compose but caught it. Minor edge case bug (returned tuple instead of function when len==1) but passed all tests. Key learning: slow down, read carefully, solve incrementally. |
-| 12/16/25 | argparse CLI implementation | 4/10 | ~5 minutes | Solved with hints | Needed walkthrough of boilerplate to understand the parser hierarchy, but wrote the implementation (`print(f"Searching for: {args.query}")`) solo. Asked good "why" questions before coding — understood the system instead of just copy/pasting. |
-| 12/22/25 | Build Inventory Status Map (dict transformation) | 3/10 | ~2 minutes | Solved solo | Warmup rep. Loop + conditionals + dict building — no hesitation. Minor cleanup: removed unnecessary `continue` statements. |
-| 12/22/25 | Summarize Purchases by Category (grouping/aggregation) | 5-6/10 | ~3-4 min | Solved solo | Aggregation pattern with nested dicts. No hesitation on "check if key exists → initialize or update" logic. Minor note: explicit empty check was redundant but harmless. |
+| 12/31/25 | **Binary Search - Find Player Rank (descending order, insert after duplicates)** | **6/10** | ~30-40 min | **Solved with hints** | Tricky because descending order inverts standard binary search logic. Key learnings: (1) `while low <= high` is standard — ensures we check when pointers converge, (2) For descending + "insert after duplicates": `>=` moves `low` right, `<` moves `high` left, (3) Return `low` not `mid` — `low` converges to insertion point by design, `mid` is just a temp calculation, (4) `+1` for 1-based ranking. Debugged through multiple iterations — comparison direction and loop condition were the bugs. |
 | 12/22/25 | **Depth-First Path Search (DFS with recursion)** | **6/10** | ~15-20 min | **Solved solo** | **First algorithm implementation from scratch.** Handled cycle prevention with set, base cases, recursive exploration. Key debugging insight: needed `if has_path_dfs(...)` to propagate True upward. Had correct `==` and `return False` initially, changed during debugging, forgot to revert. |
+| 12/22/25 | Summarize Purchases by Category (grouping/aggregation) | 5-6/10 | ~3-4 min | Solved solo | Aggregation pattern with nested dicts. No hesitation on "check if key exists → initialize or update" logic. Minor note: explicit empty check was redundant but harmless. |
+| 12/22/25 | Build Inventory Status Map (dict transformation) | 3/10 | ~2 minutes | Solved solo | Warmup rep. Loop + conditionals + dict building — no hesitation. Minor cleanup: removed unnecessary `continue` statements. |
+| 12/16/25 | argparse CLI implementation | 4/10 | ~5 minutes | Solved with hints | Needed walkthrough of boilerplate to understand the parser hierarchy, but wrote the implementation (`print(f"Searching for: {args.query}")`) solo. Asked good "why" questions before coding — understood the system instead of just copy/pasting. |
+| 12/13/25 | **Functional Data Pipeline (map_iter, filter_iter, compose, pipe)** | **10/10** | ~15 minutes | **Solved solo** | **BREAKTHROUGH:** Built lazy iterators with yield, implemented right-to-left function composition, threaded values through pipe. First 10/10 problem solved completely independently. Strategy: broke problem into pieces, tackled one function at a time. Almost missed "right-to-left" detail in compose but caught it. Minor edge case bug (returned tuple instead of function when len==1) but passed all tests. Key learning: slow down, read carefully, solve incrementally. |
+| 12/09/25 | sliding n-grams window | 5/10 | ~15 minutes | Needed AI | was sort of unsure of the question, and then gemini helped me understand that in a window problem, you can do for range(len(what you're sliding over) - <window size> + 1 to catch the last bit of the window), because then if the window size is larger than the thing were sliding, it'll auto detect it and return nothing (empty list or empty string more likely) |
 
 **Result options:** Solved solo, Solved with hints, Needed AI, Gave up
 
@@ -134,6 +136,37 @@
 ## WEEKLY LOG
 
 *Newest week at top. Add a new section each week.*
+
+-----
+
+### Week of: [12/29/25 - 01/04/26]
+
+**What I Actually Did:**
+- **Binary search problem (12/31):** Solved with hints after ~30-40 min of debugging
+  - Descending order leaderboard with duplicate handling
+  - Learned: `<=` loop condition, comparison direction for descending, why `low` is the answer
+
+**Attempted WITHOUT AI:**
+- Initial binary search implementation — had right structure, wrong details
+
+**Where I Froze / Needed Help:**
+- Comparison direction (`>=` vs `<=`) for descending order
+- Loop condition (`<` vs `<=`) — didn't realize `<` skips edge cases
+- Why we return `low` instead of `mid`
+
+**What Clicked:**
+- `low` converges to insertion point by design — it tracks "earliest position that could be the answer"
+- `while low <= high` ensures we check when pointers meet (single element remaining)
+- For descending order: `>=` means "go right" (toward lower scores), `<` means "go left"
+
+**Weekly Reflection:**
+
+- **Hours actually spent learning:** [FILL IN END OF WEEK]
+- **Solo attempts vs AI-assisted ratio:** [FILL IN END OF WEEK]
+- **Progress toward 3-month goal (honest 1-10):** [FILL IN END OF WEEK]
+- **What went well:** Pushed through binary search debugging instead of giving up
+- **What I avoided or half-assed:** [FILL IN END OF WEEK]
+- **One thing to do differently next week:** [FILL IN END OF WEEK]
 
 -----
 
@@ -257,15 +290,16 @@
 - Functional programming challenge completed solo (10/10 difficulty, 15 minutes)
 - argparse CLI basics learned (12/16/25)
 - Morning warmup session established (12/22/25) — 3 problems solo
+- Binary search (descending order) completed with hints (12/31/25)
 
 **Independence Growth:**
 
 - Problems solved solo this month: 4 (Functional Data Pipeline 10/10, Inventory Status 3/10, Summarize Purchases 5-6/10, DFS Path Search 6/10)
-- Problems solved with hints: 1 (argparse CLI - 4/10)
+- Problems solved with hints: 2 (argparse CLI 4/10, Binary Search 6/10)
 - Hardest thing I did without AI: **Functional Data Pipeline** (10/10) and **DFS Path Search** (6/10 — first algorithm from scratch)
 
 **Am I closer to the 3-month goal?**
-YES. Went from freezing on 5/10 problems to crushing 10/10 solo in 15 minutes. Now also implementing algorithms (DFS) from scratch. The gap is closing fast.
+YES. Went from freezing on 5/10 problems to crushing 10/10 solo in 15 minutes. Now also implementing algorithms (DFS) from scratch. Binary search adds another DSA pattern to the toolkit. The gap is closing fast.
 
 **Am I bouncing between systems or staying focused?**
 Was bouncing (C diversion week 1), but corrected course. Now locked on Boot.dev RAG + Python only. Morning warmup system established.
