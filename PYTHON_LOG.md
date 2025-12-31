@@ -92,6 +92,7 @@
 | Dict transformation & aggregation | Can do independently | Loop + conditionals + dict building, grouping/aggregation with nested dicts | 2025-12-22 |
 | DSA (algorithms) | Can implement with reasoning | **LEVELED UP:** DFS from scratch — recursion, cycle prevention with set, base case handling | 2025-12-22 |
 | Binary search | Can implement with reasoning | Descending order variant with duplicate handling. Key: `low` converges to insertion point, `<=` ensures convergence check | 2025-12-31 |
+| Two-pointer technique | Can implement with reasoning | Closest pair sum on sorted array. Setup: low/high at ends, move based on sum vs target comparison | 2025-12-31 |
 | pandas | Exposed | Used in work, need AI help | - |
 | numpy | Exposed | Used in work, need AI help | - |
 | Data structures (lists, dicts) | Can use | Don't know when to pick which | - |
@@ -113,6 +114,7 @@
 
 | Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
 |------|--------------|------------|-------------------|--------|-------|
+| 12/31/25 | **Two-Pointer - Closest Pair Sum** | **5/10** | ~10 min | **Solved solo** | **First two-pointer problem!** New DSA pattern, first try, all tests passed. Setup: `low = 0`, `high = len(nums) - 1`. Logic: sum too big → high down, sum too small → low up. Early return on exact match. Tracked best diff and final pair. Clean implementation. Could simplify diff calc with `abs()` but code works. |
 | 12/31/25 | **Binary Search - Find Player Rank (descending order, insert after duplicates)** | **6/10** | ~30-40 min | **Solved with hints** | Tricky because descending order inverts standard binary search logic. Key learnings: (1) `while low <= high` is standard — ensures we check when pointers converge, (2) For descending + "insert after duplicates": `>=` moves `low` right, `<` moves `high` left, (3) Return `low` not `mid` — `low` converges to insertion point by design, `mid` is just a temp calculation, (4) `+1` for 1-based ranking. Debugged through multiple iterations — comparison direction and loop condition were the bugs. |
 | 12/22/25 | **Depth-First Path Search (DFS with recursion)** | **6/10** | ~15-20 min | **Solved solo** | **First algorithm implementation from scratch.** Handled cycle prevention with set, base cases, recursive exploration. Key debugging insight: needed `if has_path_dfs(...)` to propagate True upward. Had correct `==` and `return False` initially, changed during debugging, forgot to revert. |
 | 12/22/25 | Summarize Purchases by Category (grouping/aggregation) | 5-6/10 | ~3-4 min | Solved solo | Aggregation pattern with nested dicts. No hesitation on "check if key exists → initialize or update" logic. Minor note: explicit empty check was redundant but harmless. |
@@ -145,9 +147,13 @@
 - **Binary search problem (12/31):** Solved with hints after ~30-40 min of debugging
   - Descending order leaderboard with duplicate handling
   - Learned: `<=` loop condition, comparison direction for descending, why `low` is the answer
+- **Two-pointer problem (12/31):** Solved solo in ~10 min, first try, all tests passed
+  - Closest pair sum on sorted array
+  - New DSA pattern — two pointers converging from ends
 
 **Attempted WITHOUT AI:**
 - Initial binary search implementation — had right structure, wrong details
+- Two-pointer implementation — 100% solo, clean first attempt
 
 **Where I Froze / Needed Help:**
 - Comparison direction (`>=` vs `<=`) for descending order
@@ -158,6 +164,7 @@
 - `low` converges to insertion point by design — it tracks "earliest position that could be the answer"
 - `while low <= high` ensures we check when pointers meet (single element remaining)
 - For descending order: `>=` means "go right" (toward lower scores), `<` means "go left"
+- **Two-pointer pattern:** Start at both ends, compare sum to target, move the pointer that helps you get closer. Sorted array = predictable movement.
 
 **Weekly Reflection:**
 
@@ -291,15 +298,16 @@
 - argparse CLI basics learned (12/16/25)
 - Morning warmup session established (12/22/25) — 3 problems solo
 - Binary search (descending order) completed with hints (12/31/25)
+- Two-pointer (closest pair sum) completed solo, first try (12/31/25)
 
 **Independence Growth:**
 
-- Problems solved solo this month: 4 (Functional Data Pipeline 10/10, Inventory Status 3/10, Summarize Purchases 5-6/10, DFS Path Search 6/10)
+- Problems solved solo this month: 5 (Functional Data Pipeline 10/10, Inventory Status 3/10, Summarize Purchases 5-6/10, DFS Path Search 6/10, Two-Pointer Closest Pair 5/10)
 - Problems solved with hints: 2 (argparse CLI 4/10, Binary Search 6/10)
 - Hardest thing I did without AI: **Functional Data Pipeline** (10/10) and **DFS Path Search** (6/10 — first algorithm from scratch)
 
 **Am I closer to the 3-month goal?**
-YES. Went from freezing on 5/10 problems to crushing 10/10 solo in 15 minutes. Now also implementing algorithms (DFS) from scratch. Binary search adds another DSA pattern to the toolkit. The gap is closing fast.
+YES. Went from freezing on 5/10 problems to crushing 10/10 solo in 15 minutes. Now also implementing algorithms (DFS, binary search, two-pointer) from scratch. Two-pointer was first try, 10 minutes, all passes — stacking DSA patterns fast. The gap is closing fast.
 
 **Am I bouncing between systems or staying focused?**
 Was bouncing (C diversion week 1), but corrected course. Now locked on Boot.dev RAG + Python only. Morning warmup system established.
