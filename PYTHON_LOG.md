@@ -17,6 +17,10 @@
 
 **3-Month Goal:** Solve 5-6/10 Python problems from scratch in 30-60 min, explaining reasoning throughout
 
+**Archive Files:**
+- `weekly_log_archive.md` — Past weekly logs
+- `monthly_log_archive.md` — Past monthly check-ins
+
 -----
 
 ## WHO I AM
@@ -93,9 +97,9 @@
 | DSA (algorithms) | Can implement with reasoning | **LEVELED UP:** DFS from scratch — recursion, cycle prevention with set, base case handling | 2025-12-22 |
 | Binary search | Can implement with reasoning | Descending order variant with duplicate handling. Key: `low` converges to insertion point, `<=` ensures convergence check | 2025-12-31 |
 | Two-pointer technique | Can implement with reasoning | Closest pair sum on sorted array. Setup: low/high at ends, move based on sum vs target comparison | 2025-12-31 |
+| Data structures (lists, dicts, sets) | Can do independently | **LEVELED UP:** Instinctively reached for dict for O(n) counting; understand when dict > list for lookups/counting | 2026-01-03 |
 | pandas | Exposed | Used in work, need AI help | - |
 | numpy | Exposed | Used in work, need AI help | - |
-| Data structures (lists, dicts) | Can use | Don't know when to pick which | - |
 | Stats/Probability | Gap | Need to learn | - |
 | NLP techniques | Gap | Target skill from DS Course | - |
 
@@ -114,6 +118,7 @@
 
 | Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
 |------|--------------|------------|-------------------|--------|-------|
+| 01/03/26 | **Find Suspicious Users (Pick Right Data Structure)** | **6/10** | ~2 min | **Solved solo** | Dictionary for O(n) counting. Used second dict for duplicate tracking (worked but unnecessary). **Pattern learned:** Use `== threshold` instead of `>= threshold` for single-trigger events — fires exactly once when crossed, no extra tracking needed. |
 | 12/31/25 | **Two-Pointer - Closest Pair Sum** | **5/10** | ~10 min | **Solved solo** | **First two-pointer problem!** New DSA pattern, first try, all tests passed. Setup: `low = 0`, `high = len(nums) - 1`. Logic: sum too big → high down, sum too small → low up. Early return on exact match. Tracked best diff and final pair. Clean implementation. Could simplify diff calc with `abs()` but code works. |
 | 12/31/25 | **Binary Search - Find Player Rank (descending order, insert after duplicates)** | **6/10** | ~30-40 min | **Solved with hints** | Tricky because descending order inverts standard binary search logic. Key learnings: (1) `while low <= high` is standard — ensures we check when pointers converge, (2) For descending + "insert after duplicates": `>=` moves `low` right, `<` moves `high` left, (3) Return `low` not `mid` — `low` converges to insertion point by design, `mid` is just a temp calculation, (4) `+1` for 1-based ranking. Debugged through multiple iterations — comparison direction and loop condition were the bugs. |
 | 12/22/25 | **Depth-First Path Search (DFS with recursion)** | **6/10** | ~15-20 min | **Solved solo** | **First algorithm implementation from scratch.** Handled cycle prevention with set, base cases, recursive exploration. Key debugging insight: needed `if has_path_dfs(...)` to propagate True upward. Had correct `==` and `return False` initially, changed during debugging, forgot to revert. |
@@ -135,11 +140,20 @@
 
 -----
 
-## WEEKLY LOG
+## PATTERNS & MENTAL MODELS
 
-*Newest week at top. Add a new section each week.*
+*Reusable insights worth remembering*
+
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| `== threshold` vs `>= threshold` | Single-trigger events (e.g., "first time X reaches N") | `==` fires exactly once when threshold is crossed; `>=` fires every time after, requiring extra tracking to prevent duplicates |
+| `dict.get(key, default)` | Counting/accumulating in dicts | Cleaner than `if key not in dict` — one line instead of four |
 
 -----
+
+## CURRENT WEEK
+
+*At end of week: move this section to weekly_log_archive.md and start fresh.*
 
 ### Week of: [12/29/25 - 01/04/26]
 
@@ -150,10 +164,14 @@
 - **Two-pointer problem (12/31):** Solved solo in ~10 min, first try, all tests passed
   - Closest pair sum on sorted array
   - New DSA pattern — two pointers converging from ends
+- **Find Suspicious Users (01/03):** Solved solo in ~2 min, all tests passed
+  - Dictionary for O(n) counting, threshold detection
+  - Pattern: `== threshold` instead of `>= threshold` for single-trigger events
 
 **Attempted WITHOUT AI:**
 - Initial binary search implementation — had right structure, wrong details
 - Two-pointer implementation — 100% solo, clean first attempt
+- Find Suspicious Users — 100% solo, 2 minutes flat
 
 **Where I Froze / Needed Help:**
 - Comparison direction (`>=` vs `<=`) for descending order
@@ -165,152 +183,45 @@
 - `while low <= high` ensures we check when pointers meet (single element remaining)
 - For descending order: `>=` means "go right" (toward lower scores), `<` means "go left"
 - **Two-pointer pattern:** Start at both ends, compare sum to target, move the pointer that helps you get closer. Sorted array = predictable movement.
+- **Single-trigger pattern:** Use `==` not `>=` when you only care about the moment something crosses a threshold
 
 **Weekly Reflection:**
 
 - **Hours actually spent learning:** [FILL IN END OF WEEK]
-- **Solo attempts vs AI-assisted ratio:** [FILL IN END OF WEEK]
+- **Solo attempts vs AI-assisted ratio:** 2 solo, 1 with hints (67% solo)
 - **Progress toward 3-month goal (honest 1-10):** [FILL IN END OF WEEK]
-- **What went well:** Pushed through binary search debugging instead of giving up
+- **What went well:** Pushed through binary search debugging instead of giving up. Crushed two-pointer first try. Smashed 6/10 in 2 minutes on 01/03.
 - **What I avoided or half-assed:** [FILL IN END OF WEEK]
 - **One thing to do differently next week:** [FILL IN END OF WEEK]
 
 -----
 
-### Week of: [12/22/25 - 12/28/25]
+## CURRENT MONTH
 
-**What I Actually Did:**
-- **Morning warmup session (12/22):** 3 problems solved solo in ~25 minutes total
-  - Inventory Status Map (3/10) — dict transformation warmup
-  - Summarize Purchases (5-6/10) — aggregation with nested dicts
-  - **DFS Path Search (6/10)** — first algorithm from scratch, recursion + cycle prevention
-- Implemented "foundational training period" idea from last week's reflection
+*At end of month: move this section to monthly_log_archive.md and start fresh.*
 
-**Attempted WITHOUT AI:**
-- All three morning problems — 100% solo
-- DFS algorithm with recursion and cycle prevention using a set
-
-**Where I Froze / Needed Help:**
-- None — clean sweep on all three problems
-
-**What Clicked:**
-- DFS mental model: base cases first, track visited nodes, recurse through neighbors, propagate True upward
-- Debugging insight: `if has_path_dfs(...)` vs just calling it — need to check return value to propagate success
-- Warmup reps on fundamentals → confidence boost before harder work
-
-**Weekly Reflection:**
-
-- **Hours actually spent learning:** [FILL IN END OF WEEK]
-- **Solo attempts vs AI-assisted ratio:** 3/3 solo so far (100%)
-- **Progress toward 3-month goal (honest 1-10):** [FILL IN END OF WEEK]
-- **What went well:** Morning warmup system works. Proved fundamentals are solid. First DSA implementation solo.
-- **What I avoided or half-assed:** [FILL IN END OF WEEK]
-- **One thing to do differently next week:** [FILL IN END OF WEEK]
-
------
-
-### Week of: [12/15/25 - 12/19/25]
-
-**What I Actually Did:**
-
-- **MAJOR WIN:** Solved 10/10 difficulty functional programming challenge (Boot.dev) completely solo in ~15 minutes - map_iter, filter_iter, compose, pipe
-- Started Boot.dev RAG course on personal device
-- Learned argparse CLI fundamentals — parser hierarchy, subcommands vs arguments, dest parameter, args namespace
-
-**Attempted WITHOUT AI:**
-
-- Functional Data Pipeline implementation (generators, higher-order functions, function composition)
-- argparse CLI print statement (small but solo)
-
-**Where I Froze / Needed Help:**
-
-- None on the functional programming challenge - brief confusion on compose, but figured it out by breaking down requirements
-- argparse boilerplate — needed line-by-line walkthrough to understand structure before implementing
-
-**What Clicked:**
-
-- Generators with `yield` - already understood the concept, just needed to apply it
-- Right-to-left vs left-to-right execution (compose vs pipe) - caught the detail by reading carefully
-- **Process that worked:** Read part A → implement function A → read part B → implement function B. One small problem at a time.
-- **Key insight:** I can solve hard problems when I slow down and decompose them instead of panicking
-- **argparse mental model:** `dest="command"` just names the slot where the chosen subcommand is stored — not magic. Subcommands (`search`, `index`) are separate from their arguments (`query`, `filepath`) so each command can have independent argument sets. `args` only contains user-provided values, not CLI structure.
-
-**Weekly Reflection:**
-
-- **Hours actually spent learning:** Roughly 4-5 hours
-- **Solo attempts vs AI-assisted ratio:** roughly 50% of the things I did were solo, but nearly all of it were significantly easier
-- **Progress toward 3-month goal (honest 1-10):** 8/10 - Crushed a 10/10 problem solo in 15 minutes, exactly what the goal is about
-- **What went well:** Stayed focused on Python (Boot.dev RAG course), didn't drift to C or theory. Proved I can solve complex problems independently. Asked "why" questions on argparse before coding — building understanding first.
-- **What I avoided or half-assed:** Architectural logic of the RAG course, needed to redo the file structure.
-- **One thing to do differently next week:** Implement a foundational training period in the morning, to keep reps of the foundations (keep foundations strong, and build up the floor).
-
------
-
-### Week of: [12/8/25 - 12/12/25]
-
-**What I Actually Did:**
-
-- ~~with some help with Gemini, was able to build a tokenizer generator, with m length of words and n window size, yield the tokens of length n and then generate the next sequence until we hit the end of the list.~~ *[WORK ASSIGNMENT - MOVED TO SEPARATE NOTES]*
-- ~~Implemented some core loop logic in C and started building some structs as well.~~ *[OFF-TRACK DIVERSION - ABANDONED C]*
-- ~~Identified C structs and initializers. Got introduced to typedef. Introduced to the basics of a pointer.~~ *[OFF-TRACK DIVERSION - ABANDONED C]*
-- ~~Understood the foundations of different major AI concepts, such as Prompt Engineering, XAI, evaluation, inferences, etc.~~ *[WORK ASSIGNMENT - MOVED TO SEPARATE NOTES]*
-
-**Attempted WITHOUT AI:**
-
-- ~~basic loops and structures, typedef, super basic pointer variables in C~~ *[OFF-TRACK - NOT PYTHON]*
-
-**Where I Froze / Needed Help:**
-
-- sliding n-grams, trying to find the right way to iterate over the windows if n was bigger than m (window bigger than length)
-
-**What Clicked:**
-
-- if you iterate, and you want to check a window, a good way to identify if the window is bigger than the length of the tokens is to iterate for range(len(tokens)-n + 1), then, if the window is bigger than the len of tokens, it'll be <0, and the iterator will never yield, thus giving us an empty list (a list in our case which is what we wanted)
-
-**Weekly Reflection:**
-
-- **Hours actually spent learning:** roughly 4-5
-- **Solo attempts vs AI-assisted ratio:** most of my learning was purely theoretical, but the two things I did by myself was basically 50/50.
-- **Progress toward 3-month goal (honest 1-10):** 3/10, could be better
-- **What went well:** I was able to maintain good progression in the week despite my company laptop being down, continuing with boot.dev instead of the DS course. ~~I was able to implement basic C concepts without AI~~ *[Not relevant to Python goal]*
-- **What I avoided or half-assed:** The actual learning part I avoided, I need to block more time next week. **Also drifted to C instead of staying focused on Python.**
-- **One thing to do differently next week:** ~~Prepare the week fully before I go into the week.~~ **Stay focused on Python only - no C, no diversions. Boot.dev RAG course is the priority.**
-
------
-
-## MONTHLY CHECK-IN
-
-*Newest month at top. Add a new section each month.*
-
------
-
-### Month: December 2025
+### Month: January 2026
 
 **DS Course Progress:**
 
-- Modules completed: None yet (waiting on company laptop)
-- Current module: Watching videos when accessible, taking prep notes
+- Modules completed: [UPDATE]
+- Current module: [UPDATE]
 
 **Boot.dev Progress:**
 
-- RAG course started (12/13/25)
-- Functional programming challenge completed solo (10/10 difficulty, 15 minutes)
-- argparse CLI basics learned (12/16/25)
-- Morning warmup session established (12/22/25) — 3 problems solo
-- Binary search (descending order) completed with hints (12/31/25)
-- Two-pointer (closest pair sum) completed solo, first try (12/31/25)
+- Find Suspicious Users completed solo, 2 minutes (01/03/26)
 
 **Independence Growth:**
 
-- Problems solved solo this month: 5 (Functional Data Pipeline 10/10, Inventory Status 3/10, Summarize Purchases 5-6/10, DFS Path Search 6/10, Two-Pointer Closest Pair 5/10)
-- Problems solved with hints: 2 (argparse CLI 4/10, Binary Search 6/10)
-- Hardest thing I did without AI: **Functional Data Pipeline** (10/10) and **DFS Path Search** (6/10 — first algorithm from scratch)
+- Problems solved solo this month: 1 (Find Suspicious Users 6/10)
+- Problems solved with hints: 0
+- Hardest thing I did without AI: Find Suspicious Users (6/10) — 2 minutes, correct data structure instinct
 
 **Am I closer to the 3-month goal?**
-YES. Went from freezing on 5/10 problems to crushing 10/10 solo in 15 minutes. Now also implementing algorithms (DFS, binary search, two-pointer) from scratch. Two-pointer was first try, 10 minutes, all passes — stacking DSA patterns fast. The gap is closing fast.
+Strong start to January. 6/10 in 2 minutes shows the reps are compounding. Data structure selection is becoming instinctive.
 
 **Am I bouncing between systems or staying focused?**
-Was bouncing (C diversion week 1), but corrected course. Now locked on Boot.dev RAG + Python only. Morning warmup system established.
+[UPDATE END OF MONTH]
 
 **Honest assessment - what needs to change?**
-Keep doing what I did on 12/13 and 12/22 - attempt problems solo first, don't reach for AI, slow down and read carefully, solve one piece at a time. The neurons DO connect when I force them to. Morning warmup reps are working — keep this habit.
+[UPDATE END OF MONTH]
