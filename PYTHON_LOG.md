@@ -144,10 +144,48 @@
 
 *Reusable insights worth remembering*
 
+### Data Structure Selection
 | Pattern | When to Use | Key Insight |
 |---------|-------------|-------------|
-| `== threshold` vs `>= threshold` | Single-trigger events (e.g., "first time X reaches N") | `==` fires exactly once when threshold is crossed; `>=` fires every time after, requiring extra tracking to prevent duplicates |
-| `dict.get(key, default)` | Counting/accumulating in dicts | Cleaner than `if key not in dict` — one line instead of four |
+| Dict for O(n) counting | Need to count occurrences, check membership, or aggregate | Dict lookup is O(1); nested loops scanning a list is O(n²) |
+| `dict.get(key, default)` | Counting/accumulating in dicts | `count[x] = count.get(x, 0) + 1` — one line instead of if/else block |
+| Set for cycle prevention | Graph traversal, avoiding revisits | O(1) membership check; add before recursing, check before exploring |
+
+### Threshold & Trigger Logic
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| `== threshold` vs `>= threshold` | Single-trigger events (e.g., "first time X reaches N") | `==` fires exactly once when crossed; `>=` requires extra tracking to prevent duplicates |
+
+### Two-Pointer Technique
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| Converging pointers | Sorted array, find pair matching condition (sum, diff, etc.) | `low = 0`, `high = len-1`. Move the pointer that gets you closer to target. Sorted = predictable movement. |
+| Early return on exact match | Target found mid-search | `if condition_met: return result` — don't keep searching once you've won |
+
+### Binary Search
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| `while low <= high` | Standard binary search loop | `<=` ensures you check when pointers meet (single element remaining); `<` skips edge cases |
+| Return `low` not `mid` | Finding insertion point | `low` converges to answer by design; `mid` is just a temp calculation each iteration |
+| Descending order search | Sorted descending (leaderboards, rankings) | Logic inverts: `>=` goes right (toward lower values), `<` goes left |
+
+### Recursion & DFS
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| Boolean propagation | DFS/tree search returning True/False | `if recursive_call(...): return True` — must explicitly bubble up success, don't just call and ignore |
+| Base case first | Any recursive function | Check termination conditions before recursive calls; prevents infinite loops and handles edge cases |
+| Visited set | Graph traversal with cycles | Add node to visited *before* recursing into neighbors; check membership *before* exploring |
+
+### Sliding Window
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| Window range formula | Fixed-size window over sequence | `range(len(seq) - window_size + 1)` — auto-returns empty if window > sequence |
+
+### Problem-Solving Meta-Strategies
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| Solve incrementally | Complex multi-part problems | Break into pieces, solve one function at a time, test as you go |
+| Read twice, code once | Before starting any problem | Almost missed "right-to-left" in compose — slow down, catch details before writing |
 
 -----
 
