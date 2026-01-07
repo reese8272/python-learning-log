@@ -4,6 +4,47 @@
 
 ---
 
+### Week of: [12/29/25 - 01/04/26]
+
+**What I Actually Did:**
+- **Binary search problem (12/31):** Solved with hints after ~30-40 min of debugging
+  - Descending order leaderboard with duplicate handling
+  - Learned: `<=` loop condition, comparison direction for descending, why `low` is the answer
+- **Two-pointer problem (12/31):** Solved solo in ~10 min, first try, all tests passed
+  - Closest pair sum on sorted array
+  - New DSA pattern — two pointers converging from ends
+- **Find Suspicious Users (01/03):** Solved solo in ~2 min, all tests passed
+  - Dictionary for O(n) counting, threshold detection
+  - Pattern: `== threshold` instead of `>= threshold` for single-trigger events
+
+**Attempted WITHOUT AI:**
+- Initial binary search implementation — had right structure, wrong details
+- Two-pointer implementation — 100% solo, clean first attempt
+- Find Suspicious Users — 100% solo, 2 minutes flat
+
+**Where I Froze / Needed Help:**
+- Comparison direction (`>=` vs `<=`) for descending order
+- Loop condition (`<` vs `<=`) — didn't realize `<` skips edge cases
+- Why we return `low` instead of `mid`
+
+**What Clicked:**
+- `low` converges to insertion point by design — it tracks "earliest position that could be the answer"
+- `while low <= high` ensures we check when pointers meet (single element remaining)
+- For descending order: `>=` means "go right" (toward lower scores), `<` means "go left"
+- **Two-pointer pattern:** Start at both ends, compare sum to target, move the pointer that helps you get closer. Sorted array = predictable movement.
+- **Single-trigger pattern:** Use `==` not `>=` when you only care about the moment something crosses a threshold
+
+**Weekly Reflection:**
+
+- **Hours actually spent learning:** [FILL IN END OF WEEK]
+- **Solo attempts vs AI-assisted ratio:** 2 solo, 1 with hints (67% solo)
+- **Progress toward 3-month goal (honest 1-10):** [FILL IN END OF WEEK]
+- **What went well:** Pushed through binary search debugging instead of giving up. Crushed two-pointer first try. Smashed 6/10 in 2 minutes on 01/03.
+- **What I avoided or half-assed:** [FILL IN END OF WEEK]
+- **One thing to do differently next week:** [FILL IN END OF WEEK]
+
+---
+
 ### Week of: [12/22/25 - 12/28/25]
 
 **What I Actually Did:**

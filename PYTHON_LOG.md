@@ -1,16 +1,13 @@
 # Reese's Python Learning Log
 
 **Started:** 2025-12-09  
-**Primary Focus (while waiting on company laptop):**
+**Primary Focus:**
 
-- Boot.dev RAG course (personal device)
-- Krish Naik DS Course video review + prep notes (when accessible)
-
-**Primary Focus (when company laptop returns):**
-
-- DS Course hands-on implementation (Krish Naik)
-- Boot.dev Python fundamentals
+- Boot.dev backend path + RAG course
+- Krish Naik DS/NLP Course (Udemy)
 - neetcode problem-solving practice
+
+**All resources now on personal device** — no work laptop dependencies.
 
 **What Gets Logged:** Only direct Python coding practice and problem-solving attempts  
 **What Doesn't:** Work assignments, theory without practice, language diversions
@@ -98,6 +95,7 @@
 | Binary search | Can implement with reasoning | Descending order variant with duplicate handling. Key: `low` converges to insertion point, `<=` ensures convergence check | 2025-12-31 |
 | Two-pointer technique | Can implement with reasoning | Closest pair sum on sorted array. Setup: low/high at ends, move based on sum vs target comparison | 2025-12-31 |
 | Data structures (lists, dicts, sets) | Can do independently | **LEVELED UP:** Instinctively reached for dict for O(n) counting; understand when dict > list for lookups/counting | 2026-01-03 |
+| RAG fundamentals | In progress | Learning through Boot.dev RAG course — modularity, code cleanliness, retrieval patterns | 2026-01-07 |
 | pandas | Exposed | Used in work, need AI help | - |
 | numpy | Exposed | Used in work, need AI help | - |
 | Stats/Probability | Gap | Need to learn | - |
@@ -189,46 +187,39 @@
 
 -----
 
+## SYSTEM IMPROVEMENTS LOG
+
+*Meta-level changes that make learning more consistent*
+
+| Date | Change | Impact |
+|------|--------|--------|
+| 01/07/26 | Purchased Udemy DS course on personal device ($15) | Eliminated work laptop dependency. All three learning pillars now accessible regardless of IT issues. |
+
+-----
+
 ## CURRENT WEEK
 
 *At end of week: move this section to weekly_log_archive.md and start fresh.*
 
-### Week of: [12/29/25 - 01/04/26]
+### Week of: [01/05/26 - 01/11/26]
 
 **What I Actually Did:**
-- **Binary search problem (12/31):** Solved with hints after ~30-40 min of debugging
-  - Descending order leaderboard with duplicate handling
-  - Learned: `<=` loop condition, comparison direction for descending, why `low` is the answer
-- **Two-pointer problem (12/31):** Solved solo in ~10 min, first try, all tests passed
-  - Closest pair sum on sorted array
-  - New DSA pattern — two pointers converging from ends
-- **Find Suspicious Users (01/03):** Solved solo in ~2 min, all tests passed
-  - Dictionary for O(n) counting, threshold detection
-  - Pattern: `== threshold` instead of `>= threshold` for single-trigger events
+- 01/07 (Tue): Boot.dev RAG course — continuing modularity and code cleanliness patterns
 
 **Attempted WITHOUT AI:**
-- Initial binary search implementation — had right structure, wrong details
-- Two-pointer implementation — 100% solo, clean first attempt
-- Find Suspicious Users — 100% solo, 2 minutes flat
+
 
 **Where I Froze / Needed Help:**
-- Comparison direction (`>=` vs `<=`) for descending order
-- Loop condition (`<` vs `<=`) — didn't realize `<` skips edge cases
-- Why we return `low` instead of `mid`
+
 
 **What Clicked:**
-- `low` converges to insertion point by design — it tracks "earliest position that could be the answer"
-- `while low <= high` ensures we check when pointers meet (single element remaining)
-- For descending order: `>=` means "go right" (toward lower scores), `<` means "go left"
-- **Two-pointer pattern:** Start at both ends, compare sum to target, move the pointer that helps you get closer. Sorted array = predictable movement.
-- **Single-trigger pattern:** Use `==` not `>=` when you only care about the moment something crosses a threshold
 
 **Weekly Reflection:**
 
 - **Hours actually spent learning:** [FILL IN END OF WEEK]
-- **Solo attempts vs AI-assisted ratio:** 2 solo, 1 with hints (67% solo)
+- **Solo attempts vs AI-assisted ratio:** [FILL IN END OF WEEK]
 - **Progress toward 3-month goal (honest 1-10):** [FILL IN END OF WEEK]
-- **What went well:** Pushed through binary search debugging instead of giving up. Crushed two-pointer first try. Smashed 6/10 in 2 minutes on 01/03.
+- **What went well:** [FILL IN END OF WEEK]
 - **What I avoided or half-assed:** [FILL IN END OF WEEK]
 - **One thing to do differently next week:** [FILL IN END OF WEEK]
 
@@ -248,6 +239,7 @@
 **Boot.dev Progress:**
 
 - Find Suspicious Users completed solo, 2 minutes (01/03/26)
+- RAG course in progress — learning modularity patterns (01/07/26)
 
 **Independence Growth:**
 
