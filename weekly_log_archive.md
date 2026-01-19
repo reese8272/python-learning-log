@@ -4,6 +4,13 @@
 
 ---
 
+### Week of: [01/05/26 - 01/11/26]
+
+**What I Actually Did:**
+- 01/07 (Tue): Boot.dev RAG course — continuing modularity and code cleanliness patterns
+
+---
+
 ### Week of: [12/29/25 - 01/04/26]
 
 **What I Actually Did:**
