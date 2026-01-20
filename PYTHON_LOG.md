@@ -98,6 +98,7 @@
 | argparse CLI basics | Can use with reference | Understand parser hierarchy (ArgumentParser → subparsers → arguments), dest parameter, args namespace | 2025-12-16 |
 | Dict transformation & aggregation | Can do independently | Loop + conditionals + dict building, grouping/aggregation with nested dicts | 2025-12-22 |
 | DSA (algorithms) | Can implement with reasoning | **LEVELED UP:** DFS from scratch — recursion, cycle prevention with set, base case handling | 2025-12-22 |
+| Recursion on nested structures | Can do independently | **LEVELED UP:** Tree/nested dict traversal. Key insight: self-similar structures — the part looks like the whole, so the function handles one level and delegates the rest to itself. | 2026-01-20 |
 | BFS shortest path | Can do independently | Queue-based traversal, return depth+1 when goal found | 2026-01-19 |
 | Binary search | Can implement with reasoning | Descending order variant with duplicate handling. Key: `low` converges to insertion point, `<=` ensures convergence check | 2025-12-31 |
 | Two-pointer technique | Can implement with reasoning | Closest pair sum on sorted array. Setup: low/high at ends, move based on sum vs target comparison | 2025-12-31 |
@@ -123,6 +124,7 @@
 
 | Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
 |------|--------------|------------|-------------------|--------|-------|
+| 01/20/26 | **Sum Task Durations Recursively** | **7/10** | ~10 min | **Solved solo** | Nested task structure with optional subtasks. Base case: empty list returns 0. Recursive case: iterate tasks, add duration, recurse on subtasks if present. **Key insight articulated:** "the structure of the subtasks is the same structure as the parent tasks" — self-similar data = recursion is the natural fit. |
 | 01/19/26 | **Advanced Functions Module (15 exercises)** | **4-6/10** | ~45-60 min total | **Completed** | Memoization, **kwargs filtering, callbacks, decorators (timer wrapper), higher-order functions (filter + map composition), function composition, partial application, generators (infinite Fibonacci), currying, context managers, type separation, mutable default state. All working code. |
 | 01/19/26 | **Fix Shortest Social Connection (BFS)** | **5/10** | ~1 min | **Solved solo** | Recognized DFS vs BFS issue immediately. Key insight: `depth` is where we came from, `+1` is where we are now — return `depth + 1` when neighbor equals goal. |
 | 01/03/26 | **Find Suspicious Users (Pick Right Data Structure)** | **6/10** | ~2 min | **Solved solo** | Dictionary for O(n) counting. Used second dict for duplicate tracking (worked but unnecessary). **Pattern learned:** Use `== threshold` instead of `>= threshold` for single-trigger events — fires exactly once when crossed, no extra tracking needed. |
@@ -179,6 +181,7 @@
 ### Recursion & DFS
 | Pattern | When to Use | Key Insight |
 |---------|-------------|-------------|
+| Self-similar structure recognition | Nested dicts, trees, subtasks, file systems | If the part looks like the whole, recursion is the natural fit. Handle one level, delegate the rest. |
 | Boolean propagation | DFS/tree search returning True/False | `if recursive_call(...): return True` — must explicitly bubble up success, don't just call and ignore |
 | Base case first | Any recursive function | Check termination conditions before recursive calls; prevents infinite loops and handles edge cases |
 | Visited set | Graph traversal with cycles | Add node to visited *before* recursing into neighbors; check membership *before* exploring |
@@ -229,6 +232,7 @@
 
 **What I Actually Did:**
 
+- 01/20: Boot.dev — Sum Task Durations Recursively (7/10) — solved independently in ~10 min
 - 01/19: Boot.dev — Fix Shortest Social Connection (BFS) — solved independently in ~1 min
 - 01/19: Krish Naik DS Course — Completed Advanced Functions module (15 exercises)
 
@@ -236,6 +240,7 @@
 
 | Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
 |------|--------------|------------|-------------------|--------|-------|
+| 01/20/26 | Sum Task Durations Recursively | 7/10 | ~10 min | Solved solo | Nested task structure with optional subtasks. Self-similar data structure = recursion. Articulated WHY it works: "the structure of the subtasks is the same structure as the parent tasks." |
 | 01/19/26 | Fix Shortest Social Connection (BFS) | 5/10 | ~1 min | Solved solo | Recognized DFS vs BFS issue immediately. Key insight: `depth` is where we came from, `+1` is where we are now — return `depth + 1` when neighbor equals goal. |
 | 01/19/26 | Advanced Functions Module (15 exercises) | 4-6/10 | ~45-60 min total | Completed | Memoization, **kwargs filtering, callbacks, decorators (timer wrapper), higher-order functions (filter + map composition), function composition, partial application, generators (infinite Fibonacci), currying, context managers, type separation, mutable default state. All working code. |
 
@@ -248,6 +253,7 @@
 - BFS vs DFS recognition is becoming automatic
 - Decorator pattern (wrapper function capturing timing) feels natural now
 - Currying with nested closures — `height(2)(3)(4)` pattern understood and implemented
+- Recursion on nested structures — can now articulate WHY it guarantees full traversal
 
 **Weekly Reflection:**
 
@@ -276,13 +282,14 @@
 - Find Suspicious Users completed solo, 2 minutes (01/03/26)
 - RAG course in progress — learning modularity patterns (01/07/26)
 - Fix Shortest Social Connection (BFS) completed solo, 1 minute (01/19/26)
+- Sum Task Durations Recursively (7/10) completed solo, 10 minutes (01/20/26)
 
 **Independence Growth:**
 
-- Problems solved solo this month: 2 (Find Suspicious Users 6/10, BFS fix 5/10)
+- Problems solved solo this month: 3 (Find Suspicious Users 6/10, BFS fix 5/10, Sum Task Durations 7/10)
 - Problems solved with hints: 0
 - Module exercises completed: 15 (Advanced Functions)
-- Hardest thing I did without AI: Find Suspicious Users (6/10) — 2 minutes, correct data structure instinct
+- Hardest thing I did without AI: Sum Task Durations (7/10) — 10 minutes, recursive nested structure traversal
 
 **Running total of independent solves:**
 
@@ -290,9 +297,10 @@
 2. 6/10 Find Suspicious Users (2 min) — Jan
 3. 5/10 BFS shortest path (1 min) — Jan
 4. 15x Advanced Functions exercises (~45-60 min total) — Jan
+5. 7/10 Sum Task Durations recursion (10 min) — Jan
 
 **Am I closer to the 3-month goal?**
-Strong start to January. 6/10 in 2 minutes shows the reps are compounding. Data structure selection is becoming instinctive. BFS/DFS distinction now automatic. The Advanced Functions module reinforces patterns you already had (generators, composition) while adding new tools (decorators, currying, partial).
+Strong start to January. 7/10 in 10 minutes — ahead of the 5-6/10 in 30-60 min target. Data structure selection is becoming instinctive. BFS/DFS distinction now automatic. Recursion on nested structures now understood at the "can explain why it works" level, not just "can write working code" level. The Advanced Functions module reinforces patterns you already had (generators, composition) while adding new tools (decorators, currying, partial).
 
 **Am I bouncing between systems or staying focused?**
 [UPDATE END OF MONTH]
