@@ -104,6 +104,11 @@
 | Two-pointer technique | Can implement with reasoning | Closest pair sum on sorted array. Setup: low/high at ends, move based on sum vs target comparison | 2025-12-31 |
 | Data structures (lists, dicts, sets) | Can do independently | **LEVELED UP:** Instinctively reached for dict for O(n) counting; understand when dict > list for lookups/counting | 2026-01-03 |
 | RAG fundamentals | In progress | Learning through Boot.dev RAG course — modularity, code cleanliness, retrieval patterns | 2026-01-07 |
+| Big O notation | Can do independently | Time/space complexity for common sorting algorithms — can explain cold | 2026-02-09 |
+| Bubble sort | Can do independently | Implemented from scratch, no friction | 2026-02-09 |
+| Insertion sort | Can do independently | Implemented from scratch, no friction | 2026-02-09 |
+| Merge sort | Can implement with reasoning | Logic is understood — recursive split/merge. Tripped on syntax (bare `return` instead of `return arr` in base case), not on the algorithm itself. | 2026-02-09 |
+| Quick sort | Can implement with reasoning | Partitioning logic is understood. Needed clarification on tracking pivot/i/j indices during partition, but conceptual understanding was there. | 2026-02-09 |
 | pandas | Exposed | Used in work, need AI help | - |
 | numpy | Exposed | Used in work, need AI help | - |
 | Stats/Probability | Gap | Need to learn | - |
@@ -124,6 +129,7 @@
 
 | Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
 |------|--------------|------------|-------------------|--------|-------|
+| 02/09/26 | **Sorting Algorithms from Scratch (merge, quick, bubble, insertion) + Big O Refresher** | **5-7/10** | Full session | **Mostly solo (syntax help only)** | Refresher after ~3 week gap. Bubble and insertion came naturally. Merge and quick sort were logically correct — issues were syntax-level: bare `return` instead of `return arr` on merge sort base case, and index tracking clarification on quick sort pivot/i/j. Big O analysis solid across all four without reference. |
 | 01/20/26 | **Sum Task Durations Recursively** | **7/10** | ~10 min | **Solved solo** | Nested task structure with optional subtasks. Base case: empty list returns 0. Recursive case: iterate tasks, add duration, recurse on subtasks if present. **Key insight articulated:** "the structure of the subtasks is the same structure as the parent tasks" — self-similar data = recursion is the natural fit. |
 | 01/19/26 | **Advanced Functions Module (15 exercises)** | **4-6/10** | ~45-60 min total | **Completed** | Memoization, **kwargs filtering, callbacks, decorators (timer wrapper), higher-order functions (filter + map composition), function composition, partial application, generators (infinite Fibonacci), currying, context managers, type separation, mutable default state. All working code. |
 | 01/19/26 | **Fix Shortest Social Connection (BFS)** | **5/10** | ~1 min | **Solved solo** | Recognized DFS vs BFS issue immediately. Key insight: `depth` is where we came from, `+1` is where we are now — return `depth + 1` when neighbor equals goal. |
@@ -145,7 +151,8 @@
 
 *What's blocking you RIGHT NOW. When resolved, delete and update Skills Tracker.*
 
-**No active struggles logged.** Update as they come up during RAG course.
+- **Merge sort base case syntax:** Logic was correct but wrote bare `return` instead of `return arr` when array length is 1. Kept getting `None` as results. The algorithm worked — the Python syntax didn't. Need to internalize: in Python, bare `return` always returns `None`. If your base case IS a value, return that value.
+- **Quick sort index tracking:** Understood the partitioning concept (pick pivot, smaller left, larger right) but got turned around tracking pivot, i, and j positions during the partition step. Was a clarification question, not a conceptual gap. Need more reps to make the index dance automatic.
 
 -----
 
@@ -201,6 +208,20 @@
 | Mutable default for state | Function call counting, accumulators | `def f(x, state=[0])` — list persists across calls |
 | Function composition | Chaining transformations | `f(g(x))` — inner closure captures outer functions |
 
+### Sorting Algorithms
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| Bubble sort | Simple/educational; nearly sorted data | Nested loops, swap adjacent. O(n²) time, O(1) space. Early exit optimization if no swaps in a pass. |
+| Insertion sort | Small datasets, nearly sorted data | Build sorted portion left-to-right, shift elements to insert. O(n²) time, O(1) space. Best case O(n) on sorted input. |
+| Merge sort | Need guaranteed O(n log n), stability matters | Divide in half, recurse, merge sorted halves. O(n log n) time, O(n) space. The merge step is the hard part: two pointers comparing heads of sorted subarrays. |
+| Quick sort | General-purpose, good average case | Pick pivot, partition (smaller left, larger right), recurse on halves. O(n log n) avg / O(n²) worst, O(log n) space. Partition logic is the tricky part. |
+
+### Big O Quick Reference
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| O(n²) vs O(n log n) | Choosing a sorting approach | Bubble/insertion are simple but slow on large data. Merge/quick scale — the "log n" comes from halving the problem each step. |
+| Space complexity tradeoff | Merge sort vs quick sort | Merge needs O(n) extra space for merging. Quick sorts in-place with O(log n) stack space. Trade memory for guaranteed performance. |
+
 ### Sliding Window
 | Pattern | When to Use | Key Insight |
 |---------|-------------|-------------|
@@ -211,6 +232,7 @@
 |---------|-------------|-------------|
 | Solve incrementally | Complex multi-part problems | Break into pieces, solve one function at a time, test as you go |
 | Read twice, code once | Before starting any problem | Almost missed "right-to-left" in compose — slow down, catch details before writing |
+| Bare `return` = `None` | Any Python function returning a value | If your base case IS a value, you must return that value explicitly. `return` by itself always returns `None`. |
 
 -----
 
@@ -228,32 +250,31 @@
 
 *At end of week: move this section to weekly_log_archive.md and start fresh.*
 
-### Week of: [01/19/26 - 01/25/26]
+### Week of: [02/09/26 - 02/15/26]
 
 **What I Actually Did:**
 
-- 01/20: Boot.dev — Sum Task Durations Recursively (7/10) — solved independently in ~10 min
-- 01/19: Boot.dev — Fix Shortest Social Connection (BFS) — solved independently in ~1 min
-- 01/19: Krish Naik DS Course — Completed Advanced Functions module (15 exercises)
+- 02/09: Refresher — Big O notation review + implemented 4 sorting algorithms from scratch (merge, bubble, quick, insertion)
 
 **Attempted WITHOUT AI:**
 
 | Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
 |------|--------------|------------|-------------------|--------|-------|
-| 01/20/26 | Sum Task Durations Recursively | 7/10 | ~10 min | Solved solo | Nested task structure with optional subtasks. Self-similar data structure = recursion. Articulated WHY it works: "the structure of the subtasks is the same structure as the parent tasks." |
-| 01/19/26 | Fix Shortest Social Connection (BFS) | 5/10 | ~1 min | Solved solo | Recognized DFS vs BFS issue immediately. Key insight: `depth` is where we came from, `+1` is where we are now — return `depth + 1` when neighbor equals goal. |
-| 01/19/26 | Advanced Functions Module (15 exercises) | 4-6/10 | ~45-60 min total | Completed | Memoization, **kwargs filtering, callbacks, decorators (timer wrapper), higher-order functions (filter + map composition), function composition, partial application, generators (infinite Fibonacci), currying, context managers, type separation, mutable default state. All working code. |
+| 02/09/26 | Sorting algorithms (bubble, insertion) | 3-4/10 | Minimal | Solved solo | Loop-based sorting — no friction, pattern is locked in |
+| 02/09/26 | Sorting algorithms (merge, quick) | 6-7/10 | Full session | Solved with hints | Both issues were syntax/clarification, not logic. Merge: bare `return` instead of `return arr` in base case. Quick: needed clarification on pivot/i/j index tracking during partition. |
+| 02/09/26 | Big O analysis for all four sorts | 5/10 | N/A | Solid | Can explain time AND space complexity for all four without looking anything up |
 
 **Where I Froze / Needed Help:**
 
-- None logged yet this week
+- Merge sort: Base case had bare `return` instead of `return arr`. Array of length 1 IS the base case — you need to return it, not just exit. Kept getting `None` results because bare `return` in Python always returns `None`. Logic was correct, syntax wasn't.
+- Quick sort: Got turned around tracking pivot, i, and j positions during the partition step. This was a "where is my syntax wrong" clarification question, not a conceptual gap. Understood what the partition needed to do, just needed to straighten out which index was doing what.
 
 **What Clicked:**
 
-- BFS vs DFS recognition is becoming automatic
-- Decorator pattern (wrapper function capturing timing) feels natural now
-- Currying with nested closures — `height(2)(3)(4)` pattern understood and implemented
-- Recursion on nested structures — can now articulate WHY it guarantees full traversal
+- Big O across all four sorts — can reason about WHY each has its complexity, not just recite it
+- Bubble and insertion are automatic now — iterative sorting patterns feel natural
+- Came back after a 3-week gap and still implemented all four; fundamentals are sticking
+- Both "help" moments were debugging syntax, not understanding algorithms — the logic was there
 
 **Weekly Reflection:**
 
@@ -270,26 +291,22 @@
 
 *At end of month: move this section to monthly_log_archive.md and start fresh.*
 
-### Month: January 2026
+### Month: February 2026
 
 **DS Course Progress:**
 
-- Modules completed: Advanced Functions (01/19/26)
+- Modules completed: [UPDATE]
 - Current module: [UPDATE]
 
 **Boot.dev Progress:**
 
-- Find Suspicious Users completed solo, 2 minutes (01/03/26)
-- RAG course in progress — learning modularity patterns (01/07/26)
-- Fix Shortest Social Connection (BFS) completed solo, 1 minute (01/19/26)
-- Sum Task Durations Recursively (7/10) completed solo, 10 minutes (01/20/26)
+- [UPDATE as you go]
 
 **Independence Growth:**
 
-- Problems solved solo this month: 3 (Find Suspicious Users 6/10, BFS fix 5/10, Sum Task Durations 7/10)
-- Problems solved with hints: 0
-- Module exercises completed: 15 (Advanced Functions)
-- Hardest thing I did without AI: Sum Task Durations (7/10) — 10 minutes, recursive nested structure traversal
+- Problems solved solo this month: 2 (bubble + insertion sort from scratch)
+- Problems solved with hints: 1 (merge + quick sort — syntax-level help only)
+- Hardest thing I did without AI: Big O analysis for all four sorting algorithms cold
 
 **Running total of independent solves:**
 
@@ -298,9 +315,10 @@
 3. 5/10 BFS shortest path (1 min) — Jan
 4. 15x Advanced Functions exercises (~45-60 min total) — Jan
 5. 7/10 Sum Task Durations recursion (10 min) — Jan
+6. 3-4/10 Bubble + Insertion sort from scratch — Feb (refresher)
 
 **Am I closer to the 3-month goal?**
-Strong start to January. 7/10 in 10 minutes — ahead of the 5-6/10 in 30-60 min target. Data structure selection is becoming instinctive. BFS/DFS distinction now automatic. Recursion on nested structures now understood at the "can explain why it works" level, not just "can write working code" level. The Advanced Functions module reinforces patterns you already had (generators, composition) while adding new tools (decorators, currying, partial).
+Back after a ~3 week gap. Good sign: fundamentals stuck through the break. Big O is solid. Iterative sorts are automatic. Merge and quick sort logic was there — the issues were Python syntax (bare return) and index tracking (pivot/i/j), not algorithmic understanding. That distinction matters: you're not failing on the "how does this algorithm work" part, you're failing on the "translate it cleanly to Python" part. That's a smaller gap to close.
 
 **Am I bouncing between systems or staying focused?**
 [UPDATE END OF MONTH]

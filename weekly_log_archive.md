@@ -4,6 +4,44 @@
 
 ---
 
+### Week of: [01/19/26 - 01/25/26]
+
+**What I Actually Did:**
+
+- 01/20: Boot.dev — Sum Task Durations Recursively (7/10) — solved independently in ~10 min
+- 01/19: Boot.dev — Fix Shortest Social Connection (BFS) — solved independently in ~1 min
+- 01/19: Krish Naik DS Course — Completed Advanced Functions module (15 exercises)
+
+**Attempted WITHOUT AI:**
+
+| Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
+|------|--------------|------------|-------------------|--------|-------|
+| 01/20/26 | Sum Task Durations Recursively | 7/10 | ~10 min | Solved solo | Nested task structure with optional subtasks. Self-similar data structure = recursion. Articulated WHY it works: "the structure of the subtasks is the same structure as the parent tasks." |
+| 01/19/26 | Fix Shortest Social Connection (BFS) | 5/10 | ~1 min | Solved solo | Recognized DFS vs BFS issue immediately. Key insight: `depth` is where we came from, `+1` is where we are now — return `depth + 1` when neighbor equals goal. |
+| 01/19/26 | Advanced Functions Module (15 exercises) | 4-6/10 | ~45-60 min total | Completed | Memoization, **kwargs filtering, callbacks, decorators (timer wrapper), higher-order functions (filter + map composition), function composition, partial application, generators (infinite Fibonacci), currying, context managers, type separation, mutable default state. All working code. |
+
+**Where I Froze / Needed Help:**
+
+- None logged yet this week
+
+**What Clicked:**
+
+- BFS vs DFS recognition is becoming automatic
+- Decorator pattern (wrapper function capturing timing) feels natural now
+- Currying with nested closures — `height(2)(3)(4)` pattern understood and implemented
+- Recursion on nested structures — can now articulate WHY it guarantees full traversal
+
+**Weekly Reflection:**
+
+- **Hours actually spent learning:** [FILL IN END OF WEEK]
+- **Solo attempts vs AI-assisted ratio:** [FILL IN END OF WEEK]
+- **Progress toward 3-month goal (honest 1-10):** [FILL IN END OF WEEK]
+- **What went well:** [FILL IN END OF WEEK]
+- **What I avoided or half-assed:** [FILL IN END OF WEEK]
+- **One thing to do differently next week:** [FILL IN END OF WEEK]
+
+-----
+
 ### Week of: [01/05/26 - 01/11/26]
 
 **What I Actually Did:**
