@@ -103,6 +103,8 @@
 | Binary search | Can implement with reasoning | Descending order variant with duplicate handling. Key: `low` converges to insertion point, `<=` ensures convergence check | 2025-12-31 |
 | Two-pointer technique | Can implement with reasoning | Closest pair sum on sorted array. Setup: low/high at ends, move based on sum vs target comparison | 2025-12-31 |
 | Data structures (lists, dicts, sets) | Can do independently | **LEVELED UP:** Instinctively reached for dict for O(n) counting; understand when dict > list for lookups/counting | 2026-01-03 |
+| Stacks & Queues | Can do independently | Time complexity diagnosis without hesitation — O(n) insertion, deletion, etc. | 2026-02-11 |
+| Linked Lists | Can implement with reasoning | Implemented `__iter__` with generator. Tripped on using generator within own class — resolved with `self` (see Patterns). | 2026-02-11 |
 | RAG fundamentals | In progress | Learning through Boot.dev RAG course — modularity, code cleanliness, retrieval patterns | 2026-01-07 |
 | Big O notation | Can do independently | Time/space complexity for common sorting algorithms — can explain cold | 2026-02-09 |
 | Bubble sort | Can do independently | Implemented from scratch, no friction | 2026-02-09 |
@@ -129,6 +131,7 @@
 
 | Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
 |------|--------------|------------|-------------------|--------|-------|
+| 02/11/26 | **Stacks, Queues & Linked Lists (Boot.dev DSA)** | **4-6/10** | Full session | **Stacks/Queues: Solved solo. Linked Lists: Solved with hints** | Stacks and queues — diagnosed all time complexities without hesitation. Linked lists: implemented `__iter__` generator successfully, only tripped on how to call the generator within the class itself (answer: use `self`). |
 | 02/09/26 | **Sorting Algorithms from Scratch (merge, quick, bubble, insertion) + Big O Refresher** | **5-7/10** | Full session | **Mostly solo (syntax help only)** | Refresher after ~3 week gap. Bubble and insertion came naturally. Merge and quick sort were logically correct — issues were syntax-level: bare `return` instead of `return arr` on merge sort base case, and index tracking clarification on quick sort pivot/i/j. Big O analysis solid across all four without reference. |
 | 01/20/26 | **Sum Task Durations Recursively** | **7/10** | ~10 min | **Solved solo** | Nested task structure with optional subtasks. Base case: empty list returns 0. Recursive case: iterate tasks, add duration, recurse on subtasks if present. **Key insight articulated:** "the structure of the subtasks is the same structure as the parent tasks" — self-similar data = recursion is the natural fit. |
 | 01/19/26 | **Advanced Functions Module (15 exercises)** | **4-6/10** | ~45-60 min total | **Completed** | Memoization, **kwargs filtering, callbacks, decorators (timer wrapper), higher-order functions (filter + map composition), function composition, partial application, generators (infinite Fibonacci), currying, context managers, type separation, mutable default state. All working code. |
@@ -166,6 +169,8 @@
 | Dict for O(n) counting | Need to count occurrences, check membership, or aggregate | Dict lookup is O(1); nested loops scanning a list is O(n²) |
 | `dict.get(key, default)` | Counting/accumulating in dicts | `count[x] = count.get(x, 0) + 1` — one line instead of if/else block |
 | Set for cycle prevention | Graph traversal, avoiding revisits | O(1) membership check; add before recursing, check before exploring |
+| Stack (LIFO) | Undo operations, expression parsing, DFS | Push/pop from top only. O(1) push/pop. Think "last in, first out" — most recent item is always what you grab next. |
+| Queue (FIFO) | BFS, task scheduling, order preservation | Enqueue at back, dequeue from front. O(1) enqueue/dequeue (with deque). Think "first in, first out" — process in arrival order. |
 
 ### Threshold & Trigger Logic
 | Pattern | When to Use | Key Insight |
@@ -198,6 +203,12 @@
 |---------|-------------|-------------|
 | Depth tracking | Shortest path problems | `depth` is where we came from; `depth + 1` is where we are now. Return `depth + 1` when goal found. |
 | BFS vs DFS selection | Shortest path = BFS, exhaustive search = DFS | BFS guarantees shortest path in unweighted graphs; DFS explores depth-first (not shortest) |
+
+### Linked Lists & Iterators
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| `__iter__` as generator | Making a linked list (or any custom collection) iterable with `for` loops | Define `__iter__` using `yield` to walk nodes. This makes the class a generator-based iterator — `for item in my_list` just works. |
+| Using own iterator inside the class | Need to loop over the collection's elements within another method of the same class | Use `for item in self` — calling `self` in a `for` loop triggers `__iter__` on the current instance. The class IS the iterable, so `self` is how you access it from inside. |
 
 ### Function Patterns
 | Pattern | When to Use | Key Insight |
@@ -255,11 +266,14 @@
 **What I Actually Did:**
 
 - 02/09: Refresher — Big O notation review + implemented 4 sorting algorithms from scratch (merge, bubble, quick, insertion)
+- 02/11: Boot.dev DSA — Stacks, queues, and linked lists. Clean diagnosis on stacks/queues. Linked list iterator implementation.
 
 **Attempted WITHOUT AI:**
 
 | Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
 |------|--------------|------------|-------------------|--------|-------|
+| 02/11/26 | Stacks & Queues — time complexity diagnosis | 4/10 | Minimal | Solved solo | No hesitation on O(n) insertion, deletion, etc. Pattern is locked in. |
+| 02/11/26 | Linked List — `__iter__` generator + using iterator within class | 5/10 | Session | Solved with hints | Generator implementation was fine. Stumped on how to use it within the class — answer: `for item in self`. `self` IS the iterable. |
 | 02/09/26 | Sorting algorithms (bubble, insertion) | 3-4/10 | Minimal | Solved solo | Loop-based sorting — no friction, pattern is locked in |
 | 02/09/26 | Sorting algorithms (merge, quick) | 6-7/10 | Full session | Solved with hints | Both issues were syntax/clarification, not logic. Merge: bare `return` instead of `return arr` in base case. Quick: needed clarification on pivot/i/j index tracking during partition. |
 | 02/09/26 | Big O analysis for all four sorts | 5/10 | N/A | Solid | Can explain time AND space complexity for all four without looking anything up |
@@ -268,6 +282,7 @@
 
 - Merge sort: Base case had bare `return` instead of `return arr`. Array of length 1 IS the base case — you need to return it, not just exit. Kept getting `None` results because bare `return` in Python always returns `None`. Logic was correct, syntax wasn't.
 - Quick sort: Got turned around tracking pivot, i, and j positions during the partition step. This was a "where is my syntax wrong" clarification question, not a conceptual gap. Understood what the partition needed to do, just needed to straighten out which index was doing what.
+- Linked list: Knew how to write `__iter__` with `yield`, but froze on how to iterate over the linked list from within another method of the same class. The answer is `for node in self` — `self` triggers `__iter__` on the current instance.
 
 **What Clicked:**
 
@@ -275,6 +290,8 @@
 - Bubble and insertion are automatic now — iterative sorting patterns feel natural
 - Came back after a 3-week gap and still implemented all four; fundamentals are sticking
 - Both "help" moments were debugging syntax, not understanding algorithms — the logic was there
+- Stacks and queues: time complexity diagnosis is automatic now
+- Linked list `__iter__`: the class IS the iterable — `self` is the key to using your own iterator internally
 
 **Weekly Reflection:**
 
@@ -300,12 +317,12 @@
 
 **Boot.dev Progress:**
 
-- [UPDATE as you go]
+- DSA module: Stacks, queues, linked lists (02/11)
 
 **Independence Growth:**
 
-- Problems solved solo this month: 2 (bubble + insertion sort from scratch)
-- Problems solved with hints: 1 (merge + quick sort — syntax-level help only)
+- Problems solved solo this month: 3 (bubble + insertion sort from scratch, stacks/queues diagnosis)
+- Problems solved with hints: 2 (merge + quick sort — syntax-level help only; linked list iterator — `self` insight)
 - Hardest thing I did without AI: Big O analysis for all four sorting algorithms cold
 
 **Running total of independent solves:**
@@ -316,9 +333,10 @@
 4. 15x Advanced Functions exercises (~45-60 min total) — Jan
 5. 7/10 Sum Task Durations recursion (10 min) — Jan
 6. 3-4/10 Bubble + Insertion sort from scratch — Feb (refresher)
+7. 4/10 Stacks & Queues time complexity diagnosis — Feb
 
 **Am I closer to the 3-month goal?**
-Back after a ~3 week gap. Good sign: fundamentals stuck through the break. Big O is solid. Iterative sorts are automatic. Merge and quick sort logic was there — the issues were Python syntax (bare return) and index tracking (pivot/i/j), not algorithmic understanding. That distinction matters: you're not failing on the "how does this algorithm work" part, you're failing on the "translate it cleanly to Python" part. That's a smaller gap to close.
+Back after a ~3 week gap. Good sign: fundamentals stuck through the break. Big O is solid. Iterative sorts are automatic. Merge and quick sort logic was there — the issues were Python syntax (bare return) and index tracking (pivot/i/j), not algorithmic understanding. That distinction matters: you're not failing on the "how does this algorithm work" part, you're failing on the "translate it cleanly to Python" part. That's a smaller gap to close. Stacks/queues are locked in. Linked lists are close — the iterator pattern with `self` is a small conceptual gap, not a structural one.
 
 **Am I bouncing between systems or staying focused?**
 [UPDATE END OF MONTH]
