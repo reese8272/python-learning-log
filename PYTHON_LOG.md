@@ -43,50 +43,13 @@
 
 -----
 
-## WEEKLY SCHEDULE
-
-*Established: 2025-12-21*
-
-**Philosophy:** Weekdays for lessons and guided learning. Weekends for deep work and harder challenges.
-
-| Day | Learning Focus | Time | Notes |
-|-----|----------------|------|-------|
-| Mon | Boot.dev | ~2-3 hrs (work) | Lessons, concepts, guided exercises |
-| Tue | Boot.dev | ~2-3 hrs (work) | Lessons, concepts, guided exercises |
-| Wed | Krish Naik NLP/DS course | ~2-3 hrs (work) | Lessons, concepts, guided exercises |
-| Thu | Krish Naik NLP/DS course | ~2-3 hrs (work) | Lessons, concepts, guided exercises |
-| Fri | Neetcode + weekly reflection | ~2-3 hrs (work) | Problem-solving practice, update this log |
-| Sat | Boot.dev (deep work) | 6-8 AM (2 hrs) | Harder challenges, uninterrupted thinking |
-| Sun | NLP course (deep work) | 6-8 AM (2 hrs) | Harder challenges, uninterrupted thinking |
-
-**Weekly total:** ~16-19 hours of intentional learning
-
-**Daily rhythm (weekdays):**
-
-- 5:00 AM - Wake
-- 5:30-7:00 AM - Gym
-- 7:00-8:00 AM - Bible study & journaling
-- 8:00-9:00 AM - Kids to sitter
-- 9:00-5:30 PM - Work (includes 2-3 hrs learning)
-- 5:30-8:00 PM - Kids
-- 8:00-9:00 PM - Decompress / passive prep for next day
-- 9:00 PM - Bed
-
-**Weekend rhythm:**
-
-- 5:00 AM - Wake
-- 6:00-8:00 AM - Deep learning work (at-home workout before or after)
-- 8:00 AM onward - Family time
-
------
-
 ## SKILLS TRACKER
 
 *Update when something genuinely levels up. Be honest.*
 
 | Skill | Level | Notes | Last Practiced |
 |-------|-------|-------|----------------|
-| Python basics (loops, functions, classes) | Can do independently | **LEVELED UP:** Implemented functional programming patterns solo (generators, higher-order functions, composition) | 2025-12-13 |
+| Python basics (loops, functions, classes) | Can do independently | **LEVELED UP:** Implemented functional programming patterns solo (generators, higher-order functions, composition) | 2026-02-18 |
 | Generators & yield | Can do independently | Built lazy iterators from scratch (map_iter, filter_iter); infinite Fibonacci with `while True: yield` | 2026-01-19 |
 | Higher-order functions | Can do independently | **LEVELED UP:** Filter + map composition, callbacks, functions returning functions | 2026-01-19 |
 | Decorators | Can do independently | Timer wrapper pattern — capture start/end, call inner func, return result | 2026-01-19 |
@@ -120,7 +83,9 @@
 
 - **Gap:** Haven't learned yet
 - **Exposed:** Seen it, used it with help, can't do it alone
+- **In progress:** Actively learning, not enough reps to assess level yet
 - **Can use with reference:** Can do it if I look things up
+- **Can implement with reasoning:** Understand the logic, may need syntax help
 - **Can do independently:** No AI, no docs, I got this
 
 -----
@@ -131,6 +96,7 @@
 
 | Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
 |------|--------------|------------|-------------------|--------|-------|
+| 02/18/26 | **Fix Collect Top Scores (Boot.dev)** | **3-4/10** | ~5 min | **Solved solo** | Control flow with break/continue/sentinel. Filter by min_score, stop at -1 sentinel, enforce max_scores limit. No hesitation — loop + conditionals pattern is locked in. |
 | 02/11/26 | **Stacks, Queues & Linked Lists (Boot.dev DSA)** | **4-6/10** | Full session | **Stacks/Queues: Solved solo. Linked Lists: Solved with hints** | Stacks and queues — diagnosed all time complexities without hesitation. Linked lists: implemented `__iter__` generator successfully, only tripped on how to call the generator within the class itself (answer: use `self`). |
 | 02/09/26 | **Sorting Algorithms from Scratch (merge, quick, bubble, insertion) + Big O Refresher** | **5-7/10** | Full session | **Mostly solo (syntax help only)** | Refresher after ~3 week gap. Bubble and insertion came naturally. Merge and quick sort were logically correct — issues were syntax-level: bare `return` instead of `return arr` on merge sort base case, and index tracking clarification on quick sort pivot/i/j. Big O analysis solid across all four without reference. |
 | 01/20/26 | **Sum Task Durations Recursively** | **7/10** | ~10 min | **Solved solo** | Nested task structure with optional subtasks. Base case: empty list returns 0. Recursive case: iterate tasks, add duration, recurse on subtasks if present. **Key insight articulated:** "the structure of the subtasks is the same structure as the parent tasks" — self-similar data = recursion is the natural fit. |
@@ -261,37 +227,25 @@
 
 *At end of week: move this section to weekly_log_archive.md and start fresh.*
 
-### Week of: [02/09/26 - 02/15/26]
+### Week of: [02/16/26 - 02/22/26]
 
 **What I Actually Did:**
 
-- 02/09: Refresher — Big O notation review + implemented 4 sorting algorithms from scratch (merge, bubble, quick, insertion)
-- 02/11: Boot.dev DSA — Stacks, queues, and linked lists. Clean diagnosis on stacks/queues. Linked list iterator implementation.
+- 02/18: Boot.dev — Fix Collect Top Scores (3-4/10) — solved independently in ~5 min
 
 **Attempted WITHOUT AI:**
 
 | Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
 |------|--------------|------------|-------------------|--------|-------|
-| 02/11/26 | Stacks & Queues — time complexity diagnosis | 4/10 | Minimal | Solved solo | No hesitation on O(n) insertion, deletion, etc. Pattern is locked in. |
-| 02/11/26 | Linked List — `__iter__` generator + using iterator within class | 5/10 | Session | Solved with hints | Generator implementation was fine. Stumped on how to use it within the class — answer: `for item in self`. `self` IS the iterable. |
-| 02/09/26 | Sorting algorithms (bubble, insertion) | 3-4/10 | Minimal | Solved solo | Loop-based sorting — no friction, pattern is locked in |
-| 02/09/26 | Sorting algorithms (merge, quick) | 6-7/10 | Full session | Solved with hints | Both issues were syntax/clarification, not logic. Merge: bare `return` instead of `return arr` in base case. Quick: needed clarification on pivot/i/j index tracking during partition. |
-| 02/09/26 | Big O analysis for all four sorts | 5/10 | N/A | Solid | Can explain time AND space complexity for all four without looking anything up |
+| 02/18/26 | Fix Collect Top Scores — control flow with break/continue/sentinel | 3-4/10 | ~5 min | Solved solo | Loop through scores, skip below min_score, stop at -1 sentinel, enforce max_scores limit. Clean implementation, no hesitation. |
 
 **Where I Froze / Needed Help:**
 
-- Merge sort: Base case had bare `return` instead of `return arr`. Array of length 1 IS the base case — you need to return it, not just exit. Kept getting `None` results because bare `return` in Python always returns `None`. Logic was correct, syntax wasn't.
-- Quick sort: Got turned around tracking pivot, i, and j positions during the partition step. This was a "where is my syntax wrong" clarification question, not a conceptual gap. Understood what the partition needed to do, just needed to straighten out which index was doing what.
-- Linked list: Knew how to write `__iter__` with `yield`, but froze on how to iterate over the linked list from within another method of the same class. The answer is `for node in self` — `self` triggers `__iter__` on the current instance.
+- Nothing — this was clean
 
 **What Clicked:**
 
-- Big O across all four sorts — can reason about WHY each has its complexity, not just recite it
-- Bubble and insertion are automatic now — iterative sorting patterns feel natural
-- Came back after a 3-week gap and still implemented all four; fundamentals are sticking
-- Both "help" moments were debugging syntax, not understanding algorithms — the logic was there
-- Stacks and queues: time complexity diagnosis is automatic now
-- Linked list `__iter__`: the class IS the iterable — `self` is the key to using your own iterator internally
+- Control flow patterns (break/continue/early return) are automatic now — sentinel value (-1), threshold filtering, and count-based limits all felt natural
 
 **Weekly Reflection:**
 
@@ -318,10 +272,11 @@
 **Boot.dev Progress:**
 
 - DSA module: Stacks, queues, linked lists (02/11)
+- Control flow: Fix Collect Top Scores (02/18)
 
 **Independence Growth:**
 
-- Problems solved solo this month: 3 (bubble + insertion sort from scratch, stacks/queues diagnosis)
+- Problems solved solo this month: 4 (bubble + insertion sort from scratch, stacks/queues diagnosis, Fix Collect Top Scores)
 - Problems solved with hints: 2 (merge + quick sort — syntax-level help only; linked list iterator — `self` insight)
 - Hardest thing I did without AI: Big O analysis for all four sorting algorithms cold
 
@@ -334,6 +289,7 @@
 5. 7/10 Sum Task Durations recursion (10 min) — Jan
 6. 3-4/10 Bubble + Insertion sort from scratch — Feb (refresher)
 7. 4/10 Stacks & Queues time complexity diagnosis — Feb
+8. 3-4/10 Fix Collect Top Scores (5 min) — Feb
 
 **Am I closer to the 3-month goal?**
 Back after a ~3 week gap. Good sign: fundamentals stuck through the break. Big O is solid. Iterative sorts are automatic. Merge and quick sort logic was there — the issues were Python syntax (bare return) and index tracking (pivot/i/j), not algorithmic understanding. That distinction matters: you're not failing on the "how does this algorithm work" part, you're failing on the "translate it cleanly to Python" part. That's a smaller gap to close. Stacks/queues are locked in. Linked lists are close — the iterator pattern with `self` is a small conceptual gap, not a structural one.

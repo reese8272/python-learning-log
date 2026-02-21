@@ -73,6 +73,7 @@ Includes:
 
 - **Gap:** Haven't learned yet
 - **Exposed:** Seen it, used it with help, can't do it alone
+- **In progress:** Actively learning, not enough reps to assess level yet
 - **Can use with reference:** Can do it if I look things up
 - **Can implement with reasoning:** Understand the logic, may need syntax help
 - **Can do independently:** No AI, no docs, I got this

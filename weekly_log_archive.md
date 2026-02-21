@@ -4,6 +4,49 @@
 
 ---
 
+### Week of: [02/09/26 - 02/15/26]
+
+**What I Actually Did:**
+
+- 02/09: Refresher — Big O notation review + implemented 4 sorting algorithms from scratch (merge, bubble, quick, insertion)
+- 02/11: Boot.dev DSA — Stacks, queues, and linked lists. Clean diagnosis on stacks/queues. Linked list iterator implementation.
+
+**Attempted WITHOUT AI:**
+
+| Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
+|------|--------------|------------|-------------------|--------|-------|
+| 02/11/26 | Stacks & Queues — time complexity diagnosis | 4/10 | Minimal | Solved solo | No hesitation on O(n) insertion, deletion, etc. Pattern is locked in. |
+| 02/11/26 | Linked List — `__iter__` generator + using iterator within class | 5/10 | Session | Solved with hints | Generator implementation was fine. Stumped on how to use it within the class — answer: `for item in self`. `self` IS the iterable. |
+| 02/09/26 | Sorting algorithms (bubble, insertion) | 3-4/10 | Minimal | Solved solo | Loop-based sorting — no friction, pattern is locked in |
+| 02/09/26 | Sorting algorithms (merge, quick) | 6-7/10 | Full session | Solved with hints | Both issues were syntax/clarification, not logic. Merge: bare `return` instead of `return arr` in base case. Quick: needed clarification on pivot/i/j index tracking during partition. |
+| 02/09/26 | Big O analysis for all four sorts | 5/10 | N/A | Solid | Can explain time AND space complexity for all four without looking anything up |
+
+**Where I Froze / Needed Help:**
+
+- Merge sort: Base case had bare `return` instead of `return arr`. Array of length 1 IS the base case — you need to return it, not just exit. Kept getting `None` results because bare `return` in Python always returns `None`. Logic was correct, syntax wasn't.
+- Quick sort: Got turned around tracking pivot, i, and j positions during the partition step. This was a "where is my syntax wrong" clarification question, not a conceptual gap. Understood what the partition needed to do, just needed to straighten out which index was doing what.
+- Linked list: Knew how to write `__iter__` with `yield`, but froze on how to iterate over the linked list from within another method of the same class. The answer is `for node in self` — `self` triggers `__iter__` on the current instance.
+
+**What Clicked:**
+
+- Big O across all four sorts — can reason about WHY each has its complexity, not just recite it
+- Bubble and insertion are automatic now — iterative sorting patterns feel natural
+- Came back after a 3-week gap and still implemented all four; fundamentals are sticking
+- Both "help" moments were debugging syntax, not understanding algorithms — the logic was there
+- Stacks and queues: time complexity diagnosis is automatic now
+- Linked list `__iter__`: the class IS the iterable — `self` is the key to using your own iterator internally
+
+**Weekly Reflection:**
+
+- **Hours actually spent learning:** [FILL IN END OF WEEK]
+- **Solo attempts vs AI-assisted ratio:** [FILL IN END OF WEEK]
+- **Progress toward 3-month goal (honest 1-10):** [FILL IN END OF WEEK]
+- **What went well:** [FILL IN END OF WEEK]
+- **What I avoided or half-assed:** [FILL IN END OF WEEK]
+- **One thing to do differently next week:** [FILL IN END OF WEEK]
+
+-----
+
 ### Week of: [01/19/26 - 01/25/26]
 
 **What I Actually Did:**
