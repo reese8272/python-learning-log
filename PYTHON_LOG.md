@@ -17,29 +17,7 @@
 **Archive Files:**
 - `weekly_log_archive.md` — Past weekly logs
 - `monthly_log_archive.md` — Past monthly check-ins
-
------
-
-## WHO I AM
-
-**Role:** Junior Python Developer at Cognizant  
-**Day Job:** Data Science, ML, and Data Analytics pipelines  
-**Learning Window:** 2-3 hours during 9-5 workday  
-**Target:** Senior Python Engineer at Cognizant (specialization flexible)
-
-**My Honest Baseline (as of 2025-12-09):**
-
-- I know Python basics: loops, functions, classes, types, lists, dicts
-- I can read and modify existing code
-- I cannot build from scratch independently - I freeze at "thought to paper"
-- Everything I've built has been with AI or external help
-- The gap: neurons don't connect because AI fills in before I have to think
-
-**What I've Been Exposed To (with help):**
-
-- Multi-agent software team (dev, tester, security lead, team lead)
-- MCP servers for file/directory read-write
-- Customer data pipelines for insights on repeat callers and workflows
+- `patterns.md` — Patterns & mental models reference
 
 -----
 
@@ -52,7 +30,7 @@
 | Python basics (loops, functions, classes) | Can do independently | **LEVELED UP:** Implemented functional programming patterns solo (generators, higher-order functions, composition) | 2026-02-18 |
 | Generators & yield | Can do independently | Built lazy iterators from scratch (map_iter, filter_iter); infinite Fibonacci with `while True: yield` | 2026-01-19 |
 | Higher-order functions | Can do independently | **LEVELED UP:** Filter + map composition, callbacks, functions returning functions | 2026-01-19 |
-| Decorators | Can do independently | Timer wrapper pattern — capture start/end, call inner func, return result | 2026-01-19 |
+| Decorators | Can do independently | **LEVELED UP:** @property (encapsulation, `_variable` convention), @staticmethod (class-namespaced utilities), @classmethod (alternative constructors — use `cls` not class name for inheritance), @cache (automated memoization), @dataclass (data containers, Value Object pattern). Previously: timer wrapper pattern. | 2026-03-19 |
 | Memoization | Can do independently | Dict cache with `if n in memo` check, store before return | 2026-01-19 |
 | Currying | Can use with reference | Nested closures returning functions — `f(a)(b)(c)` pattern | 2026-01-19 |
 | functools.partial | Can use with reference | Pre-fill arguments: `partial(multiply, y=2)` creates doubler | 2026-01-19 |
@@ -96,6 +74,7 @@
 
 | Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
 |------|--------------|------------|-------------------|--------|-------|
+| 03/19/26 | **Python Decorators — deducing design intent** (@property, @staticmethod, @classmethod, @cache, @dataclass) | **4-5/10** | Session | **Independently deduced key patterns** | Constructed @classmethod car dealership example (`Car.from_string(...)`) before being told. Mapped @cache to manual dict memoization immediately. ID'd @staticmethod vs module tradeoff. Identified @dataclass as data container signal. Design rationale deduced through questioning, not recitation. |
 | 02/18/26 | **Fix Collect Top Scores (Boot.dev)** | **3-4/10** | ~5 min | **Solved solo** | Control flow with break/continue/sentinel. Filter by min_score, stop at -1 sentinel, enforce max_scores limit. No hesitation — loop + conditionals pattern is locked in. |
 | 02/11/26 | **Stacks, Queues & Linked Lists (Boot.dev DSA)** | **4-6/10** | Full session | **Stacks/Queues: Solved solo. Linked Lists: Solved with hints** | Stacks and queues — diagnosed all time complexities without hesitation. Linked lists: implemented `__iter__` generator successfully, only tripped on how to call the generator within the class itself (answer: use `self`). |
 | 02/09/26 | **Sorting Algorithms from Scratch (merge, quick, bubble, insertion) + Big O Refresher** | **5-7/10** | Full session | **Mostly solo (syntax help only)** | Refresher after ~3 week gap. Bubble and insertion came naturally. Merge and quick sort were logically correct — issues were syntax-level: bare `return` instead of `return arr` on merge sort base case, and index tracking clarification on quick sort pivot/i/j. Big O analysis solid across all four without reference. |
@@ -125,135 +104,33 @@
 
 -----
 
-## PATTERNS & MENTAL MODELS
-
-*Reusable insights worth remembering*
-
-### Data Structure Selection
-| Pattern | When to Use | Key Insight |
-|---------|-------------|-------------|
-| Dict for O(n) counting | Need to count occurrences, check membership, or aggregate | Dict lookup is O(1); nested loops scanning a list is O(n²) |
-| `dict.get(key, default)` | Counting/accumulating in dicts | `count[x] = count.get(x, 0) + 1` — one line instead of if/else block |
-| Set for cycle prevention | Graph traversal, avoiding revisits | O(1) membership check; add before recursing, check before exploring |
-| Stack (LIFO) | Undo operations, expression parsing, DFS | Push/pop from top only. O(1) push/pop. Think "last in, first out" — most recent item is always what you grab next. |
-| Queue (FIFO) | BFS, task scheduling, order preservation | Enqueue at back, dequeue from front. O(1) enqueue/dequeue (with deque). Think "first in, first out" — process in arrival order. |
-
-### Threshold & Trigger Logic
-| Pattern | When to Use | Key Insight |
-|---------|-------------|-------------|
-| `== threshold` vs `>= threshold` | Single-trigger events (e.g., "first time X reaches N") | `==` fires exactly once when crossed; `>=` requires extra tracking to prevent duplicates |
-
-### Two-Pointer Technique
-| Pattern | When to Use | Key Insight |
-|---------|-------------|-------------|
-| Converging pointers | Sorted array, find pair matching condition (sum, diff, etc.) | `low = 0`, `high = len-1`. Move the pointer that gets you closer to target. Sorted = predictable movement. |
-| Early return on exact match | Target found mid-search | `if condition_met: return result` — don't keep searching once you've won |
-
-### Binary Search
-| Pattern | When to Use | Key Insight |
-|---------|-------------|-------------|
-| `while low <= high` | Standard binary search loop | `<=` ensures you check when pointers meet (single element remaining); `<` skips edge cases |
-| Return `low` not `mid` | Finding insertion point | `low` converges to answer by design; `mid` is just a temp calculation each iteration |
-| Descending order search | Sorted descending (leaderboards, rankings) | Logic inverts: `>=` goes right (toward lower values), `<` goes left |
-
-### Recursion & DFS
-| Pattern | When to Use | Key Insight |
-|---------|-------------|-------------|
-| Self-similar structure recognition | Nested dicts, trees, subtasks, file systems | If the part looks like the whole, recursion is the natural fit. Handle one level, delegate the rest. |
-| Boolean propagation | DFS/tree search returning True/False | `if recursive_call(...): return True` — must explicitly bubble up success, don't just call and ignore |
-| Base case first | Any recursive function | Check termination conditions before recursive calls; prevents infinite loops and handles edge cases |
-| Visited set | Graph traversal with cycles | Add node to visited *before* recursing into neighbors; check membership *before* exploring |
-
-### BFS
-| Pattern | When to Use | Key Insight |
-|---------|-------------|-------------|
-| Depth tracking | Shortest path problems | `depth` is where we came from; `depth + 1` is where we are now. Return `depth + 1` when goal found. |
-| BFS vs DFS selection | Shortest path = BFS, exhaustive search = DFS | BFS guarantees shortest path in unweighted graphs; DFS explores depth-first (not shortest) |
-
-### Linked Lists & Iterators
-| Pattern | When to Use | Key Insight |
-|---------|-------------|-------------|
-| `__iter__` as generator | Making a linked list (or any custom collection) iterable with `for` loops | Define `__iter__` using `yield` to walk nodes. This makes the class a generator-based iterator — `for item in my_list` just works. |
-| Using own iterator inside the class | Need to loop over the collection's elements within another method of the same class | Use `for item in self` — calling `self` in a `for` loop triggers `__iter__` on the current instance. The class IS the iterable, so `self` is how you access it from inside. |
-
-### Function Patterns
-| Pattern | When to Use | Key Insight |
-|---------|-------------|-------------|
-| Decorator structure | Timing, logging, auth wrappers | `def decorator(func): def wrapper(*args, **kwargs): ... return wrapper` |
-| Memoization | Expensive recursive calls (Fibonacci, etc.) | Check cache first, compute + store if missing, return cached |
-| Currying | Partial application, config builders | Each function returns the next function until all args collected |
-| Mutable default for state | Function call counting, accumulators | `def f(x, state=[0])` — list persists across calls |
-| Function composition | Chaining transformations | `f(g(x))` — inner closure captures outer functions |
-
-### Sorting Algorithms
-| Pattern | When to Use | Key Insight |
-|---------|-------------|-------------|
-| Bubble sort | Simple/educational; nearly sorted data | Nested loops, swap adjacent. O(n²) time, O(1) space. Early exit optimization if no swaps in a pass. |
-| Insertion sort | Small datasets, nearly sorted data | Build sorted portion left-to-right, shift elements to insert. O(n²) time, O(1) space. Best case O(n) on sorted input. |
-| Merge sort | Need guaranteed O(n log n), stability matters | Divide in half, recurse, merge sorted halves. O(n log n) time, O(n) space. The merge step is the hard part: two pointers comparing heads of sorted subarrays. |
-| Quick sort | General-purpose, good average case | Pick pivot, partition (smaller left, larger right), recurse on halves. O(n log n) avg / O(n²) worst, O(log n) space. Partition logic is the tricky part. |
-
-### Big O Quick Reference
-| Pattern | When to Use | Key Insight |
-|---------|-------------|-------------|
-| O(n²) vs O(n log n) | Choosing a sorting approach | Bubble/insertion are simple but slow on large data. Merge/quick scale — the "log n" comes from halving the problem each step. |
-| Space complexity tradeoff | Merge sort vs quick sort | Merge needs O(n) extra space for merging. Quick sorts in-place with O(log n) stack space. Trade memory for guaranteed performance. |
-
-### Sliding Window
-| Pattern | When to Use | Key Insight |
-|---------|-------------|-------------|
-| Window range formula | Fixed-size window over sequence | `range(len(seq) - window_size + 1)` — auto-returns empty if window > sequence |
-
-### Problem-Solving Meta-Strategies
-| Pattern | When to Use | Key Insight |
-|---------|-------------|-------------|
-| Solve incrementally | Complex multi-part problems | Break into pieces, solve one function at a time, test as you go |
-| Read twice, code once | Before starting any problem | Almost missed "right-to-left" in compose — slow down, catch details before writing |
-| Bare `return` = `None` | Any Python function returning a value | If your base case IS a value, you must return that value explicitly. `return` by itself always returns `None`. |
-
------
-
-## SYSTEM IMPROVEMENTS LOG
-
-*Meta-level changes that make learning more consistent*
-
-| Date | Change | Impact |
-|------|--------|--------|
-| 01/07/26 | Purchased Udemy DS course on personal device ($15) | Eliminated work laptop dependency. All three learning pillars now accessible regardless of IT issues. |
-
------
-
 ## CURRENT WEEK
 
 *At end of week: move this section to weekly_log_archive.md and start fresh.*
 
-### Week of: [02/16/26 - 02/22/26]
+### Week of: [03/16/26 - 03/22/26]
 
 **What I Actually Did:**
 
-- 02/18: Boot.dev — Fix Collect Top Scores (3-4/10) — solved independently in ~5 min
-
-**Attempted WITHOUT AI:**
-
-| Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
-|------|--------------|------------|-------------------|--------|-------|
-| 02/18/26 | Fix Collect Top Scores — control flow with break/continue/sentinel | 3-4/10 | ~5 min | Solved solo | Loop through scores, skip below min_score, stop at -1 sentinel, enforce max_scores limit. Clean implementation, no hesitation. |
+- 03/19: Python Decorators deep dive — 5 decorators: @property, @staticmethod, @classmethod, @cache, @dataclass
 
 **Where I Froze / Needed Help:**
 
-- Nothing — this was clean
+- The 5 decorators themselves were taught — but design rationale was largely deduced through questioning before instruction
 
 **What Clicked:**
 
-- Control flow patterns (break/continue/early return) are automatic now — sentinel value (-1), threshold filtering, and count-based limits all felt natural
+- `@property` is Python's encapsulation mechanism — `_variable` convention, getter/setter pattern controls read/write access
+- `@classmethod` as alternative constructor — `cls(...)` instead of hardcoded class name works correctly with inheritance
+- `@cache` = the manual dict memoization pattern, automated — same concept, zero boilerplate
+- `@dataclass` signals "data container" — auto-generates `__init__`, `__repr__`, `__eq__`; two instances with same fields are equal (Value Object pattern)
+- `@dataclass` vs Pydantic: internal containers you control → dataclass; data crossing a boundary (API, agent state) → Pydantic
+- The "okay but *why*" habit is compounding — reasoning through design decisions before being told
 
 **Weekly Reflection:**
 
-- **Hours actually spent learning:** [FILL IN END OF WEEK]
-- **Solo attempts vs AI-assisted ratio:** [FILL IN END OF WEEK]
-- **Progress toward 3-month goal (honest 1-10):** [FILL IN END OF WEEK]
+- **Hours spent:** [FILL IN END OF WEEK]
 - **What went well:** [FILL IN END OF WEEK]
-- **What I avoided or half-assed:** [FILL IN END OF WEEK]
 - **One thing to do differently next week:** [FILL IN END OF WEEK]
 
 -----
@@ -262,7 +139,7 @@
 
 *At end of month: move this section to monthly_log_archive.md and start fresh.*
 
-### Month: February 2026
+### Month: March 2026
 
 **DS Course Progress:**
 
@@ -271,14 +148,13 @@
 
 **Boot.dev Progress:**
 
-- DSA module: Stacks, queues, linked lists (02/11)
-- Control flow: Fix Collect Top Scores (02/18)
+- [UPDATE]
 
 **Independence Growth:**
 
-- Problems solved solo this month: 4 (bubble + insertion sort from scratch, stacks/queues diagnosis, Fix Collect Top Scores)
-- Problems solved with hints: 2 (merge + quick sort — syntax-level help only; linked list iterator — `self` insight)
-- Hardest thing I did without AI: Big O analysis for all four sorting algorithms cold
+- Problems solved solo this month: [UPDATE]
+- Problems solved with hints: [UPDATE]
+- Hardest thing I did without AI: Deduced @classmethod alternative constructor pattern (car dealership example) before being told
 
 **Running total of independent solves:**
 
@@ -290,9 +166,10 @@
 6. 3-4/10 Bubble + Insertion sort from scratch — Feb (refresher)
 7. 4/10 Stacks & Queues time complexity diagnosis — Feb
 8. 3-4/10 Fix Collect Top Scores (5 min) — Feb
+9. Decorators — independently deduced design intent for @staticmethod, @classmethod, @cache, @dataclass — Mar
 
 **Am I closer to the 3-month goal?**
-Back after a ~3 week gap. Good sign: fundamentals stuck through the break. Big O is solid. Iterative sorts are automatic. Merge and quick sort logic was there — the issues were Python syntax (bare return) and index tracking (pivot/i/j), not algorithmic understanding. That distinction matters: you're not failing on the "how does this algorithm work" part, you're failing on the "translate it cleanly to Python" part. That's a smaller gap to close. Stacks/queues are locked in. Linked lists are close — the iterator pattern with `self` is a small conceptual gap, not a structural one.
+[UPDATE END OF MONTH]
 
 **Am I bouncing between systems or staying focused?**
 [UPDATE END OF MONTH]

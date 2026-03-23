@@ -4,22 +4,37 @@
 
 ---
 
+### Week of: [02/16/26 - 02/22/26]
+
+**What I Actually Did:**
+
+- 02/18: Boot.dev — Fix Collect Top Scores (3-4/10) — solved independently in ~5 min
+
+**Where I Froze / Needed Help:**
+
+- Nothing — this was clean
+
+**What Clicked:**
+
+- Control flow patterns (break/continue/early return) are automatic now — sentinel value (-1), threshold filtering, and count-based limits all felt natural
+
+**Weekly Reflection:**
+
+- **Hours actually spent learning:** [FILL IN END OF WEEK]
+- **Solo attempts vs AI-assisted ratio:** [FILL IN END OF WEEK]
+- **Progress toward 3-month goal (honest 1-10):** [FILL IN END OF WEEK]
+- **What went well:** [FILL IN END OF WEEK]
+- **What I avoided or half-assed:** [FILL IN END OF WEEK]
+- **One thing to do differently next week:** [FILL IN END OF WEEK]
+
+-----
+
 ### Week of: [02/09/26 - 02/15/26]
 
 **What I Actually Did:**
 
 - 02/09: Refresher — Big O notation review + implemented 4 sorting algorithms from scratch (merge, bubble, quick, insertion)
 - 02/11: Boot.dev DSA — Stacks, queues, and linked lists. Clean diagnosis on stacks/queues. Linked list iterator implementation.
-
-**Attempted WITHOUT AI:**
-
-| Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
-|------|--------------|------------|-------------------|--------|-------|
-| 02/11/26 | Stacks & Queues — time complexity diagnosis | 4/10 | Minimal | Solved solo | No hesitation on O(n) insertion, deletion, etc. Pattern is locked in. |
-| 02/11/26 | Linked List — `__iter__` generator + using iterator within class | 5/10 | Session | Solved with hints | Generator implementation was fine. Stumped on how to use it within the class — answer: `for item in self`. `self` IS the iterable. |
-| 02/09/26 | Sorting algorithms (bubble, insertion) | 3-4/10 | Minimal | Solved solo | Loop-based sorting — no friction, pattern is locked in |
-| 02/09/26 | Sorting algorithms (merge, quick) | 6-7/10 | Full session | Solved with hints | Both issues were syntax/clarification, not logic. Merge: bare `return` instead of `return arr` in base case. Quick: needed clarification on pivot/i/j index tracking during partition. |
-| 02/09/26 | Big O analysis for all four sorts | 5/10 | N/A | Solid | Can explain time AND space complexity for all four without looking anything up |
 
 **Where I Froze / Needed Help:**
 
@@ -54,14 +69,6 @@
 - 01/20: Boot.dev — Sum Task Durations Recursively (7/10) — solved independently in ~10 min
 - 01/19: Boot.dev — Fix Shortest Social Connection (BFS) — solved independently in ~1 min
 - 01/19: Krish Naik DS Course — Completed Advanced Functions module (15 exercises)
-
-**Attempted WITHOUT AI:**
-
-| Date | Problem/Task | Difficulty | Solo Attempt Time | Result | Notes |
-|------|--------------|------------|-------------------|--------|-------|
-| 01/20/26 | Sum Task Durations Recursively | 7/10 | ~10 min | Solved solo | Nested task structure with optional subtasks. Self-similar data structure = recursion. Articulated WHY it works: "the structure of the subtasks is the same structure as the parent tasks." |
-| 01/19/26 | Fix Shortest Social Connection (BFS) | 5/10 | ~1 min | Solved solo | Recognized DFS vs BFS issue immediately. Key insight: `depth` is where we came from, `+1` is where we are now — return `depth + 1` when neighbor equals goal. |
-| 01/19/26 | Advanced Functions Module (15 exercises) | 4-6/10 | ~45-60 min total | Completed | Memoization, **kwargs filtering, callbacks, decorators (timer wrapper), higher-order functions (filter + map composition), function composition, partial application, generators (infinite Fibonacci), currying, context managers, type separation, mutable default state. All working code. |
 
 **Where I Froze / Needed Help:**
 
@@ -105,11 +112,6 @@
   - Dictionary for O(n) counting, threshold detection
   - Pattern: `== threshold` instead of `>= threshold` for single-trigger events
 
-**Attempted WITHOUT AI:**
-- Initial binary search implementation — had right structure, wrong details
-- Two-pointer implementation — 100% solo, clean first attempt
-- Find Suspicious Users — 100% solo, 2 minutes flat
-
 **Where I Froze / Needed Help:**
 - Comparison direction (`>=` vs `<=`) for descending order
 - Loop condition (`<` vs `<=`) — didn't realize `<` skips edge cases
@@ -142,10 +144,6 @@
   - **DFS Path Search (6/10)** — first algorithm from scratch, recursion + cycle prevention
 - Implemented "foundational training period" idea from last week's reflection
 
-**Attempted WITHOUT AI:**
-- All three morning problems — 100% solo
-- DFS algorithm with recursion and cycle prevention using a set
-
 **Where I Froze / Needed Help:**
 - None — clean sweep on all three problems
 
@@ -172,11 +170,6 @@
 - **MAJOR WIN:** Solved 10/10 difficulty functional programming challenge (Boot.dev) completely solo in ~15 minutes - map_iter, filter_iter, compose, pipe
 - Started Boot.dev RAG course on personal device
 - Learned argparse CLI fundamentals — parser hierarchy, subcommands vs arguments, dest parameter, args namespace
-
-**Attempted WITHOUT AI:**
-
-- Functional Data Pipeline implementation (generators, higher-order functions, function composition)
-- argparse CLI print statement (small but solo)
 
 **Where I Froze / Needed Help:**
 
@@ -210,10 +203,6 @@
 - ~~Implemented some core loop logic in C and started building some structs as well.~~ *[OFF-TRACK DIVERSION - ABANDONED C]*
 - ~~Identified C structs and initializers. Got introduced to typedef. Introduced to the basics of a pointer.~~ *[OFF-TRACK DIVERSION - ABANDONED C]*
 - ~~Understood the foundations of different major AI concepts, such as Prompt Engineering, XAI, evaluation, inferences, etc.~~ *[WORK ASSIGNMENT - MOVED TO SEPARATE NOTES]*
-
-**Attempted WITHOUT AI:**
-
-- ~~basic loops and structures, typedef, super basic pointer variables in C~~ *[OFF-TRACK - NOT PYTHON]*
 
 **Where I Froze / Needed Help:**
 
