@@ -133,3 +133,13 @@ asyncio.run(main())
 - `asyncio.gather` vs `asyncio.wait` vs `TaskGroup`
 - `asyncio.Lock` and managing shared state in concurrent coroutines
 - How FastAPI handles the event loop under the hood
+
+---
+
+i wanna start listening to think and grow rich on youtube
+build this repo with a more life-oriented style with directories about my life
+track this stuff with my habits and ideas
+i wanna start listening to certain videos every day, like mini habit building videos to literally brainwash myself to being awesome 
+create alarms to build habits
+when learning, i want to be cloud, ai native, i beleive i already know version control, but SYSTEM DESIGNS OMG
+habits i heard that felt necessary - new experiences, family and relationships over all, walk to clear mind, will write more down as i live
