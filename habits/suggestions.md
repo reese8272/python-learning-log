@@ -1,7 +1,7 @@
-Honest check-ins only — no performance here.
+The dated entries are the raw check-in. `tracker.md` is the honest picture built over time.
 
-- What habits showed up for you today?
-- What slipped and why — no judgment, just honest?
+- What habits showed up today?
+- What slipped — and do you know why?
 - What felt easy that used to feel hard?
-- What's one small thing you want to protect tomorrow?
-- How did your energy track throughout the day?
+- What's one small thing worth protecting tomorrow?
+- Is anything in the tracker ready to move up or needs to be dropped?

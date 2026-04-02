@@ -14,10 +14,9 @@
 
 **3-Month Goal:** Solve 5-6/10 Python problems from scratch in 30-60 min, explaining reasoning throughout
 
-**Archive Files:**
-- `weekly_log_archive.md` — Past weekly logs
-- `monthly_log_archive.md` — Past monthly check-ins
-- `patterns.md` — Patterns & mental models reference
+**Reference:**
+- `patterns.md` — Patterns & mental models (add a row when something proves reliable)
+- Weekly / monthly reflection → handled by `/weekly-review` and `/monthly-review`
 
 -----
 
@@ -102,77 +101,3 @@
 - **Merge sort base case syntax:** Logic was correct but wrote bare `return` instead of `return arr` when array length is 1. Kept getting `None` as results. The algorithm worked — the Python syntax didn't. Need to internalize: in Python, bare `return` always returns `None`. If your base case IS a value, return that value.
 - **Quick sort index tracking:** Understood the partitioning concept (pick pivot, smaller left, larger right) but got turned around tracking pivot, i, and j positions during the partition step. Was a clarification question, not a conceptual gap. Need more reps to make the index dance automatic.
 
------
-
-## CURRENT WEEK
-
-*At end of week: move this section to weekly_log_archive.md and start fresh.*
-
-### Week of: [03/16/26 - 03/22/26]
-
-**What I Actually Did:**
-
-- 03/19: Python Decorators deep dive — 5 decorators: @property, @staticmethod, @classmethod, @cache, @dataclass
-
-**Where I Froze / Needed Help:**
-
-- The 5 decorators themselves were taught — but design rationale was largely deduced through questioning before instruction
-
-**What Clicked:**
-
-- `@property` is Python's encapsulation mechanism — `_variable` convention, getter/setter pattern controls read/write access
-- `@classmethod` as alternative constructor — `cls(...)` instead of hardcoded class name works correctly with inheritance
-- `@cache` = the manual dict memoization pattern, automated — same concept, zero boilerplate
-- `@dataclass` signals "data container" — auto-generates `__init__`, `__repr__`, `__eq__`; two instances with same fields are equal (Value Object pattern)
-- `@dataclass` vs Pydantic: internal containers you control → dataclass; data crossing a boundary (API, agent state) → Pydantic
-- The "okay but *why*" habit is compounding — reasoning through design decisions before being told
-
-**Weekly Reflection:**
-
-- **Hours spent:** [FILL IN END OF WEEK]
-- **What went well:** [FILL IN END OF WEEK]
-- **One thing to do differently next week:** [FILL IN END OF WEEK]
-
------
-
-## CURRENT MONTH
-
-*At end of month: move this section to monthly_log_archive.md and start fresh.*
-
-### Month: March 2026
-
-**DS Course Progress:**
-
-- Modules completed: [UPDATE]
-- Current module: [UPDATE]
-
-**Boot.dev Progress:**
-
-- [UPDATE]
-
-**Independence Growth:**
-
-- Problems solved solo this month: [UPDATE]
-- Problems solved with hints: [UPDATE]
-- Hardest thing I did without AI: Deduced @classmethod alternative constructor pattern (car dealership example) before being told
-
-**Running total of independent solves:**
-
-1. 10/10 functional programming (15 min) — Dec
-2. 6/10 Find Suspicious Users (2 min) — Jan
-3. 5/10 BFS shortest path (1 min) — Jan
-4. 15x Advanced Functions exercises (~45-60 min total) — Jan
-5. 7/10 Sum Task Durations recursion (10 min) — Jan
-6. 3-4/10 Bubble + Insertion sort from scratch — Feb (refresher)
-7. 4/10 Stacks & Queues time complexity diagnosis — Feb
-8. 3-4/10 Fix Collect Top Scores (5 min) — Feb
-9. Decorators — independently deduced design intent for @staticmethod, @classmethod, @cache, @dataclass — Mar
-
-**Am I closer to the 3-month goal?**
-[UPDATE END OF MONTH]
-
-**Am I bouncing between systems or staying focused?**
-[UPDATE END OF MONTH]
-
-**Honest assessment - what needs to change?**
-[UPDATE END OF MONTH]

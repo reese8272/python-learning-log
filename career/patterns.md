@@ -90,6 +90,23 @@
 |---------|-------------|-------------|
 | Window range formula | Fixed-size window over sequence | `range(len(seq) - window_size + 1)` — auto-returns empty if window > sequence |
 
+### asyncio & Concurrency
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| `asyncio` for I/O-bound work | Network calls, DB queries, LLM API calls — anything where the CPU sits idle waiting | Not parallelism — cooperative concurrency. The event loop exploits the gaps between `await` points. Two things never run at the exact same time, but wait times overlap. |
+| `asyncio.gather` | Fire multiple async tasks simultaneously | All wait periods overlap instead of stacking. 5 x 2s calls = ~2s total, not ~10s. |
+| Blocking the event loop | Calling a synchronous blocking function inside async code without `await` | Silent bug — no error, just destroys concurrency. `time.sleep(3)` inside a coroutine freezes everything. Always ask: *"What is the event loop actually doing at this line?"* |
+| `run_in_executor` | Must call a blocking sync function inside async code | Ships the blocking call to a thread pool, frees the event loop. `await loop.run_in_executor(None, fn)` — `None` = default ThreadPoolExecutor. |
+| asyncio vs threading vs multiprocessing | Choosing the right concurrency tool | I/O-bound + async → `asyncio`. Blocking I/O you can't rewrite → `threading`. CPU-bound → `multiprocessing`. |
+
+### LLM System Design
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| Pre-hook (LLM middleware) | Before the LLM call — security checks, prompt injection detection, logging, input validation | Can short-circuit the call entirely if input fails checks. Acts as a gate. Think: input validation at the boundary. |
+| Post-hook (LLM middleware) | After the LLM response — scan for credentials, malicious output, policy violations, logging | Runs before the response is returned to the caller. Think: output sanitization at the boundary. |
+| Evaluate before you delegate | Before trusting an LLM to own a task | Run the task yourself (or with close oversight) first. Then use your output as a benchmark — have the LLM do it and compare. Refine the prompt until the outputs match on the things that matter. |
+| Output evaluation via comparison | Validating LLM prompt quality | Run similar prompts, check that all key information surfaces across outputs. If key info is missing, refine the prompt. A report you've already produced is a perfect benchmark. |
+
 ### Problem-Solving Meta-Strategies
 | Pattern | When to Use | Key Insight |
 |---------|-------------|-------------|
