@@ -143,3 +143,18 @@ i wanna start listening to certain videos every day, like mini habit building vi
 create alarms to build habits
 when learning, i want to be cloud, ai native, i beleive i already know version control, but SYSTEM DESIGNS OMG
 habits i heard that felt necessary - new experiences, family and relationships over all, walk to clear mind, will write more down as i live
+Daily log
+
+- thanks mom for calling me
+- Really need daily reflection 
+- Ai output eval - you can have similar prompts and ensure that all the key info from all prompts are output. Else, you can refine. Ex do a report from one you’re already done, have Claude do it. Compare.
+- - basically, if you want to delegate, evaluate first 
+- Finished ch3 of how to win friends and influence people
+- Started Claude 101
+- Good chat with Rupam (work related)
+- Got some sun and basketball in
+- Good talk with Nick (therapy)
+- Create a suggestions.md that allows me to simply journal at my will, but allow some of those thoughts to stem from suggestions such as with a daily review like “what went well, what could’ve been better” etc.
+- GREAT WORKOUT
+- Learned about hooks in the sense of LLM calls. Pre hooks can be used for security and prompt injection checks and overall prompt security or even logging, can cause a prompt to return early, if it passes, LLM will have its call, and then a post hook will check for creds, malicious text, security, and more logging, then return its response.
+- Better headspace with the kids, remember to be calm, look at it from their perspective.
