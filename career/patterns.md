@@ -107,6 +107,34 @@
 | Evaluate before you delegate | Before trusting an LLM to own a task | Run the task yourself (or with close oversight) first. Then use your output as a benchmark — have the LLM do it and compare. Refine the prompt until the outputs match on the things that matter. |
 | Output evaluation via comparison | Validating LLM prompt quality | Run similar prompts, check that all key information surfaces across outputs. If key info is missing, refine the prompt. A report you've already produced is a perfect benchmark. |
 
+### Agentic System Design
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| Agent + tool use | LLM needs to take actions in the world (search, run code, call APIs) | The LLM decides *when* to call a tool; the tool does the actual work. Keep tools small and single-purpose — easier to reason about and debug. |
+| LangChain for orchestration | Building chains of LLM calls, prompt templates, tool use, memory | Abstracts the plumbing. Use it when you need reusable components. Don't use it when a simple direct API call is cleaner. |
+| LangGraph for stateful agents | Multi-step agents that need to loop, branch, or revisit steps | Models agent execution as a graph — nodes are steps, edges are transitions. Use when agent behavior is too complex for a linear chain. |
+| LangSmith for observability | Debugging and evaluating LLM pipelines in production | Traces every LLM call, tool invocation, and token. Essential for knowing *why* an agent did what it did. |
+| MCP (Model Context Protocol) | Standardizing how LLMs connect to external tools and data sources | Separates the tool interface from the model. Any MCP-compliant client can use any MCP-compliant server — plug and play. |
+
+### Production Infrastructure
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| Docker container | Packaging an app so it runs the same everywhere | Bundles the app + its dependencies + its environment into one image. Eliminates "works on my machine." Think: a portable, self-contained box. |
+| CI/CD pipeline | Automating test → build → deploy on every code push | Continuous Integration: automatically test and build. Continuous Deployment: automatically ship if tests pass. Removes manual deployment steps and catches breaks before they reach production. |
+| GitHub Actions trigger | Automating workflows in response to git events | Runs on push, PR, schedule, etc. Define jobs in `.github/workflows/`. Each job = a series of steps that run in sequence. |
+
+### Security
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| Authentication vs Authorization | Any system with users and protected resources | AuthN = "who are you?" (identity). AuthZ = "what are you allowed to do?" (permissions). AuthN always comes first — you can't authorize an unknown identity. |
+| Credential management | Any secrets (API keys, DB passwords, tokens) in code or pipelines | Never hardcode credentials. Use environment variables locally, secrets managers (AWS Secrets Manager, GitHub Secrets) in production. Leaked creds are the #1 avoidable breach vector. |
+| Prompt injection defense | Any LLM app accepting user input | User input that manipulates the prompt to hijack the LLM's behavior. Mitigate with: input validation (pre-hook), privilege separation (LLM shouldn't have access to what it doesn't need), output validation (post-hook). |
+
+### Cloud — AWS for AI
+| Pattern | When to Use | Key Insight |
+|---------|-------------|-------------|
+| *(Growing — add as learned)* | | |
+
 ### Problem-Solving Meta-Strategies
 | Pattern | When to Use | Key Insight |
 |---------|-------------|-------------|

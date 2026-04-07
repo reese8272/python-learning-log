@@ -1,6 +1,24 @@
-- python log audit:
-    1) redefine what it means to log something in there: what should I log? why? what can I improve on?
-    2) is there anything on the python log worth keeping? Independence tracker but for simply tracking python accomplishments?
-    3) I want to have it help me focus on what I am learning and how I am learning it, and what I have learned in the process,
-        maybe a little more focused on the what, the how, and the why rather than the indepence tracking. 
-    4) the more I think about it the more I am in love with skills and independence tracker because it really helps with identifying gaps in my learning and in my knowledge, especially if we tie that with redefining and really **outlining** goals, milestones, and who I want to be at the peak of my career rather than just a "senior software engineer". Be more specific.
+# Brain Dump
+
+Everything goes here first. Don't filter, don't organize — just get it out. `/organize-brain-dump` will route it when ready.
+
+---
+
+big potential in my job, AI Consultant and SME potentially. Super big news
+
+Need to route and find ways to organize my life and stick to it
+
+what went well:
+- good work in for job
+- good news at job
+- door dashed
+- exercise
+
+other habits fell, which simply just means finding ways to make it easier
+
+
+# Eden Marco Langchain Course:
+- what is the difference betewen pydantic, dataclass, typeddict, JSON, and why use one over others?
+- claude, openai, gemini, have native tool calling, so we can have them use tools and then use a structured response
+
+## 

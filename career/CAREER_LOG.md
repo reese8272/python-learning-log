@@ -1,0 +1,125 @@
+# Career Log — Reese
+
+**Role target:** AI Consultant / AI Systems Engineer  
+**Current context:** AI Consultant & SME role offered at Cognizant (2026-04-03)  
+**Focus:** Agentic engineering, cloud AI (AWS), production systems, security  
+**Mastery standard:** Can I explain why THIS over THAT? If I can break down the decision — not just the syntax — I own it.
+
+**Reference:**
+- `patterns.md` — Reusable patterns and mental models; add when a pattern proves reliable
+- Weekly / monthly reflection → handled by `/weekly-review` and `/monthly-review`
+
+---
+
+## SKILLS TRACKER
+
+*Update when understanding genuinely deepens. The bar is explanation, not execution.*
+
+**Levels:**
+- **Gap** — haven't touched it
+- **Exposed** — seen it in context, can't explain it independently yet
+- **Building** — actively learning, reps in progress
+- **Can explain the what** — understand what it does and how to use it
+- **Can explain the why** — understand the decision rationale; can say why THIS over THAT
+- **Can teach it** — explained it to someone else and it held up under questions
+
+---
+
+### Agentic Engineering
+| Skill | Level | Notes | Last Updated |
+|-------|-------|-------|--------------|
+| LangChain | Gap | - | - |
+| LangGraph | Gap | - | - |
+| LangSmith | Gap | - | - |
+| MCP (Model Context Protocol) | Exposed | Aware of it through work context | 2026-04-01 |
+| Agent orchestration | Exposed | Working with agents at Cognizant | 2026-04-01 |
+| Tool use / function calling | Exposed | Working with agents at Cognizant | 2026-04-01 |
+
+### LLM Systems
+| Skill | Level | Notes | Last Updated |
+|-------|-------|-------|--------------|
+| RAG fundamentals | Building | Modularity, retrieval patterns, code cleanliness — reps in progress | 2026-01-07 |
+| Hooks / guardrails | Can explain the why | Pre-hook = gate before LLM call; post-hook = sanitize before returning. Can explain the decision rationale and order. | 2026-04-01 |
+| Prompt engineering | Building | Evaluate-before-delegate principle understood; reps in progress | 2026-04-01 |
+| Output evaluation | Can explain the what | Run similar prompts, compare key info surfaces, refine if missing | 2026-04-01 |
+| LLM evals / benchmarking | Gap | - | - |
+
+### System Design
+| Skill | Level | Notes | Last Updated |
+|-------|-------|-------|--------------|
+| FastAPI | Gap | Know what it is, haven't built with it | - |
+| REST API design | Exposed | Used in work, can't design from scratch independently | - |
+| Service decomposition | Gap | - | - |
+| Data flow design | Gap | - | - |
+| Async patterns (asyncio) | Can explain the why | asyncio for I/O-bound, gather for overlapping waits, run_in_executor for blocking calls — can explain why each | 2026-04-01 |
+
+### Production Infrastructure
+| Skill | Level | Notes | Last Updated |
+|-------|-------|-------|--------------|
+| Docker | Exposed | Know what it does, can't build Dockerfiles independently | - |
+| CI/CD concepts | Gap | Know it exists, no hands-on experience | - |
+| GitHub Actions | Gap | - | - |
+| GitLab CI | Gap | - | - |
+
+### Cloud — AWS for AI
+| Skill | Level | Notes | Last Updated |
+|-------|-------|-------|--------------|
+| AWS Bedrock | Gap | - | - |
+| AWS SageMaker | Gap | - | - |
+| AWS Lambda | Gap | - | - |
+| AWS IAM | Gap | - | - |
+| AWS S3 | Gap | - | - |
+
+### Security
+| Skill | Level | Notes | Last Updated |
+|-------|-------|-------|--------------|
+| Authentication vs Authorization | Gap | Know the words, can't explain the decision tree | - |
+| Credential management | Gap | - | - |
+| OWASP basics | Gap | - | - |
+| Cryptography fundamentals | Gap | - | - |
+| Prompt injection defense | Exposed | Aware through hooks/guardrails context | 2026-04-01 |
+
+### Python Core *(locked — reference only)*
+| Skill | Level | Notes |
+|-------|-------|-------|
+| Python fundamentals | Can teach it | Loops, functions, classes, generators, decorators — solid |
+| Async / asyncio | Can explain the why | See System Design section |
+| Data structures | Can teach it | Lists, dicts, sets, stacks, queues — can explain selection rationale cold |
+| DSA | Can explain the why | DFS, BFS, binary search, two-pointer, sorting — logic is solid |
+| Decorators | Can teach it | @property, @staticmethod, @classmethod, @cache, @dataclass — design intent understood |
+
+---
+
+## JUDGMENT LOG
+
+*The bar: can I explain why THIS over THAT? Log moments where the decision — not just the answer — clicked.*
+
+| Date | Concept / Decision | Why THIS over THAT | Context | Can Teach |
+|------|-------------------|--------------------|---------|-----------|
+| 2026-04-01 | Pre-hook vs post-hook | Pre-hook gates input before it reaches the model — catches injection, validates, logs. Post-hook sanitizes output before it reaches the caller — scans for credentials, checks policy. Order matters: bad input should never touch the model; bad output should never reach the user. | Claude 101 + Cognizant work | Yes |
+| 2026-04-01 | asyncio.gather vs sequential awaits | Sequential awaits stack wait times (5 x 2s = 10s). gather overlaps them (5 x 2s ≈ 2s). Use gather when calls are independent and I/O-bound. Using it with synchronous blocking functions doesn't help — use run_in_executor to offload those to a thread pool instead. | Career reflection | Yes |
+| 2026-03-19 | @classmethod vs @staticmethod vs module function | @classmethod: needs class context, inherits correctly (use cls not ClassName). @staticmethod: utility grouped with the class but needs no instance or class state. Module function: fully standalone. Choose by what context the function actually needs — don't reach for classmethod when there's no class state involved. | Decorators session | Yes |
+| 2026-01-19 | Queue vs Stack (FIFO vs LIFO) | Queue = first in, first out — use when order of arrival matters (BFS, task scheduling). Stack = last in, first out — use when you need to process the most recent item first (undo, DFS, call stacks). Both are lists under the hood; the difference is which end you pop from. | DSA practice | Yes |
+| 2026-01-19 | BFS vs DFS | BFS = level by level, guarantees shortest path in unweighted graphs. DFS = goes deep first, exhaustive search. If you need the shortest route, BFS. If you need to find if a path exists at all, DFS. | DSA practice | Yes |
+| 2026-01-03 | Dict vs List for counting | List lookup is O(n) — you scan every element. Dict lookup is O(1) — hash table, direct access. When you're counting occurrences or checking membership repeatedly, dict is the right tool. Nested loops + list = O(n²) for no reason. | Boot.dev exercise | Yes |
+
+---
+
+## CONSULTING LOG
+
+*Capturing moments where I explained, led, or taught. This is career data.*
+
+| Date | Context | What I explained or led | How it landed |
+|------|---------|------------------------|---------------|
+| 2026-04-03 | AI Consultant & SME role offered at Cognizant | — | Role offered based on demonstrated AI expertise and ability to lead teams |
+
+---
+
+## ACTIVE STRUGGLES
+
+*Current blockers. Delete when resolved, update Skills Tracker.*
+
+- **System design instincts:** Know the vocabulary (Docker, K8s, FastAPI, CI/CD) but don't yet have the judgment for *when* to reach for each. Gap is "knowing when," not "knowing what." Next: concept tour — map the territory before building.
+- **Security fundamentals:** Auth/authz, credential management, cryptography — exposed at best. These matter for production AI systems and the consultant role.
+- **Cloud / AWS for AI:** Zero hands-on. SageMaker, Bedrock, Lambda, IAM — need to build something real in AWS, not just read about it.
+- **Agentic frameworks:** LangChain, LangGraph, LangSmith, MCP — six-month target. Need reps.

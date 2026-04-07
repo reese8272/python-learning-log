@@ -1,4 +1,8 @@
-# Reese's Python Learning Log
+# ~~Reese's Python Learning Log~~ — ARCHIVED
+
+> **This file is superseded by `CAREER_LOG.md`.** Do not update this file. It is kept for historical reference only.
+
+---
 
 **Started:** 2025-12-09  
 **Primary Focus:**

@@ -50,16 +50,21 @@ Dated entries always go inside `reflection_log/`, not the folder root. This keep
 
 ---
 
-## Career — PYTHON_LOG.md and patterns.md
+## Career — CAREER_LOG.md and patterns.md
 
-`career/PYTHON_LOG.md` is a living skills tracker and independence log. It contains:
-- **Skills Tracker** — honest level assessment per skill, updated when something genuinely levels up
-- **Independence Tracker** — log of problems attempted solo, with difficulty, result, and key insights
+`career/CAREER_LOG.md` is the living career and expertise tracker. It contains:
+- **Skills Tracker** — organized by domain (Agentic Engineering, LLM Systems, System Design, Production Infrastructure, Cloud/AWS, Security, Python Core). Update when understanding genuinely deepens.
+- **Judgment Log** — records moments where the *decision rationale* clicked, not just the answer. The bar: "can I explain why THIS over THAT?" This replaces the old Independence Tracker.
+- **Consulting Log** — captures moments where he explained, led, or taught. Career data.
 - **Active Struggles** — current blockers; delete entries when resolved
 
-Weekly and monthly reflections on career/learning are handled by `/weekly-review` and `/monthly-review`. Do not add CURRENT WEEK or CURRENT MONTH sections back to PYTHON_LOG.md.
+**Mastery standard:** Can explain why THIS over THAT. Syntax is handled. Logic and decision rationale is the bar.
 
-`career/patterns.md` is a reference of reusable patterns and mental models extracted from practice. Add a row when a pattern proves reliable across multiple problems. This is also a review tool — use it to identify gaps relative to what the user wants to become.
+Weekly and monthly reflections on career/learning are handled by `/weekly-review` and `/monthly-review`. Do not add CURRENT WEEK or CURRENT MONTH sections back to CAREER_LOG.md.
+
+`career/PYTHON_LOG.md` is archived — superseded by CAREER_LOG.md. Do not update it.
+
+`career/patterns.md` is a reference of reusable patterns and mental models. Sections: Python patterns (existing), Agentic System Design, Production Infrastructure, Security, Cloud/AWS. Add a row when a pattern proves reliable. The "why this over that" framing is the standard for every entry. This is also a review tool — use it to identify gaps relative to what the user wants to become.
 
 ---
 
@@ -97,7 +102,7 @@ Raw daily check-ins. What showed up, what didn't, energy notes. These feed the t
 
 | Folder | Purpose |
 |---|---|
-| `career/` | `PYTHON_LOG.md` (skills + independence tracker) + `patterns.md` + `reflection_log/` entries |
+| `career/` | `CAREER_LOG.md` (skills + judgment + consulting tracker) + `patterns.md` + `reflection_log/` entries |
 | `habits/` | `tracker.md` (master habit state) + `reflection_log/` daily check-ins |
 | `family/` | `reflection_log/` dated entries — moments with kids, presence, things worth remembering |
 | `journaling/` | `reflection_log/` dated entries — raw emotional state, honest reflection |
