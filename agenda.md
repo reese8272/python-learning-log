@@ -7,7 +7,9 @@ This is the one-stop shop for current goals and intentions across all time horiz
 ## Daily
 *Updated by `/reflect` — replace with each new day's intentions*
 
-*(No daily entry yet — will populate after next `/reflect`)*
+**2026-04-07**
+- Check the habit tracker in the morning, not just at night
+- End the day with 3 things you're grateful for
 
 ---
 

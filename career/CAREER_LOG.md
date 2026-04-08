@@ -28,7 +28,7 @@
 ### Agentic Engineering
 | Skill | Level | Notes | Last Updated |
 |-------|-------|-------|--------------|
-| LangChain | Gap | - | - |
+| LangChain | Exposed | Started Eden Marco course — aware of tool calling with native LLM APIs; Pydantic/TypedDict/dataclass question actively forming | 2026-04-07 |
 | LangGraph | Gap | - | - |
 | LangSmith | Gap | - | - |
 | MCP (Model Context Protocol) | Exposed | Aware of it through work context | 2026-04-01 |

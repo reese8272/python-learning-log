@@ -4,6 +4,26 @@ This is a living document. It gets updated through coaching — when a habit is 
 
 ---
 
+## Ideal Day — Full Habit Map
+
+*Reference this in the morning. This is the full picture of what you're building toward.*
+
+| Time of Day | Habit |
+|---|---|
+| Morning | Wake at 6am |
+| Morning | Sunlight within 30 min of waking |
+| Morning | Must-listen playlist |
+| Morning | Morning deep work block |
+| Morning | 15-min creativity block |
+| Daytime | Gym |
+| Daytime | Daily walk (20 min, ideally no headphones) |
+| Daytime | Nonfiction reading |
+| Daytime | Dedicated learning block |
+| Evening | End day with 3 things you're grateful for |
+| Evening | Mental load dump — write everything on your mind |
+
+---
+
 ## Active — Locked In
 
 These habits are showing up consistently. The goal is to protect them.
@@ -24,7 +44,7 @@ These are intentional but not yet consistent. Worth tracking closely.
 
 | Habit | Goal | Status |
 |---|---|---|
-| 15-min creativity block | Daily — open Claude, explore, fail, learn | Not yet started (4+ days) — blocker: no alarm, too easy to deprioritize. Fix: set an alarm today. |
+| 15-min creativity block | Daily — open Claude, explore, fail, learn | First confirmed session 2026-04-07 — followed curiosity to LangChain naturally, no forcing. Watch for consistency. |
 | Dedicated learning block | Separate from work obligations — for personal/career growth | Not protected yet |
 | Daily walk | Clear the mind, physical reset | Showing up — not yet consistent |
 | Daily mindset videos | Short must-watch content, every day | Showing up — not yet consistent |
@@ -40,6 +60,7 @@ Things worth building eventually. Not forcing yet.
 | New experiences | Intentional, regular — not defined yet |
 | Family/relationship time (intentional) | Already a value; want to make it a deliberate practice |
 | Alarm-anchored triggers | Use alarms to anchor habit cues — not yet set up |
+| End-of-day gratitude (3 things) | Say 3 things you're grateful for before bed — closes the day right |
 
 ---
 
@@ -61,3 +82,4 @@ Habits that were tried and set aside, with context why.
 - **2026-04-02** — Bad sleep (went to bed after midnight) cascaded into 8am wakeup, lost the full morning stack. Gym and deep work still held. Sleep is the single highest-leverage lever — everything else is downstream of it. Creativity block still not attempted after two days.
 - **2026-04-03** — Baby kept him up all night — sleep disruption was external, not a discipline issue. Gym, deep work, walk, and playlist all held anyway. Four anchors on a hard day. Creativity block now three days unstarted — worth asking directly what the actual blocker is next session.
 - **2026-04-06 (weekly review)** — Vasectomy recovery today. Gym, showing up for kids, and DoorDash were the three things that held this week. DoorDash is financial necessity — Friday/Saturday/Sunday evenings are gone. Morning stack is the only truly protected window. Creativity block still not started (4+ days) — blocker identified: no alarm anchoring it, it's "too easy" to deprioritize. Calendar is treated as suggestions, not truth. Key shift needed: infrastructure over intention. Sleep held on some nights, disrupted by baby and one late-night system-building session — not a discipline pattern yet.
+- **2026-04-07** — Creativity block finally happened — naturally, no forcing, followed curiosity to LangChain. That's the right version of it. Walk + audiobook (Think and Grow Rich) while walking the dog — learning window built inside something already happening. End-of-day gratitude (3 things) added as new habit. Tracker visibility identified as a gap — ideal day view added to top of this file. Five years of trying to build a reflection system; this is the one that's holding. The mechanism was never broken — the interface was.
