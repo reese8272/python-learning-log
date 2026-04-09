@@ -138,3 +138,4 @@ Finished. Most of this landed. The ideas that hit hardest: the avoid list, depos
 ## Entry Log
 
 - [2026-04-01](reflection_log/2026-04-01.md) — Full notes, initial listen
+- [2026-04-08](reflection_log/2026-04-08.md) — Re-listen; teacher method, emotional regulation, and "smart people collect patterns not facts" hit hardest

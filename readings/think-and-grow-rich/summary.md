@@ -63,7 +63,9 @@ Self-help disguised as philosophy. Hill spent years interviewing the wealthiest 
 
 **The three feet from gold chapter hit differently this season.** The Cognizant role arrived after months of grinding through AI work in conditions that weren't ideal — bad sleep, a 9-to-5, kids, recovery weeks. That's not luck. That's what not quitting looks like. The chapter describes it precisely.
 
-**What IS the desire?** Hill asks for something specific and written down. "Success" is too vague. "Financial freedom" is closer. The real version is probably something like: build expertise in AI that is undeniable — the kind where people seek you out — and use that to create a life where the kids don't ever feel the financial pressure that's been there. That's worth writing down and sitting with.
+**What IS the desire?** Hill asks for something specific and written down. "Success" is too vague. "Financial freedom" is closer. The real version is probably something like: build expertise in AI that is undeniable — the kind where people seek you out — and use that to create a life where the kids don't ever feel the financial pressure that's been there. That's worth writing down and sitting with. Open problem queued: *How do I build genuine desire?* — not forcing an answer, letting it incubate.
+
+**Desire + visual reminder = North Star.** TAGR says you need a DEFINITE desire — the internal fuel. The morning playlist points to a visual reminder as an external anchor. These are complementary, not redundant. The desire keeps you moving; the visual reminder keeps you pointed in the right direction when you drift.
 
 **"Be success conscious"** pairs directly with the end-of-day gratitude habit. Three things you're grateful for isn't just positivity — it's intentionally ending the day by logging wins, not deficits. Running a success ledger, not a failure ledger.
 
@@ -83,3 +85,4 @@ The absorb-first mode is the right approach for this one. The ideas are simple t
 
 - [2026-04-01](reflection_log/2026-04-01.md) — Initial note, want to start
 - [2026-04-07](reflection_log/2026-04-07.md) — Ch 1-2 via audiobook on dog walk
+- [2026-04-08](reflection_log/2026-04-08.md) — Connection: TAGR desire + visual reminder as North Star

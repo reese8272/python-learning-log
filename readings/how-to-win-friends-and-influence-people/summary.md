@@ -69,6 +69,24 @@ A practical guide to human relationships — less about manipulation, more about
 
 ---
 
+### Section 2, Ch 1 — Do This and You'll Be Welcome Anywhere
+
+**Main Idea:** You can make more friends in two months by becoming genuinely interested in other people than in two years by trying to get people interested in you. Genuine interest — not performed, not strategic — is the whole game.
+
+- Genuine interest in people is more powerful than any social tactic
+- The individual not interested in his fellow men has the greatest difficulties in life — all human failures spring from among such people
+- All of us like people who admire us
+- Put yourself out for others — time, energy, selflessness, thoughtfulness
+- Greet people with animation and enthusiasm
+- Genuine interest may get you what you want without asking
+- Acknowledging someone's interest *outside* the original conversation is enormous (e.g., days later: "I think that bird you'd never seen before is outside your window right now")
+- An enthusiastic "Hi" when you pick up the phone goes a long way
+- Even small interests spark big opportunities
+
+> **Connection:** The difference between genuine and performed interest is the same distinction Carnegie made with appreciation vs. flattery in Ch. 2. The through-line in this book: sincerity is not optional — people feel the difference.
+
+---
+
 ## Honest Takeaways
 
 *(Still in progress — will complete when finished.)*
@@ -80,3 +98,4 @@ The ideas are deceptively simple. The work is in the daily application — catch
 ## Entry Log
 
 - [2026-04-01](reflection_log/2026-04-01.md) — Chapters 1, 2, 3 notes
+- [2026-04-08](reflection_log/2026-04-08.md) — Section 2, Ch 1: Do This and You'll Be Welcome Anywhere

@@ -44,8 +44,9 @@ These are intentional but not yet consistent. Worth tracking closely.
 
 | Habit | Goal | Status |
 |---|---|---|
-| 15-min creativity block | Daily — open Claude, explore, fail, learn | First confirmed session 2026-04-07 — followed curiosity to LangChain naturally, no forcing. Watch for consistency. |
+| 15-min creativity block | Daily — open Claude, explore, fail, learn | Two consecutive days (4/07–4/08) — LangChain, Sleeping Beauty paradox, enterprise architecture spitball. Showing up naturally. Watch for consistency. |
 | Dedicated learning block | Separate from work obligations — for personal/career growth | Not protected yet |
+| Cleaning | Daily tidying — picking up momentum | Showing up 2026-04-08; noted as a "big win" — watch for consistency |
 | Daily walk | Clear the mind, physical reset | Showing up — not yet consistent |
 | Daily mindset videos | Short must-watch content, every day | Showing up — not yet consistent |
 
@@ -83,3 +84,4 @@ Habits that were tried and set aside, with context why.
 - **2026-04-03** — Baby kept him up all night — sleep disruption was external, not a discipline issue. Gym, deep work, walk, and playlist all held anyway. Four anchors on a hard day. Creativity block now three days unstarted — worth asking directly what the actual blocker is next session.
 - **2026-04-06 (weekly review)** — Vasectomy recovery today. Gym, showing up for kids, and DoorDash were the three things that held this week. DoorDash is financial necessity — Friday/Saturday/Sunday evenings are gone. Morning stack is the only truly protected window. Creativity block still not started (4+ days) — blocker identified: no alarm anchoring it, it's "too easy" to deprioritize. Calendar is treated as suggestions, not truth. Key shift needed: infrastructure over intention. Sleep held on some nights, disrupted by baby and one late-night system-building session — not a discipline pattern yet.
 - **2026-04-07** — Creativity block finally happened — naturally, no forcing, followed curiosity to LangChain. That's the right version of it. Walk + audiobook (Think and Grow Rich) while walking the dog — learning window built inside something already happening. End-of-day gratitude (3 things) added as new habit. Tracker visibility identified as a gap — ideal day view added to top of this file. Five years of trying to build a reflection system; this is the one that's holding. The mechanism was never broken — the interface was.
+- **2026-04-08** — Creativity block hit two days in a row, different content each time. Gym paused due to vasectomy recovery — adapted immediately with walks and sunlight. Surgery expected to clear in a few days. Full habit stack held on a day that crashed by afternoon. "One problem journal" concept surfaced — write one problem, don't solve it, let the brain incubate. Enterprise architecture identified as a concrete learning direction for career growth (landed mid-conversation, not pre-planned).
