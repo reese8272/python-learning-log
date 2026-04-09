@@ -1,7 +1,10 @@
-No idea is too small or half-baked here.
+This is your sandbox. No structure required. Nothing needs to be actionable yet.
 
-- What's been bouncing around in your head lately?
-- Is there a problem you keep noticing that nobody's solving?
-- What would you build if time and skill weren't a factor?
-- Any random connection between two unrelated things?
-- What's something you said out loud today that felt worth keeping?
+- A quote that hit you
+- Something you want to build someday
+- A random connection between two unrelated things
+- A spark that doesn't belong anywhere else yet
+- An idea that just plopped into your head
+- Something you find interesting for no reason you can explain
+
+Nothing is too half-baked. This is where things live until they're ready to move — or until they fade and that's fine too.

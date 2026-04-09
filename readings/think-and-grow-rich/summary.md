@@ -1,40 +1,73 @@
 # Think and Grow Rich
 *Napoleon Hill*
 
-**Status:** In progress — listening on audiobook while walking
+**Status:** In progress
+**Format:** Audiobook (YouTube)
 
 ---
 
 ## What kind of book is this
 
-Self-help disguised as philosophy. Hill spent years interviewing the wealthiest people of his era and tried to distill the common thread. It reads like a preacher more than a researcher — emotionally heavy, sometimes repetitive — but the core ideas are real and the framing cuts through in a way that pure productivity content doesn't. Best absorbed when you're already in motion, not sitting at a desk.
+Self-help disguised as philosophy. Hill spent years interviewing the wealthiest people of his era and tried to distill the common thread. It reads like a preacher more than a researcher — emotionally heavy, sometimes repetitive — but the core ideas are real and the framing cuts through in a way that pure productivity content doesn't. Best absorbed in motion, not sitting at a desk.
 
 ---
 
-## Major Ideas
+## Chapter Summaries
 
-**Desire as the starting point — not wishing, but burning**
-Hill's central claim is that the starting point of all achievement is DESIRE — not a vague hope, but an obsession. Something you want so badly you're willing to do whatever it takes. He distinguishes clearly between people who "want" things and people who *will* them into existence.
+### Ch 1 — The Secret
 
-**Thoughts are things**
-Your dominating thoughts sync with your reality. Be success conscious. Failure comes from people who are failure conscious. This isn't mystical — it's about what you orient toward and what you prime your mind to notice.
+**Main Idea:** There is a secret behind all achievement — Hill won't just hand it to you, but it shows up throughout the book, and when you're ready, you'll recognize it. The starting point is a DEFINITE desire, not a vague wish.
 
-**Failure is not defeat**
-Before success comes, there will almost certainly be defeat. The natural response is to quit — but that's usually three feet before the breakthrough. Success comes one step *after* the breaking point. Inventors fail more times than they succeed; the success just outweighs the failure.
+- The secret lies in self-determination — it will appear to you; write it down when it does
+- Achievement and all earned riches begin with an idea
+- It was DEFINITE — a burning desire, not a preference
+- Willing to do anything to get it
+- When one is truly ready, what they need sets in its appearance
 
-**Know clearly what you want**
-Vague ambition produces vague results. A DEFINITE desire — specific, written down, pursued without apology — is the mechanism. When launching long-term projects where the missing pieces don't yet exist, trust that they'll be found when you get there. Know what you want, have faith, and more often than not, you will.
-
-**The "secret" runs through everything**
-Hill teases a secret that you're supposed to find on your own. Based on the early chapters, it's something like: self-determination + burning desire + refusing to call a setback a defeat. You'll notice it when you're ready.
+> **Connection:** The AI consultant role at Cognizant didn't come from passively working. It came from a specific direction — months of building in AI, showing up with answers, being visible. That's the pattern Hill is describing.
 
 ---
 
-## Connections
+### Ch 2 — Thoughts Are Things
 
-- **Atomic Habits (James Clear)** — Clear gives you the system; Hill gives you the reason to want one. Both are necessary. Clear without desire is just mechanics. Hill without structure is just motivation that fades.
-- **The reflection system** — The "be in sync with your dominating thoughts" idea maps directly onto the reason journaling and logging work. You write it down because what you track becomes what you think about. What you think about becomes who you are.
-- **Career pivot** — The "three feet from gold" chapter hit differently in this season. A role just got offered at Cognizant based on building AI expertise over months of grind. That's the parable in real time.
+**Main Idea:** Your dominating thoughts sync with your reality — be success conscious, because failure comes from people who are failure conscious, and we have the power to control which one we run.
+
+- You really can think and grow rich
+- Can sometimes be temporary defeat — don't mistake it for permanent failure
+- There is a habit of quitting when facing defeat
+- Before success comes, there will certainly be defeat and failure — the logical move is to quit, but that's three feet before the breakthrough
+- You will succeed one step AFTER your breaking point
+- Everyone fails, but those who succeed are never truly defeated
+- Inventors fail more times than they succeed — the success outweighs the failure; learn how to fail properly
+- "No" does not necessarily mean "no"
+- Experiences are as important as life itself
+- One sound idea is all you need for success
+- When riches come, it'll be so quick and abundant you won't know where it came from
+- Riches begin with state of mind and purpose
+- Too much familiarity with the word "impossible"
+- Be success conscious — failure comes from people who are failure conscious
+- Mistake: seeing everything from your own perspective only
+- Know clearly what you want
+- When launching long-term projects, assume the missing pieces will be figured out when you get there — know what you want, have faith, and more often than not, you will
+- We have the power to control our thoughts
+- We are in sync with our dominating thoughts
+- Be money conscious so much you have no choice but to make money
+- You need such a strong and unreasonable desire for what you want — something you want so bad you're willing to do whatever it takes
+- Do not pick and choose what to apply — apply everything
+
+> **Connection:** The reflection system itself is a tool for this. Writing things down daily is not journaling for the sake of it — it's programming your dominant thought pattern. What you track, you think about. What you think about, you become.
+
+---
+
+## Connections & Application
+
+**The three feet from gold chapter hit differently this season.** The Cognizant role arrived after months of grinding through AI work in conditions that weren't ideal — bad sleep, a 9-to-5, kids, recovery weeks. That's not luck. That's what not quitting looks like. The chapter describes it precisely.
+
+**What IS the desire?** Hill asks for something specific and written down. "Success" is too vague. "Financial freedom" is closer. The real version is probably something like: build expertise in AI that is undeniable — the kind where people seek you out — and use that to create a life where the kids don't ever feel the financial pressure that's been there. That's worth writing down and sitting with.
+
+**"Be success conscious"** pairs directly with the end-of-day gratitude habit. Three things you're grateful for isn't just positivity — it's intentionally ending the day by logging wins, not deficits. Running a success ledger, not a failure ledger.
+
+**Failure not being defeat** is something to watch in the learning process. The Eden Marco LangChain course raises questions (Pydantic vs dataclass vs TypedDict — the gap is real). That gap is not defeat. It's exactly where the next rep happens.
 
 ---
 
@@ -42,10 +75,11 @@ Hill teases a secret that you're supposed to find on your own. Based on the earl
 
 *(Still absorbing — too early to close out. Will update after more chapters.)*
 
-The absorb-first mode is the right move for this book. The ideas are simple to say and hard to internalize. The re-listen is where it lands.
+The absorb-first mode is the right approach for this one. The ideas are simple to say and hard to actually internalize. The re-listen will be where it compounds.
 
 ---
 
 ## Entry Log
-- [2026-04-01](2026-04-01.md) — Initial note, want to start
-- [2026-04-07](2026-04-07.md) — Ch 1-2 via audiobook on dog walk
+
+- [2026-04-01](reflection_log/2026-04-01.md) — Initial note, want to start
+- [2026-04-07](reflection_log/2026-04-07.md) — Ch 1-2 via audiobook on dog walk

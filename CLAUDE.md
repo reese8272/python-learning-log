@@ -8,33 +8,40 @@ This file contains project-specific instructions for Claude Code. These override
 
 Each book lives in its own subfolder under `readings/` using kebab-case (e.g. `readings/think-and-grow-rich/`).
 
-Every book folder contains two types of files:
+A reference template lives at `readings/template.md`. All new `summary.md` files must follow this structure.
+
+Every book folder contains:
+
+```
+readings/<book-name>/
+  summary.md          ← living master document — follows readings/template.md
+  reflection_log/     ← all dated session notes go here
+    YYYY-MM-DD.md
+```
 
 ### 1. `summary.md` — the master file
-This is the canonical record of the book. It is not a log entry — it is a living document that builds as the book is read and gets refined afterward. It should read like a thoughtful person explaining the book through their own lens, not a Wikipedia summary.
-
-Contents:
-- A short personal take on the book overall (what kind of book is it, who is it for)
-- Major ideas and themes, in the reader's own words
-- Connections to other books, experiences, or ideas in other folders
-- Quotes or passages worth keeping
-- One or two honest takeaways — what actually landed, what didn't
+Follows the structure in `readings/template.md`:
+- Personal take on what kind of book it is
+- Chapter-by-chapter summaries, each with a **Main Idea** (1-2 sentences), bullet points (as many as the chapter warrants), and a quick **Connection** note
+- A **Connections & Application** section at the bottom — deeper synthesis of observations, patterns, and actions forming. Not "observation vs. action" — they're intertwined.
+- **Honest Takeaways** — what landed, what didn't
+- **Entry Log** — links to dated entries in `reflection_log/`
 
 Update `summary.md` as reading progresses. It does not need to be complete until the book is finished.
 
-### 2. Dated entry files (`YYYY-MM-DD.md`)
-Raw notes from a specific reading session. These feed into `summary.md` over time and are kept for reference in reflections and reviews. They do not need to be polished.
+### 2. `reflection_log/YYYY-MM-DD.md` — dated session notes
+Raw notes from a specific reading session. These feed into `summary.md` over time. They do not need to be polished. Kept for reference in reflections and reviews.
 
 ### When routing brain dump content about a book:
-- Raw notes, chapter reactions, and in-the-moment thoughts → dated entry file
-- Synthesized ideas, connections, takeaways → update `summary.md`
+- Raw notes, chapter reactions, and in-the-moment thoughts → `reflection_log/YYYY-MM-DD.md`
+- Synthesized ideas, chapter summaries, connections, takeaways → update `summary.md`
 - If unsure, default to the dated entry and flag it
 
 ---
 
 ## Folder Entry Structure
 
-Every top-level folder (`career/`, `habits/`, `family/`, `journaling/`, `ideas/`, `projects/`, `misc/`) uses this pattern:
+Every top-level folder (`career/`, `habits/`, `family/`, `journaling/`, `ideas_and_connections/`, `projects/`, `misc/`) uses this pattern:
 
 ```
 folder/
@@ -46,7 +53,7 @@ folder/
 
 Dated entries always go inside `reflection_log/`, not the folder root. This keeps the root clean and the living documents easy to find.
 
-**Exception:** `readings/` book subfolders keep dated entries flat inside the book folder — they're already one level deep and don't need further nesting.
+**No exception for readings:** `readings/<book>/reflection_log/` follows the same pattern. Dated entries go inside `reflection_log/`, not the book folder root.
 
 ---
 
@@ -106,8 +113,8 @@ Raw daily check-ins. What showed up, what didn't, energy notes. These feed the t
 | `habits/` | `tracker.md` (master habit state) + `reflection_log/` daily check-ins |
 | `family/` | `reflection_log/` dated entries — moments with kids, presence, things worth remembering |
 | `journaling/` | `reflection_log/` dated entries — raw emotional state, honest reflection |
-| `ideas/` | `reflection_log/` dated entries — half-baked thoughts, sparks, random connections |
-| `readings/` | Per-book subfolders with `summary.md` + flat dated entries inside the book folder |
+| `ideas_and_connections/` | `reflection_log/` sandbox entries — quotes, sparks, project seeds, random connections, inspiration not buckled to any folder |
+| `readings/` | `template.md` + per-book subfolders with `summary.md` + `reflection_log/` dated session notes |
 | `projects/` | `reflection_log/` dated entries — things actively being built or considered |
 | `misc/` | `reflection_log/` dated entries — anything that doesn't fit elsewhere |
 | `reflections/` | Daily, weekly, and monthly review logs |
