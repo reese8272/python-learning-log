@@ -61,6 +61,8 @@ A practical guide to human relationships — less about manipulation, more about
 
 **Parenting is the live lab for this book.** Ch 3 was applied the same day it was read and it worked. The principles here are easiest to see with kids because the power dynamic is so obvious — they can't push back the way adults can, so if something isn't working, it's almost always because you're operating from your own perspective instead of theirs.
 
+**The feedback loop makes it real.** Section 2, Ch 1 was applied five seconds after reading — showed genuine interest with Hunter, asked outright how it made her feel, got live confirmation it worked. Read → apply → test → confirm. This is how Carnegie's principles stop being theory. The sincerity wasn't forced — it was already there; the book just gave it language.
+
 **The appreciation principle (Ch 2) is worth turning into a practice.** Not a vague intention — a literal question to ask at the end of the day: did I give any genuine appreciation today, or was it all feedback and correction? With the kids, with yourself, with anyone. The craving is real and universal.
 
 **"Check yourself first" (Ch 1) applies everywhere.** Before getting frustrated at someone, before giving feedback, before pushing back on an idea — run the self-check. Is this mine to criticize, or mine to own first?
@@ -99,3 +101,4 @@ The ideas are deceptively simple. The work is in the daily application — catch
 
 - [2026-04-01](reflection_log/2026-04-01.md) — Chapters 1, 2, 3 notes
 - [2026-04-08](reflection_log/2026-04-08.md) — Section 2, Ch 1: Do This and You'll Be Welcome Anywhere
+- [2026-04-09](reflection_log/2026-04-09.md) — Applied Section 2, Ch 1 in real time with Hunter; feedback loop confirmed

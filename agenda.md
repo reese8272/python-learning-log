@@ -7,12 +7,10 @@ This is the one-stop shop for current goals and intentions across all time horiz
 ## Daily
 *Updated by `/reflect` — replace with each new day's intentions*
 
-**2026-04-08**
+**2026-04-09**
 
-> **Open Problem:** How do I build genuine desire? *(don't solve it — let it sit)*
-
-- Creativity block: *"What does enterprise architecture mean in the world of AI Engineering and Software Engineering as a whole?"*
-- Keep the habit stack running — surgery recovery, but the system holds
+- Morning shake tied to work starting — first domino for eating, no negotiation
+- Open problem still sitting: *How do I build genuine desire?* — let it keep working
 
 ---
 
