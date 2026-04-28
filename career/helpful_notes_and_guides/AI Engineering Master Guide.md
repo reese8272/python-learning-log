@@ -73,6 +73,52 @@ Building is what converts knowledge into judgment. Move through the checklist at
 
 ---
 
+## Must-Read AI Papers
+
+*These explain how the models you're building on actually work — the difference between using LLMs and understanding them. Read them alongside or between phases, one at a time. Your mentor's recommended list.*
+
+- [ ] **Llama-3** — The Llama 3 Herd of Models (Meta, 2024)
+  - [arxiv.org/abs/2407.21783](https://arxiv.org/abs/2407.21783)
+  - How a leading open-weight model family is designed, trained, and deployed at scale. The benchmark for open-source frontier models.
+
+- [ ] **MoE** — Mixtral of Experts (Mistral AI, 2024)
+  - [arxiv.org/abs/2401.04088](https://arxiv.org/abs/2401.04088)
+  - Sparse mixture-of-experts architecture: only a subset of parameters activate per token. Large model capacity at lower inference cost. Explains the MoE routing logic now used across many frontier models.
+
+- [ ] **Gemma** — Gemma: Open Models Based on Gemini Research (Google, 2024)
+  - [arxiv.org/abs/2403.08295](https://arxiv.org/abs/2403.08295)
+  - How Google's frontier research translates into deployable open models. Lightweight, responsible, high-performing.
+
+- [ ] **VisionMamba** — Vision Mamba (2024)
+  - [arxiv.org/abs/2401.09417](https://arxiv.org/abs/2401.09417)
+  - Efficient visual representation using bidirectional state space models (SSMs) as an alternative to vision transformers. Relevant for multimodal agent systems.
+
+- [ ] **Gemini 1.5** — Gemini 1.5: Unlocking Multimodal Understanding Across Millions of Tokens (Google, 2024)
+  - [arxiv.org/abs/2403.05530](https://arxiv.org/abs/2403.05530)
+  - How million-token context windows are achieved. Directly relevant for long-context RAG and agentic memory.
+
+- [ ] **Phi-3** — Phi-3 Technical Report (Microsoft, 2024)
+  - [arxiv.org/abs/2404.14219](https://arxiv.org/abs/2404.14219)
+  - A small model that rivals much larger ones through better training data. The core argument: data quality beats model size.
+
+- [ ] **Qwen-2** — Qwen2 Technical Report (Alibaba, 2024)
+  - [arxiv.org/abs/2407.10671](https://arxiv.org/abs/2407.10671)
+  - Leading open-weight model with strong multilingual and coding capabilities. Expands your mental model of what the frontier looks like beyond OpenAI/Anthropic/Google.
+
+- [ ] **KAN** — KAN: Kolmogorov-Arnold Networks (2024)
+  - [arxiv.org/abs/2404.19756](https://arxiv.org/abs/2404.19756)
+  - A new neural network architecture replacing fixed activation functions with learnable ones on edges rather than nodes. Challenges the MLP paradigm — worth understanding even if MLPs still dominate.
+
+- [ ] **LLM Survey** — Large Language Models: A Survey (2024)
+  - [arxiv.org/abs/2402.06196](https://arxiv.org/abs/2402.06196)
+  - Comprehensive map of the LLM landscape — development, capabilities, evaluation, limitations. Good for building the full mental model of where everything fits.
+
+- [ ] **DeepSeek-Coder** — DeepSeek-Coder: When the Large Language Model Meets Programming (2024)
+  - [arxiv.org/abs/2401.14196](https://arxiv.org/abs/2401.14196)
+  - How code-focused LLMs are trained and what makes them effective. Directly relevant for agentic systems that write, analyze, or migrate code.
+
+---
+
 ## Phase 2 — Build: Capstone Project
 
 *No new course content in this phase. If you hit a wall on something specific, that's your learning item for the day. Struggle first, then reach for help.*
