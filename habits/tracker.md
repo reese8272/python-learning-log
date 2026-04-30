@@ -34,7 +34,7 @@ These habits are showing up consistently. The goal is to protect them.
 | Wake at 6am | Holding; creates the morning before the house wakes up | 2026-04-01 |
 | Morning deep work block | Pre-kids work time — high leverage, protect it | 2026-04-01 |
 | Must-listen playlist | Daily mindset content, part of the morning stack | 2026-04-01 |
-| Nonfiction reading | *How to Win Friends* currently — ideas carrying into real life | 2026-04-01 |
+| Nonfiction reading | 15–20 min/day — rotating between soft skills list and AI/career books | 2026-04-01 |
 
 ---
 
