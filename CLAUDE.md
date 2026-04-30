@@ -4,6 +4,12 @@ This file contains project-specific instructions for Claude Code. These override
 
 ---
 
+## Git — Direct to Main
+
+This is a personal journaling repo with a single owner. **Always commit and push directly to `main`.** No feature branches, no PRs. Every session ends with a clean push to main.
+
+---
+
 ## Core Philosophy — The 3-Iteration Filter
 
 This system is a personal reflection journal and knowledge base. Everything here exists to help the user get better — not to store trivia.
