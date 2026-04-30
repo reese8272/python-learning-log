@@ -6,6 +6,34 @@
 
 ---
 
+## North Star
+
+> *"I am in the AI space and primed to be the next generation of wealth — knowledge as power, not trading time for money. Something I can do exponentially well."*
+
+This is the why behind the plan. Come back to this when motivation dips.
+
+### The Salary Ladder (2026 data)
+
+| Stage | Role | Realistic Range | Timeline from Now |
+|---|---|---|---|
+| Now | AI-adjacent engineer (unlabeled) | ~$80k | — |
+| Next role | AI Engineer (mid-level) | $130k–$175k | 9–12 months |
+| After capstone | Senior AI Engineer | $175k–$210k | 12–18 months |
+| With certs + AWS | AI Architect / Solutions Architect | $185k–$270k | 18–24 months |
+| End state | AI Consultant (Enterprise) | $200k–$365k salaried, or $150–$500+/hr independent | 3–5 years |
+
+Remote pay parity is real now — WV location no longer discounts you against national rates.
+
+The floor of where you're heading is more than double where you are. The ceiling on independent consulting is uncapped if the niche is tight enough (enterprise automation + orchestration is tight enough).
+
+### What Gets You There
+
+1. **Portfolio project** (Phase 2) — a running, Dockerized, LangGraph + MCP + RAG system you can put in front of a client
+2. **AWS certs** (Phase 4) — AIF-C01 then MLA-C01 — validates the cloud layer
+3. **The ability to explain why** — not syntax, not demos, but decision rationale. That's what separates an engineer from a consultant.
+
+---
+
 ## Learning Philosophy
 
 Understand enough to build → build → understand more deeply through building → design → lead.
