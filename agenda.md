@@ -7,10 +7,10 @@ This is the one-stop shop for current goals and intentions across all time horiz
 ## Daily
 *Updated by `/reflect` — replace with each new day's intentions*
 
-**2026-04-09**
+**2026-04-30**
 
-- Morning shake tied to work starting — first domino for eating, no negotiation
-- Open problem still sitting: *How do I build genuine desire?* — let it keep working
+- One brain dump — anything on your mind, no filter, just get it out
+- Open one of the three resources (MLIB, Karpathy, What We've Learned from a Year of Building with LLMs) — even 15 minutes, follow curiosity
 
 ---
 

@@ -332,6 +332,16 @@ Building is what converts knowledge into judgment. Move through the checklist at
 | uv — Python Package Manager | [link](https://docs.astral.sh/uv/) |
 | gitignore.io | [link](https://www.toptal.com/developers/gitignore) |
 
+### Supplemental — Practical & Foundational
+
+| Resource | Why | Link |
+|---|---|---|
+| Introduction to Machine Learning Interviews Book (MLIB) | ML concepts, interview-level depth — fills gaps between "I know what it does" and "I can explain why" | [huyenchip.com/ml-interviews-book](https://huyenchip.com/ml-interviews-book/) |
+| Andrej Karpathy — Neural Networks: Zero to Hero | Build neural nets from scratch — the deepest possible understanding of what you're building on top of | [karpathy.ai/zero-to-hero.html](https://karpathy.ai/zero-to-hero.html) |
+| What We've Learned From A Year of Building with LLMs | Practical production lessons — the gap between demos and real systems | [applied-llms.org](https://applied-llms.org/) |
+
+---
+
 ### Inference & Explainability (Do When Ready)
 
 *Deeper specializations — come back when a project demands it.*

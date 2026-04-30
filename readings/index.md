@@ -11,6 +11,7 @@ Not summaries — those live in each book's `summary.md`. This is where ideas co
 - **Life is Short:** Write everything you want, circle top 3, everything else goes on the avoid list
 - **HTWFAIP:** The one question that changes everything: what do THEY want?
 - **Thread:** Know exactly what you're pursuing, what you're ignoring, and who you're talking to. Precision over activity.
+- **Update (2026-04-30):** The TAGR "definite desire" was an open question for weeks. It surfaced in a gratitude: "I am in the AI space and primed to be the next generation of wealth — knowledge as power, not trading time for money." That's the written-down specific version Hill was asking for.
 
 ### Sincerity is the multiplier
 - **HTWFAIP:** Appreciation vs. flattery — people feel the difference. Genuine interest > social tactics.
