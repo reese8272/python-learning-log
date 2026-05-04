@@ -28,12 +28,12 @@
 ### Agentic Engineering
 | Skill | Level | Notes | Last Updated |
 |-------|-------|-------|--------------|
-| LangChain | Exposed | Started Eden Marco course — aware of tool calling with native LLM APIs; Pydantic/TypedDict/dataclass question actively forming | 2026-04-07 |
+| LangChain | Building | Actively working through Eden Marco course. Understands ReACT loop, State = messages array, LangChain vs raw API decision rationale, system prompt as control surface | 2026-05-04 |
 | LangGraph | Gap | - | - |
 | LangSmith | Gap | - | - |
 | MCP (Model Context Protocol) | Exposed | Aware of it through work context | 2026-04-01 |
 | Agent orchestration | Exposed | Working with agents at Cognizant | 2026-04-01 |
-| Tool use / function calling | Exposed | Working with agents at Cognizant | 2026-04-01 |
+| Tool use / function calling | Building | Understands docstrings + type hints as agent-facing interface; LangChain schema authoring vs raw JSON tradeoff; MAX_ITERATIONS as production guard | 2026-05-04 |
 
 ### LLM Systems
 | Skill | Level | Notes | Last Updated |
@@ -96,6 +96,8 @@
 
 | Date | Concept / Decision | Why THIS over THAT | Context | Can Teach |
 |------|-------------------|--------------------|---------|-----------|
+| 2026-05-04 | LangChain vs raw API | LangChain removes three pain points — schema authoring, provider lock-in, result parsing. Drop to raw only when you need behavior LangChain hides (e.g., streaming edge cases, custom retry logic). The abstraction costs you visibility in exchange for speed. | Eden Marco course, Session 1 | Yes |
+| 2026-05-04 | Model swap = benchmarked decision | Swapping models is not a config change — tool-calling behavior differs between providers and versions in non-obvious ways. Two checks before swapping: (1) does the model support tool calling? (2) does it eval correctly on your actual use case? Without evals, regressions are silent. | Eden Marco course, Session 1 | Yes |
 | 2026-04-01 | Pre-hook vs post-hook | Pre-hook gates input before it reaches the model — catches injection, validates, logs. Post-hook sanitizes output before it reaches the caller — scans for credentials, checks policy. Order matters: bad input should never touch the model; bad output should never reach the user. | Claude 101 + Cognizant work | Yes |
 | 2026-04-01 | asyncio.gather vs sequential awaits | Sequential awaits stack wait times (5 x 2s = 10s). gather overlaps them (5 x 2s ≈ 2s). Use gather when calls are independent and I/O-bound. Using it with synchronous blocking functions doesn't help — use run_in_executor to offload those to a thread pool instead. | Career reflection | Yes |
 | 2026-03-19 | @classmethod vs @staticmethod vs module function | @classmethod: needs class context, inherits correctly (use cls not ClassName). @staticmethod: utility grouped with the class but needs no instance or class state. Module function: fully standalone. Choose by what context the function actually needs — don't reach for classmethod when there's no class state involved. | Decorators session | Yes |
@@ -122,4 +124,4 @@
 - **System design instincts:** Know the vocabulary (Docker, K8s, FastAPI, CI/CD) but don't yet have the judgment for *when* to reach for each. Gap is "knowing when," not "knowing what." Next: concept tour — map the territory before building.
 - **Security fundamentals:** Auth/authz, credential management, cryptography — exposed at best. These matter for production AI systems and the consultant role.
 - **Cloud / AWS for AI:** Zero hands-on. SageMaker, Bedrock, Lambda, IAM — need to build something real in AWS, not just read about it.
-- **Agentic frameworks:** LangChain, LangGraph, LangSmith, MCP — six-month target. Need reps.
+- **Agentic frameworks:** Actively working through Eden Marco LangChain course. Layer 1 (agent loop, function calling) done. LangGraph, LangSmith, MCP still ahead.

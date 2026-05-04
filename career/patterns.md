@@ -110,6 +110,13 @@
 ### Agentic System Design
 | Pattern | When to Use | Key Insight |
 |---------|-------------|-------------|
+| ReACT loop | Understanding any agent framework (LangChain, LangGraph, MCP) | Thought → Action → Observation → Thought, exit on Answer. Every agent framework is a variant of this. Learn it once, apply everywhere. |
+| State = messages array | Reasoning about agent memory at the LangChain layer | There is no memory abstraction — history is the growing list passed back into the LLM each turn. This is why LangGraph introduces explicit state. |
+| System prompt as control surface | Steering agent tool-call behavior without code changes | Strict rules in the system prompt ("never calculate your own math, use the tools") change what the agent does. Prompt engineering is agent engineering. |
+| Docstrings + type hints as agent interface | Writing tools for LLM agents | The model reads docstrings and type hints when deciding which tool to call and how. They are agent-facing interface, not human-only documentation. |
+| MAX_ITERATIONS guard | Any agent with a loop | Runaway loops are a real failure mode. Always set a ceiling. |
+| Tracing from day one | Any non-deterministic agent loop | Without tracing, you cannot debug what the agent did or why. Add it at the start — retrofitting is painful. LangSmith's `@traceable` is the LangChain native solution. |
+| LangChain vs raw API | Deciding whether to use the framework | LangChain removes schema authoring, provider lock-in, and result parsing. Drop to raw only when you need behavior LangChain hides. The abstraction costs visibility in exchange for speed. |
 | Agent + tool use | LLM needs to take actions in the world (search, run code, call APIs) | The LLM decides *when* to call a tool; the tool does the actual work. Keep tools small and single-purpose — easier to reason about and debug. |
 | LangChain for orchestration | Building chains of LLM calls, prompt templates, tool use, memory | Abstracts the plumbing. Use it when you need reusable components. Don't use it when a simple direct API call is cleaner. |
 | LangGraph for stateful agents | Multi-step agents that need to loop, branch, or revisit steps | Models agent execution as a graph — nodes are steps, edges are transitions. Use when agent behavior is too complex for a linear chain. |

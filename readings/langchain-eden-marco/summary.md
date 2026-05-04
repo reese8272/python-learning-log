@@ -1,0 +1,51 @@
+# LangChain: Develop AI Agents with LangChain & LangGraph
+*Eden Marco — Udemy*
+
+**Status:** In progress
+**Format:** Video course (~20 hrs) | [Course repo](https://github.com/emarco177/langchain-course)
+
+---
+
+## What kind of course this is
+
+A hands-on survey of the full LangChain/LangGraph/LangSmith stack. The goal isn't to memorize the API — it's to build decision-making muscle about *when* to use each layer and *why*. Every lab is an opportunity to see the framework making tradeoffs on your behalf. The right question after each section: "What does this layer hide from me, and when would I want to drop below it?"
+
+---
+
+## Session Notes
+
+### Session 1 — Agent Loop + Function Calling
+
+**Main Idea:** Every agent framework is a variant of the ReACT loop. LangChain abstracts away the plumbing (schema authoring, provider lock-in, result parsing) so you can focus on the loop itself — but you need to understand what it hides to know when to go raw.
+
+- ReACT loop: Thought → Action → Observation → Thought, exit on Answer. This is the skeleton underneath LangGraph, MCP, and every other agent framework.
+- State = the messages array. No memory abstraction at this layer — history is the growing list passed back into the LLM each turn. (This is why LangGraph introduces explicit state.)
+- LangChain vs raw API: LangChain removes three pain points — schema authoring, provider lock-in, result parsing. Drop to raw only when you need behavior LangChain hides.
+- Model swaps are benchmarked decisions, not config changes. Two failure modes to check: (1) does the model support tool calling? (2) does it eval correctly against your actual use case? Swapping without evals risks silent regression — tool-calling behavior changes between providers and versions in non-obvious ways.
+- System prompt is a control surface. Strict rules ("never calculate your own math, use the tools") steer tool-call behavior without code changes. Prompt engineering = agent steering.
+- Docstrings + type hints are part of the prompt the model reads when picking a tool. They are not human-only documentation — treat them as agent-facing interface.
+- Always set a MAX_ITERATIONS guard. Runaway loops are a real failure mode, not an edge case.
+- Tracing is non-negotiable. Without it, non-deterministic loops are undebuggable.
+- Known simplification: single tool call per iteration. Real LLMs return parallel tool calls — LangGraph's tool nodes handle this. Watch for it.
+
+> **Connection:** The State = messages array insight directly explains why LangGraph exists. When you get there, come back to this — it will click differently.
+
+---
+
+## Connections & Application
+
+- The ReACT loop being the common ancestor of all agent frameworks means mental models transfer. Learn it once here, apply it everywhere.
+- System prompt as control surface + docstrings as agent-facing interface = prompt engineering is not separate from engineering. It is engineering.
+- LangSmith tracing and MAX_ITERATIONS are the two non-negotiables for production. Build the habit of adding them from session one, not retrofitting them later.
+
+---
+
+## Honest Takeaways
+
+*(Update as course progresses. Complete when finished.)*
+
+---
+
+## Entry Log
+
+- [2026-05-04](reflection_log/2026-05-04.md) — Session 1: Agent loop, ReACT pattern, function calling, LangChain vs raw API
