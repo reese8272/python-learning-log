@@ -24,16 +24,16 @@ Content flows through three review cycles: **daily → weekly → monthly**. Eac
 
 ## Readings Structure
 
-Each book lives in its own subfolder under `readings/` using kebab-case (e.g. `readings/think-and-grow-rich/`).
+**Books and courses are treated the same way.** Both live under `readings/` using kebab-case (e.g. `readings/think-and-grow-rich/`, `readings/langchain-eden-marco/`). A course is consumed content with a natural arc — it gets a `summary.md` and dated session logs just like a book.
 
-A reference template lives at `readings/template.md`. All new `summary.md` files must follow this structure.
+A reference template lives at `readings/template.md`. All new `summary.md` files must follow this structure. For courses, adapt the language: "sessions" instead of "chapters," "What kind of course this is" instead of "What kind of book this is."
 
-`readings/index.md` is the cross-book patterns document. It captures connections and themes that span multiple books — not per-book summaries (those live in each book's `summary.md`). Update `index.md` when a new cross-book pattern is identified or an existing pattern gains a new data point from a new book.
+`readings/index.md` is the cross-source patterns document. It captures connections and themes that span multiple books or courses — not per-source summaries (those live in each subfolder's `summary.md`). Update `index.md` when a new cross-source pattern is identified or an existing pattern gains a new data point.
 
-Every book folder contains:
+Every book or course folder contains:
 
 ```
-readings/<book-name>/
+readings/<source-name>/
   summary.md          ← living master document — follows readings/template.md
   reflection_log/     ← all dated session notes go here
     YYYY-MM-DD.md
@@ -41,21 +41,30 @@ readings/<book-name>/
 
 ### 1. `summary.md` — the master file
 Follows the structure in `readings/template.md`:
-- Personal take on what kind of book it is
-- Chapter-by-chapter summaries, each with a **Main Idea** (1-2 sentences), bullet points (as many as the chapter warrants), and a quick **Connection** note
+- Personal take on what kind of book/course it is
+- Session or chapter summaries, each with a **Main Idea** (1-2 sentences), bullet points (as many as the session warrants), and a quick **Connection** note
 - A **Connections & Application** section at the bottom — deeper synthesis of observations, patterns, and actions forming. Not "observation vs. action" — they're intertwined.
 - **Honest Takeaways** — what landed, what didn't
 - **Entry Log** — links to dated entries in `reflection_log/`
 
-Update `summary.md` as reading progresses. It does not need to be complete until the book is finished.
+Update `summary.md` as reading/viewing progresses. It does not need to be complete until the source is finished.
 
 ### 2. `reflection_log/YYYY-MM-DD.md` — dated session notes
-Raw notes from a specific reading session. These feed into `summary.md` over time. They do not need to be polished. Kept for reference in reflections and reviews.
+Raw notes from a specific session. These feed into `summary.md` over time. They do not need to be polished. Kept for reference in reflections and reviews.
 
-### When routing brain dump content about a book:
-- Raw notes, chapter reactions, and in-the-moment thoughts → `reflection_log/YYYY-MM-DD.md`
-- Synthesized ideas, chapter summaries, connections, takeaways → update `summary.md`
-- Cross-book connections or patterns → update `readings/index.md`
+### 3. Career update loop — after every course session
+After routing course notes into `readings/`, always check whether anything warrants an update to the career files:
+- A skill genuinely deepened → update the Skills Tracker level + notes in `CAREER_LOG.md`
+- A "why THIS over THAT" moment clicked → add a row to the Judgment Log in `CAREER_LOG.md`
+- A pattern proved reliable → add a row to the relevant section in `patterns.md`
+
+The bar is genuine deepening, not just exposure. Don't update on every session — update when something actually shifted.
+
+### When routing brain dump content about a book or course:
+- Raw notes, chapter/session reactions, and in-the-moment thoughts → `reflection_log/YYYY-MM-DD.md`
+- Synthesized ideas, session summaries, connections, takeaways → update `summary.md`
+- Cross-source connections or patterns → update `readings/index.md`
+- Career-level insights (skill level up, judgment moment, reusable pattern) → update `career/CAREER_LOG.md` and/or `career/patterns.md`
 - If unsure, default to the dated entry and flag it
 
 ---
@@ -143,7 +152,7 @@ Habit check-ins happen through `/reflect` conversations, not separate dated entr
 | `career/` | `CAREER_LOG.md` (skills + judgment + consulting tracker) + `patterns.md` + `reflection_log/` entries |
 | `habits/` | `tracker.md` (master habit state) — no reflection_log; check-ins happen through daily reflections |
 | `ideas_and_connections/` | `index.md` (living highlights) + `reflection_log/` raw entries — quotes, sparks, insights worth finding again |
-| `readings/` | `index.md` (cross-book patterns) + `template.md` + per-book subfolders with `summary.md` + `reflection_log/` session notes |
+| `readings/` | `index.md` (cross-source patterns) + `template.md` + per-book/course subfolders with `summary.md` + `reflection_log/` session notes. Courses follow the same structure as books. |
 | `projects/` | `reflection_log/` dated entries — things actively being built or considered |
 | `misc/` | `reflection_log/` dated entries — anything that doesn't fit elsewhere |
 | `reflections/` | Daily, weekly, and monthly review logs — the coaching record |
