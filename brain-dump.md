@@ -23,3 +23,14 @@ Everything goes here first. Don't filter, don't organize — just get it out. `/
 
 ---
 
+Eden marco langchain course cont.
+Decisions / "why this over that" (cont.)
+- @tool vs @traceable: completely separate concerns. @tool is LangChain's
+  decorator — wraps a function into a LangChain tool object (schema gen,
+  result parsing). @traceable is LangSmith's decorator — instruments a
+  function for observability. Dropping to raw ollama means dropping @tool
+  (you're off LangChain); @traceable stays regardless of provider.
+- Ollama schema generation has two modes: (1) manual JSON — you write the
+  schema yourself, docstrings irrelevant to ollama; (2) auto-schema — pass
+  functions directly as tools, ollama generates the schema, but requires
+  Google-style docstrings. Today's code used mode 1.
