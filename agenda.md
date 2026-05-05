@@ -7,10 +7,10 @@ This is the one-stop shop for current goals and intentions across all time horiz
 ## Daily
 *Updated by `/reflect` — replace with each new day's intentions*
 
-**2026-04-30**
+**2026-05-06**
 
-- One brain dump — anything on your mind, no filter, just get it out
-- Open one of the three resources (MLIB, Karpathy, What We've Learned from a Year of Building with LLMs) — even 15 minutes, follow curiosity
+- Learning block at 10am — sit down, open LangChain, don't negotiate
+- Name one habit before 2:30 that you're actually going to do in the 2:30–3:30 window — treat it as the non-negotiable, let the rest be bonus
 
 ---
 
