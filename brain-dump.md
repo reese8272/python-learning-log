@@ -8,13 +8,13 @@ Everything goes here first. Don't filter, don't organize — just get it out. `/
 
 *Check off what hit today. Leave blank what didn't. No judgment — just data.*
 
-- [ ] Wake at 6am
-- [ ] Sunlight within 30 min of waking
+- [X] Wake at 6am (7:30 but better than previous days, working towards 6am and this is a win for me)
+- [X] Sunlight within 30 min of waking
 - [ ] Must-listen playlist
-- [ ] Morning shake
-- [ ] Morning deep work block
+- [X] Morning shake
+- [X] Morning deep work block
 - [ ] 15-min creativity block
-- [ ] Gym
+- [X] Gym
 - [ ] Daily walk
 - [ ] Nonfiction reading
 - [ ] Dedicated learning block
