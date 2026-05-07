@@ -7,6 +7,18 @@
 
 ---
 
+## Build Log
+
+*Tracks what's been built in the paired project and what's queued next. Updated each session.*
+
+| Session | What was covered | What was built | Status |
+|---------|-----------------|----------------|--------|
+| 1 | Agent loop, ReACT pattern, tool calling, LangChain vs raw API | *(not yet built)* | Queued |
+
+**Next build task:** Wire a basic LangChain agent with a single tool that reads `CAREER_LOG.md` and returns a random Judgment Log entry. No quiz logic yet — just get the agent calling the tool and returning an entry. That's the foundation everything else builds on.
+
+---
+
 ## What kind of course this is
 
 A hands-on survey of the full LangChain/LangGraph/LangSmith stack. The goal isn't to memorize the API — it's to build decision-making muscle about *when* to use each layer and *why*. Every lab is an opportunity to see the framework making tradeoffs on your behalf. The right question after each section: "What does this layer hide from me, and when would I want to drop below it?"
