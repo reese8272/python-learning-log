@@ -14,6 +14,7 @@
 | Session | What was covered | What was built | Status |
 |---------|-----------------|----------------|--------|
 | 1 | Agent loop, ReACT pattern, tool calling, LangChain vs raw API | *(not yet built)* | Queued |
+| 2 | @tool vs @traceable, Ollama schema generation modes (manual JSON vs auto-schema) | *(not yet built)* | Queued |
 
 **Next build task:** Wire a basic LangChain agent with a single tool that reads `CAREER_LOG.md` and returns a random Judgment Log entry. No quiz logic yet — just get the agent calling the tool and returning an entry. That's the foundation everything else builds on.
 
