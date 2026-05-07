@@ -10,6 +10,26 @@ This is a personal journaling repo with a single owner. **Always commit and push
 
 ---
 
+## ADHD Learning Protocol
+
+These rules apply to all course and reading sessions. They exist because the ADHD brain's motivation system requires engineered structure, not more willpower. When coaching a learning session, enforce these — don't work around them.
+
+**Peak window is sacred.** The 90–180 minutes post-medication is reserved for the hardest, most novel learning only — Eden Marco, AWS cert material, technical papers. Never burn this window on email, Slack, system-tinkering, or passive review. This single reallocation produces more learning gains than any tool change.
+
+**One active course.** One course at a time, until finished or formally retired. If shelved, write a 100-word retirement letter in `misc/reflection_log/YYYY-MM-DD.md` explaining why. No silent abandonment.
+
+**Pre-commit a project.** Every course needs a paired build project defined before session 1. It goes in the course `summary.md` under a "Paired Project" field. Every lesson feeds that project.
+
+**Build before next lesson.** Do not advance to session N+1 until code using session N's concept exists *outside* the course repo. Five minutes counts. The point is breaking the passive consumption loop.
+
+**Ready-to-resume note.** Before any context switch away from a learning session, write one line in the dated session log: "Stopped at: [X]. Next step: [Y]." This reconstructs context faster than re-reading.
+
+**Struggle first.** Minimum 10–20 minutes of independent effort before using AI. When asking AI: share what you tried, where you're stuck, and ask it to help you *see* what you're missing — not give the answer outright.
+
+**Cardio before peak.** 20–30 min of zone-2 cardio before the peak block pre-loads dopamine and BDNF for hours. If morning gym happened, the peak block benefits. If it didn't, that's a variable worth noting.
+
+---
+
 ## Core Philosophy — The 3-Iteration Filter
 
 This system is a personal reflection journal and knowledge base. Everything here exists to help the user get better — not to store trivia.
