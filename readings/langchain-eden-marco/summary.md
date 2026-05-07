@@ -3,6 +3,7 @@
 
 **Status:** In progress
 **Format:** Video course (~20 hrs) | [Course repo](https://github.com/emarco177/langchain-course)
+**Paired Project:** Career skills quizzer agent — reads `CAREER_LOG.md`, picks a skill or judgment log entry, and drills active recall cold. "Explain why LangChain over raw API. Go." Evolves naturally as the course progresses: tool calling (session 1–2), state management (LangGraph), RAG over the full career log (later). Solves a real problem in this system and uses your own career data as the content.
 
 ---
 
