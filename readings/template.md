@@ -3,6 +3,7 @@
 
 **Status:** [Not started / In progress / Finished]
 **Format:** [Audiobook / Physical / Kindle / etc.]
+**Paired Project:** [The concrete thing you're building or applying alongside this — defined before session 1. For courses: a real artifact. For books: a specific practice or decision you're testing.]
 
 ---
 

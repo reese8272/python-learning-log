@@ -15,6 +15,8 @@
 
 *Update when understanding genuinely deepens. The bar is explanation, not execution.*
 
+**Last Reviewed** = the date you last actively recalled this skill cold — explained it out loud, passed a practice question on it, or had it tested in real work. Not the date you re-read the notes. During `/weekly-review`, scan for anything not reviewed in 2+ weeks and flag it for a quick self-test.
+
 **Levels:**
 - **Gap** — haven't touched it
 - **Exposed** — seen it in context, can't explain it independently yet
@@ -26,67 +28,67 @@
 ---
 
 ### Agentic Engineering
-| Skill | Level | Notes | Last Updated |
-|-------|-------|-------|--------------|
-| LangChain | Building | Actively working through Eden Marco course. Understands ReACT loop, State = messages array, LangChain vs raw API decision rationale, system prompt as control surface | 2026-05-04 |
-| LangGraph | Gap | - | - |
-| LangSmith | Gap | - | - |
-| MCP (Model Context Protocol) | Exposed | Aware of it through work context | 2026-04-01 |
-| Agent orchestration | Exposed | Working with agents at Cognizant | 2026-04-01 |
-| Tool use / function calling | Building | Understands docstrings + type hints as agent-facing interface; LangChain schema authoring vs raw JSON tradeoff; MAX_ITERATIONS as production guard | 2026-05-04 |
+| Skill | Level | Notes | Last Updated | Last Reviewed |
+|-------|-------|-------|--------------|---------------|
+| LangChain | Building | Actively working through Eden Marco course. Understands ReACT loop, State = messages array, LangChain vs raw API decision rationale, system prompt as control surface | 2026-05-04 | - |
+| LangGraph | Gap | - | - | - |
+| LangSmith | Gap | - | - | - |
+| MCP (Model Context Protocol) | Exposed | Aware of it through work context | 2026-04-01 | - |
+| Agent orchestration | Exposed | Working with agents at Cognizant | 2026-04-01 | - |
+| Tool use / function calling | Building | Understands docstrings + type hints as agent-facing interface; LangChain schema authoring vs raw JSON tradeoff; MAX_ITERATIONS as production guard | 2026-05-04 | - |
 
 ### LLM Systems
-| Skill | Level | Notes | Last Updated |
-|-------|-------|-------|--------------|
-| RAG fundamentals | Building | Modularity, retrieval patterns, code cleanliness — reps in progress | 2026-01-07 |
-| Hooks / guardrails | Can explain the why | Pre-hook = gate before LLM call; post-hook = sanitize before returning. Can explain the decision rationale and order. | 2026-04-01 |
-| Prompt engineering | Building | Evaluate-before-delegate principle understood; reps in progress | 2026-04-01 |
-| Output evaluation | Can explain the what | Run similar prompts, compare key info surfaces, refine if missing | 2026-04-01 |
-| LLM evals / benchmarking | Gap | - | - |
+| Skill | Level | Notes | Last Updated | Last Reviewed |
+|-------|-------|-------|--------------|---------------|
+| RAG fundamentals | Building | Modularity, retrieval patterns, code cleanliness — reps in progress | 2026-01-07 | - |
+| Hooks / guardrails | Can explain the why | Pre-hook = gate before LLM call; post-hook = sanitize before returning. Can explain the decision rationale and order. | 2026-04-01 | - |
+| Prompt engineering | Building | Evaluate-before-delegate principle understood; reps in progress | 2026-04-01 | - |
+| Output evaluation | Can explain the what | Run similar prompts, compare key info surfaces, refine if missing | 2026-04-01 | - |
+| LLM evals / benchmarking | Gap | - | - | - |
 
 ### System Design
-| Skill | Level | Notes | Last Updated |
-|-------|-------|-------|--------------|
-| FastAPI | Gap | Know what it is, haven't built with it | - |
-| REST API design | Exposed | Used in work, can't design from scratch independently | - |
-| Service decomposition | Gap | - | - |
-| Data flow design | Gap | - | - |
-| Async patterns (asyncio) | Can explain the why | asyncio for I/O-bound, gather for overlapping waits, run_in_executor for blocking calls — can explain why each | 2026-04-01 |
+| Skill | Level | Notes | Last Updated | Last Reviewed |
+|-------|-------|-------|--------------|---------------|
+| FastAPI | Gap | Know what it is, haven't built with it | - | - |
+| REST API design | Exposed | Used in work, can't design from scratch independently | - | - |
+| Service decomposition | Gap | - | - | - |
+| Data flow design | Gap | - | - | - |
+| Async patterns (asyncio) | Can explain the why | asyncio for I/O-bound, gather for overlapping waits, run_in_executor for blocking calls — can explain why each | 2026-04-01 | - |
 
 ### Production Infrastructure
-| Skill | Level | Notes | Last Updated |
-|-------|-------|-------|--------------|
-| Docker | Exposed | Know what it does, can't build Dockerfiles independently | - |
-| CI/CD concepts | Gap | Know it exists, no hands-on experience | - |
-| GitHub Actions | Gap | - | - |
-| GitLab CI | Gap | - | - |
+| Skill | Level | Notes | Last Updated | Last Reviewed |
+|-------|-------|-------|--------------|---------------|
+| Docker | Exposed | Know what it does, can't build Dockerfiles independently | - | - |
+| CI/CD concepts | Gap | Know it exists, no hands-on experience | - | - |
+| GitHub Actions | Gap | - | - | - |
+| GitLab CI | Gap | - | - | - |
 
 ### Cloud — AWS for AI
-| Skill | Level | Notes | Last Updated |
-|-------|-------|-------|--------------|
-| AWS Bedrock | Gap | - | - |
-| AWS SageMaker | Gap | - | - |
-| AWS Lambda | Gap | - | - |
-| AWS IAM | Gap | - | - |
-| AWS S3 | Gap | - | - |
+| Skill | Level | Notes | Last Updated | Last Reviewed |
+|-------|-------|-------|--------------|---------------|
+| AWS Bedrock | Gap | - | - | - |
+| AWS SageMaker | Gap | - | - | - |
+| AWS Lambda | Gap | - | - | - |
+| AWS IAM | Gap | - | - | - |
+| AWS S3 | Gap | - | - | - |
 
 ### Security
-| Skill | Level | Notes | Last Updated |
-|-------|-------|-------|--------------|
-| Authentication vs Authorization | Gap | Know the words, can't explain the decision tree | - |
-| Credential management | Gap | - | - |
-| OWASP basics | Gap | - | - |
-| Cryptography fundamentals | Gap | - | - |
-| Prompt injection defense | Exposed | Aware through hooks/guardrails context | 2026-04-01 |
+| Skill | Level | Notes | Last Updated | Last Reviewed |
+|-------|-------|-------|--------------|---------------|
+| Authentication vs Authorization | Gap | Know the words, can't explain the decision tree | - | - |
+| Credential management | Gap | - | - | - |
+| OWASP basics | Gap | - | - | - |
+| Cryptography fundamentals | Gap | - | - | - |
+| Prompt injection defense | Exposed | Aware through hooks/guardrails context | 2026-04-01 | - |
 
 ### Python Core *(locked — reference only)*
-| Skill | Level | Notes |
-|-------|-------|-------|
-| Python fundamentals | Can teach it | Loops, functions, classes, generators, decorators — solid |
-| Async / asyncio | Can explain the why | See System Design section |
-| Data structures | Can teach it | Lists, dicts, sets, stacks, queues — can explain selection rationale cold |
-| DSA | Can explain the why | DFS, BFS, binary search, two-pointer, sorting — logic is solid |
-| Decorators | Can teach it | @property, @staticmethod, @classmethod, @cache, @dataclass — design intent understood |
+| Skill | Level | Notes | Last Reviewed |
+|-------|-------|-------|---------------|
+| Python fundamentals | Can teach it | Loops, functions, classes, generators, decorators — solid | - |
+| Async / asyncio | Can explain the why | See System Design section | - |
+| Data structures | Can teach it | Lists, dicts, sets, stacks, queues — can explain selection rationale cold | - |
+| DSA | Can explain the why | DFS, BFS, binary search, two-pointer, sorting — logic is solid | - |
+| Decorators | Can teach it | @property, @staticmethod, @classmethod, @cache, @dataclass — design intent understood | - |
 
 ---
 
@@ -94,16 +96,18 @@
 
 *The bar: can I explain why THIS over THAT? Log moments where the decision — not just the answer — clicked.*
 
-| Date | Concept / Decision | Why THIS over THAT | Context | Can Teach |
-|------|-------------------|--------------------|---------|-----------|
-| 2026-05-04 | LangChain vs raw API | LangChain removes three pain points — schema authoring, provider lock-in, result parsing. Drop to raw only when you need behavior LangChain hides (e.g., streaming edge cases, custom retry logic). The abstraction costs you visibility in exchange for speed. | Eden Marco course, Session 1 | Yes |
-| 2026-05-04 | Model swap = benchmarked decision | Swapping models is not a config change — tool-calling behavior differs between providers and versions in non-obvious ways. Two checks before swapping: (1) does the model support tool calling? (2) does it eval correctly on your actual use case? Without evals, regressions are silent. | Eden Marco course, Session 1 | Yes |
-| 2026-04-01 | Pre-hook vs post-hook | Pre-hook gates input before it reaches the model — catches injection, validates, logs. Post-hook sanitizes output before it reaches the caller — scans for credentials, checks policy. Order matters: bad input should never touch the model; bad output should never reach the user. | Claude 101 + Cognizant work | Yes |
-| 2026-04-01 | asyncio.gather vs sequential awaits | Sequential awaits stack wait times (5 x 2s = 10s). gather overlaps them (5 x 2s ≈ 2s). Use gather when calls are independent and I/O-bound. Using it with synchronous blocking functions doesn't help — use run_in_executor to offload those to a thread pool instead. | Career reflection | Yes |
-| 2026-03-19 | @classmethod vs @staticmethod vs module function | @classmethod: needs class context, inherits correctly (use cls not ClassName). @staticmethod: utility grouped with the class but needs no instance or class state. Module function: fully standalone. Choose by what context the function actually needs — don't reach for classmethod when there's no class state involved. | Decorators session | Yes |
-| 2026-01-19 | Queue vs Stack (FIFO vs LIFO) | Queue = first in, first out — use when order of arrival matters (BFS, task scheduling). Stack = last in, first out — use when you need to process the most recent item first (undo, DFS, call stacks). Both are lists under the hood; the difference is which end you pop from. | DSA practice | Yes |
-| 2026-01-19 | BFS vs DFS | BFS = level by level, guarantees shortest path in unweighted graphs. DFS = goes deep first, exhaustive search. If you need the shortest route, BFS. If you need to find if a path exists at all, DFS. | DSA practice | Yes |
-| 2026-01-03 | Dict vs List for counting | List lookup is O(n) — you scan every element. Dict lookup is O(1) — hash table, direct access. When you're counting occurrences or checking membership repeatedly, dict is the right tool. Nested loops + list = O(n²) for no reason. | Boot.dev exercise | Yes |
+| Date | Concept / Decision | Why THIS over THAT | Context | Can Teach | Last Reviewed |
+|------|-------------------|--------------------|---------|-----------|---------------|
+| 2026-05-07 | @tool vs @traceable | Completely separate concerns — different layers, different jobs. @tool is LangChain: wraps a function into a tool object (schema gen, result parsing). @traceable is LangSmith: instruments for observability. Drop to raw Ollama → lose @tool (you left LangChain); @traceable is provider-agnostic and stays. Confusing them means misdiagnosing what breaks when you switch providers. | Eden Marco course | Yes | - |
+| 2026-05-07 | Ollama schema generation modes | Two modes: (1) manual JSON — write the schema yourself, docstrings irrelevant; (2) auto-schema — pass functions directly, Ollama generates schema, but requires Google-style docstrings. Choosing wrong means either unnecessary boilerplate (writing JSON when auto would work) or broken schema generation (using auto without the right docstring format). | Eden Marco course | Yes | - |
+| 2026-05-04 | LangChain vs raw API | LangChain removes three pain points — schema authoring, provider lock-in, result parsing. Drop to raw only when you need behavior LangChain hides (e.g., streaming edge cases, custom retry logic). The abstraction costs you visibility in exchange for speed. | Eden Marco course, Session 1 | Yes | - |
+| 2026-05-04 | Model swap = benchmarked decision | Swapping models is not a config change — tool-calling behavior differs between providers and versions in non-obvious ways. Two checks before swapping: (1) does the model support tool calling? (2) does it eval correctly on your actual use case? Without evals, regressions are silent. | Eden Marco course, Session 1 | Yes | - |
+| 2026-04-01 | Pre-hook vs post-hook | Pre-hook gates input before it reaches the model — catches injection, validates, logs. Post-hook sanitizes output before it reaches the caller — scans for credentials, checks policy. Order matters: bad input should never touch the model; bad output should never reach the user. | Claude 101 + Cognizant work | Yes | - |
+| 2026-04-01 | asyncio.gather vs sequential awaits | Sequential awaits stack wait times (5 x 2s = 10s). gather overlaps them (5 x 2s ≈ 2s). Use gather when calls are independent and I/O-bound. Using it with synchronous blocking functions doesn't help — use run_in_executor to offload those to a thread pool instead. | Career reflection | Yes | - |
+| 2026-03-19 | @classmethod vs @staticmethod vs module function | @classmethod: needs class context, inherits correctly (use cls not ClassName). @staticmethod: utility grouped with the class but needs no instance or class state. Module function: fully standalone. Choose by what context the function actually needs — don't reach for classmethod when there's no class state involved. | Decorators session | Yes | - |
+| 2026-01-19 | Queue vs Stack (FIFO vs LIFO) | Queue = first in, first out — use when order of arrival matters (BFS, task scheduling). Stack = last in, first out — use when you need to process the most recent item first (undo, DFS, call stacks). Both are lists under the hood; the difference is which end you pop from. | DSA practice | Yes | - |
+| 2026-01-19 | BFS vs DFS | BFS = level by level, guarantees shortest path in unweighted graphs. DFS = goes deep first, exhaustive search. If you need the shortest route, BFS. If you need to find if a path exists at all, DFS. | DSA practice | Yes | - |
+| 2026-01-03 | Dict vs List for counting | List lookup is O(n) — you scan every element. Dict lookup is O(1) — hash table, direct access. When you're counting occurrences or checking membership repeatedly, dict is the right tool. Nested loops + list = O(n²) for no reason. | Boot.dev exercise | Yes | - |
 
 ---
 

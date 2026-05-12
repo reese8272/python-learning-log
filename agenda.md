@@ -7,10 +7,19 @@ This is the one-stop shop for current goals and intentions across all time horiz
 ## Daily
 *Updated by `/reflect` — replace with each new day's intentions*
 
-**2026-05-06**
+**2026-05-08 — Tomorrow's Plan**
 
-- Learning block at 10am — sit down, open LangChain, don't negotiate
-- Name one habit before 2:30 that you're actually going to do in the 2:30–3:30 window — treat it as the non-negotiable, let the rest be bonus
+| Time | Block |
+|------|-------|
+| 6:30 | Wake, water, meds, sunlight |
+| 7:00 | Kids to sitter |
+| 7:30–9:00 | Gym + shower + eat — the primer |
+| 9:00–11:00 | **Peak block** — `/session-start` → Eden Marco → start build task (wire LangChain agent that reads CAREER_LOG.md and returns a Judgment Log entry) |
+| 11:00–12:00 | Meeting |
+| 12:00–1:00 | Lunch, decompress. Run `/drill` if energy is there — 10 min max |
+| 1:00–2:00 | Meeting |
+| 2:00–5:00 | Finish build task. If done + momentum → `/session-start` and next Eden Marco lesson. Otherwise lighter work. |
+| Evening | `/reflect` |
 
 ---
 

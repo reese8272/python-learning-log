@@ -3,6 +3,20 @@
 
 **Status:** In progress
 **Format:** Video course (~20 hrs) | [Course repo](https://github.com/emarco177/langchain-course)
+**Paired Project:** Career skills quizzer agent — reads `CAREER_LOG.md`, picks a skill or judgment log entry, and drills active recall cold. "Explain why LangChain over raw API. Go." Evolves naturally as the course progresses: tool calling (session 1–2), state management (LangGraph), RAG over the full career log (later). Solves a real problem in this system and uses your own career data as the content.
+
+---
+
+## Build Log
+
+*Tracks what's been built in the paired project and what's queued next. Updated each session.*
+
+| Session | What was covered | What was built | Status |
+|---------|-----------------|----------------|--------|
+| 1 | Agent loop, ReACT pattern, tool calling, LangChain vs raw API | *(not yet built)* | Queued |
+| 2 | @tool vs @traceable, Ollama schema generation modes (manual JSON vs auto-schema) | *(not yet built)* | Queued |
+
+**Next build task:** Wire a basic LangChain agent with a single tool that reads `CAREER_LOG.md` and returns a random Judgment Log entry. No quiz logic yet — just get the agent calling the tool and returning an entry. That's the foundation everything else builds on.
 
 ---
 
