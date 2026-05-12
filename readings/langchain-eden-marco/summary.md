@@ -30,6 +30,19 @@ A hands-on survey of the full LangChain/LangGraph/LangSmith stack. The goal isn'
 
 > **Connection:** The State = messages array insight directly explains why LangGraph exists. When you get there, come back to this — it will click differently.
 
+### Session 2 — LangGraph: Why It Exists
+
+**Main Idea:** The basic agent loop is a straight line with one fork. LangGraph is a map with many paths — and the difference isn't cosmetic, it's what makes agents production-safe.
+
+- The `while True` loop has two production-killing flaws: state lives in RAM (no recovery if process dies) and there's only one decision point (tool or done). Neither is acceptable for real systems.
+- Silent bug in the basic loop: only `tool_calls[0]` is handled. Real LLMs return parallel tool calls — the rest are silently dropped. LangGraph's tool nodes handle all of them.
+- LangGraph's three concepts: **State** (typed object persisted to DB after every node), **Nodes** (functions that take state, do work, return updated state), **Edges** (connections between nodes — fixed or conditional).
+- Conditional edges are how routing works. The LLM sets a field in state (e.g. `state["next"]`). The edge function reads it and returns the next node name. Decision logic lives in the graph structure, not buried in loop conditionals.
+- Persistent checkpointing is the core production unlock. State written to SQLite/Redis/Postgres after every node. Process can die and resume from the last checkpoint.
+- The messages array unpacked: `SystemMessage` (your system prompt) → `HumanMessage` (user input) → `AIMessage` (LLM response, may contain tool_calls) → `ToolMessage` (tool result) → `AIMessage` (final answer). The full history is passed back each turn — history IS state.
+
+> **Connection:** "A while loop is a straight line with one fork. LangGraph is a map with many paths." The State = messages array note from Session 1 now has a concrete answer: LangGraph exists because that list in RAM isn't enough for anything serious.
+
 ---
 
 ## Connections & Application
@@ -49,3 +62,4 @@ A hands-on survey of the full LangChain/LangGraph/LangSmith stack. The goal isn'
 ## Entry Log
 
 - [2026-05-04](reflection_log/2026-05-04.md) — Session 1: Agent loop, ReACT pattern, function calling, LangChain vs raw API
+- [2026-05-12](reflection_log/2026-05-12.md) — Session 2: LangGraph — why it exists, State/Nodes/Edges, persistent checkpointing, conditional routing
