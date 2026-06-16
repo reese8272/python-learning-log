@@ -7,19 +7,10 @@ This is the one-stop shop for current goals and intentions across all time horiz
 ## Daily
 *Updated by `/reflect` — replace with each new day's intentions*
 
-**2026-05-08 — Tomorrow's Plan**
+**2026-06-16 — Tomorrow's Intentions**
 
-| Time | Block |
-|------|-------|
-| 6:30 | Wake, water, meds, sunlight |
-| 7:00 | Kids to sitter |
-| 7:30–9:00 | Gym + shower + eat — the primer |
-| 9:00–11:00 | **Peak block** — `/session-start` → Eden Marco → start build task (wire LangChain agent that reads CAREER_LOG.md and returns a Judgment Log entry) |
-| 11:00–12:00 | Meeting |
-| 12:00–1:00 | Lunch, decompress. Run `/drill` if energy is there — 10 min max |
-| 1:00–2:00 | Meeting |
-| 2:00–5:00 | Finish build task. If done + momentum → `/session-start` and next Eden Marco lesson. Otherwise lighter work. |
-| Evening | `/reflect` |
+1. **Read 15 min at 10:30, in bed — phone on the charger first.** One brick. The re-entry habit after the collapse. Don't relaunch the whole stack; rebuild this one until it's steady, then add gym back.
+2. **Treat the work project as rent, not a verdict.** Its only job is to end. Growth lives on autoclip. When the "I don't know enough" fear spikes, name it for what it is — judgment exposure, not a skill gap. Don't let the rent steal the fuel from the down payment.
 
 ---
 
