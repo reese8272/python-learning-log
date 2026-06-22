@@ -30,6 +30,9 @@ Work top-down within each tier. Tier 1 before Tier 2 unless a real project need 
 - [ ] **pgvector vs dedicated vector DB** (Pinecone/Weaviate) — when each, why pgvector for his builds *(source: autoclip, CFO Agent)*
 - [ ] **Retrieval patterns** — pure similarity vs hybrid/keyword, re-ranking *(source: Cognizant RAG)*
 
+### LLM fundamentals
+- [ ] **What an LLM call actually is** — stateless re-send model, tokens, context window (hard-reject vs lost-in-middle), cost asymmetry (output ~5× input & why) *(learned 2026-06-22 via /learn; defend cold)*
+
 ### Tools, MCP, prompting
 - [ ] **MCP: server vs inline tools** — what MCP is, why a FastMCP server over defining tools in-process, transport (STDIO vs HTTP) *(source: Cognizant FastMCP work)*
 - [ ] **Tool/function calling internals** — schema authoring, docstrings/type-hints as the agent-facing interface *(partially in Judgment Log)*

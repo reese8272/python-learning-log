@@ -60,6 +60,16 @@ Deliver it at the tier bar, tied to his code, **current pattern only**:
 
 Name a **concrete 5-minute build** that uses the concept — in autoclip, the capstone, work, or a throwaway script. The unit is *not banked until code exists*. Five minutes counts. State it explicitly: "Build before you bank: [specific tiny build]."
 
+## Step 7.5 — Write the lesson assignment (the solo worksheet)
+
+Every `/learn` session leaves behind a **self-contained, runnable worksheet** at `career/lesson_assignments/YYYY-MM-DD_<kebab-unit>.py` so Reese can re-do the lesson solo, with you having pre-written the tests. **The reference template is `career/lesson_assignments/2026-06-22_llm-call-anatomy.py`** — match its shape. Three parts:
+
+1. **A short soliloquy** (module docstring) — what we're targeting and why, the 2–3 facts to *feel in the fingers*, and a "how to use this" note. Tie it to the lesson just taught.
+2. **A few tiny, isolated coding exercises** — stub functions with `TODO` hints, **boilerplate/frameworks pre-filled** so he focuses on the *concept and the flow, not syntax*. Include only the scaffolding the concept needs — nothing more. **You pre-write the tests** (an assert-based `_run_tests()` runner under `if __name__ == "__main__"`) so he gets red/green feedback solo. Don't re-run the build he already did in Step 7 — hit the *other* facets of the same unit.
+3. **A few concept questions** with a stated **requirement** (answer cold first; write the one-line "client version" of each) and a gated **answer key** at the bottom of the file.
+
+Keep it phone-readable and concept-first. The worksheet is struggle-first homework, not a lecture transcript. Tell him it's written and where it lives.
+
 ## Step 8 — Persist
 
 - **`readings/ai-engineering-curriculum/reflection_log/YYYY-MM-DD.md`** — write the session: the unit, the live-researched material taught (with the current pattern + the deprecated one it replaces), the sources/citations, his explain-back, and the assigned build. This is the durable record of what was covered.

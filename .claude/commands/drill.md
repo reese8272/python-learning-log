@@ -8,6 +8,8 @@ Read `career/CAREER_LOG.md`. Find:
 
 Prioritize Judgment Log entries — they test the "why THIS over THAT" bar directly, which is the mastery standard.
 
+**Lesson assignments — inspiration, not a crutch.** A worksheet may exist in `career/lesson_assignments/` for the drilled concept. You may borrow an *angle* from it, but never read its questions verbatim and never surface its answer key before he's recalled cold. Drill is honest signal on what stuck — reading him the worksheet defeats the rep.
+
 Do not respond yet.
 
 ## Step 2 — Pick an entry

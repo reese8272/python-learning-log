@@ -36,6 +36,8 @@ When unsure which tier a concept is, check the queue. If it's not in the queue, 
 - `career/CAREER_LOG.md` — Skills Tracker (current level of the target skill) and Judgment Log (so you know what's already been logged).
 - Confirm the peak window is appropriate (this is hard learning — if the user flags low energy, suggest `/drill` instead).
 
+**Lesson assignments — inspiration, not a crutch.** If the concept has a worksheet in `career/lesson_assignments/`, you may glance at it for *angles* — which facets the unit has, what a good failure-mode question looks like. But **never** read its prompts verbatim, and **never** open its answer key before he's struggled. Cold defense stays cold: the whole mechanism is that he produces it unaided. The worksheet tells you what *could* be asked; it must not become the script you read from.
+
 Do not respond yet.
 
 ## Step 2 — Pick one concept

@@ -43,7 +43,7 @@ Re-verify before each unit — these move fast.
 
 *Eden Marco lec 67–75 + Anthropic tutorials. The course teaches prompting late (after building); learn it first — everything downstream rests on it.*
 
-- [ ] **What an LLM call actually is** — tokens, completions, context window; reason about cost/latency/failure modes. `T1` · src: Eden Marco lec 67 ("GIST of LLMs")
+- [~] **What an LLM call actually is** — tokens, completions, context window; reason about cost/latency/failure modes. `T1` · src: Eden Marco lec 67 ("GIST of LLMs") *(2026-06-22 — taught: stateless re-send model, token rule of thumb + Opus 4.7 tokenizer +30%, hard-reject vs lost-in-middle, output ~5× input & why. Build pending: llm_cost.py)*
 - [ ] **Anatomy of a prompt** — system/user/assistant turns, prompt composition, `max_tokens`. `T1` · src: Eden Marco lec 68, Anthropic Ch.1
 - [ ] **Zero-shot, few-shot, role prompting** — steering by examples and persona; clear-and-direct. `T1` · src: Eden Marco lec 69–70, Anthropic
 - [ ] **XML tagging & output-format control** — separate data from instructions; tell it what TO do. `T1` · src: Anthropic Ch.4–5
@@ -219,4 +219,4 @@ Decision-level (80/20), not internals. Security moved up to Section 9 (it earned
 
 ## Entry Log
 
-*(links to `reflection_log/YYYY-MM-DD.md` per `/learn` session)*
+- [2026-06-22](reflection_log/2026-06-22.md) — §1.1 "What an LLM call actually is" (Tier 1): stateless re-send, tokens, context window failure modes, cost asymmetry. Explain-back passed; build pending.
