@@ -6,6 +6,21 @@
 
 ---
 
+## How to Use This Guide
+
+> This is a **reference**, not a checklist to grind top-to-bottom. The daily learning engine is **`/sharpen` + `career/concept_queue.md`** — concept-driven, struggle-first, tied to your own shipped code, logged to `CAREER_LOG.md`. That's what you do on your phone, one concept at a time, for immediate reward and always-visible progress.
+
+This guide exists to **feed and anchor** that engine:
+
+- **North Star + salary ladder** — the why. Come back when motivation dips.
+- **Capstone project spec** (Phase 2) — the build anchor. Judgment is forged by building, not by grilling concepts in the abstract. This stays dedicated and non-negotiable.
+- **Course library** (Phase 1) — a *resource pool*, not a syllabus. Courses are **gap-fillers pulled on demand**: when a `/sharpen` session hits a true *Gap* (something you've never encountered and can't struggle-first), that's when you pull the relevant course section. Not before.
+- **Papers + resource links** — same: pull when a concept demands depth.
+
+The rule: **concepts pull resources; resources don't push concepts.** Mine syllabi (Eden Marco, etc.) for candidate concepts into the queue's pool — but they enter unprioritized, and a live project need always jumps the line.
+
+---
+
 ## North Star
 
 > *"I am in the AI space and primed to be the next generation of wealth — knowledge as power, not trading time for money. Something I can do exponentially well."*
@@ -38,15 +53,15 @@ The floor of where you're heading is more than double where you are. The ceiling
 
 Understand enough to build → build → understand more deeply through building → design → lead.
 
-Building is what converts knowledge into judgment. Move through the checklist at your own pace — no dates, no weekly blocks. Finish an item, check it off, move to the next. Skip nothing.
+Building is what converts knowledge into judgment. The daily loop is: **`/sharpen` a concept (struggle-first, defend it cold) → build something tiny that uses it → bank it to `CAREER_LOG.md` → `/drill` keeps it alive.** No course completion targets, no weekly blocks. Progress is measured in *concepts owned and code shipped*, not lessons watched.
 
 ---
 
-## Phase 1 — Core Stack
+## Phase 1 — Core Stack (Course Library — gap-fillers, pulled on demand)
 
-*Learn the tools. Work every lab. No skipping.*
+*Not a syllabus to complete in order. This is the resource pool. When `/sharpen` hits a true Gap on a concept you can't struggle-first, pull the matching course section, learn just that, then go back to the queue. Mine these for candidate concepts to seed the queue's pool — but the queue, ordered by real project need, decides what you actually grill next.*
 
-### Courses (complete in order)
+### Courses (pull the section that matches the gap)
 
 - [ ] **Eden Marco — LangChain: Develop AI Agents with LangChain & LangGraph**
   - [udemy.com/course/langchain](https://www.udemy.com/course/langchain/) | ~20 hrs | Paid | ⭐ 4.6

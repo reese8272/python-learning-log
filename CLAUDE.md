@@ -12,15 +12,15 @@ This is a personal journaling repo with a single owner. **Always commit and push
 
 ## ADHD Learning Protocol
 
-These rules apply to all course and reading sessions. They exist because the ADHD brain's motivation system requires engineered structure, not more willpower. When coaching a learning session, enforce these — don't work around them.
+These rules exist because the ADHD brain's motivation system requires engineered structure, not more willpower. When coaching a learning session, enforce these — don't work around them.
 
-**Peak window is sacred.** The 90–180 minutes post-medication is reserved for the hardest, most novel learning only — Eden Marco, AWS cert material, technical papers. Never burn this window on email, Slack, system-tinkering, or passive review. This single reallocation produces more learning gains than any tool change.
+**The primary learning engine is concept-driven, not course-driven.** The default mode is `/sharpen` + `career/concept_queue.md`: one concept at a time, struggle-first, tied to his own shipped code, logged to `CAREER_LOG.md`, kept alive by `/drill`. This is the phone-friendly, immediate-reward loop that an ADHD brain will actually sustain. Courses are **gap-fillers pulled on demand**, not a syllabus to complete. Source of truth: `career/helpful_notes_and_guides/AI Engineering Master Guide.md` (a reference, not a checklist).
 
-**One active course.** One course at a time, until finished or formally retired. If shelved, write a 100-word retirement letter in `misc/reflection_log/YYYY-MM-DD.md` explaining why. No silent abandonment.
+**Peak window is sacred.** The 90–180 minutes post-medication is reserved for the hardest, most novel learning only — `/sharpen` sessions, a pulled course section, AWS cert material, technical papers. Never burn this window on email, Slack, system-tinkering, or passive review. This single reallocation produces more learning gains than any tool change.
 
-**Pre-commit a project.** Every course needs a paired build project defined before session 1. It goes in the course `summary.md` under a "Paired Project" field. Every lesson feeds that project.
+**The build is non-negotiable.** Grilling concepts without building is passive consumption with extra steps. Two anchors keep the build alive: (1) the **dedicated capstone project** (Master Guide Phase 2) is the eventual portfolio piece; (2) **build before you bank** — a grilled concept isn't owned until code using it exists somewhere real (work, autoclip, capstone, a throwaway script). Five minutes counts.
 
-**Build before next lesson.** Do not advance to session N+1 until code using session N's concept exists *outside* the course repo. Five minutes counts. The point is breaking the passive consumption loop.
+**When you do pull a course** (gap-filler mode only): one at a time, until the gap is filled or formally retired. If shelved, write a 100-word retirement letter in `misc/reflection_log/YYYY-MM-DD.md`. No silent abandonment. Pre-commit which queue concept or build the course section feeds before starting it — never watch a course for completion's sake.
 
 **Ready-to-resume note.** Before any context switch away from a learning session, write one line in the dated session log: "Stopped at: [X]. Next step: [Y]." This reconstructs context faster than re-reading.
 
