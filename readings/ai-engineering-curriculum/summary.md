@@ -173,6 +173,15 @@ Re-verify before each unit — these move fast.
 - [ ] **Celery vs. FastAPI background tasks vs. asyncio** — why Celery for autoclip's pipeline. `T1` · src: autoclip
 - [ ] **Structured logging & API-key auth** — JSON logs/request IDs (structlog); FastAPI `Depends()` auth. `T2` · src: capstone
 
+## Section 11 — Engineering Judgment & Decision Frameworks (Tier 1 — the consultant's edge)
+
+*Not taught well by any single course — which is the whole reason to build it here, researched live. These are the THIS-over-THAT calls that separate an engineer who can build from a consultant who can advise. Directly serves the mastery standard: "can I explain why THIS over THAT?"*
+
+- [ ] **Workflow vs. agent — do you even need an agent?** — deterministic chains/workflows vs. autonomous agents; the cost of agency (latency, unpredictability, debugging). Default to the simplest thing that works. `T1` · src: Anthropic "Building Effective Agents" + live research
+- [ ] **Prompt vs. RAG vs. fine-tune vs. agentic** — the capability decision tree: which lever for which problem, and why fine-tuning is rarely the first answer. `T1` · src: live research
+- [ ] **Model & provider selection** — which model/provider for which job; cost/latency/capability tradeoffs; when local vs. managed. `T1` · src: Eden Marco lec 25, 81 + live research
+- [ ] **Build vs. buy & framework selection** — LangGraph vs. alternatives vs. rolling your own; when a framework earns its complexity. `T1` · src: Eden Marco lec 86, 146 + live research
+
 ---
 
 ## Tier 2 — Periphery (pulled when a build needs them)
