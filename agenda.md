@@ -7,10 +7,10 @@ This is the one-stop shop for current goals and intentions across all time horiz
 ## Daily
 *Updated by `/reflect` — replace with each new day's intentions*
 
-**2026-06-16 — Tomorrow's Intentions**
+**2026-06-22 — Tomorrow's Intentions**
 
-1. **Read 15 min at 10:30, in bed — phone on the charger first.** One brick. The re-entry habit after the collapse. Don't relaunch the whole stack; rebuild this one until it's steady, then add gym back.
-2. **Treat the work project as rent, not a verdict.** Its only job is to end. Growth lives on autoclip. When the "I don't know enough" fear spikes, name it for what it is — judgment exposure, not a skill gap. Don't let the rent steal the fuel from the down payment.
+1. **Peak window → `/sharpen`.** First real rep of the system built tonight; picks up at "supervisor vs swarm." Struggle-first, defend your own shipped code cold. This is the depth you said is missing — earn it in the peak window, not on email.
+2. **The brick holds — two nights running.** 15 min reading at 10:30, in bed. The cue is the whole battle: **phone on the charger first, book in hand, before you're horizontal.** It broke last week because the cue was soft, not because you lack discipline. Two nights = a restarted streak.
 
 ---
 
