@@ -182,6 +182,18 @@ Re-verify before each unit — these move fast.
 - [ ] **Model & provider selection** — which model/provider for which job; cost/latency/capability tradeoffs; when local vs. managed. `T1` · src: Eden Marco lec 25, 81 + live research
 - [ ] **Build vs. buy & framework selection** — LangGraph vs. alternatives vs. rolling your own; when a framework earns its complexity. `T1` · src: Eden Marco lec 86, 146 + live research
 
+## Section 12 — How LLMs Actually Work (Tier 2 — awareness)
+
+*Awareness-level only — enough to reason about why models behave, cost, and break the way they do, and to sound credible with a technical client. NOT deep ML theory. Maps to the Master Guide's "Must-Read AI Papers" — `/learn` can teach a paper's core idea without you reading the whole thing. Pull these between build sections, one at a time.*
+
+- [ ] **Transformer & attention, at altitude** — next-token prediction, what "attention" buys you, why context is the unit of work. The mental model under everything. `T2` · src: live research (foundational)
+- [ ] **Mixture of Experts (MoE)** — sparse activation: big capacity, cheaper inference; why frontier models use it. `T2` · src: Mixtral paper
+- [ ] **Long-context mechanics** — how million-token windows are achieved; what degrades at length (lost-in-the-middle). Directly informs RAG vs. long-context calls. `T2` · src: Gemini 1.5 paper
+- [ ] **Data quality > model size** — why a small, well-trained model can rival a big one. Informs model selection. `T2` · src: Phi-3 paper
+- [ ] **The open-weight landscape** — Llama 3 / Qwen2 / Gemma / DeepSeek-Coder: what the frontier looks like beyond Anthropic/OpenAI; when open-weights make sense. `T2` · src: those papers + live research
+- [ ] **Post-transformer architectures (awareness)** — state-space models (Mamba) and KANs as challengers; know they exist, not the math. `T2` · src: Vision Mamba / KAN papers
+- [ ] **Why models hallucinate & vary** — the mechanistic "why" behind the reliability work in §10; connects internals to production behavior. `T2` · src: live research
+
 ---
 
 ## Tier 2 — Periphery (pulled when a build needs them)
