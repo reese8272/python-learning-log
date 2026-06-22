@@ -8,16 +8,28 @@
 
 ## How to Use This Guide
 
-> This is a **reference**, not a checklist to grind top-to-bottom. The daily learning engine is **`/sharpen` + `career/concept_queue.md`** — concept-driven, struggle-first, tied to your own shipped code, logged to `CAREER_LOG.md`. That's what you do on your phone, one concept at a time, for immediate reward and always-visible progress.
+> This is a **reference**, not a checklist to grind top-to-bottom. Technical learning happens **in-catalog**, not in online courses, through a three-stage pipeline:
+>
+> ```
+> /learn          →   /sharpen        →   /drill
+> acquire from zero   defend cold         retain (spaced rep)
+> researched live     100% / tier bar     vs. forgetting curve
+> ```
+>
+> - **`/learn`** walks the technical curriculum at **`readings/ai-engineering-curriculum/summary.md`** — each unit taught live against current official docs (never stale), tied to your code, then handed onward.
+> - **`/sharpen`** grills the **`career/concept_queue.md`** backlog — defend what you've learned/built, cold, at the tier bar.
+> - **`/drill`** keeps landed concepts alive on a spaced schedule.
+>
+> All on your phone, one concept at a time, logged to `CAREER_LOG.md`.
 
-This guide exists to **feed and anchor** that engine:
+This guide exists to **feed and anchor** that pipeline:
 
 - **North Star + salary ladder** — the why. Come back when motivation dips.
-- **Capstone project spec** (Phase 2) — the build anchor. Judgment is forged by building, not by grilling concepts in the abstract. This stays dedicated and non-negotiable.
-- **Course library** (Phase 1) — a *resource pool*, not a syllabus. Courses are **gap-fillers pulled on demand**: when a `/sharpen` session hits a true *Gap* (something you've never encountered and can't struggle-first), that's when you pull the relevant course section. Not before.
-- **Papers + resource links** — same: pull when a concept demands depth.
+- **Capstone project spec** (Phase 2) — the build anchor. Judgment is forged by building, not by learning concepts in the abstract. This stays dedicated and non-negotiable.
+- **Course library** (Phase 1) — the *raw material* the curriculum was mined from, and a resource pool for depth. Don't take the courses; the curriculum already extracted what they teach (minus the deprecated parts — see the curriculum's Currency Watch).
+- **Papers + resource links** — pull when a concept demands depth.
 
-The rule: **concepts pull resources; resources don't push concepts.** Mine syllabi (Eden Marco, etc.) for candidate concepts into the queue's pool — but they enter unprioritized, and a live project need always jumps the line.
+The rule: **concepts pull resources; resources don't push concepts.** A live project need always jumps the curriculum line — that's the best learning.
 
 ---
 

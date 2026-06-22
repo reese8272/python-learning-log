@@ -2,6 +2,8 @@
 
 The prioritized list of concepts to grill with `/sharpen`. Seeded from Reese's own shipped code (the richest curriculum — defend what you already built) and the genuine gaps on the AI Engineering Master Guide path.
 
+**Where this sits in the pipeline:** `/learn` (acquire from zero, via `readings/ai-engineering-curriculum/`) → **`/sharpen` (this queue — defend cold)** → `/drill` (retain). A unit learned via `/learn` lands here to be defended. Concepts from his own shipped code start here directly (already built, just need defending). Two ledgers: this file tracks *acquisition/defense*; `CAREER_LOG.md` tracks *mastery + review cadence*.
+
 **Two tiers** (see `.claude/commands/sharpen.md`):
 - **Tier 1 — Foundational / agentic core** → 100%, "can teach it." Mechanism + why-this-over-that + failure mode. Defend cold.
 - **Tier 2 — Periphery** → Pareto 80/20, "explain the decision." Enough to make the call, not teach the internals.

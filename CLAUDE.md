@@ -14,7 +14,12 @@ This is a personal journaling repo with a single owner. **Always commit and push
 
 These rules exist because the ADHD brain's motivation system requires engineered structure, not more willpower. When coaching a learning session, enforce these — don't work around them.
 
-**The primary learning engine is concept-driven, not course-driven.** The default mode is `/sharpen` + `career/concept_queue.md`: one concept at a time, struggle-first, tied to his own shipped code, logged to `CAREER_LOG.md`, kept alive by `/drill`. This is the phone-friendly, immediate-reward loop that an ADHD brain will actually sustain. Courses are **gap-fillers pulled on demand**, not a syllabus to complete. Source of truth: `career/helpful_notes_and_guides/AI Engineering Master Guide.md` (a reference, not a checklist).
+**The primary learning engine is concept-driven, not course-driven** — a three-stage in-catalog pipeline, all phone-friendly, all logged to `CAREER_LOG.md`:
+- **`/learn`** — acquire a concept from zero, researched live against current docs, tied to his code. Walks the technical curriculum at `readings/ai-engineering-curriculum/summary.md`. *Replaces taking online courses.*
+- **`/sharpen`** — defend what he's learned/built cold, at the tier bar. Walks `career/concept_queue.md`.
+- **`/drill`** — retain landed concepts on a spaced schedule.
+
+Online courses are **not taken**; their content was mined into the curriculum (minus deprecated patterns — see the curriculum's Currency Watch). The Master Guide (`career/helpful_notes_and_guides/AI Engineering Master Guide.md`) is the reference that anchors all of it (North Star, capstone, resource pool). Live research every technical session — never teach/grade from memory; the ecosystem moves too fast.
 
 **Peak window is sacred.** The 90–180 minutes post-medication is reserved for the hardest, most novel learning only — `/sharpen` sessions, a pulled course section, AWS cert material, technical papers. Never burn this window on email, Slack, system-tinkering, or passive review. This single reallocation produces more learning gains than any tool change.
 
