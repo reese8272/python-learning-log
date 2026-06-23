@@ -52,9 +52,15 @@ PRICING = {
 SYSTEM_PROMPT = {"role": "system", "content": "You are a helpful assistant."}
 
 def build_request(history: list[dict], new_user_msg: str) -> list[dict]:
-    # TODO: return [system, *history, {"role": "user", "content": new_user_msg}]
-    ...
+    system = SYSTEM_PROMPT
+    return [system, *history, {"role": "user", "content": new_user_msg}]
 
+'''
+Questions for exercise 1:
+- why are we making system = SYSTEM_PROMPT? Isn't the config of SYSTEM_PROMPT enough?
+- what's the * in history? Is that an unpacking? it's for args right? Of a dictionary to pass all the history as fields? Help me out here.
+- and then of course the final role: user is the actual new message we are passing to the LLM that is the appendage of the payload that actually helps us go from a previous convo to a new query to the LLM.
+'''
 
 # ─── EXERCISE 2 — Tokens: estimate from raw text ────────────────────────────
 # Rule of thumb: ~0.75 words per token  ->  tokens ≈ words * 1.33
@@ -65,8 +71,17 @@ def build_request(history: list[dict], new_user_msg: str) -> list[dict]:
 # context window — you reason in tokens, not characters or words.
 
 def estimate_tokens(text: str) -> int:
-    # TODO: words = text.split(); return int(len(words) * 1.33)
-    ...
+    # TODO: split the text into words, then turn the word COUNT into a token
+    #       estimate using the rule of thumb above. Round down to a whole int.
+    if not text:
+        return 0
+    words = text.split(" ")
+    tokens = len(words) * 1.33
+    return int(tokens)
+
+'''
+Probably shouldn't have the actual thing I am learning in the TODO. The TODO should merely be psuedocode that you are trying to get me to do, or, just any imports we need to code. This seemed a little easy because it was just the TODO
+'''
 
 
 # ─── EXERCISE 3 — The hard ceiling: input + output must fit the window ───────
@@ -79,8 +94,14 @@ def estimate_tokens(text: str) -> int:
 # a different failure from in-window degradation (fix = better retrieval).
 
 def call_status(input_tokens: int, reserved_output: int, window: int) -> str:
-    # TODO: return "ok" if input_tokens + reserved_output <= window else "rejected"
-    ...
+    total = input_tokens + reserved_output
+    if total > window:
+        return "rejected"
+    return "ok"
+
+'''
+Same feedback as question 2
+'''
 
 
 # ─── EXERCISE 4 — Prove the output asymmetry numerically ────────────────────
@@ -94,10 +115,16 @@ def call_status(input_tokens: int, reserved_output: int, window: int) -> str:
 def cheaper_to_trim(words: int, model: str) -> str:
     p_in, p_out = PRICING[model]
     tokens = words * 1.33
-    # TODO: saved_input  = (tokens / 1e6) * p_in
-    #       saved_output = (tokens / 1e6) * p_out
-    #       return "output" if saved_output > saved_input else "input"
-    ...
+    # TODO: compute the dollars saved by trimming these tokens off the INPUT
+    #       vs off the OUTPUT (price is per-MTok), then return whichever side
+    #       saves more — "input" or "output".
+    saved_input = (tokens / 1e6) * p_in
+    saved_output = (tokens / 1e6) * p_out
+    return "output" if saved_output > saved_input else "input"
+
+'''
+Same feedback as question 2 and 3
+'''
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -106,18 +133,44 @@ def cheaper_to_trim(words: int, model: str) -> str:
 #
 # Q1. "The LLM remembers our conversation" is wrong. Why — and what does that
 #     fact force YOU to build into any multi-turn app?
-#
+
+'''
+The LLM is stateless, and the conversation is sent in every query, meaning it doesnt remember, it in fact reads the entire conversation up to your query. OUR job is to build a way to make that conversation cheaper and create the memory and create the caching and checkpointing.
+
+one liner: the LLM is stateless, taking up the entire convo each time, and so my job is to wire in the persistence and memory to save money when building multi-turn conversational LLMs
+'''
+
+
 # Q2. A client says "we'll just dump our 300-page knowledge base into the
 #     context window on every query." Name the TWO distinct things that go
 #     wrong — the HARD failure and the SOFT failure — and give the different
 #     fix for each.
-#
+
+'''
+1) context window could bubble and fail because we exceeded the context window in our 300 page dump (hard fail)
+2) if we did fit in the context window, the inners of the context would likely be hallucinated because of the amount of context we are giving to the LLM at once (soft fail)
+
+one liner: our 300 page dump would not only create hallucination in the response, but if it ends up being bigger than the context window, would fail our query entirely.
+'''
+
 # Q3. Output tokens cost ~5x input tokens. Give the MECHANISTIC reason (what is
 #     the model physically doing differently for output vs input?).
-#
+
+'''
+The mechanism reason is becaues the input is in one pass, all of it is ingested at intake, however, the output is being ran over and over because it is simply doing a next token prediction (that's all LLMs are), and thus costs more to output because of that continuous computation.
+
+one liner: our inputs are taken in one pass, whereas the output is generated token by token, and thus computation is needed over the entire payload over and over to generate its response.
+'''
+
 # Q4. What does capping `max_tokens` actually guard, what does it NOT fix, and
 #     what breaks if you set it too low?
-#
+
+'''
+max_tokens actually guards raw tokens that are sent to the LLM that is lower than the default max context window, it does NOT fix hallucination, and if set too low, might stop the LLM mid response.
+
+one liner: ^^
+'''
+
 # Requirement: for each, also write the ONE-LINE version you'd say to a client.
 
 
