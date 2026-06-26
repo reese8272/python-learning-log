@@ -21,6 +21,8 @@ researched live     100% / tier bar     against forgetting curve
 
 **How to use:** Work top-down within a section; sections are ordered by dependency. Don't skip a `[ ]` because you "already know it" — if you can't pass the explain-back at the tier bar, it isn't owned yet. When `/learn` finishes a unit, it logs to `reflection_log/`, marks it here, and (optionally) drops it into `career/concept_queue.md` for a defense pass.
 
+**Every unit leaves a worksheet.** Same as the AI curriculum: each `/learn` unit produces a self-contained, runnable lesson-assignment at `career/lesson_assignments/YYYY-MM-DD_<unit>.py` (template: `2026-06-22_llm-call-anatomy.py`). Shape is fixed — targeting soliloquy → Part 1 coding exercises (boilerplate pre-filled, **TODOs state intent, never the solution line**) → Part 2 concept questions answered cold + a one-line "interviewer version" of each → a red/green test runner → a gated answer key. A unit isn't banked until its worksheet runs green **and** you can say the concepts cold.
+
 ---
 
 ## 🎯 Interview Intel — what they actually asked for
@@ -61,7 +63,7 @@ Re-verify per unit.
 
 *The floor. You write Python daily — this section is about defending the parts an interviewer pushes on past the happy path. If you can't explain the GIL or why a generator saves memory, the rest doesn't matter.*
 
-- [ ] **Data model & idiomatic Python** — mutability, identity vs equality (`is` vs `==`), truthiness, `__dunder__` methods, why everything's an object. `T1`
+- [~] **Data model & idiomatic Python** — mutability, identity vs equality (`is` vs `==`), truthiness, `__dunder__` methods, why everything's an object. `T1` *(2026-06-26 — taught: `is`/`==` + small-int cache −5..256, mutable-default evaluated-once + None sentinel, `__eq__` nulls `__hash__` + the hash invariant, first-class functions → decorators/Depends. 3/4 explain-back cold; #4 re-taught. Build pending: GridPoint value object. Worksheet: lesson_assignments/2026-06-26_python-data-model.py)*
 - [ ] **Type hints in earnest** — `typing` module, `Optional`/`Union`/`|`, generics, `Protocol`, why hints matter for FastAPI (they ARE the API contract). `T1`
 - [ ] **Generators & iterators** — `yield`, lazy evaluation, when a generator saves memory vs a list; the streaming-large-dataset connection. `T1`
 - [ ] **Decorators & closures** — what `@something` actually does, writing one, why FastAPI/pytest lean on them. `T1`
@@ -182,4 +184,4 @@ Re-verify per unit.
 
 ## Entry Log
 
-*(links to dated entries in `reflection_log/` as sessions happen)*
+- [2026-06-26](reflection_log/2026-06-26.md) — §1.1 "Data model & idiomatic Python" (Tier 1): `is`/`==` + small-int cache, mutable-default evaluated-once, `__eq__`/`__hash__` contract, first-class functions. 3/4 explain-back cold; build + worksheet assigned.
