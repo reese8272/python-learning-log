@@ -47,7 +47,7 @@ Work top-down within each tier. Tier 1 before Tier 2 unless a real project need 
 - [ ] **Celery workers vs FastAPI background tasks vs asyncio** — why Celery for autoclip's pipeline *(source: autoclip)*
 
 ### Mid-Python Dev interview prep *(roadmap: `career/mid-python-developer-prep/`)*
-- [~] **Python data model** — `is` vs `==` + small-int cache, mutable-default evaluated-once, `__eq__`/`__hash__` contract + invariant, first-class functions *(acquired 2026-06-26 via /learn §1.1; defend cold after build)*
+- [ ] **Python data model** — `is` vs `==` + small-int cache, mutable-default evaluated-once, `__eq__`/`__hash__` contract + invariant, first-class functions *(acquired 2026-06-26 via /learn §1.1; build banked 2026-06-29 — GridCell value object. Ready to defend cold in /sharpen.)*
 
 ---
 

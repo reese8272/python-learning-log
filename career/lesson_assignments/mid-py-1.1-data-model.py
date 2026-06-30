@@ -30,7 +30,7 @@ worksheet drills the OTHER facets so the whole primitive is yours.
 
 HOW TO USE THIS
   - PART 1: fill in each TODO. Boilerplate is pre-written so you focus on the
-    CONCEPT and the FLOW, not syntax. Run `python 2026-06-26_python-data-model.py`.
+    CONCEPT and the FLOW, not syntax. Run `python mid-py-1.1-data-model.py`.
     The tests at the bottom tell you red/green. No AI until you've struggled.
   - PART 2: answer each concept question OUT LOUD or in writing BEFORE you
     scroll to the answer key. For each, also write the one-line "interviewer
@@ -54,7 +54,9 @@ HOW TO USE THIS
 def is_missing(value) -> bool:
     # TODO: return whether `value` is the None singleton, using identity
     #       comparison rather than equality.
-    ...
+    if value is None:
+        return True
+    return False
 
 
 # ─── EXERCISE 2 — Prove the small-int cache bites ───────────────────────────
@@ -72,7 +74,11 @@ def is_missing(value) -> bool:
 def same_object(n: int) -> bool:
     # TODO: bind `n` to two separate local variables, then return whether
     #       those two variables are the SAME object (identity comparison).
-    ...
+    var1 = int(str(n))
+    var2 = int(str(n))
+    if var1 is var2:
+        return True
+    return False
 
 
 # ─── EXERCISE 3 — Kill the mutable-default bug ──────────────────────────────
@@ -91,7 +97,10 @@ def add_fixed(item, bucket=None):
     # TODO: if no bucket was passed in, create a fresh empty list for this call;
     #       otherwise use the one that was passed. Then append item and return
     #       the list. (Use the singleton check from Exercise 1.)
-    ...
+    if bucket is None:
+        bucket = []
+    bucket.append(item)
+    return bucket
 
 
 # ─── EXERCISE 4 — The __eq__ / __hash__ contract ────────────────────────────
@@ -114,7 +123,7 @@ class GridPoint:
     def __hash__(self) -> int:
         # TODO: return a hash derived from the SAME fields __eq__ compares
         #       (lat and lon together), so equal points share a hash.
-        ...
+        return hash((self.lat,self.lon))
 
 
 # ─── EXERCISE 5 — Functions are first-class objects ─────────────────────────
@@ -131,7 +140,10 @@ class GridPoint:
 def run_all(funcs: list, value) -> list:
     # TODO: for each function in funcs, call it on `value`, and collect the
     #       results into a list (same order). Return that list.
-    ...
+    final = []
+    for func in funcs:
+        final.append(func(value))
+    return final
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -144,8 +156,10 @@ def run_all(funcs: list, value) -> list:
 
 '''
 your answer:
+anything between -5 and 256 are stored in cache, and even if it's a different object, when you say a=5 and b=5, when it's cached, it's saved to the same number, once you are outside of that range, numbers like 1000 do get saved to different memory allocations, meaning a is b would then fail.
 
 interviewer one-liner:
+^^^
 '''
 
 
@@ -155,8 +169,10 @@ interviewer one-liner:
 
 '''
 your answer:
+When you have a mutable default, then every time you don't pass a parameter to that variable, it uses that default, thus any information in there previously will leak into your other calls. The fix is having your parameter = None, and checking if var = None: (do something). This creates the parameter as immutable.
 
 interviewer one-liner:
+The variable is a mutable default and will leak into other calls, and using a mutable default like None will fix that.
 '''
 
 
@@ -166,8 +182,10 @@ interviewer one-liner:
 
 '''
 your answer:
+Yes, because you didn't modify the __hash__() function as well. If you don't, then the hash will default to None, and thus things that aren't simply values will not be hashable or unpackable. To fix this, you must override the hash function and hash the values that are associated with __eq__()
 
 interviewer one-liner:
+^^^ one liner mine as well be that one above. It's sufficient.
 '''
 
 
@@ -177,8 +195,10 @@ interviewer one-liner:
 
 '''
 your answer:
+first class functions means functions can be assigned to variables, and have attributes just like other variables. This allows you to do something like decorators and iterators. For example, you pass a list of functions to a parameter with apply(funcs, value), and for func in funcs, you can do func(value) and append it to a new list. Without a first class function, you can't do this.
 
 interviewer one-liner:
+They are functions that can be applied as variables and passed as parameters, and thus creating the ability to be used as generators or be passed as a list and iterated over.
 '''
 
 
