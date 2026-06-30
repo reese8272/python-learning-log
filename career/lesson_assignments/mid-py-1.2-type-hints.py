@@ -16,8 +16,7 @@ Four facts to feel in your fingers, not just nod at:
   1. HINTS ARE NOT ENFORCED AT RUNTIME by CPython. They live in
      __annotations__; mypy/Pyright/ruff and runtime frameworks (Pydantic,
      FastAPI) are what READ and act on them. `def f(x: int)` then `f("hi")`
-     raises only if some line inside trips on the wrong type — not because of
-     the hint.
+     raises only if some line inside trips on the wrong type — not the hint.
   2. NULLABLE != REQUIRED — two independent axes.
        nullable  = the TYPE     -> `int | None`     (value may be None)
        required  = the DEFAULT  -> no default = required; `= None` = optional
@@ -36,14 +35,17 @@ Four facts to feel in your fingers, not just nod at:
      you don't own (stdlib, boto3, vendor SDKs). isinstance() against a Protocol
      needs @runtime_checkable, and even then only checks the method EXISTS.
 
-HOW TO USE THIS
-  - PART 1: fill in each TODO. Boilerplate is pre-written so you focus on the
-    CONCEPT and the FLOW, not syntax. Run `python mid-py-1.2-type-hints.py`.
-    The tests at the bottom tell you red/green. No AI until you've struggled.
-  - PART 2: answer each concept question OUT LOUD or in writing BEFORE you
+HOW TO USE THIS  (sections run in this order — recall, then drill, then build)
+  - PART 1 — CONCEPT QUESTIONS: answer each OUT LOUD or in writing BEFORE you
     scroll to the answer key. For each, also write the one-line "interviewer
-    version" — the crisp answer you'd say across the table.
-  - Done = all tests green AND you can say the Part 2 answers cold.
+    version" — the crisp answer you'd say across the table. Recall first; it
+    primes everything below.
+  - PART 2 — EXERCISES: fill in each TODO. Boilerplate is pre-written so you
+    focus on the CONCEPT and FLOW, not syntax. These drill the separate facets.
+  - PART 3 — PROJECT: the bank-gate build. Integrate the facets into one small
+    real thing. The unit is NOT banked until this runs green.
+  - Run `python mid-py-1.2-type-hints.py` — the runner red/greens PART 2 + 3.
+  - Done = all tests green AND you can say the PART 1 answers cold.
 
   NOTE: requires Python 3.10+ (uses `X | None`) and `pip install pydantic>=2`.
 ════════════════════════════════════════════════════════════════════════════
@@ -53,97 +55,8 @@ from typing import Protocol, runtime_checkable
 from pydantic import BaseModel, ValidationError
 
 
-# ─── EXERCISE 1 — Hints don't run; __annotations__ proves it ────────────────
-# Type hints are stored as data on the function, not enforced. This exercise
-# makes you READ that data so the "hints are inert at runtime" fact is concrete.
-#
-# Implement declared_types: return the function's annotation mapping (the dict
-# Python stored from the hints). It already exists on every function — you just
-# have to return the right attribute. Do NOT build the dict by hand.
-#
-# Concept it burns in: the hint is metadata in __annotations__; nothing checks
-# it unless a tool or framework chooses to read it.
-
-def declared_types(func) -> dict:
-    # TODO: return the attribute where Python stores a function's type hints
-    #       (the annotation mapping). One line, no manual dict construction.
-    ...
-
-
-# ─── EXERCISE 2 — The four-corner truth table, as Pydantic fields ───────────
-# Build a model whose four fields are exactly the four combinations of
-# {required, optional} x {not-nullable, nullable}. The field NAMES tell you
-# which corner each one is. Choose the annotation + default for each so the
-# tests (which probe required-vs-optional and null-vs-not) pass.
-#
-#   required_solid    -> required, NOT nullable   (must pass; can't be None)
-#   required_nullable -> required, nullable        (MUST pass; may be None)
-#   optional_solid    -> optional, NOT nullable    (may omit; defaults to "json")
-#   optional_nullable -> optional, nullable        (may omit; defaults to None)
-#
-# Concept it burns in: nullable is the TYPE (`| None`), required is the DEFAULT
-# (absence of one). They're independent — set each axis deliberately.
-
-class ForecastQuery(BaseModel):
-    # TODO: declare the four fields below with the right TYPE and DEFAULT so each
-    #       lands in its named corner of the table. Use modern `str | None`
-    #       syntax. Default the optional_solid field to the string "json".
-    ...
-
-
-# ─── EXERCISE 3 — Generics make validation DEEP ─────────────────────────────
-# A bare `list` says "a list of something." A generic says "of what" — and that
-# is what lets a framework validate each element. Annotate this function with
-# CURRENT generic syntax: it takes a list of (lat, lon) float pairs and returns
-# a mapping from a string key to a float.
-#
-# Implement to_lookup: build a dict mapping "lat,lon" (formatted string) -> the
-# product lat*lon, for each pair. The point is the ANNOTATION as much as the
-# body — use builtins + brackets, not typing.List/Dict/Tuple.
-#
-# Concept it burns in: `list[tuple[float, float]]` / `dict[str, float]` — the
-# type PARAMETER is what makes validation and OpenAPI schemas precise.
-
-def to_lookup(pairs):  # TODO: annotate the parameter and the return type
-    # TODO: for each (lat, lon) pair, add an entry keyed by the string
-    #       f"{lat},{lon}" whose value is lat * lon. Return the dict.
-    ...
-
-
-# ─── EXERCISE 4 — Protocol: type by shape, not lineage ──────────────────────
-# You want a function that accepts "anything with a .read() returning bytes,"
-# including classes you don't own. Define the Protocol that captures that shape,
-# then a function typed against it. NEITHER concrete class below inherits the
-# Protocol — they satisfy it structurally, which is the whole point.
-#
-# Concept it burns in: structural typing — having the method IS satisfying the
-# interface. No inheritance/registration. @runtime_checkable is what lets the
-# isinstance() test in the runner work (and it only checks the method exists).
-
-@runtime_checkable
-class Readable(Protocol):
-    # TODO: declare the required shape — a `read` method taking no args and
-    #       returning bytes. Use `...` as the body (it's a structural stub).
-    ...
-
-
-def read_all(source) -> bytes:  # TODO: annotate `source` with the Protocol type
-    # TODO: call the source's read() method and return its bytes.
-    ...
-
-
-# These two satisfy Readable WITHOUT inheriting it — do not change them.
-class FileLike:
-    def read(self) -> bytes:
-        return b"grib-bytes"
-
-class NotReadable:
-    def open(self) -> bytes:
-        return b"nope"
-
-
 # ════════════════════════════════════════════════════════════════════════════
-# PART 2 — CONCEPT QUESTIONS (answer cold, THEN check the key at the bottom)
+# PART 1 — CONCEPT QUESTIONS (answer cold, THEN check the key at the bottom)
 # Requirement: for each, also write the ONE-LINE "interviewer version".
 # ════════════════════════════════════════════════════════════════════════════
 #
@@ -204,6 +117,112 @@ interviewer one-liner:
 
 
 # ════════════════════════════════════════════════════════════════════════════
+# PART 2 — EXERCISES (fill in the TODOs; the runner red/greens these)
+# ════════════════════════════════════════════════════════════════════════════
+
+# ─── EXERCISE 1 — Hints don't run; __annotations__ proves it ────────────────
+# Type hints are stored as data on the function, not enforced. This exercise
+# makes you READ that data so the "hints are inert at runtime" fact is concrete.
+#
+# Implement declared_types: return the function's annotation mapping (the dict
+# Python stored from the hints). It already exists on every function — you just
+# have to return the right attribute. Do NOT build the dict by hand.
+#
+# Concept it burns in: the hint is metadata in __annotations__; nothing checks
+# it unless a tool or framework chooses to read it.
+
+def declared_types(func) -> dict:
+    # TODO: return the attribute where Python stores a function's type hints
+    #       (the annotation mapping). One line, no manual dict construction.
+    ...
+
+
+# ─── EXERCISE 2 — Generics make validation DEEP ─────────────────────────────
+# A bare `list` says "a list of something." A generic says "of what" — and that
+# is what lets a framework validate each element. Annotate this function with
+# CURRENT generic syntax: it takes a list of (lat, lon) float pairs and returns
+# a mapping from a string key to a float.
+#
+# Implement to_lookup: build a dict mapping "lat,lon" (formatted string) -> the
+# product lat*lon, for each pair. The point is the ANNOTATION as much as the
+# body — use builtins + brackets, not typing.List/Dict/Tuple.
+#
+# Concept it burns in: `list[tuple[float, float]]` / `dict[str, float]` — the
+# type PARAMETER is what makes validation and OpenAPI schemas precise.
+
+def to_lookup(pairs):  # TODO: annotate the parameter and the return type
+    # TODO: for each (lat, lon) pair, add an entry keyed by the string
+    #       f"{lat},{lon}" whose value is lat * lon. Return the dict.
+    ...
+
+
+# ─── EXERCISE 3 — Protocol: type by shape, not lineage ──────────────────────
+# You want a function that accepts "anything with a .read() returning bytes,"
+# including classes you don't own. Define the Protocol that captures that shape,
+# then a function typed against it. NEITHER concrete class below inherits the
+# Protocol — they satisfy it structurally, which is the whole point.
+#
+# Concept it burns in: structural typing — having the method IS satisfying the
+# interface. No inheritance/registration. @runtime_checkable is what lets the
+# isinstance() test in the runner work (and it only checks the method exists).
+
+@runtime_checkable
+class Readable(Protocol):
+    # TODO: declare the required shape — a `read` method taking no args and
+    #       returning bytes. Use `...` as the body (it's a structural stub).
+    ...
+
+
+def read_all(source) -> bytes:  # TODO: annotate `source` with the Protocol type
+    # TODO: call the source's read() method and return its bytes.
+    ...
+
+
+# These two satisfy Readable WITHOUT inheriting it — do not change them.
+class FileLike:
+    def read(self) -> bytes:
+        return b"grib-bytes"
+
+class NotReadable:
+    def open(self) -> bytes:
+        return b"nope"
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# PART 3 — PROJECT (the bank-gate build): the four-corner request contract
+# ════════════════════════════════════════════════════════════════════════════
+# This is the build from the /learn session, written as a worksheet. It's where
+# the facets converge: you encode the required-vs-nullable truth table AS a real
+# Pydantic v2 request model, then make the model's enforcement observable.
+#
+# Build a model whose four fields are exactly the four corners of
+# {required, optional} x {not-nullable, nullable}. The field NAMES tell you
+# which corner each is. Pick the annotation + default for each:
+#
+#   variable -> required, NOT nullable   (must pass; can't be None)   e.g. "t2m"
+#   level    -> required, nullable        (MUST pass; may be None)
+#   fmt      -> optional, NOT nullable     (may omit; defaults to "json")
+#   bbox     -> optional, nullable         (may omit; defaults to None)
+#
+# Concept it burns in: nullable is the TYPE (`| None`), required is the DEFAULT
+# (absence of one). They're independent — and Pydantic v2 enforces exactly that.
+
+class ForecastQuery(BaseModel):
+    # TODO: declare the four fields above with the right TYPE and DEFAULT so each
+    #       lands in its named corner. Modern `str | None` syntax. Default `fmt`
+    #       to the string "json".
+    ...
+
+
+def try_build(**kwargs) -> str:
+    # TODO: attempt to construct ForecastQuery(**kwargs). If it succeeds, return
+    #       the string "ok". If Pydantic raises a ValidationError (a required
+    #       field was missing / invalid), catch it and return "rejected". This
+    #       makes the required-vs-nullable boundary observable instead of crashy.
+    ...
+
+
+# ════════════════════════════════════════════════════════════════════════════
 # TEST RUNNER — run this file; green means the flow is right.
 # ════════════════════════════════════════════════════════════════════════════
 def _run_tests():
@@ -223,31 +242,11 @@ def _run_tests():
     check("returns the annotation mapping",
           lambda: declared_types(_sample) == {"x": int, "y": str, "return": bool})
 
-    print("Exercise 2 — required vs nullable corners:")
-    # required_solid + required_nullable must be provided; the two optionals may be omitted.
-    base = dict(required_solid="t2m", required_nullable=None)
-    check("omitting an optional field is fine (defaults apply)",
-          lambda: ForecastQuery(**base).optional_solid == "json")
-    check("optional_nullable defaults to None",
-          lambda: ForecastQuery(**base).optional_nullable is None)
-    check("required_nullable accepts an explicit None",
-          lambda: ForecastQuery(**base).required_nullable is None)
-    def _missing_required():
-        try:
-            ForecastQuery(required_nullable=None)  # omit required_solid
-            return False
-        except ValidationError:
-            return True
-    check("omitting a REQUIRED field raises ValidationError", _missing_required)
-    check("required_nullable is required even though it's nullable",
-          lambda: (lambda: ForecastQuery(required_solid="t2m"))() and False
-          if False else _req_nullable_required())
-
-    print("Exercise 3 — generics:")
+    print("Exercise 2 — generics:")
     check("builds the lat,lon -> product lookup",
           lambda: to_lookup([(2.0, 3.0), (4.0, 5.0)]) == {"2.0,3.0": 6.0, "4.0,5.0": 20.0})
 
-    print("Exercise 4 — Protocol structural typing:")
+    print("Exercise 3 — Protocol structural typing:")
     check("a class WITH read() satisfies it (no inheritance)",
           lambda: read_all(FileLike()) == b"grib-bytes")
     check("isinstance works via @runtime_checkable",
@@ -255,19 +254,27 @@ def _run_tests():
     check("a class WITHOUT read() does NOT satisfy it",
           lambda: isinstance(NotReadable(), Readable) is False)
 
+    print("Project — four-corner request contract:")
+    # A fully-specified, valid request builds.
+    check("full valid request -> ok",
+          lambda: try_build(variable="t2m", level=None, fmt="grib", bbox=None) == "ok")
+    # The two REQUIRED fields must be present (even though `level` is nullable).
+    check("omitting required `variable` -> rejected",
+          lambda: try_build(level=None) == "rejected")
+    check("omitting required `level` -> rejected (nullable != optional)",
+          lambda: try_build(variable="t2m") == "rejected")
+    # The two OPTIONAL fields may be omitted; defaults apply.
+    check("omitting both optionals is fine; fmt defaults to 'json'",
+          lambda: ForecastQuery(variable="t2m", level=None).fmt == "json")
+    check("optional bbox defaults to None",
+          lambda: ForecastQuery(variable="t2m", level=None).bbox is None)
+    # Nullable required field accepts an explicit None as a real value.
+    check("required-but-nullable `level` accepts explicit None",
+          lambda: ForecastQuery(variable="t2m", level=None).level is None)
+
     passed = sum(1 for _, c in results if c)
     print(f"\n{passed}/{len(results)} green.",
           "All green — primitive owned." if passed == len(results) else "Keep going.")
-
-
-def _req_nullable_required() -> bool:
-    # required_nullable has NO default -> omitting it must raise, proving
-    # nullable != optional.
-    try:
-        ForecastQuery(required_solid="t2m")
-        return False
-    except ValidationError:
-        return True
 
 
 if __name__ == "__main__":
@@ -275,7 +282,7 @@ if __name__ == "__main__":
 
 
 # ════════════════════════════════════════════════════════════════════════════
-# ANSWER KEY — no peeking until you've answered Part 2 cold.
+# ANSWER KEY — no peeking until you've answered PART 1 cold.
 # ════════════════════════════════════════════════════════════════════════════
 #
 # A1. They're WRONG in Pydantic v2. `Optional[int]` means exactly `int | None`
