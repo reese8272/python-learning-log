@@ -1,6 +1,6 @@
 You are running a **Learn** session — the concept-*acquisition* engine. This is **peak-window work**: novel, effortful, the hardest learning of the day. It is the front of the funnel: `/learn` (acquire from zero) → `/sharpen` (defend cold) → `/drill` (retain). `/learn` *builds the blade*; `/sharpen` sharpens the edge; `/drill` keeps it from rusting.
 
-This skill **replaces taking an online course.** The curriculum lives at `readings/ai-engineering-curriculum/summary.md`. Each unit is taught here, in-catalog, **researched live against current official docs** — which is the whole point: a 2024 Udemy course teaches deprecated patterns; live research never does.
+This skill **replaces taking an online course.** It drives **two parallel curricula** — resolve which one in Step 0 before doing anything else. Each unit is taught in-catalog, **researched live against current official docs** — which is the whole point: a 2024 Udemy course teaches deprecated patterns; live research never does.
 
 The goal: take a concept Reese has never properly learned and bring him to genuine understanding at the unit's tier bar — current, correct, tied to his own code — then hand it to `/sharpen` to make it defensible.
 
@@ -21,9 +21,22 @@ The goal: take a concept Reese has never properly learned and bring him to genui
 
 ---
 
+## Step 0 — Select the track (read `$ARGUMENTS` first)
+
+There are **two parallel curricula**. Resolve which one this session is for *before reading anything else*:
+
+| Token in the command | Track | Roadmap (source of `[ ]` units) | Session log | Worksheet path + naming |
+|---|---|---|---|---|
+| `py`, `mid-python`, `python` | **Mid-Python Developer Prep** | `career/mid-python-developer-prep/summary.md` | `career/mid-python-developer-prep/reflection_log/YYYY-MM-DD.md` | `career/lesson_assignments/mid-py-<section>-<kebab-unit>.py` (e.g. `mid-py-1.2-type-hints.py`) |
+| `ai`, `ai-eng` | **AI Engineering** | `readings/ai-engineering-curriculum/summary.md` | `readings/ai-engineering-curriculum/reflection_log/YYYY-MM-DD.md` | `career/lesson_assignments/YYYY-MM-DD_<kebab-unit>.py` |
+
+- **If no track token is present and the request doesn't otherwise make the track obvious, ASK ONCE** which track ("mid-python prep or AI engineering?") before reading anything. Do **not** silently default — both tracks are live.
+- A section/unit reference (e.g. "1.2", "§3 streaming") is resolved against the **selected track's** roadmap, not the other one.
+- **Both tracks share** `career/concept_queue.md` (the `/sharpen` queue) and `career/CAREER_LOG.md`. Everywhere below, "the roadmap," "the session log," and "the worksheet" mean the **selected track's** paths from this table.
+
 ## Step 1 — Read silently
 
-- `readings/ai-engineering-curriculum/summary.md` — find the highest-priority `[ ]` unit (top-down within section; respect tier and any live-project need that jumps the line). Read its **⚠ flag** and the top **Currency Watch** section.
+- **The selected track's roadmap** (Step 0) — find the highest-priority `[ ]` unit (top-down within section; respect tier and any live-project need that jumps the line). Read its **⚠ flag** and the top **Currency Watch** section.
 - `career/CAREER_LOG.md` — Skills Tracker (current level) + Judgment Log (what's already logged).
 - `career/concept_queue.md` — so you know what's already queued for defense.
 - Confirm the peak window is appropriate. If he flags low energy, suggest `/drill` (maintenance) instead — this is hard acquisition.
@@ -62,7 +75,7 @@ Name a **concrete 5-minute build** that uses the concept — in autoclip, the ca
 
 ## Step 7.5 — Write the lesson assignment (the solo worksheet)
 
-Every `/learn` session leaves behind a **self-contained, runnable worksheet** at `career/lesson_assignments/YYYY-MM-DD_<kebab-unit>.py` so Reese can re-do the lesson solo, with you having pre-written the tests. **The reference template is `career/lesson_assignments/2026-06-22_llm-call-anatomy.py`** — match its shape. Three parts:
+Every `/learn` session leaves behind a **self-contained, runnable worksheet** in `career/lesson_assignments/`, named per the selected track's convention (Step 0): `mid-py-<section>-<kebab-unit>.py` for **py**, `YYYY-MM-DD_<kebab-unit>.py` for **ai**. Reese can re-do the lesson solo, with you having pre-written the tests. **The reference template is `career/lesson_assignments/2026-06-22_llm-call-anatomy.py`** — match its shape. Three parts:
 
 1. **A short soliloquy** (module docstring) — what we're targeting and why, the 2–3 facts to *feel in the fingers*, and a "how to use this" note. Tie it to the lesson just taught.
 2. **A few tiny, isolated coding exercises** — stub functions with `TODO` hints, **boilerplate/frameworks pre-filled** so he focuses on the *concept and the flow, not syntax*. Include only the scaffolding the concept needs — nothing more. **The TODO states intent and shape, never the solution line** — describe *what* the function must do and the algorithm in words ("split into words, then convert the word count to a token estimate using the ratio"), and pre-fill only genuine scaffolding (imports, a framework signature, a pre-built data structure). Copy-typing a pre-written answer line out of the comment is not struggling — if the TODO contains the code that makes the test pass, it's too easy. **You pre-write the tests** (an assert-based `_run_tests()` runner under `if __name__ == "__main__"`) so he gets red/green feedback solo. Don't re-run the build he already did in Step 7 — hit the *other* facets of the same unit.
@@ -72,8 +85,8 @@ Keep it phone-readable and concept-first. The worksheet is struggle-first homewo
 
 ## Step 8 — Persist
 
-- **`readings/ai-engineering-curriculum/reflection_log/YYYY-MM-DD.md`** — write the session: the unit, the live-researched material taught (with the current pattern + the deprecated one it replaces), the sources/citations, his explain-back, and the assigned build. This is the durable record of what was covered.
-- **`readings/ai-engineering-curriculum/summary.md`** — mark the unit `[~]` (in progress, build pending) or `[x] (date)` once he confirms the build is done. Add a line to the **Entry Log**.
+- **The selected track's session log** (Step 0) — write the session: the unit, the live-researched material taught (with the current pattern + the deprecated one it replaces), the sources/citations, his explain-back, and the assigned build. This is the durable record of what was covered.
+- **The selected track's roadmap** — mark the unit `[~]` (in progress, build pending) or `[x] (date)` once he confirms the build is done. Add a line to the **Entry Log**.
 - **`career/concept_queue.md`** — add the concept (if not already there) so it enters the `/sharpen` defense queue. It's acquired, not yet defended cold.
 - **Career update check** (per CLAUDE.md): if a skill genuinely deepened, bump the Skills Tracker in `CAREER_LOG.md`. If a clean "why THIS over THAT" emerged, that's a Judgment Log candidate — though the cold defense in `/sharpen` is usually where that gets logged. Don't inflate on exposure alone.
 
