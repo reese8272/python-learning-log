@@ -67,10 +67,10 @@ from pydantic import BaseModel, ValidationError
 
 '''
 your answer:
-
+No, in v2 they made it a requirement. Optional[int] is no longer in v2 if I am not mistaken.
 
 interviewer one-liner:
-
+^^^
 '''
 
 
@@ -81,7 +81,7 @@ interviewer one-liner:
 
 '''
 your answer:
-
+def f(x: int | None) -> list[str]: you no longer need any imports at the top. The old form dates because it hasn't been a part of python since like 3.10 
 
 interviewer one-liner:
 
@@ -95,6 +95,7 @@ interviewer one-liner:
 
 '''
 your answer:
+Protocol, and it allows you to read and connect without having to touch any vendor SDK.
 
 
 interviewer one-liner:
@@ -109,6 +110,7 @@ interviewer one-liner:
 
 '''
 your answer:
+The hint at this point is a type hint that won't cause an error if you pass hello, but if your logic relies on an int, then you might get one during function call. FastAPI however will not call your function if your parameter does not match your typehint.
 
 
 interviewer one-liner:
@@ -134,7 +136,7 @@ interviewer one-liner:
 def declared_types(func) -> dict:
     # TODO: return the attribute where Python stores a function's type hints
     #       (the annotation mapping). One line, no manual dict construction.
-    ...
+    return func.__annotations__
 
 
 # ─── EXERCISE 2 — Generics make validation DEEP ─────────────────────────────
