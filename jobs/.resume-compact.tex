@@ -1,0 +1,20 @@
+% Compact one-page resume styling for pandoc + tectonic
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+% Tight section spacing; h1 (#) = name = \section, h2 (##) = \subsection
+\titleformat{\section}{\Large\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{2pt}{2pt}
+\titleformat{\subsection}{\large\bfseries\color{RoyalBlue}}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{3pt}{0pt}
+
+% Tight lists
+\setlist[itemize]{leftmargin=1.2em, itemsep=0pt, topsep=0.5pt, parsep=0pt, partopsep=0pt}
+
+% Tight paragraph spacing
+\setlength{\parskip}{1pt}
+\setlength{\parindent}{0pt}
+
+% Slightly smaller body font for one-page density (standard resume practice)
+\AtBeginDocument{\small}
