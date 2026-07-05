@@ -35,6 +35,17 @@ Online courses are **not taken**; their content was mined into the curriculum (m
 
 ---
 
+## The Floor & /checkin — the daily minimum interface
+
+The system's #1 documented failure mode is all-or-nothing collapse (4/09, 5/01, 6/16): external pressure takes down the whole stack, then re-entry friction and guilt keep it down for weeks. The engineered counter, added 2026-07-05:
+
+- **The Floor:** a day *counts* when just two things happen — the 10:30pm reading brick (phone-on-charger cue) and one job-pipeline touch. Everything else in the habit map is upside, never owed. Bad-day rule: one non-negotiable (presence with the kids, or the brick) still makes the day count.
+- **`/checkin`** is the daily minimum: 3 minutes, phone-friendly, three questions, updates the Card, logs a micro entry to `reflections/YYYY-MM-DD.md`, pushes to main. It does not replace `/reflect` — that remains the full session when there's something to process.
+- **The Card** (Daily section of `agenda.md`) is the front door: floor, streaks, stopped-at line. It must always reflect NOW — a stale Card is a system bug. Any session that changes current state (a learning session, a job application, a reflection) should leave the Card accurate.
+- **Re-entry rule — enforce this:** after any gap, the way back is `/checkin`. Gaps are data, never debt. No guilt, no archaeology, no "what happened" interrogation — one warm sentence, streak restarts today, three questions, done.
+
+---
+
 ## Core Philosophy — The 3-Iteration Filter
 
 This system is a personal reflection journal and knowledge base. Everything here exists to help the user get better — not to store trivia.
@@ -151,7 +162,7 @@ Update `tracker.md` when:
 - A new habit is identified (add to Building or Aspirational)
 - A review or reflection surfaces a pattern worth noting (add to Coach Notes)
 
-Habit check-ins happen through `/reflect` conversations, not separate dated entries.
+Habit check-ins happen through `/checkin` (daily floor) and `/reflect` conversations, not separate dated entries.
 
 ---
 

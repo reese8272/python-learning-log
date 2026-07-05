@@ -24,6 +24,21 @@ This is a living document. It gets updated through coaching — when a habit is 
 
 ---
 
+## The Floor — the minimum day
+
+*Added 2026-07-05. The counter to the all-or-nothing collapse pattern (4/09, 5/01, 6/16). A day COUNTS when these two happen — everything in the Ideal Day map above is upside, never owed.*
+
+| # | Floor item | Cue |
+|---|---|---|
+| 1 | 🧱 15-min reading brick, 10:30pm, in bed | Phone on the charger FIRST → book in hand, before horizontal |
+| 2 | 📨 One job-pipeline touch (until hired) | Outside the peak window; current next-action lives in the Card in `agenda.md` |
+
+**Bad-day rule:** when everything breaks, ONE non-negotiable keeps the identity intact — full presence with the kids, or the brick. That day still counts. The streak is "days that counted," not "perfect days."
+
+**Interface:** `/checkin` — 3 minutes, phone-friendly, any time. It updates the Card, logs the day, and restarts streaks after gaps with zero guilt. After any gap, the way back is `/checkin`, not a make-up session.
+
+---
+
 ## Active — Locked In
 
 These habits are showing up consistently. The goal is to protect them.
@@ -80,6 +95,8 @@ Habits that were tried and set aside, with context why.
 ## Coach Notes
 
 *Updated through `/reflect`, `/weekly-review`, and `/monthly-review` as patterns emerge.*
+
+- **2026-07-05** — System rebuilt for friction-free re-entry, on his direct ask ("tired of where I am... make it insanely easy to stick to a routine and consistently come back"). Diagnosis: the system had deep interfaces (`/reflect`, `/daily-scheduler`) but no cheap one — the minimum daily touch cost 20+ minutes, so every hard stretch became a full collapse (the 4/09 / 5/01 / 6/16 pattern), and re-entry carried guilt-friction. The fix: (1) **The Floor** — a day counts on just two items: the 10:30 brick + one pipeline touch; bad-day rule preserved; (2) **`/checkin`** — new 3-minute phone-friendly daily command that updates the Card in `agenda.md`, logs a micro entry, and restarts streaks after gaps with zero archaeology; (3) **The Card** — `agenda.md` rebuilt as a glanceable front door (floor, streaks, stopped-at line) so re-entry never requires re-reading the system; (4) a nightly 10:25pm phone alarm/calendar cue for the brick (the 6/22-named single point of failure) — still to be set by Reese, one tap. Watch: does the floor hold through the next external hit? That's the test this design exists for.
 
 - **2026-04-01** — Morning stack is solid and stacking well. Gym is locked. The gap is intentional time for personal learning and creativity — these are getting squeezed out by work obligations.
 - **2026-04-02** — Bad sleep (went to bed after midnight) cascaded into 8am wakeup, lost the full morning stack. Gym and deep work still held. Sleep is the single highest-leverage lever — everything else is downstream of it. Creativity block still not attempted after two days.

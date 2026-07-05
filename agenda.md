@@ -1,38 +1,54 @@
 # Agenda
 
-This is the one-stop shop for current goals and intentions across all time horizons. Updated automatically by `/reflect`, `/weekly-review`, and `/monthly-review`.
+This is the one-stop shop for current goals and intentions across all time horizons. The **Card** below is the front door of the whole system — glanceable current state, updated by `/checkin` (daily) and `/reflect`. Weekly and Monthly are updated by `/weekly-review` and `/monthly-review`.
+
+**Re-entry rule:** if you've been away — a day, a week, a month — the way back is `/checkin`. Three minutes. The streak restarts today. No archaeology, no guilt, no catching up on what went stale. Read the Card, answer three questions, done.
 
 ---
 
-## Daily
-*Updated by `/reflect` — replace with each new day's intentions*
+## 📍 The Card
+*Updated by `/checkin` — this always reflects NOW, not history.*
 
-**2026-06-22 — Tomorrow's Intentions**
+**Date:** 2026-07-05
 
-1. **Peak window → `/sharpen`.** First real rep of the system built tonight; picks up at "supervisor vs swarm." Struggle-first, defend your own shipped code cold. This is the depth you said is missing — earn it in the peak window, not on email.
-2. **The brick holds — two nights running.** 15 min reading at 10:30, in bed. The cue is the whole battle: **phone on the charger first, book in hand, before you're horizontal.** It broke last week because the cue was soft, not because you lack discipline. Two nights = a restarted streak.
+**The Floor — a day counts if these 2 happen:**
+1. 🧱 **The brick** — 10:30pm, in bed, 15 min reading. The cue is the whole battle: **phone on the charger FIRST, book in hand, before you're horizontal.**
+2. 📨 **One pipeline touch** — today's: **make `creatorclip` + `CFO-Agent` repos public and pin them** (Phase 0 in `jobs/TODO.md`, ~2 hrs total, unlocks all 7 applications — the single biggest financial lever in the whole log)
+
+**Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts as a stacked day.
+
+**Upside — in order, if the day gives you more:**
+- Peak window (post-meds) → **CFO Agent: one demoable end-to-end path** (never admin, never email)
+- One `/sharpen` or `/learn` rep (phone is fine — queue picks up at "supervisor vs swarm")
+- Gym or 20-min zone-2 cardio *before* the peak window
+- Close the day: 3 gratitudes + update the stopped-at line
+
+**Streaks:**
+- 🧱 Brick: **0** — restarts tonight
+- 📨 Pipeline touches this week: **0**
+
+**Stopped at:** Jobs kit fully built 7/2 (7 tailored folders + tracker + TODO); nothing applied yet, repos still private. **Next step:** repos public → pin on GitHub → ConglomerateIT application (`jobs/conglomerateit-agentic-ai/`).
 
 ---
 
 ## Weekly
 *Updated by `/weekly-review` — replace each Monday with the new week's priorities*
 
-**Week of 2026-04-06**
+**Week of 2026-06-29 → 07-05 (set mid-week at system rebuild, 07-05)**
 
-1. Set the creativity block alarm today — pick a time, honor it when it goes off. This is practice for treating your own time as real.
-2. Block 9-to-5 career work on the calendar like it's a meeting you can't miss. Intention → infrastructure.
-3. Give yourself grace on sleep this week — you had surgery Monday. When the body recovers, sleep is still the lever everything else is downstream of.
+1. **Get seen:** Phase 0 visibility (repos public + pinned + LinkedIn Featured), then applications in to the top two — ConglomerateIT ⭐ and Activesoft/VidMob ⭐. Applying is admin: outside the peak window.
+2. **Get demoable:** CFO Agent one working end-to-end path — peak-window work, "demoable, not perfect."
+3. **Restart the streak:** brick every night, phone-on-charger cue. Two nights = restarted; seven = it's a habit again.
 
 ---
 
 ## Monthly
 *Updated by `/monthly-review` — replace each month with the new month's vision*
 
-**May 2026 — Intention becomes infrastructure**
+**July 2026 — The pipeline month**
 
-Top 3 to carry in:
-1. 2pm daily learning block — Eden Marco first, treat it like a meeting that can't be missed
-2. Relationship momentum — keep being deliberate with Hunter and the kids, don't let it go passive
-3. Design the /review-code spaced repetition system — get learned.md auto-populating, then start it
+The North Star is generational wealth through AI positioning, and positioning is two things this month:
 
-The north star is named. The roadmap is clear. May is the month the learning block moves from intention to identity.
+1. **Get seen** — work `jobs/TODO.md` to completion: visibility, all 7 Tier 1+2 applications, recruiter outreach, Tier-3 batch. The next role is $130–175k against ~$80k now; no habit is worth more than this move.
+2. **Get defensible** — daily `/sharpen`//`/learn` reps converting shipped work (CFO Agent, autoclip, Cognizant systems) into consultant-grade judgment. Interviews are won by "why THIS over THAT."
+3. **Keep the floor alive** — the Card's two-item floor, every day. The system that survives bad days is the one that compounds.
