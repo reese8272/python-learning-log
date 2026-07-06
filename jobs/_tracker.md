@@ -15,7 +15,7 @@ Anchor high. Market rate for the MCP/LangGraph skillset is above $120k — the o
 | Senior Applied AI Engineer | Omada Health | $200–250k | Reach (ceiling) | [Greenhouse](https://job-boards.greenhouse.io/omadahealth/jobs/7155511) | ☐ Not applied |
 | Sr. SWE Full Stack — Agentic AI | Genesys | $134–236k | High (FS+agent) | [Workday](https://genesys.wd1.myworkdayjobs.com/genesys/job/virtual-office-texas/sr-software-engineer--full-stack---agentic-ai_jr110668) | ☐ Not applied |
 | Applied AI Engineer (+ Backend sibling) | Next Step Systems | $140–200k | High | [SmartRecruiters](https://jobs.smartrecruiters.com/NextStepSystems/744000135482821-applied-ai-engineer-work-from-home) | ☐ Not applied |
-| Senior AI/ML Engineer — MCP | Activesoft → VidMob (likely) | DOE (senior) | ⭐ Best stack | [Dice](https://www.dice.com/job-detail/8ff5c940-ca17-4405-b382-f46eb2db6950) | ✅ Applied 2026-07-06 · ☐ LinkedIn recruiters · ☐ VidMob direct |
+| Senior AI/ML Engineer — MCP | Activesoft → VidMob (likely) | DOE (senior) | ⭐ Best stack | [Dice](https://www.dice.com/job-detail/8ff5c940-ca17-4405-b382-f46eb2db6950) | ✅ Applied + InMailed Madhavi & Raghu 2026-07-06 · follow-up ~Jul 9 · ☐ VidMob direct |
 | Agentic AI Engineer | ConglomerateIT | DOE (push $65–80/hr or $120k+) | ⭐ Best level | [Dice](https://www.dice.com/job-detail/2209d4d8-3381-4f76-8e55-c716ded6f736) | ✅ Applied + recruiter note emailed 2026-07-06 · follow-up ~Jul 13 |
 
 ---
