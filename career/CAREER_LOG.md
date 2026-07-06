@@ -109,7 +109,7 @@
 | 2026-03-19 | @classmethod vs @staticmethod vs module function | @classmethod: needs class context, inherits correctly (use cls not ClassName). @staticmethod: utility grouped with the class but needs no instance or class state. Module function: fully standalone. Choose by what context the function actually needs — don't reach for classmethod when there's no class state involved. | Decorators session | Yes | - |
 | 2026-01-19 | Queue vs Stack (FIFO vs LIFO) | Queue = first in, first out — use when order of arrival matters (BFS, task scheduling). Stack = last in, first out — use when you need to process the most recent item first (undo, DFS, call stacks). Both are lists under the hood; the difference is which end you pop from. | DSA practice | Yes | - |
 | 2026-01-19 | BFS vs DFS | BFS = level by level, guarantees shortest path in unweighted graphs. DFS = goes deep first, exhaustive search. If you need the shortest route, BFS. If you need to find if a path exists at all, DFS. | DSA practice | Yes | - |
-| 2026-01-03 | Dict vs List for counting | List lookup is O(n) — you scan every element. Dict lookup is O(1) — hash table, direct access. When you're counting occurrences or checking membership repeatedly, dict is the right tool. Nested loops + list = O(n²) for no reason. | Boot.dev exercise | Yes | - |
+| 2026-01-03 | Dict vs List for counting | List lookup is O(n) — you scan every element. Dict lookup is O(1) — hash table, direct access. When you're counting occurrences or checking membership repeatedly, dict is the right tool. Nested loops + list = O(n²) for no reason. | Boot.dev exercise | Yes | 2026-07-05 (partial — had the what, missed O(1)-vs-O(n) rationale) |
 
 ---
 
