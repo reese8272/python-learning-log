@@ -8,11 +8,11 @@ Your two best-fit roles (ConglomerateIT, Activesoft/VidMob) rest on MCP + the al
 ---
 
 ## ✅ Phase 0 — Make it visible (TODAY, ~2–3 hrs) — this is the ONLY gate before applying
-- [ ] **Make both repos public** — they're currently **PRIVATE** (recruiters would hit a 404):
-  - [ ] `github.com/reese8272/creatorclip`
-  - [ ] `github.com/reese8272/CFO-Agent`
-- [ ] Confirm each README renders on the landing page (both default to `main` ✔).
-- [ ] **Pin both** on your GitHub profile (Profile → Customize your pins).
+- [x] **Make both repos public** — ✅ verified PUBLIC (2026-07-06):
+  - [x] `github.com/reese8272/creatorclip`
+  - [x] `github.com/reese8272/CFO-Agent`
+- [x] Confirm each README renders on the landing page — ✅ both READMEs render, default `main`.
+- [ ] **Pin both** on your GitHub profile (Profile → Customize your pins). ⚠️ **Still your job — no API for this.** Current pins are old projects (Asteroids, bookbot, etc.); neither creatorclip nor CFO-Agent is pinned yet.
 - [ ] LinkedIn **Featured** links — add both (autoclip.studio first). Copy from `_linkedin-and-github.md`.
 - [ ] LinkedIn **Projects** entries — add both. Same file.
 - [ ] Update LinkedIn **headline / About** (suggestion in that file).
