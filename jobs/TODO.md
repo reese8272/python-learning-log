@@ -7,15 +7,15 @@ Your two best-fit roles (ConglomerateIT, Activesoft/VidMob) rest on MCP + the al
 
 ---
 
-## ✅ Phase 0 — Make it visible (TODAY, ~2–3 hrs) — this is the ONLY gate before applying
+## ✅ Phase 0 — COMPLETE (2026-07-06) — visibility gate cleared, applying is now unblocked
 - [x] **Make both repos public** — ✅ verified PUBLIC (2026-07-06):
   - [x] `github.com/reese8272/creatorclip`
   - [x] `github.com/reese8272/CFO-Agent`
 - [x] Confirm each README renders on the landing page — ✅ both READMEs render, default `main`.
 - [x] **Pin both** on your GitHub profile — ✅ done 2026-07-06. (Profile README also rewritten to lead with CreatorClip + CFO Agent.)
-- [ ] LinkedIn **Featured** links — add both (autoclip.studio first). Copy from `_linkedin-and-github.md`.
-- [ ] LinkedIn **Projects** entries — add both. Same file.
-- [ ] Update LinkedIn **headline / About** (suggestion in that file).
+- [x] LinkedIn **Featured** links — ✅ done 2026-07-06 (autoclip.studio + CFO Agent).
+- [x] LinkedIn **Projects** entries — ✅ done 2026-07-06.
+- [x] Update LinkedIn **headline / About** — ✅ done 2026-07-06.
 
 ## 🚀 Phase 1 — Apply (Day 1–2) — does NOT wait on CFO Agent
 Each folder already has a one-page `resume.pdf` ready to upload. For each role: **apply direct → within 24h send the note from that folder's `recruiter-outreach.md` → update `_tracker.md`.**
