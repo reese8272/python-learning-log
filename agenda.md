@@ -9,7 +9,7 @@ This is the one-stop shop for current goals and intentions across all time horiz
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history.*
 
-**Date:** 2026-07-06 (evening check-in done — first one in the books)
+**Date:** 2026-07-07 (morning — brick #1 landed, workout done, in peak on Cognizant work)
 
 **The Floor for tomorrow (07-07) — a day counts if these 2 happen:**
 1. 🧱 **The brick** — 10:25 alarm → phone on charger → 15 min reading in bed
@@ -24,8 +24,8 @@ This is the one-stop shop for current goals and intentions across all time horiz
 - Close the day: 3 gratitudes + update the stopped-at line
 
 **Streaks:**
-- 🧱 Brick: **0** — tonight's brick pending (alarm set ✅); counts at tomorrow's check-in
-- 📨 Pipeline touches: **1** (7/6: repos public — Phase 0 nearly done)
+- 🧱 Brick: **1** — 7/6 landed (alarm → charger → book, exactly as designed)
+- 📨 Pipeline touches: **1** (7/6: repos public); today's: pin repos + LinkedIn Featured
 - ✅ Check-ins: **1**
 
 **Stopped at:** Repos public (7/6) — the gate is open; also drilled dict-vs-list (partial → closed). **Next step:** pin repos + LinkedIn Featured, then ConglomerateIT application.
