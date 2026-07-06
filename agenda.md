@@ -9,11 +9,11 @@ This is the one-stop shop for current goals and intentions across all time horiz
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history.*
 
-**Date:** 2026-07-05
+**Date:** 2026-07-06 (evening check-in done — first one in the books)
 
-**The Floor — a day counts if these 2 happen:**
-1. 🧱 **The brick** — 10:30pm, in bed, 15 min reading. The cue is the whole battle: **phone on the charger FIRST, book in hand, before you're horizontal.**
-2. 📨 **One pipeline touch** — today's: **make `creatorclip` + `CFO-Agent` repos public and pin them** (Phase 0 in `jobs/TODO.md`, ~2 hrs total, unlocks all 7 applications — the single biggest financial lever in the whole log)
+**The Floor for tomorrow (07-07) — a day counts if these 2 happen:**
+1. 🧱 **The brick** — 10:25 alarm → phone on charger → 15 min reading in bed
+2. 📨 **One pipeline touch** — next up: **pin both repos + add LinkedIn Featured links** (finishes Phase 0 in `jobs/TODO.md`); if time allows, ConglomerateIT application (`jobs/conglomerateit-agentic-ai/`)
 
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts as a stacked day.
 
@@ -24,10 +24,11 @@ This is the one-stop shop for current goals and intentions across all time horiz
 - Close the day: 3 gratitudes + update the stopped-at line
 
 **Streaks:**
-- 🧱 Brick: **0** — restarts tonight
-- 📨 Pipeline touches this week: **0**
+- 🧱 Brick: **0** — tonight's brick pending (alarm set ✅); counts at tomorrow's check-in
+- 📨 Pipeline touches: **1** (7/6: repos public — Phase 0 nearly done)
+- ✅ Check-ins: **1**
 
-**Stopped at:** Jobs kit fully built 7/2 (7 tailored folders + tracker + TODO); nothing applied yet, repos still private. **Next step:** repos public → pin on GitHub → ConglomerateIT application (`jobs/conglomerateit-agentic-ai/`).
+**Stopped at:** Repos public (7/6) — the gate is open; also drilled dict-vs-list (partial → closed). **Next step:** pin repos + LinkedIn Featured, then ConglomerateIT application.
 
 ---
 
