@@ -4,6 +4,8 @@
 
 Anchor high. Market rate for the MCP/LangGraph skillset is above $120k — the only question is whether you believe it in the room. Lead with the projects.
 
+**Last session (2026-07-06):** Both ⭐ roles fully worked — ConglomerateIT (applied + recruiter email) and Activesoft/VidMob (applied + InMailed Madhavi & Raghu). Resume system finished (single master `Reese_Ludwick_Resume.pdf`, Plaid/WhisperX accuracy fixed). **Next at-bat:** Genesys (or batch the 4 Tier-3 easy-applies). **Peak-window priority:** get CFO Agent demoable. **Follow-ups due:** Activesoft ~Jul 9, ConglomerateIT ~Jul 13.
+
 ---
 
 ## Tier 1 + 2 — Tailored folders (human reads these → go direct + human outreach)
