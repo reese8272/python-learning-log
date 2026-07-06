@@ -1,0 +1,90 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,left=0.625in,right=0.625in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage{fontspec}
+\setmainfont{GelasioStatic}[
+  Path=/home/reese/.local/share/fonts/gelasio/,
+  Extension=.ttf,
+  UprightFont=*-Regular, BoldFont=*-Bold,
+  ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic]
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4pt}
+\pagestyle{empty}
+\titleformat{\section}{\normalsize}{}{0pt}{\MakeUppercase}[{\vspace{-3pt}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{2pt}{1pt}
+\setlist[itemize]{leftmargin=1.35em,itemsep=0.2pt,topsep=0.4pt,parsep=0pt,label=\textbullet,before=\vspace{-2.5pt}}
+\newcommand{\entrygap}{\vspace{2.5pt}}
+\newcommand{\dentry}[4]{\noindent\textbf{#1}\hfill{#2}\\{#3}\hfill{#4}\par}
+\newcommand{\sentry}[2]{\noindent\textbf{#1}\hfill{#2}\par}
+\begin{document}
+
+\begin{center}
+{\fontsize{14}{16}\selectfont\bfseries Reese Ludwick}\\[1pt]
+{\fontsize{9}{11}\selectfont Full-Stack Engineer — Agentic AI | reesepludwick@gmail.com | (304)-886-1850 | https://www.linkedin.com/in/reese-ludwick-024333286/ | https://github.com/reese8272}
+\end{center}
+\vspace{-2pt}
+\section*{Summary}
+\noindent Full-stack engineer who builds agentic AI end-to-end — from a React/TypeScript front end through a FastAPI/Django REST backend down to the LangGraph agent layer and the tools it calls. I ship production systems: MCP servers in real client workflows, multi-agent LangGraph pipelines in enterprise R\&D, and full-stack platforms delivered to paying clients on compressed timelines. The rare part is I don't stop at the model — I own the whole surface an agent lives in, from the UI a user touches to the orchestration state machine driving multi-turn behavior — exactly what an experience-orchestration product needs.\par
+\section*{Experience}
+\dentry{Freelance AI Engineer \& Full-Stack Developer}{Remote}{WorldCovers / APMC}{}
+\begin{itemize}
+  \item May 2026 – Present
+  \item Built and shipped features on the \textbf{WorldCovers} production platform: \textbf{React/TypeScript} front end, \textbf{Django REST} backend, \textbf{14-table PostgreSQL} schema.
+  \item Delivered features and automation to a live client under compressed timelines, coordinating scope with stakeholders.
+  \item Practiced AI-augmented engineering (Claude Code) to compress delivery without losing correctness.
+\end{itemize}
+\dentry{Software Associate}{Remote}{Cognizant}{}
+\begin{itemize}
+  \item December 2025 – Present
+  \item Build GenAI and agentic AI systems using \textbf{LangChain, LangGraph, and Python} across R\&D and client deliverables.
+  \item Ship \textbf{RAG pipelines} and \textbf{MCP server integrations} into production workflows.
+  \item Scope, prototype, and deliver AI data tools cross-functionally.
+\end{itemize}
+\dentry{GenAI Developer Contractor}{Remote}{Cognizant}{}
+\begin{itemize}
+  \item June 2025 – December 2025
+  \item Built GenAI POCs with \textbf{LangChain / LangGraph / Python}; owned prompt engineering and model evaluation.
+  \item Built \textbf{custom FastMCP servers} and integrated external \textbf{MCP} services with \textbf{AWS} for dynamic agent tool access — standardizing tool access platform-wide.
+\end{itemize}
+\dentry{IT Student Helper}{}{James Rumsey Technical Institute}{}
+\begin{itemize}
+  \item 2019 – 2021
+  \item Resolved \textbf{300+ support tickets}; led a Wi-Fi overhaul that cut latency \textbf{25\%}; completed \textbf{100+} AV/network setups.
+\end{itemize}
+\section*{Projects}
+\noindent\textbf{CFO Agent} --- full-stack agentic financial assistant (in active development)\par
+\noindent\textit{Python, FastAPI, LangGraph, PostgreSQL, Redis, Anthropic API}\par
+\begin{itemize}
+  \item FastAPI + \textbf{LangGraph} agent with \textbf{PostgreSQL} persistence and \textbf{Redis} caching; financial data via CSV/OFX import + encrypted vault.
+  \item Hybrid context architecture; multi-tenant-ready design.
+\end{itemize}
+\noindent\textbf{CreatorClip / autoclip.studio} --- full-stack live SaaS (Stripe billing)\par
+\noindent\textit{React/TypeScript, Python, FastAPI, Celery, pgvector, WhisperX, Voyage AI, Anthropic API, ffmpeg, YouTube OAuth}\par
+\begin{itemize}
+  \item Async \textbf{Celery} pipeline: \textbf{WhisperX} transcription, \textbf{Voyage + pgvector} embeddings, \textbf{ffmpeg} rendering.
+  \item Creator-"DNA" style-matching module; \textbf{YouTube OAuth}; \textbf{CI auto-deploys to prod on push to main}.
+\end{itemize}
+\noindent\textbf{Agentic Software Development Team} --- Cognizant R\&D\par
+\noindent\textit{LangChain, LangGraph, Amazon Bedrock}\par
+\begin{itemize}
+  \item Multi-agent \textbf{LangGraph} system (codegen / testing / security / supervision agents) on \textbf{Bedrock} + OSS ML backends.
+\end{itemize}
+\noindent\textbf{Customer Call Data Analysis \& Insights Engine} --- Cognizant R\&D\par
+\noindent\textit{Python, NLP, Sentence Transformers}\par
+\begin{itemize}
+  \item NLP clustering of call data into semantic issue groups; agentic AI for call consolidation and executive reporting. \textit{(Contact-center-adjacent.)}
+\end{itemize}
+\section*{Technical Skills}
+\noindent \textbf{Languages:} Python, SQL\par
+\noindent \textbf{Frontend:} React / TypeScript\par
+\noindent \textbf{Backend / APIs:} FastAPI, Django REST\par
+\noindent \textbf{Agentic / LLM:} LangChain, LangGraph, RAG, MCP Servers, Amazon Bedrock, Anthropic API, Sentence Transformers, pgvector\par
+\noindent \textbf{Data / Infra:} PostgreSQL, Redis, Celery, Docker, TensorFlow, Pandas, NumPy\par
+\noindent \textbf{Platforms / Tools:} Linux, Ubuntu, Git, GitHub, Azure Fundamentals, AWS, VS Code, Claude Code, Jupyter\par
+\section*{Certifications}
+\noindent TensorFlow Developer Specialization · Linux + Git (Boot.dev) · AZ-900 (Azure Fundamentals) · GitHub Copilot · Generative AI Context Engineering (Cognizant)\par
+\section*{Education}
+\noindent \textbf{B.S. Computer Science} — Shepherd University (Major GPA 3.43), Aug 2021 – May 2025\par
+\end{document}

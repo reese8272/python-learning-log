@@ -1,0 +1,81 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,left=0.625in,right=0.625in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage{fontspec}
+\setmainfont{GelasioStatic}[
+  Path=/home/reese/.local/share/fonts/gelasio/,
+  Extension=.ttf,
+  UprightFont=*-Regular, BoldFont=*-Bold,
+  ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic]
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4pt}
+\pagestyle{empty}
+\titleformat{\section}{\normalsize}{}{0pt}{\MakeUppercase}[{\vspace{-3pt}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{2pt}{1pt}
+\setlist[itemize]{leftmargin=1.35em,itemsep=0.2pt,topsep=0.4pt,parsep=0pt,label=\textbullet,before=\vspace{-2.5pt}}
+\newcommand{\entrygap}{\vspace{2.5pt}}
+\newcommand{\dentry}[4]{\noindent\textbf{#1}\hfill{#2}\\{#3}\hfill{#4}\par}
+\newcommand{\sentry}[2]{\noindent\textbf{#1}\hfill{#2}\par}
+\begin{document}
+
+\begin{center}
+{\fontsize{14}{16}\selectfont\bfseries Reese Ludwick}\\[1pt]
+{\fontsize{9}{11}\selectfont Remote (US) · reesepludwick@gmail.com · (304)-886-1850 | https://www.linkedin.com/in/reese-ludwick-024333286/ · https://github.com/reese8272}
+\end{center}
+\vspace{-2pt}
+\section*{Summary}
+\noindent AI/ML engineer who \textbf{builds and owns production MCP servers} and \textbf{video/creative-understanding AI pipelines}. Ship custom FastMCP servers and external MCP integrations giving agents dynamic tool access in production, plus a full video-understanding pipeline (autoclip.studio) that transcribes, embeds, and learns a creator's style into a scoring "DNA" module. Strong on \textbf{agentic workflows} (LangGraph multi-agent), \textbf{model-evaluation} loops, embeddings/retrieval (Voyage AI + pgvector), and FastAPI production services.\par
+\section*{Core Skills}
+\noindent \textbf{MCP \& Tooling:} Custom FastMCP servers, external MCP integrations, dynamic agent tool access, AWS-deployed\par
+\noindent \textbf{Video / Creative Understanding:} WhisperX transcription, Voyage AI embeddings, pgvector, ffmpeg rendering, learned style/"DNA" scoring module\par
+\noindent \textbf{Agentic \& Eval:} LangGraph multi-agent (codegen/testing/security/supervision), LangChain, RAG, model evaluation, prompt engineering, NLP clustering, executive reporting\par
+\noindent \textbf{Backend \& Data:} Python, FastAPI, PostgreSQL, Redis, Celery, SQL, Django REST\par
+\noindent \textbf{ML \& Platform:} Voyage AI, Sentence Transformers, TensorFlow, Pandas, NumPy, Amazon Bedrock, Anthropic API, Docker, Git/GitHub, Linux/Ubuntu, Azure Fundamentals, React/TypeScript, Claude Code\par
+\section*{Experience}
+\dentry{Software Associate}{Remote}{Cognizant}{Dec 2025–Present}
+\begin{itemize}
+  \item Build GenAI and agentic AI systems with LangChain, LangGraph, and Python.
+  \item \textbf{Own MCP server integrations} connecting enterprise tools and LLMs for production workflows; build RAG pipelines behind them.
+  \item Scope, prototype, and deliver AI data tooling cross-functionally.
+\end{itemize}
+\dentry{GenAI Developer Contractor}{Remote}{Cognizant}{Jun–Dec 2025}
+\begin{itemize}
+  \item \textbf{Built custom FastMCP servers and deployed external MCP integrations on AWS} to give agents dynamic tool access — the core capability this role centers on.
+  \item Ran \textbf{prompt engineering and model evaluation} to optimize LLM outputs across GenAI POCs.
+  \item Shipped modular, production-style agentic workflows.
+\end{itemize}
+\dentry{Freelance AI Engineer \& Full-Stack Developer}{Remote}{WorldCovers / APMC}{May 2026–Present}
+\begin{itemize}
+  \item Shipped production web properties on a 14-table PostgreSQL schema (Django REST + React/TypeScript).
+  \item AI-augmented engineering (Claude Code) on compressed timelines with direct stakeholder coordination.
+\end{itemize}
+\section*{Projects}
+\noindent\textbf{CreatorClip / autoclip.studio} --- \textit{creative + video understanding, scoring}\par
+\noindent\textit{Python, FastAPI, Celery, pgvector, WhisperX, Voyage AI, Anthropic API, ffmpeg, YouTube OAuth}\par
+\begin{itemize}
+  \item AI video-clipping pipeline that \textbf{learns a creator's channel style} via a custom \textbf{"DNA" scoring module} — a direct analog to scoring \textit{why creatives work}.
+  \item Async Celery pipeline: WhisperX transcription → Voyage AI + pgvector embeddings → ffmpeg rendering; full YouTube OAuth.
+  \item Live SaaS (Stripe billing) that turns raw footage into structured, embedded, scoreable content understanding.
+\end{itemize}
+\noindent\textbf{Agentic Software Development Team} --- \textit{agentic workflows + evaluation}\par
+\noindent\textit{LangChain, LangGraph, Amazon Bedrock (Cognizant R\&D)}\par
+\begin{itemize}
+  \item Multi-agent LangGraph system (codegen / testing / security / supervision) with dedicated \textbf{evaluation and security-review agents}; Bedrock + OSS ML backends.
+\end{itemize}
+\noindent\textbf{Customer Call Data Analysis \& Insights Engine} --- \textit{eval/scoring over unstructured data}\par
+\noindent\textit{Python, NLP, Sentence Transformers (Cognizant R\&D)}\par
+\begin{itemize}
+  \item NLP clustering + embeddings grouping unstructured call data into semantic segments; agentic analysis feeding executive reporting.
+\end{itemize}
+\noindent\textbf{CFO Agent} --- \textit{agentic financial assistant (in active development)}\par
+\noindent\textit{Python, FastAPI, LangGraph, PostgreSQL, Redis, Anthropic API}\par
+\begin{itemize}
+  \item FastAPI + LangGraph agent with PostgreSQL persistence, Redis caching, CSV/OFX import + encrypted vault; hybrid context architecture; multi-tenant-ready.
+\end{itemize}
+\section*{Education}
+\noindent \textbf{BS, Computer Science — Shepherd University} · Aug 2021–May 2025 · Major GPA 3.43\par
+\section*{Certifications}
+\noindent TensorFlow Developer Specialization · Linux + Git (Boot.dev) · AZ-900 · GitHub Copilot · GenAI Context Engineering (Cognizant)\par
+\end{document}

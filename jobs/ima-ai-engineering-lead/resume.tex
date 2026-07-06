@@ -1,0 +1,89 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,left=0.625in,right=0.625in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage{fontspec}
+\setmainfont{GelasioStatic}[
+  Path=/home/reese/.local/share/fonts/gelasio/,
+  Extension=.ttf,
+  UprightFont=*-Regular, BoldFont=*-Bold,
+  ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic]
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4pt}
+\pagestyle{empty}
+\titleformat{\section}{\normalsize}{}{0pt}{\MakeUppercase}[{\vspace{-3pt}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{2pt}{1pt}
+\setlist[itemize]{leftmargin=1.35em,itemsep=0.2pt,topsep=0.4pt,parsep=0pt,label=\textbullet,before=\vspace{-2.5pt}}
+\newcommand{\entrygap}{\vspace{2.5pt}}
+\newcommand{\dentry}[4]{\noindent\textbf{#1}\hfill{#2}\\{#3}\hfill{#4}\par}
+\newcommand{\sentry}[2]{\noindent\textbf{#1}\hfill{#2}\par}
+\begin{document}
+
+\begin{center}
+{\fontsize{14}{16}\selectfont\bfseries Reese Ludwick}\\[1pt]
+{\fontsize{9}{11}\selectfont reesepludwick@gmail.com | (304)-886-1850 | https://www.linkedin.com/in/reese-ludwick-024333286/ | https://github.com/reese8272}
+\end{center}
+\vspace{-2pt}
+\section*{Summary}
+\noindent Hands-on AI engineer who builds production agent systems 0→1, solo — architecture through deployment: copilots, autonomous agents, multi-agent LangGraph teams, custom MCP servers for dynamic agent tool access, and full-stack agentic products. Own the whole slice — orchestration, RAG, backend, data, infra. Azure Fundamentals (AZ-900) certified; stack-agnostic architecture ramps fast into Microsoft/Azure.\par
+\section*{Skills}
+\noindent \textbf{Cloud / Microsoft ecosystem:} Azure Fundamentals (AZ-900, certified), Azure concepts; Amazon Bedrock, AWS infra\par
+\noindent \textbf{Agentic AI:} LangGraph (multi-agent orchestration), LangChain, MCP servers (FastMCP + external integrations), RAG pipelines, agent tool-calling, prompt engineering, model evaluation\par
+\noindent \textbf{Languages / Data:} Python, SQL, PostgreSQL, pgvector, Redis, Pandas, NumPy | \textbf{ML / NLP:} Sentence Transformers, TensorFlow, Voyage AI + Anthropic APIs, semantic clustering\par
+\noindent \textbf{Backend / Infra:} FastAPI, Celery, Docker, Django REST, Linux/Ubuntu, Git/GitHub | \textbf{Frontend:} React / TypeScript | \textbf{Tooling:} Claude Code, VS Code, Jupyter, ffmpeg, WhisperX\par
+\section*{Experience}
+\dentry{Software Associate}{Remote}{Cognizant}{}
+\begin{itemize}
+  \item \textit{Dec 2025 – Present}
+  \item Build/maintain GenAI and agentic systems (LangChain, LangGraph, Python) for R\&D and client deliverables.
+  \item Design RAG pipelines and MCP server integrations connecting enterprise tools to LLMs in production.
+  \item Scope, prototype, and deliver AI data-analysis tools with cross-functional teams.
+\end{itemize}
+\dentry{Freelance AI Engineer \& Full-Stack Developer}{WorldCovers / APMC}{Independent Contract  (Remote)}{}
+\begin{itemize}
+  \item \textit{May 2026 – Present}
+  \item Paid contract engineer on production web properties and the WorldCovers philatelic cataloging platform.
+  \item Ship features/automation on a 14-table PostgreSQL schema, Django REST backend, React/TypeScript frontend.
+  \item AI-augmented delivery (Claude Code) shipping production work on compressed timelines, direct with stakeholders.
+\end{itemize}
+\dentry{GenAI Developer Contractor}{Remote}{Cognizant}{}
+\begin{itemize}
+  \item \textit{Jun 2025 – Dec 2025}
+  \item Built GenAI POCs (LangChain/LangGraph/Python) accelerating agentic adoption; prompt engineering + model eval.
+  \item Built custom FastMCP servers + external MCP integrations on AWS for dynamic, production-style agent tool access.
+\end{itemize}
+\dentry{IT Student Helper}{}{James Rumsey Tech}{}
+\begin{itemize}
+  \item \textit{Aug 2019 – May 2021}
+  \item Resolved 300+ tickets; led a Wi-Fi overhaul cutting latency 25\%; completed 100+ AV/network setups.
+\end{itemize}
+\section*{Projects}
+\noindent\textbf{CFO Agent} --- built from the ground up (in active development)\par
+\noindent\textit{Python, FastAPI, LangGraph, PostgreSQL, Redis, Anthropic API}\par
+\begin{itemize}
+  \item Personal-finance AI agent 0→1: FastAPI + LangGraph backend, PostgreSQL persistence, Redis cache, CSV/OFX import + encrypted vault.
+  \item Hybrid context architecture (auto aggregation + manual "vault"); architected for multi-tenant productization.
+\end{itemize}
+\noindent\textbf{Agentic Software Development Team} --- built from the ground up (Cognizant R\&D)\par
+\noindent\textit{Python, LangChain, LangGraph, Amazon Bedrock}\par
+\begin{itemize}
+  \item Multi-agent LangGraph system (codegen, testing, security review, supervision) automating the full build lifecycle.
+  \item Backed by Amazon Bedrock plus open-source ML inference — a from-scratch automated engineering workflow.
+\end{itemize}
+\noindent\textbf{CreatorClip / autoclip.studio}\par
+\noindent\textit{Python, FastAPI, Celery, pgvector, WhisperX, Voyage AI, Anthropic API, ffmpeg, YouTube OAuth}\par
+\begin{itemize}
+  \item Live SaaS I built solo: Stripe billing, CI/CD, \textasciitilde{}79\% coverage; learns creator style via a custom "DNA" module.
+  \item Async Celery: WhisperX transcription, Voyage + pgvector embeddings, ffmpeg rendering; full YouTube OAuth.
+\end{itemize}
+\noindent\textbf{Customer Call Data Analysis \& Insights Engine (Cognizant R\&D)}\par
+\noindent\textit{Python, NLP, Sentence Transformers}\par
+\begin{itemize}
+  \item NLP clustering into semantic issue groups; agentic AI for call-consolidation patterns and executive reporting.
+\end{itemize}
+\section*{Education}
+\noindent \textbf{BS Computer Science} — Shepherd University, Aug 2021 – May 2025 (major GPA 3.43)\par
+\section*{Certifications}
+\noindent Azure Fundamentals (AZ-900) | TensorFlow Developer Specialization (DeepLearning.ai) | Linux + Git (Boot.dev) | GitHub Copilot | Generative AI Context Engineering (Cognizant)\par
+\end{document}

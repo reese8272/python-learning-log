@@ -1,0 +1,73 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,left=0.625in,right=0.625in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage{fontspec}
+\setmainfont{GelasioStatic}[
+  Path=/home/reese/.local/share/fonts/gelasio/,
+  Extension=.ttf,
+  UprightFont=*-Regular, BoldFont=*-Bold,
+  ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic]
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4pt}
+\pagestyle{empty}
+\titleformat{\section}{\normalsize}{}{0pt}{\MakeUppercase}[{\vspace{-3pt}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{2pt}{1pt}
+\setlist[itemize]{leftmargin=1.35em,itemsep=0.2pt,topsep=0.4pt,parsep=0pt,label=\textbullet,before=\vspace{-2.5pt}}
+\newcommand{\entrygap}{\vspace{2.5pt}}
+\newcommand{\dentry}[4]{\noindent\textbf{#1}\hfill{#2}\\{#3}\hfill{#4}\par}
+\newcommand{\sentry}[2]{\noindent\textbf{#1}\hfill{#2}\par}
+\begin{document}
+
+\begin{center}
+{\fontsize{14}{16}\selectfont\bfseries Reese Ludwick}\\[1pt]
+{\fontsize{9}{11}\selectfont reesepludwick@gmail.com | (304)-886-1850 | https://www.linkedin.com/in/reese-ludwick-024333286/ | https://github.com/reese8272}
+\end{center}
+\vspace{-2pt}
+\section*{Summary}
+\noindent Applied AI engineer who ships LLM and agent applications to production end-to-end — RAG pipelines, multi-agent LangGraph systems, and custom MCP tool servers deployed for real clients. Strengths in applied AI system design, prompt engineering, and model/output evaluation, with hands-on delivery across FastAPI + Python backends, PostgreSQL/Redis, and async task pipelines. Focused on turning state-of-the-art LLM tooling into dependable, scalable software that works in front of real users.\par
+\section*{Experience}
+\dentry{Software Associate}{Remote}{Cognizant}{Dec 2025 – Present}
+\begin{itemize}
+  \item Build GenAI and agentic AI systems with LangChain, LangGraph, and Python across R\&D and client deliverables.
+  \item Design and ship RAG pipelines and MCP server integrations for production workflows.
+  \item Scope, prototype, and deliver AI data-analysis tools alongside cross-functional teams.
+\end{itemize}
+\dentry{Freelance AI Engineer \& Full-Stack Developer}{Remote}{WorldCovers / APMC}{May 2026 – Present}
+\begin{itemize}
+  \item Paid contract engineer on production web properties and the WorldCovers platform.
+  \item Ship features and automation against a 14-table PostgreSQL schema using Django REST + React/TypeScript.
+  \item AI-augmented engineering (Claude Code) under compressed timelines, with direct stakeholder coordination.
+\end{itemize}
+\dentry{GenAI Developer Contractor}{Remote}{Cognizant}{Jun – Dec 2025}
+\begin{itemize}
+  \item Built GenAI POCs with LangChain, LangGraph, and Python.
+  \item Ran prompt engineering and model evaluation to optimize LLM outputs across business use cases.
+  \item Built custom FastMCP servers and external MCP integrations with AWS for dynamic agent tool access.
+\end{itemize}
+\dentry{IT Student Helper}{}{James Rumsey Technical Institute}{2019 – 2021}
+\begin{itemize}
+  \item Resolved 300+ support tickets; led a Wi-Fi overhaul cutting latency 25\%; completed 100+ AV/network setups.
+\end{itemize}
+\section*{Projects}
+\noindent \textbf{CreatorClip / autoclip.studio} — \textit{Python, FastAPI, Celery, pgvector, WhisperX, Voyage AI, Anthropic API, ffmpeg, YouTube OAuth}\par
+\noindent\textit{Live SaaS (Stripe billing), shipped end-to-end. Async Celery workers run WhisperX transcription, Voyage + pgvector embeddings for semantic retrieval, and ffmpeg rendering. Custom creator-"DNA" module tailors output; YouTube OAuth for publishing. Production LLM/ML orchestration at scale; \textasciitilde{}79\% test coverage.}\par
+\noindent \textbf{CFO Agent} \textit{(in active development)} — \textit{Python, FastAPI, LangGraph, PostgreSQL, Redis, Anthropic API}\par
+\noindent\textit{FastAPI + LangGraph agent with PostgreSQL persistence and Redis caching over imported financial data (CSV/OFX import + encrypted vault). Hybrid context architecture; multi-tenant-ready design. Applied AI reasoning over financial data.}\par
+\noindent \textbf{Agentic Software Development Team} — \textit{LangChain, LangGraph, Amazon Bedrock (Cognizant R\&D)}\par
+\noindent\textit{Multi-agent LangGraph system (codegen / testing / security / supervision) automating the build lifecycle on Bedrock and OSS ML backends.}\par
+\noindent \textbf{Customer Call Data Analysis \& Insights Engine} — \textit{Python, NLP, Sentence Transformers (Cognizant R\&D)}\par
+\noindent\textit{NLP clustering of call data into semantic issue groups; agentic AI for call consolidation and executive reporting.}\par
+\section*{Technical Skills}
+\noindent \textbf{Languages:} Python, SQL\par
+\noindent \textbf{AI / ML:} LangChain, LangGraph, RAG, MCP Servers, Amazon Bedrock, Sentence Transformers, TensorFlow, pgvector, Anthropic API, Voyage AI, WhisperX, prompt engineering, model/output evaluation\par
+\noindent \textbf{Backend / Infra:} FastAPI, Django REST, PostgreSQL, Redis, Celery, Docker\par
+\noindent \textbf{Frontend:} React / TypeScript\par
+\noindent \textbf{Data:} Pandas, NumPy, Jupyter\par
+\noindent \textbf{Tooling / Cloud:} Linux, Ubuntu, Git, GitHub, VS Code, Claude Code, Azure Fundamentals\par
+\section*{Education}
+\noindent \textbf{B.S. Computer Science — Shepherd University} \textit{(Aug 2021 – May 2025)} — Major GPA 3.43\par
+\section*{Certifications}
+\noindent TensorFlow Developer Specialization (DeepLearning.ai) · Linux + Git (Boot.dev) · AZ-900 · GitHub Copilot · Generative AI Context Engineering (Cognizant)\par
+\end{document}
