@@ -1,0 +1,78 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,left=0.625in,right=0.625in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage{fontspec}
+\setmainfont{GelasioStatic}[
+  Path=/home/reese/.local/share/fonts/gelasio/,
+  Extension=.ttf,
+  UprightFont=*-Regular, BoldFont=*-Bold,
+  ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic]
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4pt}
+\pagestyle{empty}
+\titleformat{\section}{\normalsize}{}{0pt}{\MakeUppercase}[{\vspace{-3pt}\titlerule[0.6pt]}]
+\titlespacing*{\section}{0pt}{2pt}{1pt}
+\setlist[itemize]{leftmargin=1.35em,itemsep=0.2pt,topsep=0.4pt,parsep=0pt,label=\textbullet,before=\vspace{-2.5pt}}
+\newcommand{\entrygap}{\vspace{2.5pt}}
+\newcommand{\dentry}[4]{\noindent\textbf{#1}\hfill{#2}\\{#3}\hfill{#4}\par}
+\newcommand{\sentry}[2]{\noindent\textbf{#1}\hfill{#2}\par}
+\begin{document}
+
+\begin{center}
+{\fontsize{14}{16}\selectfont\bfseries Reese Ludwick}\\[1pt]
+{\fontsize{9}{11}\selectfont reesepludwick@gmail.com | (304)-886-1850 | https://www.linkedin.com/in/reese-ludwick-024333286/ | https://github.com/reese8272}
+\end{center}
+\vspace{-2pt}
+\section*{Education}
+\noindent \textbf{Bachelor of Science, Computer Science — Shepherd University} (Aug 2021 – May 2025), Major GPA 3.43\par
+\section*{Experience}
+\dentry{Software Associate}{Remote}{Cognizant Technology Solutions}{Dec 2025 – Present}
+\begin{itemize}
+  \item Develop and maintain GenAI and agentic AI systems using LangChain, LangGraph, and Python across R\&D initiatives and client-facing deliverables.
+  \item Design and implement RAG pipelines and MCP server integrations connecting enterprise tools and language models for production-ready workflows.
+  \item Collaborate cross-functionally to scope, prototype, and deliver AI-powered data analysis tools that drive measurable business insights.
+\end{itemize}
+\dentry{Freelance AI Engineer \& Full-Stack Developer}{Remote}{Independent Contract, WorldCovers / APMC}{May 2026 – Present}
+\begin{itemize}
+  \item Paid contract engineer maintaining production web properties (chinaoverprints.com, ianthom.org) and building WorldCovers, a philatelic cataloging platform sponsored by the U.S. Philatelic Classics Society.
+  \item Deliver features and automation against a 14-table PostgreSQL schema powering a Django REST API backend with a React / TypeScript frontend.
+\end{itemize}
+\dentry{GenAI Developer Contractor}{Remote}{Cognizant Technology Solutions}{Jun 2025 – Dec 2025}
+\begin{itemize}
+  \item Built custom FastMCP servers and deployed external MCP integrations alongside AWS infrastructure to give agents dynamic tool access in production-style agentic workflows.
+  \item Built and delivered GenAI proof-of-concept solutions with LangChain, LangGraph, and Python; applied prompt engineering and model evaluation to optimize LLM outputs.
+\end{itemize}
+\dentry{IT Student Helper}{Hedgesville, WV}{James Rumsey Technical Institute}{Aug 2019 – May 2021}
+\begin{itemize}
+  \item Resolved 300+ support tickets; contributed to a campus Wi-Fi overhaul that cut latency 25\%; configured and tested 100+ AV and networking systems.
+\end{itemize}
+\section*{Projects}
+\noindent\textbf{CreatorClip / autoclip.studio} --- \textit{Python, FastAPI, Celery, Deepgram, pgvector, Voyage AI, Anthropic API, ffmpeg, React/TypeScript, YouTube OAuth}\par
+\begin{itemize}
+  \item Live, multi-tenant production SaaS (autoclip.studio) with Stripe billing and a React/TypeScript frontend — turns long-form YouTube content into short-form clips, learning a creator's channel style via a custom "DNA" module.
+  \item Async Celery pipeline: Deepgram transcription (WhisperX/AssemblyAI selectable) → Voyage AI + pgvector embeddings → ffmpeg rendering, with full YouTube OAuth publishing.
+\end{itemize}
+\noindent\textbf{CFO Agent} --- \textit{Python, FastAPI, LangGraph, PostgreSQL, Redis, Anthropic API}\par
+\begin{itemize}
+  \item Personal-finance AI agent (in active development) on a FastAPI + LangGraph backend with PostgreSQL persistence and Redis caching.
+  \item Hybrid context architecture over a Fernet-encrypted data vault with CSV/OFX import; architected for multi-tenant productization.
+\end{itemize}
+\noindent\textbf{Agentic Software Development Team} --- \textit{Python, LangChain, LangGraph, Amazon Bedrock (Cognizant R\&D)}\par
+\begin{itemize}
+  \item Multi-agent LangGraph system with specialized agents for code generation, testing, security review, and supervision — automating the full software build lifecycle end to end.
+  \item Integrated Amazon Bedrock and open-source ML models as swappable inference backends.
+\end{itemize}
+\noindent\textbf{Customer Call Data Analysis \& Insights Engine} --- \textit{Python, NLP, Sentence Transformers (Cognizant R\&D)}\par
+\begin{itemize}
+  \item NLP clustering with sentence-transformer embeddings grouping large volumes of customer call data into semantic issue segments; agentic analysis feeding executive reporting.
+\end{itemize}
+\section*{Technical Skills}
+\noindent \textbf{Languages:} Python, SQL\par
+\noindent \textbf{AI / Agentic:} LangChain, LangGraph, RAG pipelines, MCP servers (FastMCP), Amazon Bedrock, Anthropic API, Sentence Transformers, TensorFlow, pgvector, prompt engineering, model evaluation\par
+\noindent \textbf{Backend / Infra:} FastAPI, Celery, Django REST, PostgreSQL, Redis, Docker\par
+\noindent \textbf{Frontend / Tooling / Cloud:} React / TypeScript, AWS, Azure Fundamentals, Linux/Ubuntu, Git/GitHub, VS Code, Claude Code, Jupyter\par
+\section*{Certifications}
+\noindent TensorFlow Developer Specialization (DeepLearning.AI) · Microsoft Certified: Azure Fundamentals (AZ-900) · Linux + Git (Boot.dev) · GitHub Copilot, Telecom \& Generative AI Context Engineering (Cognizant)\par
+\end{document}

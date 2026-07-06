@@ -235,6 +235,7 @@ if __name__ == '__main__':
     if args == ['--all']:
         args = sorted(d for d in os.listdir(HERE)
                       if os.path.isdir(os.path.join(HERE, d))
+                      and not d.startswith('.')
                       and os.path.exists(os.path.join(HERE, d, 'resume.md')))
     ok = all(build(a.rstrip('/')) for a in args)
     sys.exit(0 if ok else 1)
