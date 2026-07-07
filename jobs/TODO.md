@@ -21,9 +21,9 @@ Your two best-fit roles (ConglomerateIT, Activesoft/VidMob) rest on MCP + the al
 Each folder already has a one-page `resume.pdf` ready to upload. For each role: **apply direct → within 24h send the note from that folder's `recruiter-outreach.md` → update `_tracker.md`.**
 
 Priority order (highest probability first):
-- [ ] **ConglomerateIT — Agentic AI Engineer** ⭐ (best level fit) → `conglomerateit-agentic-ai/`
-- [ ] **Activesoft / VidMob — Sr AI/ML MCP** ⭐ (best stack fit) → `activesoft-vidmob-mcp/`
-- [ ] **Next Step — Applied AI + AI Backend** (one resume, both roles) → `nextstep-applied-ai/`
+- [x] **ConglomerateIT — Agentic AI Engineer** ⭐ (best level fit) → `conglomerateit-agentic-ai/` — ✅ applied 2026-07-06 + recruiter note emailed · follow-up ~Jul 13
+- [x] **Activesoft / VidMob — Sr AI/ML MCP** ⭐ (best stack fit) → `activesoft-vidmob-mcp/` — ✅ applied 2026-07-06 + InMailed Madhavi & Raghu · follow-up ~Jul 9 · ☐ VidMob direct still open
+- [ ] **Next Step — Applied AI + AI Backend** (one resume, both roles) → `nextstep-applied-ai/` ← **next at-bat**
 - [ ] **Genesys — Sr SWE Full-Stack Agentic AI** → `genesys-agentic-ai-swe/`
 - [ ] **Natera — Sr Forward Deployed AI** → `natera-sr-fwd-deployed/`
 - [ ] **IMA — AI Engineering Lead** (reach) → `ima-ai-engineering-lead/`

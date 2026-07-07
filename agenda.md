@@ -13,7 +13,7 @@ This is the one-stop shop for current goals and intentions across all time horiz
 
 **The Floor for tomorrow (07-07) — a day counts if these 2 happen:**
 1. 🧱 **The brick** — 10:25 alarm → phone on charger → 15 min reading in bed
-2. 📨 **One pipeline touch** — next up: **pin both repos + add LinkedIn Featured links** (finishes Phase 0 in `jobs/TODO.md`); if time allows, ConglomerateIT application (`jobs/conglomerateit-agentic-ai/`)
+2. 📨 **One pipeline touch** — Phase 0 done + both ⭐ roles applied (7/6). Next at-bat: **Next Step (Applied AI + Backend, one resume)** → `jobs/nextstep-applied-ai/`; or batch the 4 Tier-3 easy-applies in one sitting
 
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts as a stacked day.
 
@@ -28,7 +28,7 @@ This is the one-stop shop for current goals and intentions across all time horiz
 - 📨 Pipeline touches: **1** (7/6: repos public); today's: pin repos + LinkedIn Featured
 - ✅ Check-ins: **1**
 
-**Stopped at:** `/learn soft` launched — new **senior soft-skills track** created (`career/senior-engineering-soft-skills/`), `/learn` now runs 3 tracks (`ai` / `py` / `soft`), mid-python repurposed to Python-mastery. **Unit 1 (scope of impact) banked** via a senior-frame rewrite of the Playwright work. Repos still public (7/6), gate open. **Next step (pipeline floor):** pin both repos + LinkedIn Featured, then ConglomerateIT application. **Next learning rep:** `/learn soft` Unit 2 (communicating to reduce ambiguity).
+**Stopped at:** `/learn soft` launched — new **senior soft-skills track** created (`career/senior-engineering-soft-skills/`), `/learn` now runs 3 tracks (`ai` / `py` / `soft`), mid-python repurposed to Python-mastery. **Unit 1 (scope of impact) banked** via a senior-frame rewrite of the Playwright work. Phase 0 done + both ⭐ roles (ConglomerateIT, Activesoft/VidMob) applied 7/6 and logged in `jobs/_tracker.md`. **Next step (pipeline):** Next Step application (or batch Tier-3). **Follow-ups due:** Activesoft ~Jul 9, ConglomerateIT ~Jul 13. **Next learning rep:** `/learn soft` Unit 2 (communicating to reduce ambiguity).
 
 ---
 
