@@ -4,6 +4,16 @@ A log of explicit design decisions that change or deviate from what the planning
 
 ---
 
+## 2026-07-07 — `/learn new`: an on-demand mode (Reese names the topic)
+
+**What changed:** Added a fourth `/learn` mode — **`/learn new <topic>`** (aliases `adhoc`, `work`, `just-in-time`) — where Reese supplies the topic himself instead of it coming from a curated roadmap. New home: `career/on-demand-learning/` (`summary.md` is a *ledger/index* of what's been learned on demand, not a pre-planned unit list; + `reflection_log/`). Same `/learn` rigor (research-first → probe → teach → explain-back → build-before-bank). **Adaptive** on two axes: technical topic → writes a `.py` worksheet in `lesson_assignments/` and may enter `concept_queue.md` for `/sharpen`; conceptual topic → no worksheet, bank by using it (like `soft`). At persist, the "roadmap update" is appending a ledger row, not ticking a `[ ]`. When a cluster of related topics forms, the mode offers to **graduate** it into its own full track (the precedent: soft-skills, created earlier today). `.claude/commands/learn.md` updated: intro, Step 0 table + adaptation bullet, Step 1 (skip roadmap scan), Step 8 (ledger append).
+
+**Why:** Reese's request — work regularly hands him something new he must learn *before* he can use or add it, and he wanted that just-in-time learning **banked here** rather than lost. The three existing tracks are all pre-curated roadmaps; none had a slot for emergent, work-driven topics. This closes that gap without polluting the curated tracks, and the graduation path means a recurring on-demand topic can become a real curriculum when it earns it.
+
+**Source / evidence:** Reese's request during the 2026-07-07 `/learn soft` session, immediately after the three-track restructure. Files: `.claude/commands/learn.md`, new `career/on-demand-learning/`.
+
+---
+
 ## 2026-07-07 — `/learn` goes from two tracks to three; mid-python repurposed; soft-skills added
 
 **What changed (three linked decisions):**
