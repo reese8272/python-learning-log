@@ -28,7 +28,7 @@ This is the one-stop shop for current goals and intentions across all time horiz
 - 📨 Pipeline touches: **1** (7/6: repos public); today's: pin repos + LinkedIn Featured
 - ✅ Check-ins: **1**
 
-**Stopped at:** Repos public (7/6) — the gate is open; also drilled dict-vs-list (partial → closed). **Next step:** pin repos + LinkedIn Featured, then ConglomerateIT application.
+**Stopped at:** `/learn soft` launched — new **senior soft-skills track** created (`career/senior-engineering-soft-skills/`), `/learn` now runs 3 tracks (`ai` / `py` / `soft`), mid-python repurposed to Python-mastery. **Unit 1 (scope of impact) banked** via a senior-frame rewrite of the Playwright work. Repos still public (7/6), gate open. **Next step (pipeline floor):** pin both repos + LinkedIn Featured, then ConglomerateIT application. **Next learning rep:** `/learn soft` Unit 2 (communicating to reduce ambiguity).
 
 ---
 
