@@ -4,6 +4,19 @@ A log of explicit design decisions that change or deviate from what the planning
 
 ---
 
+## 2026-07-07 — `/learn` goes from two tracks to three; mid-python repurposed; soft-skills added
+
+**What changed (three linked decisions):**
+1. **`/learn` now drives THREE parallel tracks, not two.** Step 0 of `.claude/commands/learn.md` updated: `ai` (AI Engineering — master track), `py` (Python Mastery), and new `soft` (Senior Engineering — Soft Skills). Track selected by token; ASK-ONCE fallback now names all three.
+2. **The mid-python track was repurposed, not deleted.** The specific mid-level Python role that seeded `career/mid-python-developer-prep/` ($115k FastAPI weather-data shop) **closed before it was filled.** Rather than discard the work, its purpose was re-pointed from "demolish this one interview" → "Python mastery underpinning the AI-eng path." The FastAPI/weather intel is retained as realistic practice material, not *the* target job. Summary header reframed; `/learn` table updated.
+3. **New `soft` track is worksheet-exempt and does NOT use `concept_queue.md`.** Soft skills have no code to green-light, so Step 7.5's `.py` worksheet is skipped for this track; the Step 7 "build" becomes a **real interaction** (interview answer, Slack/PR message, design doc). They're not defended cold in `/sharpen` either — soft skills are deployed under real conditions. Roadmap lives at `career/senior-engineering-soft-skills/summary.md` (6 units, Larson/Reilly/Fournier/Orosz as the resource pool).
+
+**Why:** (1+2) Reese's mid-level dev job closed, but he explicitly chose to preserve the prep rather than let the loss collapse the work — Python mastery is genuinely foundational for AI engineering, so the content's value survives the job. (3) He asked to make senior/soft-skills a full track ("just as important as everything else"). At ~1yr in, aiming $120k+, the social/communication layer is the differentiator on top of technical skill — and unlike an API it has no runnable-test artifact, so the machinery was adapted honestly rather than faked.
+
+**Source / evidence:** Reese's request during the 2026-07-07 `/learn` session (Unit 1 — Scope of Impact, the first soft-skills unit). Files touched: `.claude/commands/learn.md`, `career/mid-python-developer-prep/summary.md`, new `career/senior-engineering-soft-skills/`.
+
+---
+
 ## 2026-06-22 — `/learn` now leaves a solo worksheet (lesson assignments)
 
 **What changed:** Every `/learn` session now produces a self-contained, runnable **lesson assignment** at `career/lesson_assignments/YYYY-MM-DD_<kebab-unit>.py` — a struggle-first worksheet Reese can re-do alone. Added as **Step 7.5** in `.claude/commands/learn.md`. Three parts: (1) a short soliloquy on the target, (2) tiny isolated coding exercises with boilerplate pre-filled (concept/flow over syntax) and **Claude pre-writes the assert-based tests** for red/green solo feedback, (3) concept questions with a stated requirement + a gated answer key. Reference template: `career/lesson_assignments/2026-06-22_llm-call-anatomy.py`.

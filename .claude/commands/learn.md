@@ -1,6 +1,6 @@
 You are running a **Learn** session — the concept-*acquisition* engine. This is **peak-window work**: novel, effortful, the hardest learning of the day. It is the front of the funnel: `/learn` (acquire from zero) → `/sharpen` (defend cold) → `/drill` (retain). `/learn` *builds the blade*; `/sharpen` sharpens the edge; `/drill` keeps it from rusting.
 
-This skill **replaces taking an online course.** It drives **two parallel curricula** — resolve which one in Step 0 before doing anything else. Each unit is taught in-catalog, **researched live against current official docs** — which is the whole point: a 2024 Udemy course teaches deprecated patterns; live research never does.
+This skill **replaces taking an online course.** It drives **three parallel curricula** — resolve which one in Step 0 before doing anything else. Each unit is taught in-catalog, **researched live against current official docs** — which is the whole point: a 2024 Udemy course teaches deprecated patterns; live research never does.
 
 The goal: take a concept Reese has never properly learned and bring him to genuine understanding at the unit's tier bar — current, correct, tied to his own code — then hand it to `/sharpen` to make it defensible.
 
@@ -23,16 +23,18 @@ The goal: take a concept Reese has never properly learned and bring him to genui
 
 ## Step 0 — Select the track (read `$ARGUMENTS` first)
 
-There are **two parallel curricula**. Resolve which one this session is for *before reading anything else*:
+There are **three parallel curricula**. Resolve which one this session is for *before reading anything else*:
 
 | Token in the command | Track | Roadmap (source of `[ ]` units) | Session log | Worksheet path + naming |
 |---|---|---|---|---|
-| `py`, `mid-python`, `python` | **Mid-Python Developer Prep** | `career/mid-python-developer-prep/summary.md` | `career/mid-python-developer-prep/reflection_log/YYYY-MM-DD.md` | `career/lesson_assignments/mid-py-<section>-<kebab-unit>.py` (e.g. `mid-py-1.2-type-hints.py`) |
-| `ai`, `ai-eng` | **AI Engineering** | `readings/ai-engineering-curriculum/summary.md` | `readings/ai-engineering-curriculum/reflection_log/YYYY-MM-DD.md` | `career/lesson_assignments/YYYY-MM-DD_<kebab-unit>.py` |
+| `ai`, `ai-eng` | **AI Engineering** *(master track)* | `readings/ai-engineering-curriculum/summary.md` | `readings/ai-engineering-curriculum/reflection_log/YYYY-MM-DD.md` | `career/lesson_assignments/YYYY-MM-DD_<kebab-unit>.py` |
+| `py`, `python`, `mid-python` | **Python Mastery** *(underpins AI-eng; formerly the mid-level interview prep — role closed, purpose re-pointed 2026-07-07)* | `career/mid-python-developer-prep/summary.md` | `career/mid-python-developer-prep/reflection_log/YYYY-MM-DD.md` | `career/lesson_assignments/mid-py-<section>-<kebab-unit>.py` (e.g. `mid-py-1.2-type-hints.py`) |
+| `soft`, `senior`, `soft-skills`, `senior-dev` | **Senior Engineering — Soft Skills** | `career/senior-engineering-soft-skills/summary.md` | `career/senior-engineering-soft-skills/reflection_log/YYYY-MM-DD.md` | **None — this track is worksheet-exempt** (see Step 7.5). Build/bank = a real interaction, not a `.py` file. |
 
-- **If no track token is present and the request doesn't otherwise make the track obvious, ASK ONCE** which track ("mid-python prep or AI engineering?") before reading anything. Do **not** silently default — both tracks are live.
-- A section/unit reference (e.g. "1.2", "§3 streaming") is resolved against the **selected track's** roadmap, not the other one.
-- **Both tracks share** `career/concept_queue.md` (the `/sharpen` queue) and `career/CAREER_LOG.md`. Everywhere below, "the roadmap," "the session log," and "the worksheet" mean the **selected track's** paths from this table.
+- **If no track token is present and the request doesn't otherwise make the track obvious, ASK ONCE** which track ("AI engineering, Python mastery, or senior soft-skills?") before reading anything. Do **not** silently default — all three tracks are live.
+- A section/unit reference (e.g. "1.2", "§3 streaming") is resolved against the **selected track's** roadmap, not the others.
+- **The two technical tracks (`ai`, `py`) share** `career/concept_queue.md` (the `/sharpen` cold-defense queue) and `career/CAREER_LOG.md`. The **`soft` track does not use `concept_queue.md`** — soft skills aren't defended cold; they're deployed under real conditions. Everywhere below, "the roadmap," "the session log," and "the worksheet" mean the **selected track's** paths from this table.
+- **Track-specific adaptation for `soft`:** the domain is human/social, not code. The Four Rules still apply (research-first, struggle-first, current framing, hit the tier bar tied to his real situation) — but "his code" becomes "his real situations" (interviews, work conversations, reviews, the job search), the tier bar is *articulate-it + apply-it* rather than *teach-the-mechanism*, and Steps 7/7.5 change as noted there.
 
 ## Step 1 — Read silently
 
@@ -75,7 +77,9 @@ Name a **concrete 5-minute build** that uses the concept — in autoclip, the ca
 
 ## Step 7.5 — Write the lesson assignment (the solo worksheet)
 
-Every `/learn` session leaves behind a **self-contained, runnable worksheet** in `career/lesson_assignments/`, named per the selected track's convention (Step 0): `mid-py-<section>-<kebab-unit>.py` for **py**, `YYYY-MM-DD_<kebab-unit>.py` for **ai**. Reese can re-do the lesson solo, with you having pre-written the tests. **The reference template is `career/lesson_assignments/2026-06-22_llm-call-anatomy.py`** — match its shape, but use the section ORDER below (it supersedes the template's order).
+**`soft` track is worksheet-exempt — skip this step entirely.** There's no code to green-light "communicate well"; forcing a `pytest` harness onto soft skills is ceremony. For `soft`, the Step 7 build (a real interaction — an interview answer, a Slack/PR message, a design doc) *is* the artifact. Just make sure it's captured in the session log (Step 8) and the roadmap's Entry Log. Then go to Step 8.
+
+For the two technical tracks (`ai`, `py`): every `/learn` session leaves behind a **self-contained, runnable worksheet** in `career/lesson_assignments/`, named per the selected track's convention (Step 0): `mid-py-<section>-<kebab-unit>.py` for **py**, `YYYY-MM-DD_<kebab-unit>.py` for **ai**. Reese can re-do the lesson solo, with you having pre-written the tests. **The reference template is `career/lesson_assignments/2026-06-22_llm-call-anatomy.py`** — match its shape, but use the section ORDER below (it supersedes the template's order).
 
 **Section order is fixed: soliloquy → concept questions → exercises → project.** The working sections go recall-first (answer cold), then hands-on drills, then the integrated build:
 
@@ -92,7 +96,7 @@ Keep it phone-readable and concept-first. The worksheet is struggle-first homewo
 
 - **The selected track's session log** (Step 0) — write the session: the unit, the live-researched material taught (with the current pattern + the deprecated one it replaces), the sources/citations, his explain-back, and the assigned build. This is the durable record of what was covered.
 - **The selected track's roadmap** — mark the unit `[~]` (in progress, build pending) or `[x] (date)` once he confirms the build is done. Add a line to the **Entry Log**.
-- **`career/concept_queue.md`** — add the concept (if not already there) so it enters the `/sharpen` defense queue. It's acquired, not yet defended cold.
+- **`career/concept_queue.md`** *(technical tracks only — skip for `soft`)* — add the concept (if not already there) so it enters the `/sharpen` defense queue. It's acquired, not yet defended cold.
 - **Career update check** (per CLAUDE.md): if a skill genuinely deepened, bump the Skills Tracker in `CAREER_LOG.md`. If a clean "why THIS over THAT" emerged, that's a Judgment Log candidate — though the cold defense in `/sharpen` is usually where that gets logged. Don't inflate on exposure alone.
 
 ## Step 9 — Continue or close
