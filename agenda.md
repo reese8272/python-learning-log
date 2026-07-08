@@ -25,7 +25,8 @@ This is the one-stop shop for current goals and intentions across all time horiz
 - Peak window (post-meds) → **CFO Agent: one demoable end-to-end path** (never admin, never email)
 - One `/sharpen` or `/learn` rep (phone is fine — queue picks up at "supervisor vs swarm")
 - Gym or 20-min zone-2 cardio *before* the peak window
-- Close the day: 3 gratitudes + the **affirmation stack** *(therapist homework)* — one growth-mindset line ("I got better at X today"), one identity statement ("I'm someone who…"), one evidence-based win (one concrete thing done well + why it counts) — + update the stopped-at line
+- Morning stack: the **affirmation stack** *(therapist homework)* now rides the shower/shake slot (moved from the nightly close 07-08) — one growth-mindset line ("I got better at X today"), one identity statement ("I'm someone who…"), one evidence-based win (one concrete thing done well + why it counts)
+- Close the day: 3 gratitudes + update the stopped-at line
 
 **Streaks:**
 - 🧱 Brick: **1** — 7/6 landed (alarm → charger → book, exactly as designed)
