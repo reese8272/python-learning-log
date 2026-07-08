@@ -18,10 +18,11 @@ This is the one-stop shop for current goals and intentions across all time horiz
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts as a stacked day.
 
 **Upside — in order, if the day gives you more:**
+- **Peak-window doorway** *(therapist homework — mindfulness)*: 5 min eyes-closed, breath only, as the on-ramp *before* you open the first hard thing. Same logic as cardio pre-load, aimed at attention instead of dopamine. In-meeting version: when the superiority reflex fires, silently ask *"what does this person understand that I'm not seeing yet?"* — curiosity and superiority can't share a moment.
 - Peak window (post-meds) → **CFO Agent: one demoable end-to-end path** (never admin, never email)
 - One `/sharpen` or `/learn` rep (phone is fine — queue picks up at "supervisor vs swarm")
 - Gym or 20-min zone-2 cardio *before* the peak window
-- Close the day: 3 gratitudes + update the stopped-at line
+- Close the day: 3 gratitudes + the **affirmation stack** *(therapist homework)* — one growth-mindset line ("I got better at X today"), one identity statement ("I'm someone who…"), one evidence-based win (one concrete thing done well + why it counts) — + update the stopped-at line
 
 **Streaks:**
 - 🧱 Brick: **1** — 7/6 landed (alarm → charger → book, exactly as designed)
