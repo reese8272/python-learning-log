@@ -55,6 +55,7 @@ HOW TO USE THIS
 
 '''
 your answer here
+System is a top level field for the API call. It's not included in messaged so that it can be cached. the messages array is the user and the assitant. It renders tools then systems then messages.
 '''
 
 # Q2. It's turn 5 of a chat. Write out what the `messages` array looks like
@@ -63,6 +64,7 @@ your answer here
 
 '''
 your answer here
+it is 5 iterations of [user, assistant]. Assistant holds previous answers from the LLM to aid it in the memory of the conversation and help it answer the next user question. This is because it is stateless and previous conversation helps with the memory. 
 '''
 
 # Q3. `max_tokens` vs the context window: which one truncates, which one
@@ -71,6 +73,7 @@ your answer here
 
 '''
 your answer here
+max tokens truncates the output, soft reject, and context window throws an error, you can check stop reasoning to differentiate which reason. Two of them are like "MAX TOKEN EXCEEDED" and "CONTEXT WINDOW EXCEEDED.
 '''
 
 # Q4. A pre-2026 course teaches you to force JSON by prefilling the assistant
@@ -80,6 +83,7 @@ your answer here
 
 '''
 your answer here
+That's an error and legacy now. The current replacement is a structured output schema. It's better because you can force output rather than nudging and it saves you from prefilling the output in the prompt.
 '''
 
 
@@ -98,7 +102,11 @@ def build_call_shape(system_prompt: str, turns: list[dict]) -> dict:
     #       string at the top level, and one holding the turns list. Do NOT put
     #       the system prompt inside the turns list.
     #       (Match the key names the API uses.)
-    raise NotImplementedError
+    api_call = {
+        "system" : system_prompt,
+        "messages" : turns,
+    }
+    return api_call
 
 
 # ─── EXERCISE 2 — Reconstruct the "memory" the model reads ──────────────────
@@ -115,7 +123,8 @@ def next_messages(prior_transcript: list[dict], new_user_msg: str) -> list[dict]
     #       user message as its own {"role": ..., "content": ...} entry.
     #       Don't mutate prior_transcript; don't prepend a system entry (system
     #       lives at the top level, per Exercise 1).
-    raise NotImplementedError
+    new_msg = [ { "role" : "user", "content" : new_user_msg} ]
+    return prior_transcript + new_msg
 
 
 # ─── EXERCISE 3 — Read the stop_reason like an engineer ─────────────────────
@@ -132,7 +141,12 @@ def diagnose(stop_reason: str) -> str:
     #       "context_overflow" when the whole conversation exceeded the window.
     #       (You need the exact stop_reason strings the API uses — recall them,
     #       don't guess loosely.)
-    raise NotImplementedError
+    if stop_reason == "max_tokens":
+        return "truncated_output"
+    elif stop_reason == "model_context_window_exceeded":
+        return "context_overflow"
+    else:
+        return "complete"
 
 
 # ─── EXERCISE 4 — The prefill replacement: build a structured-output config ──
@@ -152,7 +166,17 @@ def structured_output_config(required_fields: list[str]) -> dict:
     #                     "schema": {"type": "object",
     #                                "properties": {<field>: {"type": "string"}, ...},
     #                                "required": [<every field>]}}}
-    raise NotImplementedError
+    properties = {field: {"type" : "string"} for field in required_fields}
+    return {
+        "format":{
+            "type": "json_schema",
+            "schema": {
+                "type": "object",
+                "properties": properties,
+                "required": required_fields,
+            },
+        },
+    }
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -180,7 +204,13 @@ def build_extraction_call(text: str, model: str = "claude-opus-4-8") -> dict:
     #                 extract the fields from `text`
     #   - "output_config": reuse structured_output_config(fields) so the shape
     #                      is schema-enforced (NOT prefilled)
-    raise NotImplementedError
+    return {
+        "model" : model,
+        "max_tokens" : 800,
+        "system" : EXTRACTION_SYSTEM,
+        "messages" : [ {"role" : "user", "content" : f"Extract the company, Q3 revenue, and prior revenue from:\n\n{text}"} ],
+        "output_config" : structured_output_config(fields)
+    }
 
 
 # ════════════════════════════════════════════════════════════════════════════
