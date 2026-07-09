@@ -32,7 +32,7 @@ Work top-down within each tier. Tier 1 before Tier 2 unless a real project need 
 
 ### LLM fundamentals
 - [ ] **What an LLM call actually is** — stateless re-send model, tokens, context window (hard-reject vs lost-in-middle), cost asymmetry (output ~5× input & why) *(learned 2026-06-22 via /learn; defend cold)*
-- [ ] **Anatomy of a prompt** — system as top-level param (not messages[0]) & why (render order tools→system→messages = cacheable prefix); assistant turns = re-sent prior outputs = "memory"; max_tokens soft-truncate (stop_reason="max_tokens") vs context window hard-reject (model_context_window_exceeded); ⚠ assistant-prefill removed on Claude 4.6+ (400) → Structured Outputs (output_config.format) enforce vs prefill nudge *(learned 2026-07-08 via /learn §1.2; build pending — prompt_anatomy.py. Defend cold once built.)*
+- [ ] **Anatomy of a prompt** — system as top-level param (not messages[0]) & why (render order tools→system→messages = cacheable prefix); assistant turns = re-sent prior outputs = "memory"; max_tokens soft-truncate (stop_reason="max_tokens") vs context window hard-reject (model_context_window_exceeded); ⚠ assistant-prefill removed on Claude 4.6+ (400) → Structured Outputs (output_config.format) enforce vs prefill nudge *(learned 2026-07-08 via /learn §1.2; build BANKED — worksheet 16/16 green. Ready to defend cold in /sharpen.)*
 
 ### Tools, MCP, prompting
 - [ ] **MCP: server vs inline tools** — what MCP is, why a FastMCP server over defining tools in-process, transport (STDIO vs HTTP) *(source: Cognizant FastMCP work)*
