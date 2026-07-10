@@ -9,31 +9,33 @@ This is the one-stop shop for current goals and intentions across all time horiz
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history.*
 
-**Date:** 2026-07-07 (evening `/reflect` — the ONE build named: **6am morning gym**, cue rebuilt for the new slot. Therapist homework wired in.)
+**Date:** 2026-07-10 (evening `/reflect` — CFO Agent **demo-ready**; a recruiter called about it unprompted and said it looks good. Self-rated defense: **2/10** → sharpen has a live clock now.)
 
-**The Floor for tomorrow (07-07) — a day counts if these 2 happen:**
-1. 🧱 **The brick** — 10:25 alarm → phone on charger → 15 min reading in bed
-2. 📨 **One pipeline touch** — Phase 0 done + both ⭐ roles applied (7/6). Next at-bat: **Next Step (Applied AI + Backend, one resume)** → `jobs/nextstep-applied-ai/`; or batch the 4 Tier-3 easy-applies in one sitting
+**The Floor for tomorrow (Fri 07-11) — a day counts if these 2 happen:**
+1. 🧱 **The brick** — 10:30, phone on charger → Harry Potter 4 in bed. **New ceiling: lights out by 11:00, no matter where the chapter is** (the 7/9 overrun to 11:30 is what rigged the 7/10 6am miss).
+2. 📨 **One pipeline touch** — **12:30: Activesoft follow-up** (was due 7/9 — overdue, and warm-iron: a recruiter is already circling CFO Agent). Then next: ConglomerateIT follow-up ~Jul 13.
 
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts as a stacked day.
 
 **THE build (keystone — protect this one above all else):**
-- 🏋️ **6am morning gym.** *I will wake at 6am (alarm across the room), put on the clothes/shoes laid out the night before, and drive to the gym.* This is a **new build**, not the old midday habit restarting — work evicted the old cue, so the cue is rebuilt from scratch. **Worst-day minimum: show up, do one thing, 10 min — still counts.** The night-before setup (clothes + shoes out, keys + bag by door, alarm across room) is the real lever. Reading/mindfulness/learning are cued upside — this is the one that isn't optional.
+- 🏋️ **6am morning gym.** First live test 7/10: cue fired (crossed the room), wake lost — alarm off, back to bed on 6.5 hrs of sleep. Gym still happened later (all-or-nothing pattern lost a round — the miss didn't kill the day). Two fixes now in effect: (1) **alarm off → clothes on, one motion** — no negotiation window; (2) **lights out by 11** — the 6am fight is won or lost the night before. Worst-day minimum unchanged: show up, do one thing, 10 min. Clothes are already out for 7/11.
 
-**Upside — in order, if the day gives you more:**
-- **Peak-window doorway** *(therapist homework — mindfulness)*: 5 min eyes-closed, breath only, as the on-ramp *before* you open the first hard thing. Same logic as cardio pre-load, aimed at attention instead of dopamine. In-meeting version: when the superiority reflex fires, silently ask *"what does this person understand that I'm not seeing yet?"* — curiosity and superiority can't share a moment.
-- Peak window (post-meds) → **CFO Agent: one demoable end-to-end path** (never admin, never email)
-- One `/sharpen` or `/learn` rep (phone is fine — queue picks up at "supervisor vs swarm")
-- Gym or 20-min zone-2 cardio *before* the peak window
-- Morning stack: the **affirmation stack** *(therapist homework)* now rides the shower/shake slot (moved from the nightly close 07-08) — one growth-mindset line ("I got better at X today"), one identity statement ("I'm someone who…"), one evidence-based win (one concrete thing done well + why it counts)
-- Close the day: 3 gratitudes + update the stopped-at line
+**Tomorrow (Fri 07-11) — the day is built:**
+- 6:00 gym → 8:00 oil change → 9:00 call
+- **9:30 🔒 `/sharpen` CFO Agent, 25 min minimum** — the one locked block; a long call bleeds into Cognizant time, not this
+- 10:00–11:00 deep Cognizant → 11:00 Chloe
+- 12:30 Activesoft follow-up → 12:45 `/drill` → 1:00–2:30 Cognizant finish → 2:30 walk (20 min, no headphones) → 3:00–4:30 flex (first claim: patch whatever the sharpen rep exposed)
+- 4:30 hard stop → **5:00 Fiesta with the family, phone away**
+- ~9:40 night-before setup → 10:30 brick → 11:00 lights out
+
+**Daily learning shape (set 07-10):** ONE hard rep in the peak window (`/sharpen` OR `/learn`, never both) + `/drill` as the 5–10 min daily snack. The three-block learn/sharpen/drill day was named as over-launch and stopped before it started. Sharpen wins the peak window until CFO Agent is defensible.
 
 **Streaks:**
-- 🧱 Brick: **1** — 7/6 landed (alarm → charger → book, exactly as designed)
-- 📨 Pipeline touches: **1** (7/6: repos public); today's: pin repos + LinkedIn Featured
-- ✅ Check-ins: **1**
+- 🧱 Brick: held 7/9 (book read — overran to 11:30, hence the ceiling)
+- 📨 Pipeline: recruiter inbound 7/10 (CFO Agent, unprompted, positive); Activesoft follow-up is tomorrow's touch
+- ✅ Reflections: 7/7 → 7/10
 
-**Stopped at:** `/learn soft` launched — new **senior soft-skills track** created (`career/senior-engineering-soft-skills/`), `/learn` now runs 3 tracks (`ai` / `py` / `soft`), mid-python repurposed to Python-mastery. **Unit 1 (scope of impact) banked** via a senior-frame rewrite of the Playwright work. Phase 0 done + both ⭐ roles (ConglomerateIT, Activesoft/VidMob) applied 7/6 and logged in `jobs/_tracker.md`. **Next step (pipeline):** Next Step application (or batch Tier-3). **Follow-ups due:** Activesoft ~Jul 9, ConglomerateIT ~Jul 13. **Next learning rep:** `/learn ai` §1.2 "Anatomy of a prompt" **BANKED 07-08** (explain-back passed, worksheet 16/16 green — real code assembling a current-API structured-output extraction call). Now queued for `/sharpen` cold defense. Next acquisition: §1.3 (zero/few-shot/role prompting), or `/learn soft` Unit 2 (communicating to reduce ambiguity).
+**Stopped at:** **CFO Agent demo-ready (7/10)** — weekly goal #2 done; two showcasable apps now (CFO Agent + autoclip). Recruiter called about CFO unprompted, said it looks good; self-rated cold defense is 2/10 → **next rep: `/sharpen` CFO Agent, 9:30 tomorrow.** §1.2 banked 07-08, queued for cold defense. **Follow-ups due:** Activesoft (overdue, 12:30 tomorrow), ConglomerateIT ~Jul 13. Next acquisition after CFO is defensible: §1.3 (zero/few-shot/role prompting) or `/learn soft` Unit 2.
 
 ---
 
