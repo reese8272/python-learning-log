@@ -43,6 +43,26 @@ This is the one-stop shop for current goals and intentions across all time horiz
 
 ---
 
+## 🔨 Brutally Honest — 2026-07-20 (read me until the three moves are done)
+*First `/brutally-honest` session. Full version in the conversation; this is the part to act on. Remove this section when all three moves are closed.*
+
+**Verdict:** Learning is fine. Habits are genuinely good. **The job pipeline is starving, and it's the only thing that moves the year.** Effort isn't the problem — allocation is: hard work flows to system-building (comfortable, novel) while applications (boring) and builds (grindy) sit.
+
+**Receipts:**
+- Plan (07-02) said "first applications in 1–2 days… keep applying the whole time." **2 of 7** Tier 1+2 applied (07-06); **zero since**. 5 tailored folders sat ready through the working week of 7/7–7/12. Tier-3 "one sitting" batch never done.
+- CFO Agent: "demoable within a week" (07-02) → **18 days later, not demoable.** It gates flipping all 7 resumes to "live" + the Looms.
+- Build-before-bank violated serially: §1.1 llm_cost.py pending since **06-22**, §1.2 build since 06-30, §1.3 assigned 07-20. `/sharpen` — "the primary learning engine" — has run **zero** cold defenses in a month (1 of ~25 Tier 1 owned).
+- Math: ~$80k now vs $130–175k target ≈ **~$6k/month** cost per month the pipeline idles. 2 applications is a sample size of nothing — cold-apply response rates are 5–10%; you need 20+ at-bats to even test positioning.
+
+**The three moves (by ROI):**
+1. ☐ **This week: all 5 remaining Tier 1+2 applications + the Tier-3 batch.** Admin, outside peak, folders are done (~3 hrs total). Highest dollar-per-hour activity available.
+2. ☐ **CFO Agent one end-to-end path in the 9:45 peak blocks — before any new curriculum sections.** Freeze `/learn` acquisition until §1.1–1.3 builds are green. Demoable flips 7 resumes + unlocks Looms.
+3. ☐ **Run the first real `/sharpen` cold defense** (§1.2 is queued and ready).
+
+**Don't touch what's working:** the Floor, the brick, the re-entry design — the collapse pattern is actually beaten. Keep it exactly as is.
+
+---
+
 ## Weekly
 *Updated by `/weekly-review` — replace each Monday with the new week's priorities*
 

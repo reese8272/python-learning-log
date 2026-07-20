@@ -59,7 +59,19 @@ HOW TO USE THIS
 #     the top.
 
 '''
-your answer here
+1) zero shot and clear prompting: the DEFAULT rung. Most cost effective — modern
+   models are good enough that clear, direct instructions are usually sufficient.
+2) few shot: for FUZZY steering — tone, judgment boundaries, edge cases. Things
+   you can't necessarily capture in a response schema and can't rely on zero shot
+   for. NO schema/format refinement lives in rung 2 (per the 2026 docs — format
+   guarantees are rung 3's job). Examples NUDGE.
+3) structured output: guarantees SHAPE — 100% parseable against the schema.
+   Does NOT guarantee quality/content (shape, not truth). Top choice when output
+   must be repeatable/parseable.
+
+Cost logic for why you don't start at the top: every rung above zero shot ADDS
+TOKENS TO EVERY CALL (the prompt is re-sent statelessly — examples especially,
+and the schema too). Never pay a higher rung for a job a lower rung does free.
 '''
 
 # Q2. The current few-shot spec: how many examples, how are they formatted in
@@ -68,7 +80,15 @@ your answer here
 #     set goes wrong without that property.
 
 '''
-your answer here
+3-5 good examples wrapped in <example></example> tags. Having one property like only positive results or one scope of the question can lead to false formatting and the LLM may learn that it's the only way to structure the output. You need DIVERSE examples. 
+
+Bad Example of Showing how to respond to a customer.
+
+- I need money. Answer: here is money
+- I need money. Answer: what do you need money for?
+- I need money. Answer: sure, let me get with a supervisor.
+
+All of them only show a customer needing money.
 '''
 
 # Q3. Role prompting: name two things it genuinely changes, the one thing
@@ -77,7 +97,9 @@ your answer here
 #     order).
 
 '''
-your answer here
+1) scope and judgement.
+2) wrongly assumes that it changes knowledge or accuracy.
+3) lives in the system prompt. We can cache that as well as have it repeat for every turn, thus no need to repeat that role prompting after the first go in the system prompt.
 '''
 
 # Q4. A pre-2026 course teaches "CRITICAL: You MUST use the search tool for
@@ -85,7 +107,17 @@ your answer here
 #     why did the failure mode flip, and what does the current fix look like?
 
 '''
-your answer here
+Shipping that against a current model causes OVERTRIGGERING — the tool fires on
+questions that don't need it.
+
+Why the failure mode flipped: the aggressive "you MUST" style existed to
+over-correct OLDER models, which were reluctant/undertriggered. Modern models
+(4.5/4.6+) follow the system prompt closely — so the same over-correction is now
+itself the bug: over-eager literal compliance instead of fixed reluctance.
+Older models needed correcting; modern models get OVER-corrected.
+
+Current fix: plain, scoped sentences — "Use this tool when..." — plus the WHY,
+so the model generalizes the boundary.
 '''
 
 
@@ -109,7 +141,11 @@ def choose_rung(job: dict) -> str:
     # TODO: pick the rung. A guaranteed schema outranks everything (it's the
     #       only rung that ENFORCES). Otherwise fuzzy steering needs examples.
     #       Otherwise plain clear instructions are enough — that's the default.
-    ...
+    if job["needs_guaranteed_schema"]:
+        return "structured_output"
+    if job["fuzzy_style_or_judgment"]:
+        return "few_shot"
+    return "zero_shot"
 
 
 # ─── EXERCISE 2 — Format the examples block ─────────────────────────────────
@@ -130,7 +166,12 @@ def wrap_examples(pairs: list[tuple[str, str]]) -> str:
     #         <example>\n<input>...</input>\n<output>...</output>\n</example>
     #       then join them all inside one <examples>...</examples> wrapper,
     #       newline-separated.
-    ...
+
+    list = []
+    for inp, outp in pairs:
+        list.append(inp)
+        list.append(outp)
+    return "<examples>\n" + list.join("") + "\n</examples>"
 
 
 # ─── EXERCISE 3 — Catch the silent bias ─────────────────────────────────────
