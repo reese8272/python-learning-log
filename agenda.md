@@ -30,7 +30,7 @@ This is the one-stop shop for current goals and intentions across all time horiz
 
 **Upside — if the day gives you more:**
 - Peak-window doorway: 5 min eyes-closed breathing before the first hard thing
-- Peak window (post-meds) → `/sharpen` §1.2 cold defense or `/learn ai` §1.3, or CFO Agent demoable path
+- Peak window (post-meds) → `/sharpen` §1.2 cold defense, finish the §1.3 worksheet to green, or CFO Agent demoable path
 - 20-min walk (blocked 1:30 as free — owes you nothing)
 - Close the day: 3 gratitudes + update the stopped-at line
 
@@ -39,7 +39,7 @@ This is the one-stop shop for current goals and intentions across all time horiz
 - 📨 Pipeline touches: restart tomorrow with the two follow-up notes
 - ✅ Check-ins: restart today (this session counts)
 
-**Stopped at:** Vacation 7/13–7/19 (full unplug except brick + play-movement). Before it: `/learn ai` §1.2 **BANKED 07-08**, queued for `/sharpen` cold defense; `/learn soft` Unit 1 banked; both ⭐ roles applied 7/6, no responses yet — follow-ups are tomorrow's touch. **Next learning rep (blocked 9:45am Tue):** `/sharpen` §1.2 cold, or `/learn ai` §1.3 (zero/few-shot/role prompting). **Tomorrow's spine:** 6am gym → 7:00 landing (shake · meds · shower→affirmations) → 9am call → 9:45 peak block → 11am Hannah → 12:00 follow-ups → 5pm call → 10:25 brick.
+**Stopped at:** `/learn ai` §1.3 (zero/few-shot/role prompting) **taught 07-20** — first learning rep after vacation, explain-back passed. Next step: run `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` solo to green (then `--live`) to bank it. Also live: `/sharpen` §1.2 cold defense queued; §1.1 build (llm_cost.py) still pending from 06-22. Both ⭐ roles applied 7/6, no responses yet — follow-ups are tomorrow's touch. **Next learning rep (blocked 9:45am Tue):** §1.3 worksheet to green, or `/sharpen` §1.2 cold. **Tomorrow's spine:** 6am gym → 7:00 landing (shake · meds · shower→affirmations) → 9am call → 9:45 peak block → 11am Hannah → 12:00 follow-ups → 5pm call → 10:25 brick.
 
 ---
 
