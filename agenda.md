@@ -9,31 +9,37 @@ This is the one-stop shop for current goals and intentions across all time horiz
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history.*
 
-**Date:** 2026-07-07 (evening `/reflect` — the ONE build named: **6am morning gym**, cue rebuilt for the new slot. Therapist homework wired in.)
+**Date:** 2026-07-20 (evening day-setup — **back from vacation 7/13–7/19**, the first *chosen* gap in the log. Brick held all week with zero scaffolding; movement stayed alive as play. Re-entry with no guilt-debt. Tomorrow is fully blocked to the calendar.)
 
-**The Floor for tomorrow (07-07) — a day counts if these 2 happen:**
+**The Floor for tomorrow (07-21) — a day counts if these 2 happen:**
 1. 🧱 **The brick** — 10:25 alarm → phone on charger → 15 min reading in bed
-2. 📨 **One pipeline touch** — Phase 0 done + both ⭐ roles applied (7/6). Next at-bat: **Next Step (Applied AI + Backend, one resume)** → `jobs/nextstep-applied-ai/`; or batch the 4 Tier-3 easy-applies in one sitting
+2. 📨 **One pipeline touch** — the two ⭐ follow-up notes (Activesoft, ConglomerateIT — both came due during vacation, warm "still very interested" note is normal at this distance). Blocked 12:00–12:25 on the calendar.
 
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts as a stacked day.
 
-**THE build (keystone — protect this one above all else):**
-- 🏋️ **6am morning gym.** *I will wake at 6am (alarm across the room), put on the clothes/shoes laid out the night before, and drive to the gym.* This is a **new build**, not the old midday habit restarting — work evicted the old cue, so the cue is rebuilt from scratch. **Worst-day minimum: show up, do one thing, 10 min — still counts.** The night-before setup (clothes + shoes out, keys + bag by door, alarm across room) is the real lever. Reading/mindfulness/learning are cued upside — this is the one that isn't optional.
+**THE build (restarting — protect this one above all else):**
+- 🏋️ **6am morning gym.** Restarts 07-21 — the vacation swallowed the original two-week window, so this is night zero again, *rested*. **Morning stretching is the on-ramp** (feet on floor → stretch → clothes already out → drive), not a separate habit. **Worst-day minimum: show up, do one thing, 10 min — still counts.** The night-before setup (clothes + shoes out, keys + bag by door, alarm across room, 10pm calendar reminder) is the real lever.
 
-**Upside — in order, if the day gives you more:**
-- **Peak-window doorway** *(therapist homework — mindfulness)*: 5 min eyes-closed, breath only, as the on-ramp *before* you open the first hard thing. Same logic as cardio pre-load, aimed at attention instead of dopamine. In-meeting version: when the superiority reflex fires, silently ask *"what does this person understand that I'm not seeing yet?"* — curiosity and superiority can't share a moment.
-- Peak window (post-meds) → **CFO Agent: one demoable end-to-end path** (never admin, never email)
-- One `/sharpen` or `/learn` rep (phone is fine — queue picks up at "supervisor vs swarm")
-- Gym or 20-min zone-2 cardio *before* the peak window
-- Morning stack: the **affirmation stack** *(therapist homework)* now rides the shower/shake slot (moved from the nightly close 07-08) — one growth-mindset line ("I got better at X today"), one identity statement ("I'm someone who…"), one evidence-based win (one concrete thing done well + why it counts)
+**Second build (new 07-20):**
+- 🪞 **Affirmation stack in the shower.** Cue: **water turns on → line one starts.** Three lines: growth ("I got better at X"), identity ("I'm someone who…"), evidence (one concrete win + why it counts). Worst-day minimum: just the identity line. One week riding this cue before judging it.
+
+**This week (7/21–7/25) — the three goals he named:**
+1. Concrete learning progress (peak-window reps — first blocked 9:45 Tue)
+2. Log 3–4 times (`/checkin` is the interface)
+3. The two builds above — gym + affirmations
+
+**Upside — if the day gives you more:**
+- Peak-window doorway: 5 min eyes-closed breathing before the first hard thing
+- Peak window (post-meds) → `/sharpen` §1.2 cold defense or `/learn ai` §1.3, or CFO Agent demoable path
+- 20-min walk (blocked 1:30 as free — owes you nothing)
 - Close the day: 3 gratitudes + update the stopped-at line
 
 **Streaks:**
-- 🧱 Brick: **1** — 7/6 landed (alarm → charger → book, exactly as designed)
-- 📨 Pipeline touches: **1** (7/6: repos public); today's: pin repos + LinkedIn Featured
-- ✅ Check-ins: **1**
+- 🧱 Brick: **held through the entire vacation** — the phone-on-charger cue proved portable; streak alive
+- 📨 Pipeline touches: restart tomorrow with the two follow-up notes
+- ✅ Check-ins: restart today (this session counts)
 
-**Stopped at:** `/learn soft` launched — new **senior soft-skills track** created (`career/senior-engineering-soft-skills/`), `/learn` now runs 3 tracks (`ai` / `py` / `soft`), mid-python repurposed to Python-mastery. **Unit 1 (scope of impact) banked** via a senior-frame rewrite of the Playwright work. Phase 0 done + both ⭐ roles (ConglomerateIT, Activesoft/VidMob) applied 7/6 and logged in `jobs/_tracker.md`. **Next step (pipeline):** Next Step application (or batch Tier-3). **Follow-ups due:** Activesoft ~Jul 9, ConglomerateIT ~Jul 13. **Next learning rep:** `/learn ai` §1.2 "Anatomy of a prompt" **BANKED 07-08** (explain-back passed, worksheet 16/16 green — real code assembling a current-API structured-output extraction call). Now queued for `/sharpen` cold defense. Next acquisition: §1.3 (zero/few-shot/role prompting), or `/learn soft` Unit 2 (communicating to reduce ambiguity).
+**Stopped at:** Vacation 7/13–7/19 (full unplug except brick + play-movement). Before it: `/learn ai` §1.2 **BANKED 07-08**, queued for `/sharpen` cold defense; `/learn soft` Unit 1 banked; both ⭐ roles applied 7/6, no responses yet — follow-ups are tomorrow's touch. **Next learning rep (blocked 9:45am Tue):** `/sharpen` §1.2 cold, or `/learn ai` §1.3 (zero/few-shot/role prompting). **Tomorrow's spine:** 6am gym → 7:00 landing (shake · meds · shower→affirmations) → 9am call → 9:45 peak block → 11am Hannah → 12:00 follow-ups → 5pm call → 10:25 brick.
 
 ---
 
