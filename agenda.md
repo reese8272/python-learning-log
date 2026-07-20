@@ -29,11 +29,11 @@ This is the one-stop shop for current goals and intentions across all time horiz
 
 **This week (7/21–7/25) — the pipeline sprint (closes brutally-honest move #1 by Friday):**
 One application per non-peak sitting; folders are already tailored, each is ~30–45 min of admin. After each: recruiter note within 24h + `_tracker.md` updated.
-- **Mon:** ⭐ follow-ups ×2 + **Next Step** (blocked 12:00)
-- **Tue:** **Genesys**
-- **Wed:** **Natera**
-- **Thu:** **IMA + Omada** (both reaches — fire and forget)
-- **Fri:** **Tier-3 easy-apply batch**, one sitting
+- **Tue 7/21:** ⭐ follow-ups ×2 + **Next Step** (blocked 12:00)
+- **Wed 7/22:** **Genesys**
+- **Thu 7/23:** **Natera**
+- **Fri 7/24:** **IMA + Omada** (both reaches — fire and forget)
+- **Sat 7/25:** **Tier-3 easy-apply batch**, one sitting
 Plus the goals he named: log 3–4 times (`/checkin`), and the two builds — gym + affirmations.
 
 **Peak blocks this week (9:45) — CFO Agent until demoable (brutally-honest move #2):**
@@ -66,7 +66,7 @@ No new `/learn` sections, no admin in this window. One narrowest end-to-end path
 - Math: ~$80k now vs $130–175k target ≈ **~$6k/month** cost per month the pipeline idles. 2 applications is a sample size of nothing — cold-apply response rates are 5–10%; you need 20+ at-bats to even test positioning.
 
 **The three moves (by ROI) — now scheduled (07-20), see the Card's week map:**
-1. ☐ **This week: all 5 remaining Tier 1+2 applications + the Tier-3 batch.** Admin, outside peak, folders are done (~3 hrs total). Highest dollar-per-hour activity available. → *Scheduled: one per day Mon–Thu, Tier-3 batch Fri.*
+1. ☐ **This week: all 5 remaining Tier 1+2 applications + the Tier-3 batch.** Admin, outside peak, folders are done (~3 hrs total). Highest dollar-per-hour activity available. → *Scheduled: one per day Tue–Fri, Tier-3 batch Sat.*
 2. ☐ **CFO Agent one end-to-end path in the 9:45 peak blocks — before any new curriculum sections.** Freeze `/learn` acquisition until §1.1–1.3 builds are green. Demoable flips 7 resumes + unlocks Looms. → *Scheduled: every 9:45 peak block this week until demoable.*
 3. ☐ **Run the first real `/sharpen` cold defense** (§1.2 is queued and ready). → *Scheduled: first peak block after CFO Agent is demoable.*
 
