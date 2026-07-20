@@ -15,6 +15,10 @@ This is the one-stop shop for current goals and intentions across all time horiz
 1. 🧱 **The brick** — 10:25 alarm → phone on charger → 15 min reading in bed
 2. 📨 **One pipeline touch** — the two ⭐ follow-up notes (Activesoft, ConglomerateIT — both came due during vacation, warm "still very interested" note is normal at this distance). Blocked 12:00–12:25 on the calendar.
 
+**The $6k rule (from brutally-honest 07-20):** every idle pipeline month costs ~$6k. When choosing what an hour goes to, the tiebreaker is always *"does this shorten the distance to the next role?"* Applications and CFO Agent win that tiebreaker over everything except the Floor.
+
+**Maximize the 12:00 block — don't leave the seat:** after the two follow-ups, same sitting, submit the **Next Step** application (`jobs/nextstep-applied-ai/` — resume.pdf ready, it's marked next at-bat, ~30 min of admin). Follow-ups are the floor; the application is the ROI. Then the recruiter note from that folder within 24h.
+
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts as a stacked day.
 
 **THE build (restarting — protect this one above all else):**
@@ -23,14 +27,21 @@ This is the one-stop shop for current goals and intentions across all time horiz
 **Second build (new 07-20):**
 - 🪞 **Affirmation stack in the shower.** Cue: **water turns on → line one starts.** Three lines: growth ("I got better at X"), identity ("I'm someone who…"), evidence (one concrete win + why it counts). Worst-day minimum: just the identity line. One week riding this cue before judging it.
 
-**This week (7/21–7/25) — the three goals he named:**
-1. Concrete learning progress (peak-window reps — first blocked 9:45 Tue)
-2. Log 3–4 times (`/checkin` is the interface)
-3. The two builds above — gym + affirmations
+**This week (7/21–7/25) — the pipeline sprint (closes brutally-honest move #1 by Friday):**
+One application per non-peak sitting; folders are already tailored, each is ~30–45 min of admin. After each: recruiter note within 24h + `_tracker.md` updated.
+- **Mon:** ⭐ follow-ups ×2 + **Next Step** (blocked 12:00)
+- **Tue:** **Genesys**
+- **Wed:** **Natera**
+- **Thu:** **IMA + Omada** (both reaches — fire and forget)
+- **Fri:** **Tier-3 easy-apply batch**, one sitting
+Plus the goals he named: log 3–4 times (`/checkin`), and the two builds — gym + affirmations.
+
+**Peak blocks this week (9:45) — CFO Agent until demoable (brutally-honest move #2):**
+No new `/learn` sections, no admin in this window. One narrowest end-to-end path someone can watch: one input → agent loop → one output. Define "done" before starting; end every block with a stopped-at line. Demoable flips all 7 resumes to "live" + unlocks the Looms. First `/sharpen` §1.2 cold defense (move #3) slots into a peak block only once CFO Agent is demoable — or as a non-peak 15-min rep later in the week.
 
 **Upside — if the day gives you more:**
 - Peak-window doorway: 5 min eyes-closed breathing before the first hard thing
-- Peak window (post-meds) → `/sharpen` §1.2 cold defense, finish the §1.3 worksheet to green, or CFO Agent demoable path
+- Evening (non-peak): run `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` solo to green — it's mechanical, doesn't deserve peak minutes
 - 20-min walk (blocked 1:30 as free — owes you nothing)
 - Close the day: 3 gratitudes + update the stopped-at line
 
@@ -39,7 +50,7 @@ This is the one-stop shop for current goals and intentions across all time horiz
 - 📨 Pipeline touches: restart tomorrow with the two follow-up notes
 - ✅ Check-ins: restart today (this session counts)
 
-**Stopped at:** `/learn ai` §1.3 (zero/few-shot/role prompting) **taught 07-20** — first learning rep after vacation, explain-back passed. Next step: run `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` solo to green (then `--live`) to bank it. Also live: `/sharpen` §1.2 cold defense queued; §1.1 build (llm_cost.py) still pending from 06-22. Both ⭐ roles applied 7/6, no responses yet — follow-ups are tomorrow's touch. **Next learning rep (blocked 9:45am Tue):** §1.3 worksheet to green, or `/sharpen` §1.2 cold. **Tomorrow's spine:** 6am gym → 7:00 landing (shake · meds · shower→affirmations) → 9am call → 9:45 peak block → 11am Hannah → 12:00 follow-ups → 5pm call → 10:25 brick.
+**Stopped at:** `/learn ai` §1.3 (zero/few-shot/role prompting) **taught 07-20** — explain-back passed; solo run-to-green is an evening upside item (mechanical, non-peak). `/learn` acquisition **frozen** until §1.1–1.3 builds are green (brutally-honest move #2). Also live: `/sharpen` §1.2 cold defense queued (runs after CFO Agent is demoable); §1.1 build (llm_cost.py) pending from 06-22. Both ⭐ roles applied 7/6, no responses yet — follow-ups are tomorrow's touch. **Tomorrow's spine:** 6am gym (night-before setup done tonight: clothes+shoes out, keys+bag by door, alarm across room) → 7:00 landing (shake · meds · shower→affirmations) → 9am call → **9:45 peak block = CFO Agent end-to-end path** → 11am Hannah → **12:00 follow-ups ×2 + Next Step application** → 5pm call → 10:25 brick.
 
 ---
 
@@ -54,10 +65,10 @@ This is the one-stop shop for current goals and intentions across all time horiz
 - Build-before-bank violated serially: §1.1 llm_cost.py pending since **06-22**, §1.2 build since 06-30, §1.3 assigned 07-20. `/sharpen` — "the primary learning engine" — has run **zero** cold defenses in a month (1 of ~25 Tier 1 owned).
 - Math: ~$80k now vs $130–175k target ≈ **~$6k/month** cost per month the pipeline idles. 2 applications is a sample size of nothing — cold-apply response rates are 5–10%; you need 20+ at-bats to even test positioning.
 
-**The three moves (by ROI):**
-1. ☐ **This week: all 5 remaining Tier 1+2 applications + the Tier-3 batch.** Admin, outside peak, folders are done (~3 hrs total). Highest dollar-per-hour activity available.
-2. ☐ **CFO Agent one end-to-end path in the 9:45 peak blocks — before any new curriculum sections.** Freeze `/learn` acquisition until §1.1–1.3 builds are green. Demoable flips 7 resumes + unlocks Looms.
-3. ☐ **Run the first real `/sharpen` cold defense** (§1.2 is queued and ready).
+**The three moves (by ROI) — now scheduled (07-20), see the Card's week map:**
+1. ☐ **This week: all 5 remaining Tier 1+2 applications + the Tier-3 batch.** Admin, outside peak, folders are done (~3 hrs total). Highest dollar-per-hour activity available. → *Scheduled: one per day Mon–Thu, Tier-3 batch Fri.*
+2. ☐ **CFO Agent one end-to-end path in the 9:45 peak blocks — before any new curriculum sections.** Freeze `/learn` acquisition until §1.1–1.3 builds are green. Demoable flips 7 resumes + unlocks Looms. → *Scheduled: every 9:45 peak block this week until demoable.*
+3. ☐ **Run the first real `/sharpen` cold defense** (§1.2 is queued and ready). → *Scheduled: first peak block after CFO Agent is demoable.*
 
 **Don't touch what's working:** the Floor, the brick, the re-entry design — the collapse pattern is actually beaten. Keep it exactly as is.
 
