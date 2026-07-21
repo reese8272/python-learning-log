@@ -29,8 +29,7 @@ This is the one-stop shop for current goals and intentions across all time horiz
 
 **This week (7/21–7/25) — the pipeline sprint (closes brutally-honest move #1 by Friday):**
 One application per non-peak sitting; folders are already tailored, each is ~30–45 min of admin. After each: recruiter note within 24h + `_tracker.md` updated.
-- **Tue 7/21:** ⭐ follow-ups ×2 + **Next Step** (blocked 12:00)
-- **Wed 7/22:** **Genesys**
+- ~~Tue 7/21~~ → **Wed 7/22:** ⭐ follow-ups ×2 + **Next Step** + **Genesys** (Tue's block lost to a work surge — carried, not owed; attach the demo link if the re-record lands first)
 - **Thu 7/23:** **Natera**
 - **Fri 7/24:** **IMA + Omada** (both reaches — fire and forget)
 - **Sat 7/25:** **Tier-3 easy-apply batch**, one sitting
@@ -54,7 +53,9 @@ No new `/learn` sections, no admin in this window. End every block with a stoppe
 - 📨 Pipeline touches: restart tomorrow with the two follow-up notes
 - ✅ Check-ins: restart today (this session counts)
 
-**Stopped at:** `/learn ai` §1.3 (zero/few-shot/role prompting) **taught 07-20** — explain-back passed; solo run-to-green is an evening upside item (mechanical, non-peak). `/learn` acquisition **frozen** until §1.1–1.3 builds are green (brutally-honest move #2). Also live: `/sharpen` §1.2 cold defense queued (runs after CFO Agent is demoable); §1.1 build (llm_cost.py) pending from 06-22. Both ⭐ roles applied 7/6, no responses yet — follow-ups are tomorrow's touch. **Today's spine (07-21):** ✅ 6am gym → ✅ 7:00 landing (shake · shower) → ✅ 9am call → ✅ affirmations (rescued) → ✅ **peak block = demo RECORDED** (`CFO-Agent.mp4`, 47s, life-log root — git-ignored; prod verified: health green, auth round-trip works after stale-token fix #48, plus #49 Gate-2 harness + #50 UX fixes shipped today). **Remaining to close the win: upload → shareable link** (YouTube unlisted or Loom), then attach to Next Step app + both ⭐ follow-ups → 11am Hannah → **12:00 follow-ups ×2 + Next Step application (+ attach the Loom link if it exists)** → 5pm call → 10:25 brick. (Affirmation stack: missed the water-on cue, rescued same-morning ✅ — rep 1 done. Growth line was the strongest; tomorrow's target is catching the cue itself.)
+**Stopped at (07-21, CFO demo):** first take recorded (`CFO-Agent.mp4`, 47s) but the payoff isn't captured — **next step: re-record the 5 beats** (login → vault add → snapshot refresh → "Where am I financially?" with the recommendation readable → "$1M at current trajectory" result), then upload for a shareable link. Prod is verified working and the flow is rehearsed — the redo is ~15 min.
+
+**Also live:** `/learn ai` §1.3 (zero/few-shot/role prompting) **taught 07-20** — explain-back passed; solo run-to-green is an evening upside item (mechanical, non-peak). `/learn` acquisition **frozen** until §1.1–1.3 builds are green (brutally-honest move #2). Also live: `/sharpen` §1.2 cold defense queued (runs after CFO Agent is demoable); §1.1 build (llm_cost.py) pending from 06-22. Both ⭐ roles applied 7/6, no responses yet — follow-ups are tomorrow's touch. **Today's spine (07-21):** ✅ 6am gym → ✅ 7:00 landing (shake · shower) → ✅ 9am call → ✅ affirmations (rescued) → **peak block = demo first take done, needs re-record** (47s take didn't capture the payoff; prod fully verified: health green, auth round-trip works after stale-token fix #48, plus #49 Gate-2 harness + #50 UX fixes shipped today). Work surged in the afternoon — 12:00 pipeline block didn't run; carried to Wed, no debt → 11am Hannah → **12:00 follow-ups ×2 + Next Step application (+ attach the Loom link if it exists)** → 5pm call → 10:25 brick. (Affirmation stack: missed the water-on cue, rescued same-morning ✅ — rep 1 done. Growth line was the strongest; tomorrow's target is catching the cue itself.)
 
 ---
 
