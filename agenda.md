@@ -9,7 +9,7 @@ This is the one-stop shop for current goals and intentions across all time horiz
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history.*
 
-**Date:** 2026-07-21 (morning — **gym build day 1: DONE.** 6am workout ✅ shake ✅ shower ✅ 9am call ✅. The night-before setup worked on night zero. Next up: 9:45 peak block = CFO Agent.)
+**Date:** 2026-07-21 (morning — **gym build day 1: DONE.** 6am workout ✅ shake ✅ shower ✅ 9am call ✅ affirmations ✅. **Discovery: CFO Agent was already demoable as of 07-09** (`LEFT_OFF.md`: Gate 2 all-pass, prod live; smoke-checked green 07-21 — health 200, PG+Redis ok, login page renders). Today's 9:45 peak block = **record the Loom**.)
 
 **The Floor for today (07-21) — a day counts if these 2 happen:**
 1. 🧱 **The brick** — 10:25 alarm → phone on charger → 15 min reading in bed
@@ -36,8 +36,12 @@ One application per non-peak sitting; folders are already tailored, each is ~30�
 - **Sat 7/25:** **Tier-3 easy-apply batch**, one sitting
 Plus the goals he named: log 3–4 times (`/checkin`), and the two builds — gym + affirmations.
 
-**Peak blocks this week (9:45) — CFO Agent until demoable (brutally-honest move #2):**
-No new `/learn` sections, no admin in this window. One narrowest end-to-end path someone can watch: one input → agent loop → one output. Define "done" before starting; end every block with a stopped-at line. Demoable flips all 7 resumes to "live" + unlocks the Looms. First `/sharpen` §1.2 cold defense (move #3) slots into a peak block only once CFO Agent is demoable — or as a non-peak 15-min rep later in the week.
+**Peak blocks this week (9:45) — cash in the demoable milestone (brutally-honest move #2 update):**
+CFO Agent turned out to be **already demoable** (verified 07-09 in its `LEFT_OFF.md` — Gate 2 walkthrough all-pass with real key; prod smoke-checked green 07-21). The receipt in the brutally-honest section was stale. So the peak blocks shift to the unlocks:
+- **Tue 7/21:** drive the demo yourself out loud (login → vault add → chat → cited recommendation → $1M scenario; hit snapshot-refresh after vault edits) → **record the 2–3 min Loom**. Done = a shareable Loom link.
+- **Wed onward:** first `/sharpen` §1.2 cold defense (move #3 — now unblocked). §1.1–1.3 builds still gate `/learn` acquisition.
+- Non-peak follow-on once the Loom exists: flip all 7 resumes/folders to "live + demo link."
+No new `/learn` sections, no admin in this window. End every block with a stopped-at line.
 
 **Upside — if the day gives you more:**
 - Peak-window doorway: 5 min eyes-closed breathing before the first hard thing
@@ -50,7 +54,7 @@ No new `/learn` sections, no admin in this window. One narrowest end-to-end path
 - 📨 Pipeline touches: restart tomorrow with the two follow-up notes
 - ✅ Check-ins: restart today (this session counts)
 
-**Stopped at:** `/learn ai` §1.3 (zero/few-shot/role prompting) **taught 07-20** — explain-back passed; solo run-to-green is an evening upside item (mechanical, non-peak). `/learn` acquisition **frozen** until §1.1–1.3 builds are green (brutally-honest move #2). Also live: `/sharpen` §1.2 cold defense queued (runs after CFO Agent is demoable); §1.1 build (llm_cost.py) pending from 06-22. Both ⭐ roles applied 7/6, no responses yet — follow-ups are tomorrow's touch. **Today's spine (07-21):** ✅ 6am gym → ✅ 7:00 landing (shake · shower) → ✅ 9am call → **NOW: 9:45 peak block = CFO Agent end-to-end path** → 11am Hannah → **12:00 follow-ups ×2 + Next Step application** → 5pm call → 10:25 brick. (Affirmation stack: missed the water-on cue, rescued same-morning ✅ — rep 1 done. Growth line was the strongest; tomorrow's target is catching the cue itself.)
+**Stopped at:** `/learn ai` §1.3 (zero/few-shot/role prompting) **taught 07-20** — explain-back passed; solo run-to-green is an evening upside item (mechanical, non-peak). `/learn` acquisition **frozen** until §1.1–1.3 builds are green (brutally-honest move #2). Also live: `/sharpen` §1.2 cold defense queued (runs after CFO Agent is demoable); §1.1 build (llm_cost.py) pending from 06-22. Both ⭐ roles applied 7/6, no responses yet — follow-ups are tomorrow's touch. **Today's spine (07-21):** ✅ 6am gym → ✅ 7:00 landing (shake · shower) → ✅ 9am call → ✅ affirmations (rescued) → **NOW: 9:45 peak block = drive the CFO demo + record the Loom** (prod smoke-checked green; done = shareable Loom link) → 11am Hannah → **12:00 follow-ups ×2 + Next Step application (+ attach the Loom link if it exists)** → 5pm call → 10:25 brick. (Affirmation stack: missed the water-on cue, rescued same-morning ✅ — rep 1 done. Growth line was the strongest; tomorrow's target is catching the cue itself.)
 
 ---
 
@@ -67,8 +71,8 @@ No new `/learn` sections, no admin in this window. One narrowest end-to-end path
 
 **The three moves (by ROI) — now scheduled (07-20), see the Card's week map:**
 1. ☐ **This week: all 5 remaining Tier 1+2 applications + the Tier-3 batch.** Admin, outside peak, folders are done (~3 hrs total). Highest dollar-per-hour activity available. → *Scheduled: one per day Tue–Fri, Tier-3 batch Sat.*
-2. ☐ **CFO Agent one end-to-end path in the 9:45 peak blocks — before any new curriculum sections.** Freeze `/learn` acquisition until §1.1–1.3 builds are green. Demoable flips 7 resumes + unlocks Looms. → *Scheduled: every 9:45 peak block this week until demoable.*
-3. ☐ **Run the first real `/sharpen` cold defense** (§1.2 is queued and ready). → *Scheduled: first peak block after CFO Agent is demoable.*
+2. ☑ **CFO Agent one end-to-end path — turned out already DONE 07-09** (`CFO-analyzer/LEFT_OFF.md`: Gate 2 all-pass, prod live + verified; smoke-checked green 07-21). The 07-20 receipt was stale. *Remaining unlock work: Loom (peak, 7/21) + flip resumes to live (non-peak). `/learn` freeze stays until §1.1–1.3 builds are green — that part was accurate.*
+3. ☐ **Run the first real `/sharpen` cold defense** (§1.2 is queued and ready). → *Now unblocked — next peak block after the Loom (Wed 7/22).*
 
 **Don't touch what's working:** the Floor, the brick, the re-entry design — the collapse pattern is actually beaten. Keep it exactly as is.
 
