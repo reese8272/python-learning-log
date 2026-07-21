@@ -9,9 +9,9 @@ This is the one-stop shop for current goals and intentions across all time horiz
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history.*
 
-**Date:** 2026-07-20 (evening day-setup — **back from vacation 7/13–7/19**, the first *chosen* gap in the log. Brick held all week with zero scaffolding; movement stayed alive as play. Re-entry with no guilt-debt. Tomorrow is fully blocked to the calendar.)
+**Date:** 2026-07-21 (morning — **gym build day 1: DONE.** 6am workout ✅ shake ✅ shower ✅ 9am call ✅. The night-before setup worked on night zero. Next up: 9:45 peak block = CFO Agent.)
 
-**The Floor for tomorrow (07-21) — a day counts if these 2 happen:**
+**The Floor for today (07-21) — a day counts if these 2 happen:**
 1. 🧱 **The brick** — 10:25 alarm → phone on charger → 15 min reading in bed
 2. 📨 **One pipeline touch** — the two ⭐ follow-up notes (Activesoft, ConglomerateIT — both came due during vacation, warm "still very interested" note is normal at this distance). Blocked 12:00–12:25 on the calendar.
 
@@ -22,7 +22,7 @@ This is the one-stop shop for current goals and intentions across all time horiz
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts as a stacked day.
 
 **THE build (restarting — protect this one above all else):**
-- 🏋️ **6am morning gym.** Restarts 07-21 — the vacation swallowed the original two-week window, so this is night zero again, *rested*. **Morning stretching is the on-ramp** (feet on floor → stretch → clothes already out → drive), not a separate habit. **Worst-day minimum: show up, do one thing, 10 min — still counts.** The night-before setup (clothes + shoes out, keys + bag by door, alarm across room, 10pm calendar reminder) is the real lever.
+- 🏋️ **6am morning gym.** **Day 1 done (07-21)** — the vacation swallowed the original two-week window, so this restart began rested, and the first morning landed. **Morning stretching is the on-ramp** (feet on floor → stretch → clothes already out → drive), not a separate habit. **Worst-day minimum: show up, do one thing, 10 min — still counts.** The night-before setup (clothes + shoes out, keys + bag by door, alarm across room, 10pm calendar reminder) is the real lever.
 
 **Second build (new 07-20):**
 - 🪞 **Affirmation stack in the shower.** Cue: **water turns on → line one starts.** Three lines: growth ("I got better at X"), identity ("I'm someone who…"), evidence (one concrete win + why it counts). Worst-day minimum: just the identity line. One week riding this cue before judging it.
@@ -50,7 +50,7 @@ No new `/learn` sections, no admin in this window. One narrowest end-to-end path
 - 📨 Pipeline touches: restart tomorrow with the two follow-up notes
 - ✅ Check-ins: restart today (this session counts)
 
-**Stopped at:** `/learn ai` §1.3 (zero/few-shot/role prompting) **taught 07-20** — explain-back passed; solo run-to-green is an evening upside item (mechanical, non-peak). `/learn` acquisition **frozen** until §1.1–1.3 builds are green (brutally-honest move #2). Also live: `/sharpen` §1.2 cold defense queued (runs after CFO Agent is demoable); §1.1 build (llm_cost.py) pending from 06-22. Both ⭐ roles applied 7/6, no responses yet — follow-ups are tomorrow's touch. **Tomorrow's spine:** 6am gym (night-before setup done tonight: clothes+shoes out, keys+bag by door, alarm across room) → 7:00 landing (shake · meds · shower→affirmations) → 9am call → **9:45 peak block = CFO Agent end-to-end path** → 11am Hannah → **12:00 follow-ups ×2 + Next Step application** → 5pm call → 10:25 brick.
+**Stopped at:** `/learn ai` §1.3 (zero/few-shot/role prompting) **taught 07-20** — explain-back passed; solo run-to-green is an evening upside item (mechanical, non-peak). `/learn` acquisition **frozen** until §1.1–1.3 builds are green (brutally-honest move #2). Also live: `/sharpen` §1.2 cold defense queued (runs after CFO Agent is demoable); §1.1 build (llm_cost.py) pending from 06-22. Both ⭐ roles applied 7/6, no responses yet — follow-ups are tomorrow's touch. **Today's spine (07-21):** ✅ 6am gym → ✅ 7:00 landing (shake · shower) → ✅ 9am call → **NOW: 9:45 peak block = CFO Agent end-to-end path** → 11am Hannah → **12:00 follow-ups ×2 + Next Step application** → 5pm call → 10:25 brick. (Affirmation stack with the shower — unconfirmed; water-on cue, week 1.)
 
 ---
 
