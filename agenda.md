@@ -52,7 +52,7 @@ No new `/learn` sections, no admin in this window. End every block with a stoppe
 - 📨 Pipeline touches: restart tomorrow with the two follow-up notes
 - ✅ Check-ins: restart today (this session counts)
 
-**Stopped at (07-22):** demo re-record **shelved by choice** — not needed right now, not owed. (If picked back up: 5 beats — login → vault add → snapshot refresh → "Where am I financially?" → $1M scenario — ~15 min, flow rehearsed, prod green.) **Next step: `/sharpen` §1.2 cold defense** ("Anatomy of a prompt" — build banked 07-08, ready to defend). Then 12:00 pipeline block.
+**Stopped at (07-22):** **first `/sharpen` cold defense DONE — §1.2 "Anatomy of a prompt" owned** (brutally-honest move #3 closed: all four faces produced under push; one taught sliver → silent cache invalidators, now in /drill). Prompt engineering bumped to "Can explain the why" in CAREER_LOG. (Demo re-record stays shelved by choice — not owed.) **Next step: 12:00 pipeline block** — follow-ups ×2 + Next Step + Genesys.
 
 **Also live:** `/learn ai` §1.3 (zero/few-shot/role prompting) **taught 07-20** — explain-back passed; solo run-to-green is an evening upside item (mechanical, non-peak). `/learn` acquisition **frozen** until §1.1–1.3 builds are green (brutally-honest move #2). Also live: `/sharpen` §1.2 cold defense queued (runs after CFO Agent is demoable); §1.1 build (llm_cost.py) pending from 06-22. Both ⭐ roles applied 7/6, no responses yet — follow-ups are tomorrow's touch. **Today's spine (07-21):** ✅ 6am gym → ✅ 7:00 landing (shake · shower) → ✅ 9am call → ✅ affirmations (rescued) → **peak block = demo first take done, needs re-record** (47s take didn't capture the payoff; prod fully verified: health green, auth round-trip works after stale-token fix #48, plus #49 Gate-2 harness + #50 UX fixes shipped today). Work surged in the afternoon — 12:00 pipeline block didn't run; carried to Wed, no debt → 11am Hannah → **12:00 follow-ups ×2 + Next Step application (+ attach the Loom link if it exists)** → 5pm call → 10:25 brick. (Affirmation stack: missed the water-on cue, rescued same-morning ✅ — rep 1 done. Growth line was the strongest; tomorrow's target is catching the cue itself.)
 
@@ -72,7 +72,7 @@ No new `/learn` sections, no admin in this window. End every block with a stoppe
 **The three moves (by ROI) — now scheduled (07-20), see the Card's week map:**
 1. ☐ **This week: all 5 remaining Tier 1+2 applications + the Tier-3 batch.** Admin, outside peak, folders are done (~3 hrs total). Highest dollar-per-hour activity available. → *Scheduled: one per day Tue–Fri, Tier-3 batch Sat.*
 2. ☑ **CFO Agent one end-to-end path — turned out already DONE 07-09** (`CFO-analyzer/LEFT_OFF.md`: Gate 2 all-pass, prod live + verified; smoke-checked green 07-21). The 07-20 receipt was stale. *Remaining unlock work: Loom + flip resumes to live — **shelved by choice 07-22**, pick up when a demo link is actually needed. `/learn` freeze stays until §1.1–1.3 builds are green — that part was accurate.*
-3. ☐ **Run the first real `/sharpen` cold defense** (§1.2 is queued and ready). → *Now unblocked — next peak block after the Loom (Wed 7/22).*
+3. ☑ **Run the first real `/sharpen` cold defense** — **DONE 07-22**: §1.2 "Anatomy of a prompt" defended cold and owned. The primary learning engine has now run its first defense; 2 of ~25 Tier 1 owned.
 
 **Don't touch what's working:** the Floor, the brick, the re-entry design — the collapse pattern is actually beaten. Keep it exactly as is.
 
