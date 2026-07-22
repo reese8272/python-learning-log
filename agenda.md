@@ -29,7 +29,7 @@ This is the one-stop shop for current goals and intentions across all time horiz
 
 **This week (7/21–7/25) — the pipeline sprint (closes brutally-honest move #1 by Friday):**
 One application per non-peak sitting; folders are already tailored, each is ~30–45 min of admin. After each: recruiter note within 24h + `_tracker.md` updated.
-- ~~Tue 7/21~~ → **Wed 7/22:** ⭐ follow-ups ×2 + **Next Step** + **Genesys** (Tue's block lost to a work surge — carried, not owed; attach the demo link if the re-record lands first)
+- ~~Tue 7/21~~ → **Wed 7/22:** ⭐ follow-ups ×2 + **Next Step** + **Genesys** (Tue's block lost to a work surge — carried, not owed; applications go out without the demo link — the re-record is shelved, not blocking)
 - **Thu 7/23:** **Natera**
 - **Fri 7/24:** **IMA + Omada** (both reaches — fire and forget)
 - **Sat 7/25:** **Tier-3 easy-apply batch**, one sitting
@@ -37,9 +37,8 @@ Plus the goals he named: log 3–4 times (`/checkin`), and the two builds — gy
 
 **Peak blocks this week (9:45) — cash in the demoable milestone (brutally-honest move #2 update):**
 CFO Agent turned out to be **already demoable** (verified 07-09 in its `LEFT_OFF.md` — Gate 2 walkthrough all-pass with real key; prod smoke-checked green 07-21). The receipt in the brutally-honest section was stale. So the peak blocks shift to the unlocks:
-- **Tue 7/21:** drive the demo yourself out loud (login → vault add → chat → cited recommendation → $1M scenario; hit snapshot-refresh after vault edits) → **record the 2–3 min Loom**. Done = a shareable Loom link.
+- ~~Tue 7/21: record the Loom~~ → **shelved by choice 07-22** — take 1 exists (47s), flow rehearsed, prod verified; not needed right now. When it's wanted: re-record the 5 beats (~15 min), upload, then flip resumes to "live + demo link" (non-peak).
 - **Wed onward:** first `/sharpen` §1.2 cold defense (move #3 — now unblocked). §1.1–1.3 builds still gate `/learn` acquisition.
-- Non-peak follow-on once the Loom exists: flip all 7 resumes/folders to "live + demo link."
 No new `/learn` sections, no admin in this window. End every block with a stopped-at line.
 
 **Upside — if the day gives you more:**
@@ -53,7 +52,7 @@ No new `/learn` sections, no admin in this window. End every block with a stoppe
 - 📨 Pipeline touches: restart tomorrow with the two follow-up notes
 - ✅ Check-ins: restart today (this session counts)
 
-**Stopped at (07-21, CFO demo):** first take recorded (`CFO-Agent.mp4`, 47s) but the payoff isn't captured — **next step: re-record the 5 beats** (login → vault add → snapshot refresh → "Where am I financially?" with the recommendation readable → "$1M at current trajectory" result), then upload for a shareable link. Prod is verified working and the flow is rehearsed — the redo is ~15 min.
+**Stopped at (07-22):** demo re-record **shelved by choice** — not needed right now, not owed. (If picked back up: 5 beats — login → vault add → snapshot refresh → "Where am I financially?" → $1M scenario — ~15 min, flow rehearsed, prod green.) **Next step: `/sharpen` §1.2 cold defense** ("Anatomy of a prompt" — build banked 07-08, ready to defend). Then 12:00 pipeline block.
 
 **Also live:** `/learn ai` §1.3 (zero/few-shot/role prompting) **taught 07-20** — explain-back passed; solo run-to-green is an evening upside item (mechanical, non-peak). `/learn` acquisition **frozen** until §1.1–1.3 builds are green (brutally-honest move #2). Also live: `/sharpen` §1.2 cold defense queued (runs after CFO Agent is demoable); §1.1 build (llm_cost.py) pending from 06-22. Both ⭐ roles applied 7/6, no responses yet — follow-ups are tomorrow's touch. **Today's spine (07-21):** ✅ 6am gym → ✅ 7:00 landing (shake · shower) → ✅ 9am call → ✅ affirmations (rescued) → **peak block = demo first take done, needs re-record** (47s take didn't capture the payoff; prod fully verified: health green, auth round-trip works after stale-token fix #48, plus #49 Gate-2 harness + #50 UX fixes shipped today). Work surged in the afternoon — 12:00 pipeline block didn't run; carried to Wed, no debt → 11am Hannah → **12:00 follow-ups ×2 + Next Step application (+ attach the Loom link if it exists)** → 5pm call → 10:25 brick. (Affirmation stack: missed the water-on cue, rescued same-morning ✅ — rep 1 done. Growth line was the strongest; tomorrow's target is catching the cue itself.)
 
@@ -72,7 +71,7 @@ No new `/learn` sections, no admin in this window. End every block with a stoppe
 
 **The three moves (by ROI) — now scheduled (07-20), see the Card's week map:**
 1. ☐ **This week: all 5 remaining Tier 1+2 applications + the Tier-3 batch.** Admin, outside peak, folders are done (~3 hrs total). Highest dollar-per-hour activity available. → *Scheduled: one per day Tue–Fri, Tier-3 batch Sat.*
-2. ☑ **CFO Agent one end-to-end path — turned out already DONE 07-09** (`CFO-analyzer/LEFT_OFF.md`: Gate 2 all-pass, prod live + verified; smoke-checked green 07-21). The 07-20 receipt was stale. *Remaining unlock work: Loom (peak, 7/21) + flip resumes to live (non-peak). `/learn` freeze stays until §1.1–1.3 builds are green — that part was accurate.*
+2. ☑ **CFO Agent one end-to-end path — turned out already DONE 07-09** (`CFO-analyzer/LEFT_OFF.md`: Gate 2 all-pass, prod live + verified; smoke-checked green 07-21). The 07-20 receipt was stale. *Remaining unlock work: Loom + flip resumes to live — **shelved by choice 07-22**, pick up when a demo link is actually needed. `/learn` freeze stays until §1.1–1.3 builds are green — that part was accurate.*
 3. ☐ **Run the first real `/sharpen` cold defense** (§1.2 is queued and ready). → *Now unblocked — next peak block after the Loom (Wed 7/22).*
 
 **Don't touch what's working:** the Floor, the brick, the re-entry design — the collapse pattern is actually beaten. Keep it exactly as is.
