@@ -41,6 +41,8 @@ CFO Agent turned out to be **already demoable** (verified 07-09 in its `LEFT_OFF
 - **Wed onward:** first `/sharpen` §1.2 cold defense (move #3 — now unblocked). §1.1–1.3 builds still gate `/learn` acquisition.
 No new `/learn` sections, no admin in this window. End every block with a stopped-at line.
 
+**Daily rep cadence (named by Reese 07-22, after the first cold defense):** one peak block = one `/sharpen` or `/learn` rep (a single concept, to the bar); one non-peak `/drill` (5–10 min, phone-friendly — evening or a gap). That's the whole engine: acquire → defend → retain, one concept at a time. This is *cadence, not floor* — the Floor stays two items; a day without a rep is data, never debt.
+
 **Upside — if the day gives you more:**
 - Peak-window doorway: 5 min eyes-closed breathing before the first hard thing
 - Evening (non-peak): run `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` solo to green — it's mechanical, doesn't deserve peak minutes
@@ -52,7 +54,7 @@ No new `/learn` sections, no admin in this window. End every block with a stoppe
 - 📨 Pipeline touches: restart tomorrow with the two follow-up notes
 - ✅ Check-ins: restart today (this session counts)
 
-**Stopped at (07-22):** **first `/sharpen` cold defense DONE — §1.2 "Anatomy of a prompt" owned** (brutally-honest move #3 closed: all four faces produced under push; one taught sliver → silent cache invalidators, now in /drill). Prompt engineering bumped to "Can explain the why" in CAREER_LOG. (Demo re-record stays shelved by choice — not owed.) **Next step: 12:00 pipeline block** — follow-ups ×2 + Next Step + Genesys.
+**Stopped at (07-22, peak block closed):** **§1.2 "Anatomy of a prompt" defended cold — OWNED** (move #3 closed). Bonus second defense: **§1.1 "What an LLM call is" — 3 of 4 faces owned** a month after learning it (cost-asymmetry mechanism nailed); marked `[~]` — one more rep on the token face (ratio: token ≈ ¾ word; tokens = learned subword vocab = atomic unit of compute). Both now feed /drill: cache invalidators + token facts. (Demo re-record stays shelved by choice — not owed.) **Next step: 12:00 pipeline block** — follow-ups ×2 + Next Step + Genesys.
 
 **Also live:** `/learn ai` §1.3 (zero/few-shot/role prompting) **taught 07-20** — explain-back passed; solo run-to-green is an evening upside item (mechanical, non-peak). `/learn` acquisition **frozen** until §1.1–1.3 builds are green (brutally-honest move #2). Also live: `/sharpen` §1.2 cold defense queued (runs after CFO Agent is demoable); §1.1 build (llm_cost.py) pending from 06-22. Both ⭐ roles applied 7/6, no responses yet — follow-ups are tomorrow's touch. **Today's spine (07-21):** ✅ 6am gym → ✅ 7:00 landing (shake · shower) → ✅ 9am call → ✅ affirmations (rescued) → **peak block = demo first take done, needs re-record** (47s take didn't capture the payoff; prod fully verified: health green, auth round-trip works after stale-token fix #48, plus #49 Gate-2 harness + #50 UX fixes shipped today). Work surged in the afternoon — 12:00 pipeline block didn't run; carried to Wed, no debt → 11am Hannah → **12:00 follow-ups ×2 + Next Step application (+ attach the Loom link if it exists)** → 5pm call → 10:25 brick. (Affirmation stack: missed the water-on cue, rescued same-morning ✅ — rep 1 done. Growth line was the strongest; tomorrow's target is catching the cue itself.)
 

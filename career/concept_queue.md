@@ -31,7 +31,7 @@ Work top-down within each tier. Tier 1 before Tier 2 unless a real project need 
 - [ ] **Retrieval patterns** — pure similarity vs hybrid/keyword, re-ranking *(source: Cognizant RAG)*
 
 ### LLM fundamentals
-- [ ] **What an LLM call actually is** — stateless re-send model, tokens, context window (hard-reject vs lost-in-middle), cost asymmetry (output ~5× input & why) *(learned 2026-06-22 via /learn; defend cold)*
+- [~] **What an LLM call actually is** — stateless re-send model, tokens, context window (hard-reject vs lost-in-middle), cost asymmetry (output ~5× input & why) *(2026-07-22 — /sharpen: 3 of 4 faces owned cold: statelessness ✓, hard-reject vs lost-in-the-middle ✓, cost asymmetry mechanism ✓ (parallel prefill vs serial autoregressive generation). Fuzzy: tokens — ratio inverted (token ≈ ¾ word, word ≈ 1.33 tokens), tokens are learned subword vocab not fixed-size, why-tokens = atomic unit of compute. One more rep on the token face.)*
 - [x] **Anatomy of a prompt** — system as top-level param (not messages[0]) & why (render order tools→system→messages = cacheable byte-prefix); assistant turns = re-sent prior outputs = "memory"; max_tokens = 200 + stop_reason (never raises) vs context window = 400 BadRequestError (raises); ⚠ assistant-prefill removed on Claude 4.6+ (400) → Structured Outputs (output_config.format) enforce vs prefill nudge *(2026-07-22 — defended cold, first /sharpen defense. All four faces produced under push. Taught in-session → drill: silent cache invalidators (dynamic bytes in prefix — timestamps/UUIDs/unsorted JSON/varying tools; verify via usage.cache_read_input_tokens). In /drill rotation.)*
 
 ### Tools, MCP, prompting
