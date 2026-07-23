@@ -17,6 +17,8 @@ This is the one-stop shop for current goals and intentions across all time horiz
 
 **The $6k rule (from brutally-honest 07-20):** every idle pipeline month costs ~$6k. When choosing what an hour goes to, the tiebreaker is always *"does this shorten the distance to the next role?"* Applications and CFO Agent win that tiebreaker over everything except the Floor.
 
+**The contract-work gate (from brutally-honest 07-23):** the AI-training contractor playbook (Mercor/Handshake/etc.) is **good idea, bad timing** — sequenced, not rejected. No platform setup, no accounts, no profile until **all 7 Tier 1+2 applications are live + the Tier-3 batch is done**. After that it's the delivery-driving replacement: non-peak only, never the 9:45 block, and the twice-weekly platform check rides the existing 12:00 pipeline block. The horse is the applications, not the cold defenses — defenses run in parallel and are not a prerequisite for this.
+
 **Maximize the 12:00 block — don't leave the seat:** after the two follow-ups, same sitting, submit the **Next Step** application (`jobs/nextstep-applied-ai/` — resume.pdf ready, it's marked next at-bat, ~30 min of admin). Follow-ups are the floor; the application is the ROI. Then the recruiter note from that folder within 24h.
 
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts as a stacked day.
@@ -53,6 +55,8 @@ No new `/learn` sections, no admin in this window. End every block with a stoppe
 - 🧱 Brick: **held through the entire vacation** — the phone-on-charger cue proved portable; streak alive
 - 📨 Pipeline touches: restart tomorrow with the two follow-up notes
 - ✅ Check-ins: restart today (this session counts)
+
+**Stopped at (07-23, night — brutally-honest micro-session):** Contract-work playbook adjudicated: good idea, bad timing — gate written above, no platform setup until the sprint is done. **Pipeline debt carried:** Wed + Thu items didn't run — **Fri 12:00 block = follow-ups ×2 + Next Step + Genesys + Natera**, then IMA + Omada as the day allows; Tier-3 batch Sat per plan. Next step: the Fri 12:00 sitting.
 
 **Stopped at (07-22, peak block closed):** **§1.2 "Anatomy of a prompt" defended cold — OWNED** (move #3 closed). Bonus second defense: **§1.1 "What an LLM call is" — 3 of 4 faces owned** a month after learning it (cost-asymmetry mechanism nailed); marked `[~]` — one more rep on the token face (ratio: token ≈ ¾ word; tokens = learned subword vocab = atomic unit of compute). Both now feed /drill: cache invalidators + token facts. (Demo re-record stays shelved by choice — not owed.) **Next step: 12:00 pipeline block** — follow-ups ×2 + Next Step + Genesys.
 
