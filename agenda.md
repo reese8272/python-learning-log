@@ -58,6 +58,8 @@ No new `/learn` sections, no admin in this window. End every block with a stoppe
 
 **Stopped at (07-23, night — brutally-honest micro-session + /reflect):** **4-year anniversary — day counted** (full presence; gym day 3 ✅, brick 2 nights ✅, affirmation rep 3 at the identity-line minimum ✅). Contract-work playbook adjudicated: good idea, bad timing — gate written above, no platform setup until the sprint is done. **Pipeline debt carried:** Wed + Thu items didn't run — **Fri 12:00 block = follow-ups ×2 + Next Step + Genesys + Natera**, then IMA + Omada as the day allows; Tier-3 batch Sat per plan.
 
+**Update (07-23, ~10:55am — pre-Chloe):** The 12:00 pipeline blocks are now **SACRED on the calendar** (red, reminders at 5 min + start): **today 12:00–2:30 = the big 5** (⭐ follow-ups ×2 + Next Step + Genesys + Natera — full order of operations in the event), **Fri = IMA + Omada**, **Sat = Tier-3 batch**. Notecard text written (see check-in conversation): header "I am capable of amazing things," growth/identity/evidence lines, footer "Make today count. Win the block."
+
 **Friday additions (from /reflect 07-23):**
 1. ☐ **The notecard** — after gym, before shower: write THIS card (finalized 07-23 — he asked for something to *read*, not fill in), tape at eye level by the shower. ~2 min. Read it when the water turns on; the spoken three-line stack can ride behind it or not — the read IS the rep. Judge the cue Sunday as planned.
 
