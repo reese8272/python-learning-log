@@ -56,7 +56,13 @@ No new `/learn` sections, no admin in this window. End every block with a stoppe
 - 📨 Pipeline touches: restart tomorrow with the two follow-up notes
 - ✅ Check-ins: restart today (this session counts)
 
-**Stopped at (07-23, night — brutally-honest micro-session):** Contract-work playbook adjudicated: good idea, bad timing — gate written above, no platform setup until the sprint is done. **Pipeline debt carried:** Wed + Thu items didn't run — **Fri 12:00 block = follow-ups ×2 + Next Step + Genesys + Natera**, then IMA + Omada as the day allows; Tier-3 batch Sat per plan. Next step: the Fri 12:00 sitting.
+**Stopped at (07-23, night — brutally-honest micro-session + /reflect):** **4-year anniversary — day counted** (full presence; gym day 3 ✅, brick 2 nights ✅, affirmation rep 3 at the identity-line minimum ✅). Contract-work playbook adjudicated: good idea, bad timing — gate written above, no platform setup until the sprint is done. **Pipeline debt carried:** Wed + Thu items didn't run — **Fri 12:00 block = follow-ups ×2 + Next Step + Genesys + Natera**, then IMA + Omada as the day allows; Tier-3 batch Sat per plan.
+
+**Friday additions (from /reflect 07-23):**
+1. ☐ **The notecard** — after gym, before shower: write the three affirmation lines (growth / identity / evidence) on ONE card, tape at eye level by the shower. ~2 min. Cue-support for the water-on trigger; judge the cue Sunday as planned.
+2. ☐ **The 12:00 block** — the one thing that makes Friday different from this week. Everything else is already momentum.
+3. ☐ Tell her you know what her full support is worth.
+*Rule reaffirmed: any new plan that shows up after 10pm goes to the next check-in, not into action that night.*
 
 **Stopped at (07-22, peak block closed):** **§1.2 "Anatomy of a prompt" defended cold — OWNED** (move #3 closed). Bonus second defense: **§1.1 "What an LLM call is" — 3 of 4 faces owned** a month after learning it (cost-asymmetry mechanism nailed); marked `[~]` — one more rep on the token face (ratio: token ≈ ¾ word; tokens = learned subword vocab = atomic unit of compute). Both now feed /drill: cache invalidators + token facts. (Demo re-record stays shelved by choice — not owed.) **Next step: 12:00 pipeline block** — follow-ups ×2 + Next Step + Genesys.
 
