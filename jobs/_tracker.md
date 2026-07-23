@@ -15,7 +15,7 @@ Anchor high. Market rate for the MCP/LangGraph skillset is above $120k — the o
 | Sr. Forward Deployed AI Solutions Eng | Natera | Senior band (~$120–160k); Staff $152–190k | High | [Greenhouse](https://job-boards.greenhouse.io/natera/jobs/5766365004) | ☐ Not applied |
 | AI Engineering Lead (founding) | IMA Financial | $147–220k | Reach (title) | [IMA careers](https://imacorp.com/careers/openings/5175285007) | ☐ Not applied |
 | Senior Applied AI Engineer | Omada Health | $200–250k | Reach (ceiling) | [Greenhouse](https://job-boards.greenhouse.io/omadahealth/jobs/7155511) | ☐ Not applied |
-| Sr. SWE Full Stack — Agentic AI | Genesys | $134–236k | High (FS+agent) | [Workday](https://genesys.wd1.myworkdayjobs.com/genesys/job/virtual-office-texas/sr-software-engineer--full-stack---agentic-ai_jr110668) | ☐ Not applied |
+| ~~Sr. SWE Full Stack — Agentic AI~~ | ~~Genesys~~ | ~~$134–236k~~ | — | — | ❌ Posting expired before apply (found 2026-07-23) — off the list, no action owed |
 | ~~Applied AI Engineer (+ Backend sibling)~~ | ~~Next Step Systems~~ | ~~$140–200k~~ | — | — | ❌ Both postings expired before apply (found 2026-07-23) — off the list, no action owed |
 | Senior AI/ML Engineer — MCP | Activesoft → VidMob (likely) | DOE (senior) | ⭐ Best stack | [Dice](https://www.dice.com/job-detail/8ff5c940-ca17-4405-b382-f46eb2db6950) | ✅ Applied + InMailed 07-06 · ✅ follow-up sent to Madhavi & Raghu 2026-07-23 (CFO-Agent-live hook) · ☐ VidMob direct |
 | Agentic AI Engineer | ConglomerateIT | DOE (push $65–80/hr or $120k+) | ⭐ Best level | [Dice](https://www.dice.com/job-detail/2209d4d8-3381-4f76-8e55-c716ded6f736) | ✅ Applied + recruiter note 07-06 · ✅ follow-up emailed 2026-07-23 (in-thread, CFO-Agent-live detail) |
@@ -32,6 +32,19 @@ Apply via Dice Easy Apply, move on. Do NOT tailor — the ROI isn't there.
 | Python AI Engineer (State of CT) | SnapCode | $70/hr C2C | [Dice](https://www.dice.com/job-detail/9f9729d7-c5f6-4854-9d37-c2b3e45161dc) |
 | AI Platform Engineer | System One | $72/hr | [Dice](https://www.dice.com/job-detail/14b5758e-58bf-4ced-b80c-4575c1a5d53a) |
 | Solutions Architect — Gen AI | StaffRight | $65–80/hr C2H | email jobs@staffrightassociates.com |
+
+### Fresh-sourced 2026-07-23 (replacements for expired Next Step + Genesys — fold into Sat batch)
+*AI-search sourced (Dice MCP, remote, posted ≤7 days) — verify details on the posting before applying.*
+
+| Job | Company | Rate/Comp | Notes | Apply |
+|---|---|---|---|---|
+| Sr Data Scientist — GenAI/Agentic AI | Molina Healthcare | $87–190k FTE | Real product co, direct hire; JD is agentic workflows + RAG + tool orchestration despite DS title | [Dice](https://www.dice.com/job-detail/0fc0e724-7ce7-4112-93fe-582009241c43) |
+| Agentic AI Architect / Fwd Deployed Eng | Photon | DOE | Easy apply; asks 6+ yrs — fire and forget, the fwd-deployed framing matches the Natera resume | [Dice](https://www.dice.com/job-detail/d60bb500-8a30-4fda-8130-918b6d21a94b) |
+| Sr. Agentic AI Engineer | TechniPros | DOE, 12+ mo W2 | Easy apply; agentic + RAG, production focus (also has 2 sibling "Agentic AI Engineer" postings — apply to best one only) | [Dice](https://www.dice.com/job-detail/5794daae-3893-4f3f-be30-3c9648434d3d) |
+| Senior AI Developer (Palantir platform) | Vaco | to $170k+ FTE | Easy apply; remote w/ ~monthly travel to Irving TX — reach, platform-specific | [Dice](https://www.dice.com/job-detail/69f6c0b3-6369-470f-b32a-fb06ab881339) |
+| Applied AI Engineer | Scigon Solutions | $52–70/hr | Easy apply; bottom of band is below floor — anchor $70, drop if they push down | [Dice](https://www.dice.com/job-detail/1f4c2f42-d592-41b0-86c3-353de2835d15) |
+
+*Excluded from this sweep: SDH Systems ($40–45/hr, below floor + 8yr healthcare wall), Optum Applied Scientist (DS-track), QTech multi-city postings (no easy apply, DOE, same shape as TechniPros).*
 
 ---
 
