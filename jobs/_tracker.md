@@ -13,7 +13,7 @@ Anchor high. Market rate for the MCP/LangGraph skillset is above $120k — the o
 | Job | Company | Comp | Fit | Direct apply | Status |
 |---|---|---|---|---|---|
 | Sr. Forward Deployed AI Solutions Eng | Natera | Posted band $125–156.3k | High | [Greenhouse](https://job-boards.greenhouse.io/natera/jobs/5766365004) | ✅ Applied 2026-07-23, anchored $145k · ☐ recruiter note within 24h |
-| AI Engineering Lead (founding) | IMA Financial | $147–220k | Reach (title) | [IMA careers](https://imacorp.com/careers/openings/5175285007) | ☐ Not applied |
+| AI Engineering Lead (founding) | IMA Financial | $147–220k | Reach (title) | [IMA careers](https://imacorp.com/careers/openings/5175285007) | ✅ Applied 2026-07-23 (pulled forward from Fri) · ☐ recruiter note within 24h |
 | Senior Applied AI Engineer | Omada Health | $200–250k | Reach (ceiling) | [Greenhouse](https://job-boards.greenhouse.io/omadahealth/jobs/7155511) | ☐ Not applied |
 | ~~Sr. SWE Full Stack — Agentic AI~~ | ~~Genesys~~ | ~~$134–236k~~ | — | — | ❌ Posting expired before apply (found 2026-07-23) — off the list, no action owed |
 | ~~Applied AI Engineer (+ Backend sibling)~~ | ~~Next Step Systems~~ | ~~$140–200k~~ | — | — | ❌ Both postings expired before apply (found 2026-07-23) — off the list, no action owed |
