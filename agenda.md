@@ -31,10 +31,9 @@ This is the one-stop shop for current goals and intentions across all time horiz
 
 **This week (7/21–7/25) — the pipeline sprint (closes brutally-honest move #1 by Friday):**
 One application per non-peak sitting; folders are already tailored, each is ~30–45 min of admin. After each: recruiter note within 24h + `_tracker.md` updated.
-- ~~Tue 7/21~~ → **Wed 7/22:** ⭐ follow-ups ×2 + **Next Step** + **Genesys** (Tue's block lost to a work surge — carried, not owed; applications go out without the demo link — the re-record is shelved, not blocking)
-- **Thu 7/23:** **Natera**
-- **Fri 7/24:** **IMA + Omada** (both reaches — fire and forget)
-- **Sat 7/25:** **Tier-3 easy-apply batch**, one sitting
+- ~~Tue 7/21~~ → ~~Wed 7/22~~ → **Thu 7/23: THE BLOCK — WON.** Follow-ups ×2 sent ✅ (both with the CFO-Agent-live hook) · **Natera applied** ✅ (anchored $145k against their $125–156.3k band) · **IMA applied** ✅ (pulled forward from Fri) · recruiter connects to Kyle (Natera) + Jordan (IMA) sent ✅. **Next Step, Genesys, Omada all expired before apply** — 3 of 7 died on the shelf while the pipeline idled; 5 fresh remote agentic roles sourced same-day into `_tracker.md` as replacements. **The Tier-1+2 board is cleared — nothing left unapplied.**
+- **Fri 7/24:** **Tier-3 batch pulled forward** — original 4 + 5 fresh-sourced = 9 easy applies, one sitting (calendar event rewritten with the full list)
+- **Sat 7/25:** overflow + VidMob direct check + recruiter-note cleanup (calendar updated); if Friday lands all 9, this block is free and the sprint closes a day early
 Plus the goals he named: log 3–4 times (`/checkin`), and the two builds — gym + affirmations.
 
 **Peak blocks this week (9:45) — cash in the demoable milestone (brutally-honest move #2 update):**
@@ -78,6 +77,8 @@ No new `/learn` sections, no admin in this window. End every block with a stoppe
 3. ☐ Tell her you know what her full support is worth.
 *Rule reaffirmed: any new plan that shows up after 10pm goes to the next check-in, not into action that night.*
 
+**Stopped at (07-23, ~2:45pm — the 12:00 block, WON):** Biggest pipeline day in the system's history: 2 follow-ups + 2 applications (Natera $145k-anchored, IMA) + 2 recruiter connects, seat never left. 3 postings found expired (Next Step, Genesys, Omada) — logged as data, not debt, and 5 fresh replacements sourced into the tracker the same hour. At-bat count: 4 Tier-1+2 applications now live. **Next step: Fri 12:00 = the 9-job Tier-3 batch (calendar has the list). Tonight: 10:25 brick, and tell her what her full support is worth.**
+
 **Stopped at (07-22, peak block closed):** **§1.2 "Anatomy of a prompt" defended cold — OWNED** (move #3 closed). Bonus second defense: **§1.1 "What an LLM call is" — 3 of 4 faces owned** a month after learning it (cost-asymmetry mechanism nailed); marked `[~]` — one more rep on the token face (ratio: token ≈ ¾ word; tokens = learned subword vocab = atomic unit of compute). Both now feed /drill: cache invalidators + token facts. (Demo re-record stays shelved by choice — not owed.) **Next step: 12:00 pipeline block** — follow-ups ×2 + Next Step + Genesys.
 
 **Also live:** `/learn ai` §1.3 (zero/few-shot/role prompting) **taught 07-20** — explain-back passed; solo run-to-green is an evening upside item (mechanical, non-peak). `/learn` acquisition **frozen** until §1.1–1.3 builds are green (brutally-honest move #2). Also live: `/sharpen` §1.2 cold defense queued (runs after CFO Agent is demoable); §1.1 build (llm_cost.py) pending from 06-22. Both ⭐ roles applied 7/6, no responses yet — follow-ups are tomorrow's touch. **Today's spine (07-21):** ✅ 6am gym → ✅ 7:00 landing (shake · shower) → ✅ 9am call → ✅ affirmations (rescued) → **peak block = demo first take done, needs re-record** (47s take didn't capture the payoff; prod fully verified: health green, auth round-trip works after stale-token fix #48, plus #49 Gate-2 harness + #50 UX fixes shipped today). Work surged in the afternoon — 12:00 pipeline block didn't run; carried to Wed, no debt → 11am Hannah → **12:00 follow-ups ×2 + Next Step application (+ attach the Loom link if it exists)** → 5pm call → 10:25 brick. (Affirmation stack: missed the water-on cue, rescued same-morning ✅ — rep 1 done. Growth line was the strongest; tomorrow's target is catching the cue itself.)
@@ -96,7 +97,7 @@ No new `/learn` sections, no admin in this window. End every block with a stoppe
 - Math: ~$80k now vs $130–175k target ≈ **~$6k/month** cost per month the pipeline idles. 2 applications is a sample size of nothing — cold-apply response rates are 5–10%; you need 20+ at-bats to even test positioning.
 
 **The three moves (by ROI) — now scheduled (07-20), see the Card's week map:**
-1. ☐ **This week: all 5 remaining Tier 1+2 applications + the Tier-3 batch.** Admin, outside peak, folders are done (~3 hrs total). Highest dollar-per-hour activity available. → *Scheduled: one per day Tue–Fri, Tier-3 batch Sat.*
+1. ◐ **This week: all 5 remaining Tier 1+2 applications + the Tier-3 batch.** → *07-23: Tier-1+2 side DONE as far as reality allows — Natera + IMA applied; Next Step, Genesys, Omada expired before apply (the cost of the idle weeks, made concrete). Remaining: Fri's 9-job Tier-3 batch closes this move.*
 2. ☑ **CFO Agent one end-to-end path — turned out already DONE 07-09** (`CFO-analyzer/LEFT_OFF.md`: Gate 2 all-pass, prod live + verified; smoke-checked green 07-21). The 07-20 receipt was stale. *Remaining unlock work: Loom + flip resumes to live — **shelved by choice 07-22**, pick up when a demo link is actually needed. `/learn` freeze stays until §1.1–1.3 builds are green — that part was accurate.*
 3. ☑ **Run the first real `/sharpen` cold defense** — **DONE 07-22**: §1.2 "Anatomy of a prompt" defended cold and owned. The primary learning engine has now run its first defense; 2 of ~25 Tier 1 owned.
 

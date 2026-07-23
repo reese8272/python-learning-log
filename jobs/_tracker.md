@@ -12,9 +12,9 @@ Anchor high. Market rate for the MCP/LangGraph skillset is above $120k — the o
 
 | Job | Company | Comp | Fit | Direct apply | Status |
 |---|---|---|---|---|---|
-| Sr. Forward Deployed AI Solutions Eng | Natera | Posted band $125–156.3k | High | [Greenhouse](https://job-boards.greenhouse.io/natera/jobs/5766365004) | ✅ Applied 2026-07-23, anchored $145k · ☐ recruiter note within 24h |
-| AI Engineering Lead (founding) | IMA Financial | $147–220k | Reach (title) | [IMA careers](https://imacorp.com/careers/openings/5175285007) | ✅ Applied 2026-07-23 (pulled forward from Fri) · ☐ recruiter note within 24h |
-| Senior Applied AI Engineer | Omada Health | $200–250k | Reach (ceiling) | [Greenhouse](https://job-boards.greenhouse.io/omadahealth/jobs/7155511) | ☐ Not applied |
+| Sr. Forward Deployed AI Solutions Eng | Natera | Posted band $125–156.3k | High | [Greenhouse](https://job-boards.greenhouse.io/natera/jobs/5766365004) | ✅ Applied 2026-07-23, anchored $145k · ✅ Kyle Kledzik connect sent 07-23 (Matt Sparks backup if silent ~3 days) |
+| AI Engineering Lead (founding) | IMA Financial | $147–220k | Reach (title) | [IMA careers](https://imacorp.com/careers/openings/5175285007) | ✅ Applied 2026-07-23 (pulled forward from Fri) · ✅ Jordan Skidmore connect sent 07-23 |
+| ~~Senior Applied AI Engineer~~ | ~~Omada Health~~ | ~~$200–250k~~ | — | — | ❌ Posting closed before apply (found 2026-07-23) — off the list, no action owed |
 | ~~Sr. SWE Full Stack — Agentic AI~~ | ~~Genesys~~ | ~~$134–236k~~ | — | — | ❌ Posting expired before apply (found 2026-07-23) — off the list, no action owed |
 | ~~Applied AI Engineer (+ Backend sibling)~~ | ~~Next Step Systems~~ | ~~$140–200k~~ | — | — | ❌ Both postings expired before apply (found 2026-07-23) — off the list, no action owed |
 | Senior AI/ML Engineer — MCP | Activesoft → VidMob (likely) | DOE (senior) | ⭐ Best stack | [Dice](https://www.dice.com/job-detail/8ff5c940-ca17-4405-b382-f46eb2db6950) | ✅ Applied + InMailed 07-06 · ✅ follow-up sent to Madhavi & Raghu 2026-07-23 (CFO-Agent-live hook) · ☐ VidMob direct |
