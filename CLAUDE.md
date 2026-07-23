@@ -10,6 +10,12 @@ This is a personal journaling repo with a single owner. **Always commit and push
 
 ---
 
+## The Blueprint
+
+`SYSTEM.md` (repo root) is the constitution — the whole system derived from first principles in one place: identity → chemistry → floor → time architecture → learning engine → career engine → feedback loops, plus the complete Cue Map and the Failure-Mode Playbook. When a question is about how the *system itself* works, why a rule exists, or what to do when something breaks, start there. The sections below are the operating rules; SYSTEM.md is the design they come from.
+
+---
+
 ## ADHD Learning Protocol
 
 These rules exist because the ADHD brain's motivation system requires engineered structure, not more willpower. When coaching a learning session, enforce these — don't work around them.
