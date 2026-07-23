@@ -59,7 +59,17 @@ No new `/learn` sections, no admin in this window. End every block with a stoppe
 **Stopped at (07-23, night — brutally-honest micro-session + /reflect):** **4-year anniversary — day counted** (full presence; gym day 3 ✅, brick 2 nights ✅, affirmation rep 3 at the identity-line minimum ✅). Contract-work playbook adjudicated: good idea, bad timing — gate written above, no platform setup until the sprint is done. **Pipeline debt carried:** Wed + Thu items didn't run — **Fri 12:00 block = follow-ups ×2 + Next Step + Genesys + Natera**, then IMA + Omada as the day allows; Tier-3 batch Sat per plan.
 
 **Friday additions (from /reflect 07-23):**
-1. ☐ **The notecard** — after gym, before shower: write the three affirmation lines (growth / identity / evidence) on ONE card, tape at eye level by the shower. ~2 min. Cue-support for the water-on trigger; judge the cue Sunday as planned.
+1. ☐ **The notecard** — after gym, before shower: write THIS card (finalized at the 07-23 check-in — copy it verbatim), tape at eye level by the shower. ~2 min. Cue-support for the water-on trigger; judge the cue Sunday as planned.
+
+   > **WATER ON → LINE ONE.**
+   > 1. **GROWTH** — "Yesterday I got better at ______."
+   > 2. **IDENTITY** — "I am capable enough and good enough. I don't rely on easy — I engineered showing up."
+   > 3. **EVIDENCE** — "Proof: ______ — and it counts because ______."
+   >
+   > Bad day? Line 2 alone still counts.
+   > **The system holds. When I use it, I move.**
+
+   The printed text never changes — the card is consistent; the two blanks are filled fresh out loud each morning so it never goes wallpaper. Line 2 is fixed forever: it's his own rep-3 line plus the anniversary-night correction ("it's easy" is the collapse sentence; "I engineered it" is the true one).
 2. ☐ **The 12:00 block** — the one thing that makes Friday different from this week. Everything else is already momentum.
 3. ☐ Tell her you know what her full support is worth.
 *Rule reaffirmed: any new plan that shows up after 10pm goes to the next check-in, not into action that night.*
