@@ -23,6 +23,8 @@ Online courses are **not taken**; their content was mined into the curriculum (m
 
 **Peak window is sacred.** The 90–180 minutes post-medication is reserved for the hardest, most novel learning only — `/sharpen` sessions, a pulled course section, AWS cert material, technical papers. Never burn this window on email, Slack, system-tinkering, or passive review. This single reallocation produces more learning gains than any tool change.
 
+**Focus & time-block reference:** `career/helpful_notes_and_guides/Focus & Time Block Protocol.md` is the "how to manage my time and focus" tool — the block-setup checklist (phone out of the room, one pre-named thing, parking-lot pad, stopped-at close), placement rules, a failing-block diagnostic, and the ADHD science behind each rule. Reference it when designing time blocks, when a block keeps failing, or whenever focus coaching comes up.
+
 **The build is non-negotiable.** Grilling concepts without building is passive consumption with extra steps. Two anchors keep the build alive: (1) the **dedicated capstone project** (Master Guide Phase 2) is the eventual portfolio piece; (2) **build before you bank** — a grilled concept isn't owned until code using it exists somewhere real (work, autoclip, capstone, a throwaway script). Five minutes counts.
 
 **When you do pull a course** (gap-filler mode only): one at a time, until the gap is filled or formally retired. If shelved, write a 100-word retirement letter in `misc/reflection_log/YYYY-MM-DD.md`. No silent abandonment. Pre-commit which queue concept or build the course section feeds before starting it — never watch a course for completion's sake.
