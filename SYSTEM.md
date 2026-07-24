@@ -77,10 +77,10 @@ Three-stage, in-catalog, phone-friendly, always live-researched: **`/learn`** (a
 | Wake + gym | Alarm across room → feet on floor → stretch → clothes (laid out) → drive | Show up, one thing, 10 min | ✓ Calendar 6:00 daily + 10pm setup nudge |
 | Shake | Back from gym → shake in hand first | Drink it, 10 min | ✓ rides 7:00 landing event |
 | Affirmations / notecard | Water turns on → read the card | Identity line only | Physical: notecard at eye level by shower |
-| Peak block | Sit down 9:45 → phone to other room → one pre-named rep | Phone out + one named thing + 10 min | ☐ Recurring weekday 9:45 event — to install |
+| Peak block | Sit down 9:45 → phone to other room → one pre-named rep | Phone out + one named thing + 10 min | ✓ Recurring weekday 9:45–11:15 event, protocol in body (installed 07-23) |
 | Parking-lot pad | Intrusive thought mid-block → one written line → back to task | The line itself | Physical: pad beside keyboard |
 | Stopped-at line | Block ends → one sentence in the log/Card | The sentence | Baked into block exit criteria |
-| Pipeline touch | 12:00 event fires → one touch, same seat | One follow-up or one submit | ☐ Recurring weekday 12:00 event — to install (one-offs cover this week) |
+| Pipeline touch | 12:00 event fires → one touch, same seat | One follow-up or one submit | ✓ Recurring weekday 12:00–12:25 event, rules in body (installed 07-23; sprint one-offs govern through Sat) |
 | Night-before setup | 10pm nudge → clothes/bag/alarm staged | Clothes out | ✓ 480-min reminder on gym event |
 | The brick | Phone on charger FIRST → book in hand, before horizontal | A page | ✓ 10:25 phone alarm (☐ optional calendar backup) |
 | Gratitude close | Lights out → 3 things | One thing | Rides the brick slot |
@@ -106,7 +106,7 @@ Three-stage, in-catalog, phone-friendly, always live-researched: **`/learn`** (a
 The ground-up audit found the architecture sound and the gaps small. Installed:
 
 1. **This document** — the system now exists as one designed constitution, not an accumulation across files.
-2. **Calendar infrastructure gap named** (currently hand-placed, week-to-week — the 07-23 audit found only the gym event is permanent): the fix is three recurring events — weekday **9:45 peak block** (block protocol in the event body), weekday **12:00 pipeline block** (this week's one-offs already cover the sprint), and optionally a nightly **10:25 brick backup** behind the phone alarm. To install by hand or by asking Claude in any session — the specs are the Cue Map rows above.
+2. **Permanent calendar infrastructure installed** (was hand-placed, week-to-week — the audit found only the gym event was permanent): recurring weekday **9:45–11:15 peak block** and **12:00–12:25 pipeline block**, both starting Mon 07-27, each carrying its own protocol and worst-day minimum in the event body so the reminder demands a specific action. This week's sprint one-offs govern through Saturday. The gym event was left untouched. Remaining installs are physical and take minutes: charger relocated to another room, shower notecard, parking-lot pad at the keyboard.
 3. **Two cue extensions** from the Focus Protocol (not new habits): phone leaves the room at block start; parking-lot pad beside the keyboard.
 
 Nothing else launches. The floor stays two items. The active builds stay gym + affirmations. That restraint is not a limitation of this rebuild — it *is* the rebuild working.
