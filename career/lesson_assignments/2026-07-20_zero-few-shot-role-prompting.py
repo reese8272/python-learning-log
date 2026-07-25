@@ -167,11 +167,11 @@ def wrap_examples(pairs: list[tuple[str, str]]) -> str:
     #       then join them all inside one <examples>...</examples> wrapper,
     #       newline-separated.
 
-    list = []
-    for inp, outp in pairs:
-        list.append(inp)
-        list.append(outp)
-    return "<examples>\n" + list.join("") + "\n</examples>"
+    final = "<examples>\n"
+    for inp,out in pairs:
+        final += f"<example>\n<input>{inp}</input>\n<output>{out}</output>\n</example>"
+    final += "\n</examples>"
+    return final
 
 
 # ─── EXERCISE 3 — Catch the silent bias ─────────────────────────────────────
@@ -186,7 +186,10 @@ def examples_are_diverse(labels: list[str]) -> bool:
     """Return True only when the example set is usable: at least 2 examples
     AND more than one distinct label represented."""
     # TODO: implement exactly that rule.
-    ...
+    unique = set()
+    for label in labels:
+        unique.add(label)
+    return len(unique) > 1
 
 
 # ─── EXERCISE 4 — 2026 prompt lint: flag aggressive language ────────────────
@@ -203,7 +206,12 @@ def lint_for_overtriggering(instruction: str) -> list[str]:
     (case-insensitive match), in AGGRESSIVE_MARKERS order. Empty list = safe."""
     # TODO: check each marker against an upper-cased copy of the instruction;
     #       collect the ones found.
-    ...
+    ins = instruction.upper()
+    final = []
+    for item in AGGRESSIVE_MARKERS:
+        if item in ins:
+            final.append(item)
+    return final
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -216,6 +224,27 @@ def lint_for_overtriggering(instruction: str) -> list[str]:
 #   - STRUCTURED OUTPUT: guarantees the label parses every time
 # `_live_demo()` at the bottom fires it for real.
 # ════════════════════════════════════════════════════════════════════════════
+
+def structured_output_config(required_fields: list[str]) -> dict:
+    # TODO: return the output_config dict the current API expects:
+    #       a "format" whose type marks it as a json schema, carrying a JSON
+    #       Schema for an object that REQUIRES every name in required_fields
+    #       (each typed as a string). Shape to match:
+    #         {"format": {"type": <the json-schema marker>,
+    #                     "schema": {"type": "object",
+    #                                "properties": {<field>: {"type": "string"}, ...},
+    #                                "required": [<every field>]}}}
+    properties = {field: {"type" : "string"} for field in required_fields}
+    return {
+        "format":{
+            "type": "json_schema",
+            "schema": {
+                "type": "object",
+                "properties": properties,
+                "required": required_fields,
+            },
+        },
+    }
 
 REVIEWER_ROLE = (
     "You are a senior code reviewer on an enterprise consulting team. "
@@ -247,7 +276,30 @@ def build_triage_call(review_comment: str, model: str = "claude-opus-4-8") -> di
     #                 string constrained by an enum of the two valid labels,
     #                 reason a plain string. (Recall the shape from §1.2's
     #                 worksheet; add the enum constraint yourself.)
-    ...
+    #
+    # ── COACH NOTES (07-25 session, 16/19 green — 3 fails left) ─────────────
+    # 1. Message dict shape: FIXED. Still open: `review_comment` (the function
+    #    param) is NEVER USED — the volatile input has to BE part of the user
+    #    turn's content. Right now the model is asked to triage nothing.
+    # 2. FIELDS vs VALUES confusion: required_fields should be
+    #    ["severity", "reason"] — those are the schema's FIELDS.
+    #    blocking/non_blocking are the allowed VALUES of severity (its enum),
+    #    not fields. Also: underscore (non_blocking), not hyphen.
+    # 3. The enum doesn't exist yet: severity's property dict needs
+    #    "enum": ["blocking", "non_blocking"]. Either extend the helper or
+    #    enrich the dict it returns — pick one, be able to say why.
+    # 4. (Tests won't catch this) the system f-string has a LITERAL " + "
+    #    inside the quotes — it ships in the prompt. Concatenate for real,
+    #    e.g. separate with a newline instead.
+    # ─────────────────────────────────────────────────────────────────────────
+    required_fields = ["blocking", "non-blocking"]
+    return {
+        "model" : model,
+        "max_tokens" : 520,
+        "system" : f"{REVIEWER_ROLE} + {wrap_examples(TRIAGE_EXAMPLES)}",
+        "messages" : [{"role": "user", "content" : "Please triage the review to identify if the comment is blocking a merge."}],
+        "output_config" : structured_output_config(required_fields)
+    }
 
 
 # ════════════════════════════════════════════════════════════════════════════
