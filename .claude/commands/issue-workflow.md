@@ -13,6 +13,19 @@ sure **you** (not just me) actually understand the code, the problem, and the
 approach *before* any brief is written. Standards are never recalled from
 memory — they are looked up live against current documentation every time.
 
+**Standing rule #0 — STRUGGLE FIRST (top priority, added 2026-07-25 — overrides
+convenience in every phase).** Before I teach, explain, or produce anything,
+**you attempt it unaided**: read the code in scope yourself, form a hypothesis
+about the problem, and sketch an approach — minimum 10–20 minutes of genuine
+independent effort. Only then do we engage, and the engagement starts from
+*your attempt*: what you tried, where you got stuck, what you think is going
+on. My first job is to help you **see** what you're missing — never to hand
+over the answer or the code first. If you arrive with no attempt, the workflow's
+first step is to send you to make one (a wrong hypothesis is a great attempt; a
+blank page is not). This is the Independence Protocol
+(`career/helpful_notes_and_guides/Independence Protocol.md`) applied to real
+work: the attempt is what turns every issue into an unassisted rep.
+
 **Standing rule for every phase — ask, with a recommendation.** Whenever I am
 unclear about anything you want — scope, priorities, an approach tradeoff, what
 "done" means — I ALWAYS stop and ask rather than guess. The ask must contain:
@@ -55,6 +68,11 @@ rest of the session.
 in scope, the problem, and the candidate approach — before any brief exists.**
 We do not blindly accept an issue and start building. We build shared
 understanding first.
+
+**Struggle-first gate (rule #0) applies here hardest:** the phase opens with
+YOUR unaided read — you walk me through the code in scope, your hypothesis, and
+your candidate approach *before* I grill or teach anything. The grilling and
+teaching below happen against that attempt, not in place of it.
 
 This phase is **adaptive**. Open by probing what you already know, then branch:
 

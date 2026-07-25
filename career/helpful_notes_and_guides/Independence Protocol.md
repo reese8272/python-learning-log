@@ -49,6 +49,35 @@ Once a week, peak window, 60–90 minutes, timer running:
 |---|---|---|---|---|
 | | | | | |
 
+## Layer 2.5 — The Ownership Audit (know your own systems end-to-end)
+
+The concept queue was always seeded from "his own shipped code — the richest curriculum." This layer makes that a *practice*: the 12:00 weekday block (the retired pipeline slot, now the **🧭 Ownership block**) is spent auditing and documenting his own projects until he can walk any of them end-to-end, cold.
+
+**The rep (one slice per sitting, ~25 min):**
+1. Pick ONE module from the queue below — never "the project," always a slice.
+2. Read it like a reviewer who didn't write it.
+3. Document it *in that project's repo*: what it does, **why this over that**, the data flow, the failure modes. ADR-style where a real decision lives.
+4. Anything you can't explain cold → a row in `career/concept_queue.md`. That's the audit finding — the gap goes into the `/sharpen` funnel.
+5. Tick the slice below with the date.
+
+**Why this matters for the review:** "true mastery of your craft" = walking your own architecture without notes. These audits are also the raw material for ADRs #1–2, the tech talk, and design-review credibility — the scoreboard artifacts write themselves out of this block.
+
+**Audit queue (seed — reorder freely, add slices as discovered):**
+
+*autoclip:*
+- [ ] Pipeline architecture end-to-end — ingestion → processing → output; why Celery over FastAPI background tasks
+- [ ] Embedding + retrieval layer — why Voyage AI, why pgvector; chunking choices
+- [ ] Hooks/guardrails — pre/post structure, what each gate catches
+- [ ] Deployment + config surface — env, secrets, what breaks first under load
+
+*CFO Agent:*
+- [ ] Agent graph — nodes, state schema, edges; why this topology
+- [ ] Retrieval path — pgvector integration, query shaping
+- [ ] Auth + API surface — login flow, endpoint contract
+- [ ] Prod posture — what Gate 2 verified, health checks, PG+Redis wiring
+
+**Worst-day minimum (this is Floor #2 now):** one doc line or one audit note on your own code. Two minutes counts.
+
 ## Layer 3 — The work-visible layer (what John actually sees)
 
 The catalog is invisible to him. These four behaviors are the review's own prescriptions, made operational:

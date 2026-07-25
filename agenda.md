@@ -17,7 +17,7 @@ This is the one-stop shop for current goals and intentions across all time horiz
 | Standup | ☐ | **Honest 3-parter** — yesterday / today / blocker named *specifically*, today not "when it's a crisis" | Work-visible: comms floor |
 | First work block | ☐ | **First hour AI-free** on the hardest ticket — read code, read docs, 5-line plan *before* any AI | Work-visible: independence they can see |
 | 9:45 peak (90 min) | ☐ | **The rep** — one `/learn` or `/sharpen` concept to the bar, via the ladder (recall → docs → hand-build → AI examines). **Cold Bench day: this block, timer on, no AI.** End with a stopped-at line. | Learning ladder / Cold Bench |
-| 12:00 | ⬛ | **Pipeline touch** (Floor #2) | Floor |
+| 12:00 | ⬛ | **Ownership block** — audit + doc one slice of your own code (autoclip / CFO Agent); Floor #2 = one ownership touch | Floor / Ownership Audit |
 | Workday close | ☐ | **Close-out**: written update in the channel · pull/rebase · commits pushed, every line explainable cold | Work-visible: own every line + merge hygiene |
 | Evening (non-peak) | ☐ | `/drill` — 5–10 min, phone-friendly | Retention |
 | 10:25 | ⬛ | **The brick** — alarm → phone on charger → 15 min reading (Floor #1) | Floor |
@@ -28,7 +28,7 @@ This is the one-stop shop for current goals and intentions across all time horiz
 
 ### 📅 This table lives in Google Calendar now (synced 2026-07-25)
 
-Every row above is a recurring event on the primary calendar (America/New_York) — the calendar **is** the daily interface; this table is the spec behind it. Existing events kept: 🏋️ Gym 6:00 · 🎯 Peak 9:45–11:15 · 🔒 Pipeline 12:00. Added: 🗣 Standup 8:15 + 🚫🤖 First-hour-AI-free 8:30 + ✅ Close-out 4:45 (all weekdays — **drag these three to match the real work schedule**, the anchor matters, not the clock time) · 🧊 Cold Bench Fri 9:45 (overrides the generic 🎯 on Fridays) · 🃏 /drill 8:30pm daily · 🌙 Set-tomorrow 10:15pm daily · 🧱 Brick 10:25pm daily · 📋 /weekly-review Sun 8pm.
+Every row above is a recurring event on the primary calendar (America/New_York) — the calendar **is** the daily interface; this table is the spec behind it. Existing events kept: 🏋️ Gym 6:00 · 🎯 Peak 9:45–11:15 · 🧭 Ownership block 12:00 (the former pipeline slot, repurposed 2026-07-25 for the code audit practice — Independence Protocol Layer 2.5). Added: 🗣 Standup 8:15 + 🚫🤖 First-hour-AI-free 8:30 + ✅ Close-out 4:45 (all weekdays — **drag these three to match the real work schedule**, the anchor matters, not the clock time) · 🧊 Cold Bench Fri 9:45 (overrides the generic 🎯 on Fridays) · 🃏 /drill 8:30pm daily · 🌙 Set-tomorrow 10:15pm daily · 🧱 Brick 10:25pm daily · 📋 /weekly-review Sun 8pm.
 
 **The linchpin ritual — 🌙 Set tomorrow (10:15pm, 60 seconds):** read the stopped-at line → **rename tomorrow's 🎯 peak block to the actual concept** ("🎯 /learn — XML tagging", "🎯 /sharpen — prompt anatomy cold defense"; Fridays: name the Cold Bench task) → gym clothes out → phone on charger → brick. This is what makes the morning decision-free: wake up, and the calendar already says what you're learning. A generic "🎯 Peak block" title at 9:45am means last night's ritual was skipped — that's the tell, fix it at `/checkin`. Any Claude session (including `/checkin`) can do the rename via the Calendar connector when asked.
 
@@ -36,6 +36,8 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history.*
+
+> **⚡ PIVOT (2026-07-25, by Reese's call):** the job pipeline is **retired from the daily system**. After John's review, the priority is owning and growing the Cognizant role — not the exit pipeline. Floor #2 is now an **ownership touch** (doc/audit line on his own code, or the close-out done); the 12:00 block is now the **🧭 Ownership block** (audit + doc autoclip / CFO Agent end-to-end — queue in the Independence Protocol). Everything pipeline-related below this line ($6k rule, sprint, application items) is **historical context**, superseded until Reese says otherwise. `jobs/` stays on disk as archive.
 
 **Date:** 2026-07-21 (morning — **gym build day 1: DONE.** 6am workout ✅ shake ✅ shower ✅ 9am call ✅ affirmations ✅. **Discovery: CFO Agent was already demoable as of 07-09** (`LEFT_OFF.md`: Gate 2 all-pass, prod live; smoke-checked green 07-21 — health 200, PG+Redis ok, login page renders). Today's 9:45 peak block = **record the Loom**.)
 
