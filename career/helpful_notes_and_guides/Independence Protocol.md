@@ -77,6 +77,8 @@ Every "Measured by" line in the review goals is an artifact. Artifacts are dated
 
 ## Cadence (folds into the existing engine — nothing new to remember daily)
 
+> **The daily version of this protocol is the time-anchored checklist at the top of `agenda.md` ("The Daily Protocol").** That table is the single source of truth for the day; this section is the summary.
+
 - **Daily:** the Floor as-is · comms floor at work · one `/drill` (non-peak).
 - **Peak blocks:** unchanged engine (`/learn` / `/sharpen`, one concept to the bar) — now under the Layer-1 ladder; **one block per week is the Cold Bench.**
 - **Weekly (`/weekly-review`):** check the ledger got a row, the comms floor held, one artifact moved.

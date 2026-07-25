@@ -6,6 +6,28 @@ This is the one-stop shop for current goals and intentions across all time horiz
 
 ---
 
+## 🗓 The Daily Protocol — the one checklist (added 2026-07-25, post-review)
+
+*The time-anchored daily system for the Independence Protocol (`career/helpful_notes_and_guides/Independence Protocol.md`). This is what "learning effectively" looks like as a day. `/checkin` scores against it. The Floor still rules: only the two ⬛ items make the day count — everything else is upside, never owed. A missed item is data, not debt.*
+
+| When | ✓ | Item | Which layer |
+|---|---|---|---|
+| 6:00 | ☐ | Gym (worst-day: show up, one thing, 10 min) | Build — dopamine pre-load for the peak block |
+| Shower | ☐ | Affirmation stack (worst-day: identity line only) | Build |
+| Standup | ☐ | **Honest 3-parter** — yesterday / today / blocker named *specifically*, today not "when it's a crisis" | Work-visible: comms floor |
+| First work block | ☐ | **First hour AI-free** on the hardest ticket — read code, read docs, 5-line plan *before* any AI | Work-visible: independence they can see |
+| 9:45 peak (90 min) | ☐ | **The rep** — one `/learn` or `/sharpen` concept to the bar, via the ladder (recall → docs → hand-build → AI examines). **Cold Bench day: this block, timer on, no AI.** End with a stopped-at line. | Learning ladder / Cold Bench |
+| 12:00 | ⬛ | **Pipeline touch** (Floor #2) | Floor |
+| Workday close | ☐ | **Close-out**: written update in the channel · pull/rebase · commits pushed, every line explainable cold | Work-visible: own every line + merge hygiene |
+| Evening (non-peak) | ☐ | `/drill` — 5–10 min, phone-friendly | Retention |
+| 10:25 | ⬛ | **The brick** — alarm → phone on charger → 15 min reading (Floor #1) | Floor |
+
+**Weekly riders:** one peak block = **Cold Bench** (pick the task at `/weekly-review`; ledger row after) · `/weekly-review` checks: ledger row ✓, comms floor held ✓, one scoreboard artifact moved ✓.
+
+**The scoring question at `/checkin`:** not "did I do everything" — it's *"did the day count (⬛×2), and did I get a rep in (peak block or drill)?"* Two ⬛ + any one rep = a genuinely effective day. Full column = a great one.
+
+---
+
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history.*
 
