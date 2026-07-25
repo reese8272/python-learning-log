@@ -26,6 +26,12 @@ This is the one-stop shop for current goals and intentions across all time horiz
 
 **The scoring question at `/checkin`:** not "did I do everything" — it's *"did the day count (⬛×2), and did I get a rep in (peak block or drill)?"* Two ⬛ + any one rep = a genuinely effective day. Full column = a great one.
 
+### 📅 This table lives in Google Calendar now (synced 2026-07-25)
+
+Every row above is a recurring event on the primary calendar (America/New_York) — the calendar **is** the daily interface; this table is the spec behind it. Existing events kept: 🏋️ Gym 6:00 · 🎯 Peak 9:45–11:15 · 🔒 Pipeline 12:00. Added: 🗣 Standup 8:15 + 🚫🤖 First-hour-AI-free 8:30 + ✅ Close-out 4:45 (all weekdays — **drag these three to match the real work schedule**, the anchor matters, not the clock time) · 🧊 Cold Bench Fri 9:45 (overrides the generic 🎯 on Fridays) · 🃏 /drill 8:30pm daily · 🌙 Set-tomorrow 10:15pm daily · 🧱 Brick 10:25pm daily · 📋 /weekly-review Sun 8pm.
+
+**The linchpin ritual — 🌙 Set tomorrow (10:15pm, 60 seconds):** read the stopped-at line → **rename tomorrow's 🎯 peak block to the actual concept** ("🎯 /learn — XML tagging", "🎯 /sharpen — prompt anatomy cold defense"; Fridays: name the Cold Bench task) → gym clothes out → phone on charger → brick. This is what makes the morning decision-free: wake up, and the calendar already says what you're learning. A generic "🎯 Peak block" title at 9:45am means last night's ritual was skipped — that's the tell, fix it at `/checkin`. Any Claude session (including `/checkin`) can do the rename via the Calendar connector when asked.
+
 ---
 
 ## 📍 The Card
