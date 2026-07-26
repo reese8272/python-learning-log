@@ -31,7 +31,11 @@ This is a living document. It gets updated through coaching — when a habit is 
 | # | Floor item | Cue |
 |---|---|---|
 | 1 | 🧱 15-min reading brick, 10:30pm, in bed | Phone on the charger FIRST → book in hand, before horizontal |
-| 2 | 📨 One job-pipeline touch (until hired) | Outside the peak window; current next-action lives in the Card in `agenda.md` |
+| 2 | 🧭 One ownership touch — a doc/audit line on his own code, or the workday close-out done *(weekdays only)* | The 12:00 Ownership block on the calendar; queue lives in `Independence Protocol.md` |
+
+**Weekend rule (named by Reese 2026-07-25):** weekends owe nothing professional. Weekend floor = the brick (or full presence with the kids). Any ownership touch, check-in, or rep on a weekend is a bonus win, never owed.
+
+*(Floor #2 was a job-pipeline touch 2026-07-05 → 2026-07-25 — retired by choice after John's mid-year review; the priority is owning and growing the Cognizant role.)*
 
 **Bad-day rule:** when everything breaks, ONE non-negotiable keeps the identity intact — full presence with the kids, or the brick. That day still counts. The streak is "days that counted," not "perfect days."
 
