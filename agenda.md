@@ -37,7 +37,7 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history. (Older stopped-at lines live in git history.)*
 
-**Date:** 2026-07-25 (Saturday night check-in — the system-rebuild day)
+**Date:** 2026-07-27 (Monday morning check-in — Daily Protocol debut day)
 
 > **⚡ PIVOT (2026-07-25, by Reese's call):** the job pipeline is **retired from the daily system** — after John's review, the priority is owning and growing the Cognizant role. `jobs/` is archive. The Brutally Honest sprint closed with it (moves 2–3 done; move 1 retired with the pivot). Full response system: `career/helpful_notes_and_guides/Independence Protocol.md` + the Daily Protocol table above (now live in Google Calendar).
 
@@ -46,22 +46,22 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts.
 
-**Tonight (Sat):** 🃏 drill ✓ (running now) → 🌙 10:15 set-tomorrow (rename Monday's 🎯 block) → 🧱 10:25 brick. Brick = the day counts.
+**Today (Mon):** 🗣 standup 3-parter ✓ (done at check-in) → 🎯 9:45 peak = §1.3 three fixes → 🧭 12:00 ownership block (first audit slice = Floor #2) → ✅ 4:45 close-out → 🃏 8:30 drill → 🌙 10:15 **installer night** (notecard taped in shower + alarm across room) → 🧱 10:25 brick.
 
-**Sunday (upside only, nothing owed):** the brick. If the day gives more: 📋 8pm weekly review — name Friday's first Cold Bench task (standing suggestion: ADR #1 on a modernization-project decision).
+**🦵 Hamstring pulled this weekend** — gym paused until healed, not dropped. The floor never included the gym; nothing is owed. Walks count as movement while it heals.
 
 **Builds (protect):**
-- 🏋️ 6am gym — worst-day minimum: show up, one thing, 10 min. Night-before setup is the lever.
-- 🪞 Shower affirmations — cue: water on → line one. Worst-day: identity line only.
+- 🏋️ 6am gym — **paused (hamstring)**. Installer ritual keeps running so the cue is ready the day the leg is.
+- 🪞 Shower affirmations — cue: water on → line one. Worst-day: identity line only. **Notecard goes up TONIGHT.**
 
 **Daily rep cadence:** one peak block = one `/sharpen` or `/learn` rep (single concept, to the bar); one non-peak `/drill`. Acquire → defend → retain. Cadence, not floor.
 
 **Streaks:**
-- 🧱 Brick: reset — restarts tonight
+- 🧱 Brick: 1 — held Sunday night ✓
 - ✅ Check-ins: today ✓
-- 🧭 Ownership touches (weekdays): start Monday
+- 🧭 Ownership touches (weekdays): starts today, 12:00 block
 
-**Stopped at (Monday's 9:45 🎯 block):** §1.3 worksheet at **16/19 green** — Part 3 `build_triage_call` has 3 fails left. **Next step: open the COACH NOTES block next to the TODO in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` — three fixes spelled out (fields-vs-values, missing enum, unused `review_comment`) — fix, run, 19/19 = green.** Monday also debuts the full Daily Protocol: standup 3-parter, first hour AI-free, 12:00 ownership block (first audit slice), 4:45 close-out.
+**Stopped at (today's 9:45 🎯 block):** §1.3 worksheet at **16/19 green** — Part 3 `build_triage_call` has 3 fails left. **Next step: open the COACH NOTES block next to the TODO in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` — three fixes spelled out (fields-vs-values, missing enum, unused `review_comment`) — fix, run, 19/19 = green.** Monday also debuts the full Daily Protocol: standup 3-parter, first hour AI-free, 12:00 ownership block (first audit slice), 4:45 close-out.
 
 ---
 
