@@ -46,7 +46,7 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts.
 
-**Today (Mon):** 🗣 standup 3-parter ✓ (done at check-in) → ✉️ 5-min recruiter reply (Insight Global — park to Q1 2027, email only, no call; then it's off the mind) → 🎯 9:45 peak = §1.3 three fixes → 🧭 12:00 ownership block (first audit slice = Floor #2) → ✅ 4:45 close-out → 🃏 8:30 drill → 🌙 10:15 **installer night** (notecard taped in shower + alarm across room) → 🧱 10:25 brick.
+**Today (Mon):** 🗣 standup 3-parter ✓ (done at check-in) → ✉️ recruiter reply sent ✓ (Insight Global parked to Q1 2027 — off the mind) → 🎯 9:45 peak = §1.3 three fixes → 🧭 12:00 ownership block (first audit slice = Floor #2) → ✅ 4:45 close-out → 🃏 8:30 drill → 🌙 10:15 **installer night** (notecard taped in shower + alarm across room) → 🧱 10:25 brick.
 
 **🦵 Hamstring pulled this weekend** — gym paused until healed, not dropped. The floor never included the gym; nothing is owed. Walks count as movement while it heals.
 
