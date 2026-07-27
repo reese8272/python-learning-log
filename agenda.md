@@ -68,11 +68,11 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 ## Weekly
 *Updated by `/weekly-review` — replace each Monday with the new week's priorities*
 
-**Week of 2026-06-29 → 07-05 (set mid-week at system rebuild, 07-05)**
+**Week of 2026-07-27 → 08-02 (set at weekly review, 07-27) — installation week, not design week**
 
-1. **Get seen:** Phase 0 visibility (repos public + pinned + LinkedIn Featured), then applications in to the top two — ConglomerateIT ⭐ and Activesoft/VidMob ⭐. Applying is admin: outside the peak window.
-2. **Get demoable:** CFO Agent one working end-to-end path — peak-window work, "demoable, not perfect."
-3. **Restart the streak:** brick every night, phone-on-charger cue. Two nights = restarted; seven = it's a habit again.
+1. **Install the cues tonight, then keep the rep cadence.** 🌙 10:15 ritual = the installer: notecard taped in the shower, clothes/shoes out, alarm across the room (~4 min). Monday 9:45 is loaded: three fixes → §1.3 worksheet 19/19. A cue isn't designed until it's physically installed — the tape counts, not the design session.
+2. **Daily Protocol runs as a menu, never a bill.** Score stays ⬛×2 + one rep = a good day; stacked rows are upside. The tell: the first missed row that generates *guilt* — catch it at `/checkin` same day. Zero new habit/system design this week — installation and reps only.
+3. **One artifact row on the new scoreboard by Friday.** Cold Bench (Fri 9:45) or the first ownership-audit slice. "Barren" was the between-scoreboards feeling; one visible row kills it.
 
 ---
 
