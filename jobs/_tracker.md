@@ -1,5 +1,9 @@
 # Job Search Tracker — AI/Agentic Engineering
 
+> **ARCHIVE (pivot 2026-07-25):** pipeline retired from the daily system — priority is owning the Cognizant role through the Independence Protocol (year-end package, Jan 2027). Reopen on Reese's schedule, not a recruiter's.
+>
+> **Warm contact for Q1 2027 reopen:** Gabrielle Monreal, Insight Global (professional recruiter) — cold-emailed 2026-07-27 with an Agentic AI Consultant req ($60–80/hr, AAA Life, SDLC agentification). Replied same day: not exploring now, deepening AWS/production agentic work, reconnect Q1 2027. Signal: recruiters now find the resume cold for agentic AI consultant roles — the July visibility work landed.
+
 **Snapshot:** 2026-07-02 · Source: Dice (remote, last 7 days) · Target comp: **$65–80/hr contract OR $120k+ FTE**
 
 Anchor high. Market rate for the MCP/LangGraph skillset is above $120k — the only question is whether you believe it in the room. Lead with the projects.
