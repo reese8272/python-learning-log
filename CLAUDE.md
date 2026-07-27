@@ -10,6 +10,12 @@ This is a personal journaling repo with a single owner. **Always commit and push
 
 ---
 
+## The Blueprint
+
+`SYSTEM.md` (repo root) is the constitution — the whole system derived from first principles in one place: identity → chemistry → floor → time architecture → learning engine → career engine → feedback loops, plus the complete Cue Map and the Failure-Mode Playbook. When a question is about how the *system itself* works, why a rule exists, or what to do when something breaks, start there. The sections below are the operating rules; SYSTEM.md is the design they come from.
+
+---
+
 ## ADHD Learning Protocol
 
 These rules exist because the ADHD brain's motivation system requires engineered structure, not more willpower. When coaching a learning session, enforce these — don't work around them.
@@ -22,6 +28,8 @@ These rules exist because the ADHD brain's motivation system requires engineered
 Online courses are **not taken**; their content was mined into the curriculum (minus deprecated patterns — see the curriculum's Currency Watch). The Master Guide (`career/helpful_notes_and_guides/AI Engineering Master Guide.md`) is the reference that anchors all of it (North Star, capstone, resource pool). Live research every technical session — never teach/grade from memory; the ecosystem moves too fast.
 
 **Peak window is sacred.** The 90–180 minutes post-medication is reserved for the hardest, most novel learning only — `/sharpen` sessions, a pulled course section, AWS cert material, technical papers. Never burn this window on email, Slack, system-tinkering, or passive review. This single reallocation produces more learning gains than any tool change.
+
+**Focus & time-block reference:** `career/helpful_notes_and_guides/Focus & Time Block Protocol.md` is the "how to manage my time and focus" tool — the block-setup checklist (phone out of the room, one pre-named thing, parking-lot pad, stopped-at close), placement rules, a failing-block diagnostic, and the ADHD science behind each rule. Reference it when designing time blocks, when a block keeps failing, or whenever focus coaching comes up.
 
 **The build is non-negotiable.** Grilling concepts without building is passive consumption with extra steps. Two anchors keep the build alive: (1) the **dedicated capstone project** (Master Guide Phase 2) is the eventual portfolio piece; (2) **build before you bank** — a grilled concept isn't owned until code using it exists somewhere real (work, autoclip, capstone, a throwaway script). Five minutes counts.
 
