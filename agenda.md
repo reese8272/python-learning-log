@@ -37,7 +37,7 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history. (Older stopped-at lines live in git history.)*
 
-**Date:** 2026-07-27, night close (Monday — Daily Protocol day 1, survived raw)
+**Date:** 2026-07-28, evening close (Tuesday — Daily Protocol day 2, closed clean; night `/reflect` to follow)
 
 > **⚡ PIVOT (2026-07-25, by Reese's call):** the job pipeline is **retired from the daily system** — after John's review, the priority is owning and growing the Cognizant role. `jobs/` is archive. The Brutally Honest sprint closed with it (moves 2–3 done; move 1 retired with the pivot). Full response system: `career/helpful_notes_and_guides/Independence Protocol.md` + the Daily Protocol table above (now live in Google Calendar).
 
@@ -46,11 +46,11 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts.
 
-**Day 1 result (Mon):** standup ✓ · recruiter reply ✓ · peak block taken by work — the raw trace question (dread → freeze → rage → adaptation; §1.3 carried) · day closed on purpose at 11pm with a night `/reflect`, brick in hand. Rough and it held.
+**Day 2 result (Tue):** learning guide + quiz from the job finished · everything closed cleanly, nothing left mid-stream · day 2 cost less than day 1 — the week's metric answered yes. (4:45 close-out ran late at 6:36 — the anchor held, the clock didn't; that's fine.)
 
-**Tomorrow (Tue) — the two carries from the night close:**
-1. **🎯 Peak block opens with a ten-minute win** — one evidence-blank filled and *verified in code* before the deep water (calibration fix from the addicting-learning note). Then the hard thing. End-of-day honest read: **did day 2 cost less than day 1?** That's the week's real metric.
-2. **The floor alone makes the day count** — 🧭 one ownership touch + 🧱 brick. Everything else is upside, never owed. (§1.3 three fixes → 19/19 still queued when the peak block has room.)
+**Tomorrow (Wed) — fresh start:**
+1. **🎯 Peak block opens with a ten-minute win** — one evidence-blank filled and *verified in code* before the deep water. Then the hard thing. (§1.3 three fixes → 19/19 still queued when the peak block has room.)
+2. **The floor alone makes the day count** — 🧭 one ownership touch + 🧱 brick. Everything else is upside, never owed.
 
 **🦵 Hamstring pulled this weekend** — gym paused until healed, not dropped. The floor never included the gym; nothing is owed. Walks count as movement while it heals.
 
@@ -61,11 +61,11 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 **Daily rep cadence:** one peak block = one `/sharpen` or `/learn` rep (single concept, to the bar); one non-peak `/drill`. Acquire → defend → retain. Cadence, not floor.
 
 **Streaks:**
-- 🧱 Brick: 2 pending — book in hand at the 11pm close Monday night
-- ✅ Check-ins: Mon ✓ (morning check-in + night reflect)
-- 🧭 Ownership touches (weekdays): day 1 — the raw trace work WAS the ownership work
+- 🧱 Brick: 2 ✓ (Monday night confirmed) — tonight makes 3
+- ✅ Check-ins: Mon ✓ · Tue ✓ (night `/reflect` planned tonight)
+- 🧭 Ownership touches (weekdays): day 2 — learning guide + quiz closed out
 
-**Stopped at:** Work trace (PPTX end-to-end): worksheet format rebuilt, tutor-mode guardrails held — next work session opens with the **ten-minute verified win**. §1.3 worksheet still at **16/19 green** — next step unchanged: COACH NOTES block next to the TODO in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py`, three fixes (fields-vs-values, missing enum, unused `review_comment`), run, 19/19 = green.
+**Stopped at:** Nothing mid-stream — day 2 closed cleanly, starting Wednesday fresh. First move: peak block opens with the **ten-minute verified win**, then §1.3 worksheet (16/19 → 19/19: COACH NOTES block in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py`, three fixes — fields-vs-values, missing enum, unused `review_comment`).
 
 ---
 
