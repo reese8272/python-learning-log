@@ -37,7 +37,7 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history. (Older stopped-at lines live in git history.)*
 
-**Date:** 2026-07-27 (Monday morning check-in — Daily Protocol debut day)
+**Date:** 2026-07-27, night close (Monday — Daily Protocol day 1, survived raw)
 
 > **⚡ PIVOT (2026-07-25, by Reese's call):** the job pipeline is **retired from the daily system** — after John's review, the priority is owning and growing the Cognizant role. `jobs/` is archive. The Brutally Honest sprint closed with it (moves 2–3 done; move 1 retired with the pivot). Full response system: `career/helpful_notes_and_guides/Independence Protocol.md` + the Daily Protocol table above (now live in Google Calendar).
 
@@ -46,7 +46,11 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts.
 
-**Today (Mon):** 🗣 standup 3-parter ✓ (done at check-in) → ✉️ recruiter reply sent ✓ (Insight Global parked to Q1 2027 — off the mind) → 🎯 9:45 peak = §1.3 three fixes → 🧭 12:00 ownership block (first audit slice = Floor #2) → ✅ 4:45 close-out → 🃏 8:30 drill → 🌙 10:15 **installer night** (notecard taped in shower + alarm across room) → 🧱 10:25 brick.
+**Day 1 result (Mon):** standup ✓ · recruiter reply ✓ · peak block taken by work — the raw trace question (dread → freeze → rage → adaptation; §1.3 carried) · day closed on purpose at 11pm with a night `/reflect`, brick in hand. Rough and it held.
+
+**Tomorrow (Tue) — the two carries from the night close:**
+1. **🎯 Peak block opens with a ten-minute win** — one evidence-blank filled and *verified in code* before the deep water (calibration fix from the addicting-learning note). Then the hard thing. End-of-day honest read: **did day 2 cost less than day 1?** That's the week's real metric.
+2. **The floor alone makes the day count** — 🧭 one ownership touch + 🧱 brick. Everything else is upside, never owed. (§1.3 three fixes → 19/19 still queued when the peak block has room.)
 
 **🦵 Hamstring pulled this weekend** — gym paused until healed, not dropped. The floor never included the gym; nothing is owed. Walks count as movement while it heals.
 
@@ -57,11 +61,11 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 **Daily rep cadence:** one peak block = one `/sharpen` or `/learn` rep (single concept, to the bar); one non-peak `/drill`. Acquire → defend → retain. Cadence, not floor.
 
 **Streaks:**
-- 🧱 Brick: 1 — held Sunday night ✓
-- ✅ Check-ins: today ✓
-- 🧭 Ownership touches (weekdays): starts today, 12:00 block
+- 🧱 Brick: 2 pending — book in hand at the 11pm close Monday night
+- ✅ Check-ins: Mon ✓ (morning check-in + night reflect)
+- 🧭 Ownership touches (weekdays): day 1 — the raw trace work WAS the ownership work
 
-**Stopped at (today's 9:45 🎯 block):** §1.3 worksheet at **16/19 green** — Part 3 `build_triage_call` has 3 fails left. **Next step: open the COACH NOTES block next to the TODO in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` — three fixes spelled out (fields-vs-values, missing enum, unused `review_comment`) — fix, run, 19/19 = green.** Monday also debuts the full Daily Protocol: standup 3-parter, first hour AI-free, 12:00 ownership block (first audit slice), 4:45 close-out.
+**Stopped at:** Work trace (PPTX end-to-end): worksheet format rebuilt, tutor-mode guardrails held — next work session opens with the **ten-minute verified win**. §1.3 worksheet still at **16/19 green** — next step unchanged: COACH NOTES block next to the TODO in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py`, three fixes (fields-vs-values, missing enum, unused `review_comment`), run, 19/19 = green.
 
 ---
 
