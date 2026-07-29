@@ -15,6 +15,7 @@ The catch-all backlog — stuff worth getting into that has no concrete home yet
 - [ ] Salesforce courses *(added 2026-07-29)*
 - [ ] Look into John Mark Comer *(added 2026-07-29)*
 - [ ] LLC business? *(added 2026-07-29)*
+- [ ] Recap How to Win Friends and Influence People *(added 2026-07-29)*
 
 ---
 
