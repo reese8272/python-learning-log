@@ -37,7 +37,7 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history. (Older stopped-at lines live in git history.)*
 
-**Date:** 2026-07-28, evening close (Tuesday — Daily Protocol day 2, closed clean; night `/reflect` to follow)
+**Date:** 2026-07-28, night close (Tuesday — Daily Protocol day 2 closed clean; `/drill` ✓ + night `/reflect` ✓ done)
 
 > **⚡ PIVOT (2026-07-25, by Reese's call):** the job pipeline is **retired from the daily system** — after John's review, the priority is owning and growing the Cognizant role. `jobs/` is archive. The Brutally Honest sprint closed with it (moves 2–3 done; move 1 retired with the pivot). Full response system: `career/helpful_notes_and_guides/Independence Protocol.md` + the Daily Protocol table above (now live in Google Calendar).
 
@@ -46,23 +46,23 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts.
 
-**Day 2 result (Tue):** learning guide + quiz from the job finished · everything closed cleanly, nothing left mid-stream · day 2 cost less than day 1 — the week's metric answered yes. (4:45 close-out ran late at 6:36 — the anchor held, the clock didn't; that's fine.)
+**Day 2 result (Tue):** quiz passed (a 100 in his book) via the self-invented **fading-scaffold protocol** — support faded to zero across the quiz, ending at "I can defend myself" · day 2 cost less AND paid more — the week's metric answered yes, with the feeling attached ("felt amazing") · contingency gate (earned play) day-1 verdict: **gelled** — keep as-is · notecard **taped in the bathroom** (installed mid-reflection, 60 seconds) · evening `/drill` ✓ (Queue vs Stack — solid).
 
-**Tomorrow (Wed) — fresh start:**
-1. **🎯 Peak block opens with a ten-minute win** — one evidence-blank filled and *verified in code* before the deep water. Then the hard thing. (§1.3 three fixes → 19/19 still queued when the peak block has room.)
-2. **The floor alone makes the day count** — 🧭 one ownership touch + 🧱 brick. Everything else is upside, never owed.
+**Tomorrow (Wed) — carry:**
+1. **📞 The boss call, from the map** — concrete notes in hand, precise questions; asking from knowledge, not confusion. First *visible* payoff of the Independence Protocol — let it be seen.
+2. **🎯 Peak block opens with the ten-minute verified win**, then §1.3 three fixes (16/19 → 19/19). The floor alone still makes the day count — 🧭 one ownership touch + 🧱 brick; everything else is upside.
 
 **🦵 Hamstring pulled this weekend** — gym paused until healed, not dropped. The floor never included the gym; nothing is owed. Walks count as movement while it heals.
 
 **Builds (protect):**
 - 🏋️ 6am gym — **paused (hamstring)**. Installer ritual keeps running so the cue is ready the day the leg is.
-- 🪞 Shower affirmations — cue: water on → line one. Worst-day: identity line only. **Notecard goes up TONIGHT.**
+- 🪞 Shower affirmations — cue: water on → line one. Worst-day: identity line only. **Notecard INSTALLED 07-28 — trial live from Wednesday's shower.**
 
 **Daily rep cadence:** one peak block = one `/sharpen` or `/learn` rep (single concept, to the bar); one non-peak `/drill`. Acquire → defend → retain. Cadence, not floor.
 
 **Streaks:**
-- 🧱 Brick: 2 ✓ (Monday night confirmed) — tonight makes 3
-- ✅ Check-ins: Mon ✓ · Tue ✓ (night `/reflect` planned tonight)
+- 🧱 Brick: 3 ✓ (Tuesday night held — book in hand at reflect close)
+- ✅ Check-ins: Mon ✓ · Tue ✓ (+ night `/reflect` ✓)
 - 🧭 Ownership touches (weekdays): day 2 — learning guide + quiz closed out
 
 **Stopped at:** Nothing mid-stream — day 2 closed cleanly, starting Wednesday fresh. First move: peak block opens with the **ten-minute verified win**, then §1.3 worksheet (16/19 → 19/19: COACH NOTES block in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py`, three fixes — fields-vs-values, missing enum, unused `review_comment`).
