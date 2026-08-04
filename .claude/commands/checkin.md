@@ -52,11 +52,19 @@ That's it. No fourth question unless he offers more.
 3. **Tracker only on real signal** — update `habits/tracker.md` ONLY for milestones: brick streak hits 7 (note it in Coach Notes / consider moving toward Active), a habit consciously dropped, a pattern across multiple check-ins. Never touch it for a routine yes/no day.
 4. **Milestone escalation** — if the answers reveal a big event (applied to a job, interview scheduled, CFO Agent demoable, streak milestone), mirror it in ONE other place if warranted (`jobs/_tracker.md` status column, or flag "worth a `/reflect` on this"). One line, not a project.
 
-## Step 4 — Close in one line
+## Step 4 — Close in one line (+ at most one read)
 
 Tomorrow's floor + the first move. Example: *"Floor tomorrow: brick at 10:30, ConglomerateIT application before noon. First move: repos public. Done — go to bed."*
 
 No coach's assessment. No summary of the summary.
+
+**The one-line read (optional, and only when it's real).** Per `COACHING.md`, this system's coach shows up with something. At `/checkin` that budget is exactly **one sentence**, and only when the Card plus his answers reveal something concrete he'd want to know — a streak crossing a threshold, the same stopped-at line for the third night running, a floor item that's quietly been swapped for an easier one. Format: *"One thing I notice: [read]."* Then stop.
+
+Hard limits, because this is the floor and the floor must stay cheap:
+- One sentence. Never two. Never a follow-up question attached.
+- Never on a return-from-gap check-in — the re-entry rule outranks this completely.
+- Never when the read would land as criticism at 10:40pm. If it needs care, say *"worth a real `/reflect`"* and leave it.
+- If nothing genuine surfaced, say nothing. A manufactured observation is worse than a clean close.
 
 ## Step 5 — Commit and push
 

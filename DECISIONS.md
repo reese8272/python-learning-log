@@ -4,6 +4,23 @@ A log of explicit design decisions that change or deviate from what the planning
 
 ---
 
+## 2026-08-04 — Coaching posture flipped: mentor generates insight, not therapist draws it out
+
+**What changed:** New root file **`COACHING.md`** — the Mentor Doctrine — now the governing posture for every coaching session and for ordinary conversation in this repo. The core rule: **every session must leave a read on the table**; a session that only asked questions and mirrored him back is a *failed* session. Defines the four insight moves (cross-time read with dates · named call · reframe · the thing he didn't ask about), how to deliver a read ("here's what I see — does that track?"), and the only three cases where holding beats reading (raw grief · explicit "let me just talk" · genuine ambiguity in the record).
+
+Files edited to match:
+- `CLAUDE.md` — new "Coaching Posture" section at the top, pointing at `COACHING.md`
+- `reflect.md` — Step 2 is now **form a read before speaking**; deleted *"your job is to draw things out of the user, not present things to them"*, *"lead with listening, not analysis... make them feel heard, not assessed"*, *"only challenge when they're clearly being dishonest with themselves"*, and *"if a contradiction exists, ask about it gently and let them see it themselves."* "Reflective listening" dropped from the toolkit; new **Insight toolkit** added above the (now demoted) Question toolkit; steps renumbered (the file had two "Step 5"s)
+- `weekly-review.md` — *"let them arrive at it themselves, don't present it like a finding"* → **present patterns as findings with dates attached**; challenge whenever the record supports it, not only on self-dishonesty
+- `monthly-review.md` — *"ask about it gently — let them arrive at the honest read themselves"* → **say it plainly with the evidence**; minimum deliverable is one month-spanning cross-time read + one named call
+- `checkin.md` — unchanged in length; gains a hard-capped **one-sentence** optional read, explicitly outranked by the re-entry rule and forbidden when it would land as criticism at 10:40pm
+
+**Why:** Reese's call, opening this session: *"I want Claude to be like a person who is able to generate insight now rather than just 'hearing me out.'"* The audit confirmed the gap was real and was in the *mechanics*, not the identity — every skill already declared "you are a mentor, not a therapist" in its Tone section while the step-by-step instructions enforced textbook Rogerian practice (withhold conclusions, let the client discover it). Net effect: `/brutally-honest` was the only skill in the system permitted to state a finding, so the only two settings were *validate* and *audit with receipts*, with nothing in between. The doctrine fills that middle. Tone is explicitly unchanged — process praise, "and" not "but", cue-level habit diagnosis, gaps-are-data — the only change is that the coach now shows up with something.
+
+**Source / evidence:** Reese's request, 2026-08-04. Offending lines quoted above were pulled verbatim from the pre-change files. New file: `COACHING.md`. Related: memory `feedback_mentoring_tone.md` (2026-04, established the mentor *tone*) — this decision supplies the missing *mechanics*.
+
+---
+
 ## 2026-07-07 — `/learn new`: an on-demand mode (Reese names the topic)
 
 **What changed:** Added a fourth `/learn` mode — **`/learn new <topic>`** (aliases `adhoc`, `work`, `just-in-time`) — where Reese supplies the topic himself instead of it coming from a curated roadmap. New home: `career/on-demand-learning/` (`summary.md` is a *ledger/index* of what's been learned on demand, not a pre-planned unit list; + `reflection_log/`). Same `/learn` rigor (research-first → probe → teach → explain-back → build-before-bank). **Adaptive** on two axes: technical topic → writes a `.py` worksheet in `lesson_assignments/` and may enter `concept_queue.md` for `/sharpen`; conceptual topic → no worksheet, bank by using it (like `soft`). At persist, the "roadmap update" is appending a ledger row, not ticking a `[ ]`. When a cluster of related topics forms, the mode offers to **graduate** it into its own full track (the precedent: soft-skills, created earlier today). `.claude/commands/learn.md` updated: intro, Step 0 table + adaptation bullet, Step 1 (skip roadmap scan), Step 8 (ledger append).
