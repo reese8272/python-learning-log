@@ -41,6 +41,8 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 
 > **⚡ PIVOT (2026-07-25, by Reese's call):** the job pipeline is **retired from the daily system** — after John's review, the priority is owning and growing the Cognizant role. `jobs/` is archive. The Brutally Honest sprint closed with it (moves 2–3 done; move 1 retired with the pivot). Full response system: `career/helpful_notes_and_guides/Independence Protocol.md` + the Daily Protocol table above (now live in Google Calendar).
 
+> **🏈 THE CLOCK (added 08-04):** the AI YouTube Editor ships to one real lead by **NFL Week 1 (~09-10)** — ~18 usable days. Scope, cut list, and acceptance test are in **🏈 SHIP BY KICKOFF** below; it outranks the Weekly and Monthly blocks until it ships. Real people are waiting on this.
+
 **The Floor — weekdays:** 🧱 the brick + 🧭 one ownership touch (a doc/audit line on his own code, or the close-out done).
 **The Floor — weekends (new rule, named by Reese 07-25):** weekends owe *nothing* professional. Weekend floor = **the brick** (or full presence with the kids). Any ownership touch, check-in, or rep on a weekend = bonus win, never owed.
 
@@ -85,6 +87,43 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 - 🧭 Ownership touches: 0 — rep #1 is tomorrow's Cold Bench, before 9am
 
 **Stopped at:** 08-04 — named the real diagnosis: the tape at work is phone/games, and that's avoidance of the exact fear John's review named (unassisted output under stress), not laziness. Two gears only — 10 and 0 (Jul 02–10 burst → 9 days dark → Jul 20–29 burst → 5 days dark). **First move:** 30-min Cold Bench rep #1 above. Still queued when there's room: §1.3 worksheet 16/19 → 19/19 (COACH NOTES block in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` — fields-vs-values, missing enum, unused `review_comment`).
+
+---
+
+## 🏈 SHIP BY KICKOFF — AI YouTube Editor v1 (scoped 2026-08-04)
+
+*The most time-sensitive, highest-upside thing in the system — and until today it existed nowhere in it, running entirely in his head while the Card tracked worksheet fixes. Fixed now. This section outranks the Weekly and Monthly blocks below until it ships.*
+
+**Deadline:** NFL Week 1, ~**2026-09-10**. From 08-04 that's five calendar weeks.
+**Honest budget:** ~**18 usable days**, not 35 — the summer cadence is a 10-day sprint followed by a 5–9 day blackout (Jul 02–10 → 9 dark → Jul 20–29 → 5 dark). Plan against 18, not 35.
+
+### The real objective (not a launch)
+**One happy user.** His own go-to-market: *"If I can get one person on board here, then he can outreach to others."* The target is one interested lead with good shorts for his channel before Week 1 — not a finished product. Everything below follows from that.
+
+### ✅ The spine — v1 is exactly this
+> **Upload a long video → get back shorts good enough to post → with titles and captions → download.**
+
+**Where the effort goes:** clip *selection quality* on long-form video is ~80% of the value and the only genuinely hard problem here. Upload and download are plumbing; titles and captions are garnish. In the original nine-item list, clipping sat as item four weighted the same as analytics — **that misallocation was the finding.** Every hour of the 18 days should buy a better answer to the acceptance test.
+
+### 🎯 The acceptance test — worth more than any feature checklist
+**Take one of the lead's actual long-form videos, run it, and ask: "would he post these?"**
+Not "did it run." Not "did it produce ten clips." *Would he post them.* If no, no amount of plumbing saves it. If yes, it's done and everything else is negotiable.
+
+### ✂️ Cut list — post-ship, not pre-ship
+Cut by Reese's own call 08-04. **He can use the clipping engine while the rest gets built around him** — incremental delivery is why the cut isn't a compromise.
+
+| Cut | Why |
+|---|---|
+| **Auto-upload to YouTube** | OAuth sensitive scope → an external Google review with an unpredictable timeline. **Never put a third-party reviewer on the critical path before a hard date.** First thing built after he's happy. *(Verify current requirements from primary docs when the time comes — docs-log task, not an AI-answer task.)* |
+| **Analytics** | Analytics on what? Zero usage. This is a feature for a product that already has customers. |
+| **Video editing** | A second product wearing a feature's clothing. |
+| **Batches** | Only if he hands over ten videos on day one. He won't. |
+| **High availability** | *Reframed, not cut.* For one user, "available" = doesn't crash mid-video. A retry and a real error message — ~2 hours, not 2 weeks. |
+
+### ⚠️ Standing guards
+- **Scope creep arrives mid-clause, not in planning.** On 08-04 the YouTube upload was agreed cut and re-added in the same sentence. When a cut item reappears in a half-clause — that's the tell. Cut list is closed until the lead is happy.
+- **Not on Cognizant's clock.** This is his product on his time. Same rule that applies to the phone and the games — keep the 9-to-5 clean and both can be pushed hard without looking over the shoulder.
+- **The vision survives.** It just gets built with revenue instead of before it.
 
 ---
 
