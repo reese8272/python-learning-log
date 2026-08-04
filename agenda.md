@@ -67,7 +67,21 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 
 **Why it's not a money-over-mastery violation** (the 07-25 pivot still stands): the mastery rep and the sales asset are *the same action* here. Explaining your own pipeline end-to-end cold IS the lead conversation. No tradeoff to manage.
 
-**Tonight, 60 seconds:** rename tomorrow's calendar block to **"🧊 Cold Bench — YouTube Editor: one video end to end."** If it still says "Peak block" at 8am, you'll decide, and deciding is where it dies.
+**Tomorrow is blocked on the calendar (done 08-04, no renaming needed in the morning):**
+
+| Time | Block |
+|---|---|
+| 8:45–9:45 | 🚫🤖 First hour AI-free (existing) |
+| **9:45–10:15** | **🧊 THE COLD BENCH REP — AI closed, timer on. Win banked at 10:15.** |
+| 10:15–11:45 | 🏈 Ship work on the spine — AI allowed |
+| 11:45–12:45 | 🍽 Lunch — a real stop, not a working one |
+| 1:00–2:00 | Nicks (existing) |
+| 2:30 → | **Left open on purpose.** Ian's side-gig items live here. |
+| 8:30pm · 10:15pm · 10:25pm | 🃏 /drill · 🌙 Set tomorrow · 🧱 The Brick |
+
+**The structure that matters:** the first 30 minutes is the whole floor. It is banked at 10:15 regardless of what the other 90 minutes turn into. 🧭 Floor #2 is cleared by that same rep — the 12:00 ownership block is marked free, nothing owed there.
+
+**2:30 stays empty deliberately.** Over-scheduling is what feeds the two-gear pattern. Ian's items get the afternoon; the Cold Bench only ever needed 30 minutes and can't legitimately lose a scheduling fight.
 
 *(CFO Agent graph topology → queued as rep #2 material. Cognizant code you didn't write is still the escalation target.)*
 
