@@ -50,20 +50,24 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 
 **The nine-row Daily Protocol is suspended this week. Deliberately.** It has died in four days twice. One row runs instead — this one. Everything else is upside.
 
-**What we're doing:** 30 minutes, first thing, one Ownership Audit slice — **CFO Agent: the agent graph** (nodes, state schema, edges, *why this topology*). Timer on. Docs open. **AI closed.**
+**What we're doing:** 30 minutes, first thing — **the AI YouTube Editor (autoclip): trace ONE video end to end.** URL in → clip out, naming every hop. Timer on. Docs open. **AI closed.** *(Chosen by Reese 08-04 over CFO Agent: highest ROI — he has leads, and you cannot sell a system you can't explain.)*
 
-**The goal by minute 30:** a commit exists. That's it — not "I understood everything."
+**The goal by minute 30:** a commit exists, containing a hop-by-hop map of one video's journey through the pipeline. That's it — not "I understood everything."
 
 | Min | What |
 |---|---|
-| 0–2 | Close AI. From **memory**, 3 lines: what the graph does, its nodes, what lives in state. Don't look. |
-| 2–20 | Open the code. Read only, trace one request end to end. Docs allowed, AI closed. |
-| 20–28 | Write it into the CFO Agent repo: what it does, the data flow, **why this topology over a plain ReAct loop**, what breaks first. |
+| 0–2 | Close AI. From **memory**, list every hop from URL to finished clip. Don't look. The blanks are the whole point. |
+| 2–20 | Open the code. Read only, follow ONE video through. Docs allowed, AI closed. Don't fix anything you find. |
+| 20–28 | Write it into the repo: the hop list, **where the AI calls actually happen**, and the first thing that breaks under load. |
 | 28–30 | Anything you couldn't explain → a row in `career/concept_queue.md`. Then the **first row in the Cold Bench ledger** (`Independence Protocol.md` — empty since 07-25). |
 
 **Why this one can't be failed:** explain it cold → you just did the thing John's review says you can't. Can't explain it → that's a concept_queue row, which is the audit working as designed. Both outcomes are the win. This also clears Floor #2 (🧭 ownership touch) before 9am.
 
-**Tonight, 60 seconds:** rename tomorrow's calendar block to **"🧊 Cold Bench — CFO Agent graph topology."** If it still says "Peak block" at 8am, you'll decide, and deciding is where it dies.
+**Why it's not a money-over-mastery violation** (the 07-25 pivot still stands): the mastery rep and the sales asset are *the same action* here. Explaining your own pipeline end-to-end cold IS the lead conversation. No tradeoff to manage.
+
+**Tonight, 60 seconds:** rename tomorrow's calendar block to **"🧊 Cold Bench — YouTube Editor: one video end to end."** If it still says "Peak block" at 8am, you'll decide, and deciding is where it dies.
+
+*(CFO Agent graph topology → queued as rep #2 material. Cognizant code you didn't write is still the escalation target.)*
 
 **Selection rule for every rep after this:** pick the slice you feel you *should* already be able to explain and quietly can't. That flinch is the targeting system. (Rep #2 escalates to Cognizant code you didn't write — that's the real muscle. Next week's problem.)
 
