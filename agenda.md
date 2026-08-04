@@ -37,7 +37,7 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history. (Older stopped-at lines live in git history.)*
 
-**Date:** 2026-07-28, night close (Tuesday — Daily Protocol day 2 closed clean; `/drill` ✓ + night `/reflect` ✓ done)
+**Date:** 2026-08-04 (Tuesday) — re-entry after a 5-day gap. Gap is data, not debt. One thing set for tomorrow, nothing else owed.
 
 > **⚡ PIVOT (2026-07-25, by Reese's call):** the job pipeline is **retired from the daily system** — after John's review, the priority is owning and growing the Cognizant role. `jobs/` is archive. The Brutally Honest sprint closed with it (moves 2–3 done; move 1 retired with the pivot). Full response system: `career/helpful_notes_and_guides/Independence Protocol.md` + the Daily Protocol table above (now live in Google Calendar).
 
@@ -46,11 +46,26 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts.
 
-**Day 2 result (Tue):** quiz passed (a 100 in his book) via the self-invented **fading-scaffold protocol** — support faded to zero across the quiz, ending at "I can defend myself" · day 2 cost less AND paid more — the week's metric answered yes, with the feeling attached ("felt amazing") · contingency gate (earned play) day-1 verdict: **gelled** — keep as-is · notecard **taped in the bathroom** (installed mid-reflection, 60 seconds) · evening `/drill` ✓ (Queue vs Stack — solid).
+### 🧊 TOMORROW (Wed 08-05) — THE ONE THING: Cold Bench rep #1
 
-**Tomorrow (Wed) — carry:**
-1. **📞 The boss call, from the map** — concrete notes in hand, precise questions; asking from knowledge, not confusion. First *visible* payoff of the Independence Protocol — let it be seen.
-2. **🎯 Peak block opens with the ten-minute verified win**, then §1.3 three fixes (16/19 → 19/19). The floor alone still makes the day count — 🧭 one ownership touch + 🧱 brick; everything else is upside.
+**The nine-row Daily Protocol is suspended this week. Deliberately.** It has died in four days twice. One row runs instead — this one. Everything else is upside.
+
+**What we're doing:** 30 minutes, first thing, one Ownership Audit slice — **CFO Agent: the agent graph** (nodes, state schema, edges, *why this topology*). Timer on. Docs open. **AI closed.**
+
+**The goal by minute 30:** a commit exists. That's it — not "I understood everything."
+
+| Min | What |
+|---|---|
+| 0–2 | Close AI. From **memory**, 3 lines: what the graph does, its nodes, what lives in state. Don't look. |
+| 2–20 | Open the code. Read only, trace one request end to end. Docs allowed, AI closed. |
+| 20–28 | Write it into the CFO Agent repo: what it does, the data flow, **why this topology over a plain ReAct loop**, what breaks first. |
+| 28–30 | Anything you couldn't explain → a row in `career/concept_queue.md`. Then the **first row in the Cold Bench ledger** (`Independence Protocol.md` — empty since 07-25). |
+
+**Why this one can't be failed:** explain it cold → you just did the thing John's review says you can't. Can't explain it → that's a concept_queue row, which is the audit working as designed. Both outcomes are the win. This also clears Floor #2 (🧭 ownership touch) before 9am.
+
+**Tonight, 60 seconds:** rename tomorrow's calendar block to **"🧊 Cold Bench — CFO Agent graph topology."** If it still says "Peak block" at 8am, you'll decide, and deciding is where it dies.
+
+**Selection rule for every rep after this:** pick the slice you feel you *should* already be able to explain and quietly can't. That flinch is the targeting system. (Rep #2 escalates to Cognizant code you didn't write — that's the real muscle. Next week's problem.)
 
 **🦵 Hamstring pulled this weekend** — gym paused until healed, not dropped. The floor never included the gym; nothing is owed. Walks count as movement while it heals.
 
@@ -60,12 +75,12 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 
 **Daily rep cadence:** one peak block = one `/sharpen` or `/learn` rep (single concept, to the bar); one non-peak `/drill`. Acquire → defend → retain. Cadence, not floor.
 
-**Streaks:**
-- 🧱 Brick: 3 ✓ (Tuesday night held — book in hand at reflect close)
-- ✅ Check-ins: Mon ✓ · Tue ✓ (+ night `/reflect` ✓)
-- 🧭 Ownership touches (weekdays): day 2 — learning guide + quiz closed out
+**Streaks:** all restart today. No commentary, no archaeology.
+- 🧱 Brick: 0 — restarts tonight
+- ✅ Check-ins: restarts today (08-04)
+- 🧭 Ownership touches: 0 — rep #1 is tomorrow's Cold Bench, before 9am
 
-**Stopped at:** Nothing mid-stream — day 2 closed cleanly, starting Wednesday fresh. First move: peak block opens with the **ten-minute verified win**, then §1.3 worksheet (16/19 → 19/19: COACH NOTES block in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py`, three fixes — fields-vs-values, missing enum, unused `review_comment`).
+**Stopped at:** 08-04 — named the real diagnosis: the tape at work is phone/games, and that's avoidance of the exact fear John's review named (unassisted output under stress), not laziness. Two gears only — 10 and 0 (Jul 02–10 burst → 9 days dark → Jul 20–29 burst → 5 days dark). **First move:** 30-min Cold Bench rep #1 above. Still queued when there's room: §1.3 worksheet 16/19 → 19/19 (COACH NOTES block in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` — fields-vs-values, missing enum, unused `review_comment`).
 
 ---
 
