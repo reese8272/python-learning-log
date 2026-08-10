@@ -37,51 +37,63 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history. (Older stopped-at lines live in git history.)*
 
-**Date:** 2026-08-04 (Tuesday) — re-entry after a 5-day gap. Gap is data, not debt. One thing set for tomorrow, nothing else owed.
+**Date:** 2026-08-10 (Sunday) — re-entry after a 6-day gap, and the day the board changed. A screening cleared. Streak restarts today; nothing is owed backward.
 
-> **⚡ PIVOT (2026-07-25, by Reese's call):** the job pipeline is **retired from the daily system** — after John's review, the priority is owning and growing the Cognizant role. `jobs/` is archive. The Brutally Honest sprint closed with it (moves 2–3 done; move 1 retired with the pivot). Full response system: `career/helpful_notes_and_guides/Independence Protocol.md` + the Daily Protocol table above (now live in Google Calendar).
+> **🔒 THE INTERVIEW CLOCK (added 08-10 — this now outranks everything, including the 🏈 Editor clock):** screening cleared for a **secure-API role** — FastAPI + OAuth2/JWT/mTLS + Okta + AWS (ECS/ALB/Route 53/ACM/WAF/CloudWatch), HIPAA environment. Next round **~08-17**, covering verbal Q&A, live coding, **and** system design. Seven days. Roadmap: `career/api-security-aws-prep/summary.md` (`/learn api`). Build: `~/workspace/secure-api-lab` (`/issue-workflow`). Full block: **🔒 SEVEN DAYS** below.
 
-> **🏈 THE CLOCK (added 08-04):** the AI YouTube Editor ships to one real lead by **NFL Week 1 (~09-10)** — ~18 usable days. Scope, cut list, and acceptance test are in **🏈 SHIP BY KICKOFF** below; it outranks the Weekly and Monthly blocks until it ships. Real people are waiting on this.
+> **⚡ PIVOT (2026-07-25, by Reese's call):** the job pipeline is **retired from the daily system** — after John's review, the priority is owning and growing the Cognizant role. `jobs/` is archive. **⏱ Suspended 08-10 for the duration of this interview sprint** — this opportunity came inbound, it wasn't pipeline work. The pivot's *intent* (mastery over scattershot applications) is intact: this sprint is 90% depth on skills the Cognizant role needs anyway. Reinstate 08-18. Full response system: `career/helpful_notes_and_guides/Independence Protocol.md`.
+
+> **🏈 THE CLOCK (added 08-04, PAUSED 08-10):** the AI YouTube Editor ships to one real lead by **NFL Week 1 (~09-10)**. **Paused through 08-17 by Reese's call** — see `DECISIONS.md` (2026-08-10). Post-sprint budget: ~8 usable days against a ~24-day calendar. ⚠️ **The lead gets a message today** — silence damages that relationship, a stated delay does not.
 
 **The Floor — weekdays:** 🧱 the brick + 🧭 one ownership touch (a doc/audit line on his own code, or the close-out done).
 **The Floor — weekends (new rule, named by Reese 07-25):** weekends owe *nothing* professional. Weekend floor = **the brick** (or full presence with the kids). Any ownership touch, check-in, or rep on a weekend = bonus win, never owed.
 
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts.
 
-### 🧊 TOMORROW (Wed 08-05) — THE ONE THING: Cold Bench rep #1
+### 🔒 SEVEN DAYS (Sun 08-10 → Sun 08-17) — the interview sprint
 
-**The nine-row Daily Protocol is suspended this week. Deliberately.** It has died in four days twice. One row runs instead — this one. Everything else is upside.
+**One track runs. `/learn api`.** The nine-row Daily Protocol stays suspended. The AI Editor is paused. The other three learning tracks are dormant until 08-18.
 
-**What we're doing:** 30 minutes, first thing — **the AI YouTube Editor (autoclip): trace ONE video end to end.** URL in → clip out, naming every hop. Timer on. Docs open. **AI closed.** *(Chosen by Reese 08-04 over CFO Agent: highest ROI — he has leads, and you cannot sell a system you can't explain.)*
+**The shape of every day:**
 
-**The goal by minute 30:** a commit exists, containing a hop-by-hop map of one video's journey through the pipeline. That's it — not "I understood everything."
+| When | What | Owed? |
+|---|---|---|
+| Peak (90 min) | `/learn api` — the day's concept, to the tier bar | ⬛ **The rep** |
+| Afternoon (60–90 min) | `/issue-workflow` — the day's build issue in `~/workspace/secure-api-lab` | ⬛ **The build** |
+| 8:30pm (20 min) | `/drill` + log the session | ☐ upside |
+| 10:25pm | 🧱 The Brick | ⬛ floor |
 
-| Min | What |
-|---|---|
-| 0–2 | Close AI. From **memory**, list every hop from URL to finished clip. Don't look. The blanks are the whole point. |
-| 2–20 | Open the code. Read only, follow ONE video through. Docs allowed, AI closed. Don't fix anything you find. |
-| 20–28 | Write it into the repo: the hop list, **where the AI calls actually happen**, and the first thing that breaks under load. |
-| 28–30 | Anything you couldn't explain → a row in `career/concept_queue.md`. Then the **first row in the Cold Bench ledger** (`Independence Protocol.md` — empty since 07-25). |
+**The day map** (full detail in the roadmap's 7-day table):
 
-**Why this one can't be failed:** explain it cold → you just did the thing John's review says you can't. Can't explain it → that's a concept_queue row, which is the audit working as designed. Both outcomes are the win. This also clears Floor #2 (🧭 ownership touch) before 9am.
+| Day | Peak concept | Build |
+|---|---|---|
+| **Sun 08-10** | §1 FastAPI depth · §2 REST/OpenAPI | Scaffold + Issue 1 |
+| Mon 08-11 | §3 OAuth2 / OIDC / Okta | Issue 2 — Okta tenant, real token |
+| Tue 08-12 | §4 JWT validation + the attacks | Issues 3 + 4 |
+| Wed 08-13 | §5 mTLS | Issues 5 + 6 · **mock #1** |
+| Thu 08-14 | §6 the AWS request path | Issue 7a — ECR → Fargate → ALB → ACM |
+| Fri 08-15 | §6 WAF / CloudWatch / API GW | Issue 7b + Issue 8 |
+| Sat 08-16 | §7 testing · §8 HIPAA · §9 CI/CD | **Teardown** + `/sharpen` §3–§6 |
+| Sun 08-17 | §10 system design · §11 stories | **Full mock** |
 
-**Why it's not a money-over-mastery violation** (the 07-25 pivot still stands): the mastery rep and the sales asset are *the same action* here. Explaining your own pipeline end-to-end cold IS the lead conversation. No tradeoff to manage.
+**🩹 The floor for this sprint — read this on a bad day.** `habits/tracker.md:105` has six instances of the all-or-nothing pattern: *"a 10 and a 0, and no median day."* A 7×3hr plan is exactly that shape, so each day has a **45-minute floor version** (listed per-day in the roadmap). Dropping to the floor **counts as a completed day.** The sprint survives four floor days. It does not survive one zero that becomes three.
 
-**Tomorrow is blocked on the calendar (done 08-04, no renaming needed in the morning):**
+**What can't slip:** Thursday and Friday. Issue 7 is the real AWS deploy, and it's the only thing converting *"proven ability to deploy, secure, and operate APIs on AWS"* from a no into a yes. If a day has to be sacrificed, sacrifice Saturday's §9, not Thursday.
+
+**💸 Two hard money rules:** never create an **AWS Private CA** (~$400/mo general-purpose, ~$50/mo short-lived, prorated from creation, no refund on delete) and never enable **Shield Advanced** (~$3k/mo, 1-yr commit). mTLS is learned with a local openssl CA. Set a **$25 Budget alert** before touching AWS; tag everything `project=secure-api-lab`; run `docs/TEARDOWN.md` Saturday.
+
+**Blocks to put on the calendar today:**
 
 | Time | Block |
 |---|---|
-| 8:45–9:45 | 🚫🤖 First hour AI-free (existing) |
-| **9:45–10:15** | **🧊 THE COLD BENCH REP — AI closed, timer on. Win banked at 10:15.** |
-| 10:15–11:45 | 🏈 Ship work on the spine — AI allowed |
-| 11:45–12:45 | 🍽 Lunch — a real stop, not a working one |
-| 1:00–2:00 | Nicks (existing) |
-| 2:30 → | **Left open on purpose.** Ian's side-gig items live here. |
+| Peak 90 min | 🔒 `/learn api` — rename the block to the actual unit each night |
+| Afternoon 60–90 | 🔨 `/issue-workflow` — the day's issue |
+| 1:00–2:00 | Nicks (existing, untouched) |
 | 8:30pm · 10:15pm · 10:25pm | 🃏 /drill · 🌙 Set tomorrow · 🧱 The Brick |
 
-**The structure that matters:** the first 30 minutes is the whole floor. It is banked at 10:15 regardless of what the other 90 minutes turn into. 🧭 Floor #2 is cleared by that same rep — the 12:00 ownership block is marked free, nothing owed there.
+**Cognizant's clock stays untouched** (`agenda.md` 07-25 rule, John's review note about balancing professional development with client priorities). This runs before work, after work, and on the weekend — not during it.
 
-**2:30 stays empty deliberately.** Over-scheduling is what feeds the two-gear pattern. Ian's items get the afternoon; the Cold Bench only ever needed 30 minutes and can't legitimately lose a scheduling fight.
+**Weekend rule consciously suspended** through 08-17. It comes back 08-18, unchanged.
 
 *(CFO Agent graph topology → queued as rep #2 material. Cognizant code you didn't write is still the escalation target.)*
 
@@ -93,20 +105,28 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 - 🏋️ 6am gym — **paused (hamstring)**. Installer ritual keeps running so the cue is ready the day the leg is.
 - 🪞 Shower affirmations — cue: water on → line one. Worst-day: identity line only. **Notecard INSTALLED 07-28 — trial live from Wednesday's shower.**
 
-**Daily rep cadence:** one peak block = one `/sharpen` or `/learn` rep (single concept, to the bar); one non-peak `/drill`. Acquire → defend → retain. Cadence, not floor.
+**Daily rep cadence:** ⏱ **through 08-17 the peak block is `/learn api`, every day** — the other three tracks are dormant, not competing. Evening `/drill` unchanged. Acquire → build → defend → retain. Normal cadence (`/sharpen` or `/learn`, dealer's choice of track) resumes 08-18.
 
 **Streaks:** all restart today. No commentary, no archaeology.
 - 🧱 Brick: 0 — restarts tonight
-- ✅ Check-ins: restarts today (08-04)
-- 🧭 Ownership touches: 0 — rep #1 is tomorrow's Cold Bench, before 9am
+- ✅ Check-ins: restarts today (08-10)
+- 🧭 Ownership touches: 0 — rep #1 is today's Issue 1 in `secure-api-lab`
 
-**Stopped at:** 08-04 — named the real diagnosis: the tape at work is phone/games, and that's avoidance of the exact fear John's review named (unassisted output under stress), not laziness. Two gears only — 10 and 0 (Jul 02–10 burst → 9 days dark → Jul 20–29 burst → 5 days dark). **First move:** 30-min Cold Bench rep #1 above. Still queued when there's room: §1.3 worksheet 16/19 → 19/19 (COACH NOTES block in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` — fields-vs-values, missing enum, unused `review_comment`).
+**Stopped at:** 08-10 — the board changed. A screening cleared for a secure-API role (FastAPI/OAuth2/JWT/mTLS/Okta/AWS, HIPAA), next round ~08-17 across Q&A + live coding + system design. Built the track (`career/api-security-aws-prep/summary.md`), seeded the queue, scaffolded the build repo, and paused the Editor for seven days.
+
+**The read that came out of the gap analysis, and it's the useful part:** the JD looked overwhelming and wasn't. It split into two piles. *Recalibration* — FastAPI, async, OAuth2, testing, CI/CD are all already in production and all self-rated "Gap" (`CAREER_LOG.md` said "haven't built with it" against ~37k LOC of FastAPI, and "no hands-on experience" against 5+ live CI workflows). *Acquisition* — the AWS platform/edge layer, mTLS, Okta/OIDC, HIPAA, which a full-repo grep found **zero** mentions of. Two different problems that were wearing the same label. Notes corrected 08-10; levels held at Building until the cold defense on 08-16, per the standing rule.
+
+**First move:** §1 + §2 in the peak block, then scaffold Issue 1. **Also today, outside the terminal:** message the Editor lead about the 7-day pause.
+
+*Deferred until 08-18 (not dropped):* §1.3 worksheet 16/19 → 19/19 (COACH NOTES in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` — fields-vs-values, missing enum, unused `review_comment`); Cold Bench rep #1 on the Editor pipeline.
 
 ---
 
-## 🏈 SHIP BY KICKOFF — AI YouTube Editor v1 (scoped 2026-08-04)
+## 🏈 SHIP BY KICKOFF — AI YouTube Editor v1 (scoped 2026-08-04) · ⏸ **PAUSED 08-10 → 08-17**
 
-*The most time-sensitive, highest-upside thing in the system — and until today it existed nowhere in it, running entirely in his head while the Card tracked worksheet fixes. Fixed now. This section outranks the Weekly and Monthly blocks below until it ships.*
+> **⏸ Paused, not descoped (2026-08-10, Reese's call).** The interview sprint (🔒 above) outranks this for seven days. Everything below stays valid and is picked up **08-18** with ~8 usable days against a ~24-day calendar — tighter than the original ~18, so expect a scope conversation on the 18th, not a schedule conversation. **Action owed today:** tell the lead. A stated delay costs nothing; silence costs the relationship. See `DECISIONS.md` (2026-08-10).
+
+*The most time-sensitive, highest-upside thing in the system — and until 08-04 it existed nowhere in it, running entirely in his head while the Card tracked worksheet fixes. This section outranks the Weekly and Monthly blocks below (but not the interview sprint) until it ships.*
 
 **Deadline:** NFL Week 1, ~**2026-09-10**. From 08-04 that's five calendar weeks.
 **Honest budget:** ~**18 usable days**, not 35 — the summer cadence is a 10-day sprint followed by a 5–9 day blackout (Jul 02–10 → 9 dark → Jul 20–29 → 5 dark). Plan against 18, not 35.

@@ -52,6 +52,27 @@ Work top-down within each tier. Tier 1 before Tier 2 unless a real project need 
 - [ ] **Python data model** — `is` vs `==` + small-int cache, mutable-default evaluated-once, `__eq__`/`__hash__` contract + invariant, first-class functions *(acquired 2026-06-26 via /learn §1.1; build banked 2026-06-29 — GridCell value object. Ready to defend cold in /sharpen.)*
 - [ ] **Type hints in earnest** — hints inert at runtime; nullable (`| None`, the type) vs required (the default) as independent axes; Pydantic v2 makes `x: int|None` required → 422 (v1 implicit-None default removed); builtin generics `list[str]`/`dict[str,float]`; `Protocol` structural typing for shapes you don't own + `@runtime_checkable` gotcha *(acquired 2026-06-30 via /learn §1.2; build pending — four-corner ForecastQuery model. Defend cold once built.)*
 
+### Secure API on AWS — interview prep *(roadmap: `career/api-security-aws-prep/`)* ⏱ **interview 2026-08-17**
+*These are Tier 1 **because the posting names them explicitly**, not by generic importance. Several are promoted out of Tier 2 below for the duration of the sprint — see the note there. Build: `~/workspace/secure-api-lab`.*
+
+- [ ] **Resource server vs authorization server** — your API validates tokens Okta issued; it never issues them. The framing the whole Okta bullet rests on *(source: JD "exposing APIs that support integration with IDP")*
+- [ ] **OAuth2 grant-type map + what 2.1 removed** — implicit and ROPC gone, PKCE now required for confidential clients too; each removal traces to a specific attack. Still an Internet-Draft, not an RFC — say so precisely *(source: JD; verified live 2026-08-10)*
+- [ ] **Client credentials vs authorization code + PKCE** — no user context vs user context; why client-credentials can't request OpenID scopes and needs a custom scope
+- [ ] **OIDC vs OAuth2 = authn vs authz** — ID token vs access token, why you never authorize off an ID token *(this is the decision tree `CAREER_LOG.md` Security section says is missing)*
+- [ ] **The JWT validation checklist, cold** — signature · `iss` · `aud` · `exp` · `nbf` · algorithm allow-list; plus `cid` for Okta. Six items, recited without hesitating
+- [ ] **`alg: none` and RS256→HS256 confusion** — why you pin algorithms and never read the payload before verifying. Naming these unprompted is a senior signal
+- [ ] **JWKS fetch, `kid` selection, caching, rotation** — cache until an unknown `kid` appears; the failure modes of both over-fetching and never re-fetching
+- [ ] **JWT revocation — the honest hard problem** — bearer tokens are valid until expiry; short TTL + rotation vs introspection vs denylist, and what each costs
+- [ ] **Where to validate the token: edge vs app** — ALB native JWT verification (new 2025-11) and API Gateway JWT authorizers vs an in-app dependency; defense in depth says both
+- [ ] **mTLS vs JWT vs both** — mTLS authenticates the *workload/channel*, the JWT authorizes the *call*. Layered is the zero-trust answer. *The single highest-value one-liner in §5*
+- [ ] **ALB mTLS: passthrough vs verify mode** — `X-Amzn-Mtls-Clientcert` header family vs a trust store with a CA bundle + CRLs. Two distinct modes, don't blur them
+- [ ] **Cert rotation/expiry as the #1 mTLS production failure** — and why AWS Private CA has a $50/mo short-lived tier (7-day max) next to the $400/mo general-purpose one
+- [ ] **The AWS request path as one diagram** — Route 53 → ACM → WAF → ALB → ECS Fargate → CloudWatch. Drawn cold in under 4 minutes
+- [ ] **ECS task role vs task execution role** — execution role = what ECS needs (pull image, write logs, inject secrets); task role = what your app code can call. Classic interview question
+- [ ] **API Gateway vs ALB — when each** — HTTP vs REST API, JWT authorizers, usage plans, and the honest cost/latency tradeoff
+- [ ] **HIPAA technical safeguards mapped to API surfaces** — access control, **audit controls** (log actor/action/subject/time, never the payload), integrity, transmission security; minimum-necessary → `response_model` *(Tier 2 by the posting, Tier 1 by how often it gets probed)*
+- [ ] **GitHub Actions OIDC federation to an IAM role** — no long-lived AWS keys in CI, ever. "Access keys in secrets" is a miss
+
 ---
 
 ## Tier 2 — Periphery (80/20 / explain-the-decision)
@@ -63,8 +84,10 @@ Work top-down within each tier. Tier 1 before Tier 2 unless a real project need 
 - [ ] **S3 basics** — when/why
 
 ### Security
-- [ ] **authn vs authz** — the decision tree, not just the words
-- [ ] **JWT + API key patterns** — issue/sign/verify, when each
+> ⏱ **Promoted to Tier 1 through 2026-08-17** — the first two rows below are named explicitly in the interview posting and now live in the "Secure API on AWS" block above. Work them there; return them here afterward.
+
+- [ ] **authn vs authz** — the decision tree, not just the words *(→ promoted, see interview-prep block)*
+- [ ] **JWT + API key patterns** — issue/sign/verify, when each *(→ promoted, see interview-prep block)*
 - [ ] **OWASP Top 10** — read once, all ten, one sitting
 - [ ] **Secrets management** — .env, never committing keys, prod patterns
 - [ ] **Prompt injection defense** — pre/post hooks as guardrails *(partly owned via hooks)*

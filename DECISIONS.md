@@ -4,6 +4,32 @@ A log of explicit design decisions that change or deviate from what the planning
 
 ---
 
+## 2026-08-10 — Seven-day interview sprint: a fourth `/learn` track added, the AI YouTube Editor paused, the job-pipeline pivot temporarily suspended
+
+**What changed:**
+
+1. **New track — `career/api-security-aws-prep/`**, reachable via `/learn api` (also `apisec`, `interview`). Eleven sections covering FastAPI at depth, REST/OpenAPI-as-contract, OAuth2/OIDC/Okta, JWT validation, mTLS, the AWS platform/edge stack, API testing, HIPAA/PHI, CI/CD, a system-design set-piece, and honest positioning. Registered in the Step 0 routing table of `.claude/commands/learn.md`, which now reads "four curated curricula" and gives this track the peak window by default through 08-17.
+2. **New build repo — `~/workspace/secure-api-lab`**, driven by `/issue-workflow` over 8 dependency-ordered issues, ending in a real ECS/ALB/ACM/WAF/CloudWatch deployment.
+3. **🏈 AI YouTube Editor paused 08-10 → 08-17.** It had outranked the Weekly and Monthly blocks since 08-04; the interview sprint now outranks it.
+4. **⚡ The 07-25 job-pipeline pivot is suspended for the sprint**, and reinstated 08-18.
+5. **Skills Tracker notes corrected** in `CAREER_LOG.md` — FastAPI, REST API design, CI/CD concepts, GitHub Actions. Levels moved Gap → Building as a *factual correction*, not a mastery bump.
+
+**Why:**
+
+- A screening cleared for a backend role whose JD is a single coherent thing — secure async FastAPI, IdP integration, AWS edge, HIPAA — with the next round ~08-17 covering verbal Q&A, live coding, *and* system design. Seven days, ~3hr/day available.
+- **The gap analysis split in two, and conflating the halves was the main risk.** A full-repo grep returned **zero mentions** of mTLS, Okta, OIDC, SAML, ECS, ALB, Route 53, API Gateway, ACM, Private CA, WAF, Shield, CloudWatch, or Swagger — genuine acquisition-from-zero. But FastAPI (~37k LOC in CreatorClip + CFO Agent), async (defended cold), OAuth2 (shipped, YouTube publishing), testing (1,774 test functions), and CI/CD (5+ workflows, auto-deploy on main) were all already in production **and all self-rated "Gap."** Those need rehearsal, not teaching. Half the sprint's value is not wasting peak windows re-learning things he already does.
+- **On the paused Editor:** `agenda.md` budgeted ~18 usable days to NFL Week 1 and the repo had already been dark 6 days. The interview is a larger and more time-bound lever than the Editor, and the sprint's content (secure APIs, AWS, auth) serves the Cognizant role regardless of outcome — so it doesn't violate the 07-25 pivot's *intent* (mastery over scattershot applications) even though it suspends its letter. Coupled obligation: **message the lead** rather than going silent.
+- **On the tracker correction and why levels only moved to Building:** `CAREER_LOG.md` Active Struggles carries a standing rule from 2026-06-22 — *"Bump tracker levels only as concepts are actually defended, not from resume evidence alone."* That rule was honored. What was fixed is that two notes were **factually false** ("haven't built with it"; "no hands-on experience"), and "Gap" asserts something untrue. Cold defense is scheduled 08-16; any bump past Building is earned there. The risk being mitigated is real and specific: walking into an interview and under-selling production experience because your own file told you it was a gap.
+- **On the floor:** `habits/tracker.md:105` documents six all-or-nothing collapses — *"a 10 and a 0, and no median day."* A 7×3hr plan is precisely that shape, so every sprint day carries a ~45-minute floor version that counts as a completed day.
+
+**Source / evidence:** the job description (transcribed verbatim in the track's Interview Intel section); two parallel repo-exploration agents (2026-08-10) producing the skills inventory and the zero-footprint grep; live web research the same day verifying every Currency Watch claim — [FastAPI's python-jose→PyJWT migration](https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/), [OAuth 2.1 still at draft-15](https://oauth.net/2.1/), [ALB native JWT verification shipped 2025-11-12](https://aws.amazon.com/about-aws/whats-new/2025/11/application-load-balancer-jwt-verification/), [ALB mTLS passthrough vs verify modes](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/configuring-mtls-with-elb.html), [AWS Private CA $400/mo vs $50/mo short-lived](https://aws.amazon.com/private-ca/pricing/), and [Okta client-credentials/custom-auth-server requirements](https://developer.okta.com/docs/guides/implement-grant-type/clientcreds/main/). Scope decisions (real AWS deploy vs paper, separate repo, full Editor pause) confirmed with Reese via AskUserQuestion.
+
+**Follow-ups owed 08-18:** reinstate the weekend rule and the 07-25 pivot; delete the peak-window-default bullet from `learn.md` Step 0; resolve or update the Active Struggles entry with the interview outcome; re-scope the Editor with the lead.
+
+**Date:** 2026-08-10
+
+---
+
 ## 2026-08-04 — Coaching posture flipped: mentor generates insight, not therapist draws it out
 
 **What changed:** New root file **`COACHING.md`** — the Mentor Doctrine — now the governing posture for every coaching session and for ordinary conversation in this repo. The core rule: **every session must leave a read on the table**; a session that only asked questions and mirrored him back is a *failed* session. Defines the four insight moves (cross-time read with dates · named call · reframe · the thing he didn't ask about), how to deliver a read ("here's what I see — does that track?"), and the only three cases where holding beats reading (raw grief · explicit "let me just talk" · genuine ambiguity in the record).

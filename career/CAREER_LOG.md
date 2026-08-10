@@ -49,8 +49,8 @@
 ### System Design
 | Skill | Level | Notes | Last Updated | Last Reviewed |
 |-------|-------|-------|--------------|---------------|
-| FastAPI | Gap | Know what it is, haven't built with it | - | - |
-| REST API design | Exposed | Used in work, can't design from scratch independently | - | - |
+| FastAPI | Building | ⚠ **Note corrected 2026-08-10 — the old note ("haven't built with it") was factually false.** ~37k LOC of FastAPI in CreatorClip (1,774 test functions) + CFO Agent (177 tests, Redis-backed LangGraph checkpointing). Level held deliberately low per the standing rule in Active Struggles — production LOC is not a mastery claim. Cold defense scheduled 08-16 (`/sharpen`); bump only then. | 2026-08-10 | - |
+| REST API design | Building | ⚠ Note corrected 2026-08-10. Has shipped REST surfaces — Django REST over a 14-table Postgres schema (WorldCovers), FastAPI endpoints across both flagship projects. The untested part is *design rationale from scratch* (status-code semantics, idempotency, versioning), not exposure. Roadmap: `api-security-aws-prep` §2. | 2026-08-10 | - |
 | Service decomposition | Gap | - | - | - |
 | Data flow design | Gap | - | - | - |
 | Async patterns (asyncio) | Can explain the why | asyncio for I/O-bound, gather for overlapping waits, run_in_executor for blocking calls — can explain why each | 2026-04-01 | - |
@@ -59,8 +59,8 @@
 | Skill | Level | Notes | Last Updated | Last Reviewed |
 |-------|-------|-------|--------------|---------------|
 | Docker | Exposed | Know what it does, can't build Dockerfiles independently | - | - |
-| CI/CD concepts | Gap | Know it exists, no hands-on experience | - | - |
-| GitHub Actions | Gap | - | - | - |
+| CI/CD concepts | Building | ⚠ **Note corrected 2026-08-10 — "no hands-on experience" was factually false.** CFO Agent runs 5+ CI workflows with auto-deploy to prod on push to main; CreatorClip has staging/prod Docker-compose with CI auto-deploy. Gap is the *vocabulary and the whiteboard sketch*, not the doing. Roadmap: §9. | 2026-08-10 | - |
+| GitHub Actions | Building | ⚠ Note corrected 2026-08-10 — authored the workflows above. Untested: OIDC federation to an IAM role (the current no-static-keys pattern) — §9. | 2026-08-10 | - |
 | GitLab CI | Gap | - | - | - |
 
 ### Cloud — AWS for AI
@@ -72,10 +72,28 @@
 | AWS IAM | Gap | - | - | - |
 | AWS S3 | Gap | - | - | - |
 
+### Cloud — AWS platform & edge *(added 2026-08-10 for the secure-API interview track)*
+*The prior AWS section covers only the **AI** services. The platform/edge layer below is what actually fronts a production API, and a full-repo grep on 2026-08-10 returned **zero mentions** of every row here. Honest baseline — the point is a visible before/after by 08-17.*
+
+| Skill | Level | Notes | Last Updated | Last Reviewed |
+|-------|-------|-------|--------------|---------------|
+| ECS / Fargate | Gap | Task def vs service vs task; **task role vs execution role**. Build: secure-api-lab Issue 7 | 2026-08-10 | - |
+| ALB | Gap | Listeners/rules/target groups; mTLS passthrough vs verify; native JWT verification (new 2025-11) | 2026-08-10 | - |
+| Route 53 | Gap | Alias records, health checks, failover | 2026-08-10 | - |
+| ACM / Private CA | Gap | DNS-validated public certs + auto-renewal; PCA general-purpose $400/mo vs short-lived $50/mo (7-day max) | 2026-08-10 | - |
+| API Gateway | Gap | HTTP vs REST API, JWT authorizers, usage plans; the when-vs-ALB decision | 2026-08-10 | - |
+| AWS WAF / Shield | Gap | Managed rule groups, rate-based rules, count-before-block; Shield Standard vs Advanced (~$3k/mo) | 2026-08-10 | - |
+| CloudWatch | Gap | Structured JSON logs, metric filters, alarms; what to alert on for an API | 2026-08-10 | - |
+
 ### Security
 | Skill | Level | Notes | Last Updated | Last Reviewed |
 |-------|-------|-------|--------------|---------------|
-| Authentication vs Authorization | Gap | Know the words, can't explain the decision tree | - | - |
+| Authentication vs Authorization | Gap | Know the words, can't explain the decision tree. ⏱ Now Tier 1 — the posting names it. Roadmap §3 | 2026-08-10 | - |
+| OAuth2 flows | Exposed | **Shipped** YouTube OAuth publishing in CreatorClip, and made a real judgment call on it (cut auto-upload from v1 over sensitive-scope review risk). Never defended cold; grant-type map and OAuth 2.1 changes are genuinely new. Roadmap §3 | 2026-08-10 | - |
+| OIDC / IdP integration (Okta) | Gap | Zero repo footprint. Resource-server framing, custom auth server, custom scopes, `aud` + `cid`. Build: Issue 2 | 2026-08-10 | - |
+| JWT validation | Gap | Zero repo footprint. The 6-item checklist, JWKS/`kid`/rotation, `alg:none` + RS256→HS256 confusion, revocation. Build: Issues 3–4 | 2026-08-10 | - |
+| mTLS | Gap | Zero repo footprint. Cert-as-identity, trust chains, ALB termination modes, rotation as the #1 failure mode. Build: Issue 5 (local openssl CA) | 2026-08-10 | - |
+| HIPAA / PHI handling | Gap | Zero operating experience — **do not overclaim** (own prior guidance: `jobs/natera-sr-fwd-deployed/README.md:37`). Studying the technical safeguards + audit-logging discipline. Roadmap §8 | 2026-08-10 | - |
 | Credential management | Gap | - | - | - |
 | OWASP basics | Gap | - | - | - |
 | Cryptography fundamentals | Gap | - | - | - |
@@ -135,4 +153,5 @@
 - **Cloud / AWS for AI:** Zero hands-on. SageMaker, Bedrock, Lambda, IAM — need to build something real in AWS, not just read about it.
 - **Agentic frameworks:** Actively working through Eden Marco LangChain course. Layer 1 (agent loop, function calling) done. LangGraph why-over-ReAct now explained cold (2026-06-22). LangSmith/evals still genuine gaps; MCP shipped in production (FastMCP at Cognizant) but the *why* not yet defended cold.
 - **Independent execution under observation (2026-07-25, from John's mid-year notes):** The review's core critique — "prove you can perform without AI" + accountability/comms gaps under stress (Verizon merge conflicts, marketing engagement). Not a learning-system gap; a *performance-visibility* gap: unassisted capability was never trained as its own rep and never made visible at work. Counter-system: `helpful_notes_and_guides/Independence Protocol.md` (learning ladder, weekly Cold Bench, own-every-line + comms floor, artifact scoreboard through Jan 2027). **Day-2 data point (07-28): target state reached from the inside** — work quiz passed via self-invented fading-scaffold protocol (support faded to zero), "I can defend myself" on the work pipeline (files, contracts, configs, his code's place in it); day 2 cost less and paid more than day 1. Boss call 07-29 from a position of knowledge = first visible payoff. Resolve when the year-end package ships.
-- **Tracker undersells the resume (2026-06-22):** The Skills Tracker is calibrated below reality — it marked LangGraph/FastAPI/MCP/Bedrock as Gap/Exposed while the resume shows production builds of all of them (CFO Agent, autoclip/CreatorClip, Cognizant multi-agent team). The real gap isn't building capacity — it's *defending the decisions cold* (consultant-grade articulation). The fix is the new `/sharpen` loop + `career/concept_queue.md`: grill each concept against his own shipped code until the level reflects demonstrated explanation, not exposure. Bump tracker levels only as concepts are actually defended, not from resume evidence alone.
+- **Secure-API interview sprint (2026-08-10 → 08-17):** Screening cleared for a FastAPI + OAuth2/JWT/mTLS + Okta + AWS (ECS/ALB/Route 53/ACM/WAF/CloudWatch) role in a HIPAA environment; next round covers verbal Q&A, live coding, *and* system design. Roadmap: `career/api-security-aws-prep/summary.md`, build: `~/workspace/secure-api-lab`. The gap analysis split cleanly in two — **recalibration** (FastAPI, async, OAuth2, testing, CI/CD: already in production, never said out loud) vs **acquisition from zero** (the entire AWS platform/edge layer, mTLS, Okta/OIDC, HIPAA — zero repo footprint on a full grep). Resolve after 08-17 with the outcome and what the cold defenses actually returned.
+- **Tracker undersells the resume (2026-06-22):** *(2026-08-10 addendum — acted on, partially. The FastAPI / REST / CI-CD / GitHub Actions **notes** were factually wrong, not merely conservative: "haven't built with it" against ~37k LOC, "no hands-on experience" against 5+ live workflows. Notes corrected and levels moved Gap→Building as a **factual correction**, not a mastery claim; "Gap" asserts something untrue. The standing rule below still holds — no bump past Building without a cold defense, scheduled 08-16.)* The Skills Tracker is calibrated below reality — it marked LangGraph/FastAPI/MCP/Bedrock as Gap/Exposed while the resume shows production builds of all of them (CFO Agent, autoclip/CreatorClip, Cognizant multi-agent team). The real gap isn't building capacity — it's *defending the decisions cold* (consultant-grade articulation). The fix is the new `/sharpen` loop + `career/concept_queue.md`: grill each concept against his own shipped code until the level reflects demonstrated explanation, not exposure. Bump tracker levels only as concepts are actually defended, not from resume evidence alone.
