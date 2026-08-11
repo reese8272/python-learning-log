@@ -4,6 +4,34 @@ A log of explicit design decisions that change or deviate from what the planning
 
 ---
 
+## 2026-08-10 (later same day) — The `api` track is taught from scratch with three depth bars, in chunks, with inline checks
+
+**What changed** (revising the entry below, written hours earlier):
+
+1. **The "recalibration vs acquisition" split is dropped as a teaching directive.** Every unit starts `[ ]` and is taught from zero, including FastAPI and CI/CD. The earlier analysis survives only as *which worked example to use* — where shipped code exists, the example is CreatorClip or CFO Agent instead of a toy.
+2. **Three depth bars added to every unit**, with a minute budget: `[A]` BUILD IT ~30m (implement cold + name the failure mode) · `[B]` EXPLAIN IT ~15m (the decision, not internals) · `[C]` NAME IT ~5m. Roughly 15 / 20 / 15 units.
+3. **Sections broken into named chunks** (`1.A`, `4.C`, …) of ~20–30 min, each one teaching loop.
+4. **A scoped `⏱ TRACK ADDENDUM` block added to `.claude/commands/learn.md`**, overriding Steps 5, 6, and 7.5 for the `api` track only: chunk loop instead of single delivery; inline checks per chunk instead of one end-of-unit explain-back; one worksheet per **section** (~9) instead of per unit (~60).
+5. **A third check format added — spot-the-bug**: a 3–8 line snippet with exactly one real vulnerability, named before being told. Required at least once per security section.
+6. **`concept_queue.md` re-tiered** with the same bars; `[C]` units deliberately excluded from the `/sharpen` queue.
+7. **The retired "client one-liner" worksheet requirement removed from `learn.md` Step 7.5**, which still mandated it despite the decision to drop it.
+
+**Why:**
+
+- **Reese's call, and it's the right one:** *"assume I am learning everything from scratch… the pipeline is best spent understanding the 'what' and 'how deep'."* Revision 1 was a checklist of topics, which silently defers the depth decision to whatever comes next in the file. Under a 7-day clock that is how the peak window gets spent on the wrong thing.
+- **The bars exist because the arithmetic doesn't work.** Taught from scratch, the 11 sections price at ~19h teaching + ~9h building = **~28 hours against ~21 available.** Rationing was going to happen either way; the only choice was whether it happened deliberately or by running out of days. Stated consequences: §1–§7 and §10 taught properly; **§8 HIPAA and §9 CI/CD capped at `[B]`/`[C]`** (the JD's *Desired* column, not its requirements); §11 story-drafting moved to evenings; **Issue 8 is the designated cut, never Issue 7.**
+- **On chunking and inline checks:** the existing `/learn` teaches a full unit then runs one explain-back. For material this dense, that puts every check at the point of weakest recall. Chunk-level checks are the testing effect applied at the right granularity — and they're phone-friendly, which matters for an ADHD brain under time pressure.
+- **On spot-the-bug:** short answer proves you can describe a concept; a snippet with `options={"verify_signature": False}` in it proves you'd catch it in a code review. The second is what a security interview actually tests, and the format didn't exist in the system yet.
+- **On the addendum being scoped and dated:** rewriting the shared `/learn` skill a week before an interview would disturb the `ai`, `py`, and `soft` tracks for no benefit. The block is explicitly marked for deletion on 2026-08-18.
+
+**Source / evidence:** Reese's direction (2026-08-10); an exploration pass over `career/lesson_assignments/2026-06-22_llm-call-anatomy.py` (the reference template), `2026-07-20_zero-few-shot-role-prompting.py` (including its in-file COACH NOTES grading convention), and `learn.md` Steps 4–9 / `sharpen.md` / `drill.md`, to confirm the new formats match the house style rather than replacing it. Confirmed the house question mold running through all three skills — *why THIS over THAT · when it matters · what breaks if you get it wrong* — and built every check format on it. Depth-bar system, inline-vs-worksheet placement, and one-project-per-section confirmed with Reese via AskUserQuestion.
+
+**Follow-ups owed 08-18:** delete the `⏱ TRACK ADDENDUM` block and the peak-window-default bullet from `learn.md`. Keep the spot-the-bug format if it proved useful — it generalizes to the `ai` and `py` tracks.
+
+**Date:** 2026-08-10
+
+---
+
 ## 2026-08-10 — Seven-day interview sprint: a fourth `/learn` track added, the AI YouTube Editor paused, the job-pipeline pivot temporarily suspended
 
 **What changed:**

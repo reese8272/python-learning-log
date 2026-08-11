@@ -34,7 +34,7 @@ There are **four curated curricula + one on-demand mode**. Resolve which one thi
 | `new`, `adhoc`, `work`, `just-in-time` | **On-Demand Learning** *(NO roadmap — Reese names the topic in the command; usually work-driven)* | `career/on-demand-learning/summary.md` — a **ledger/index of what's been learned on demand**, NOT a list of pre-planned `[ ]` units | `career/on-demand-learning/reflection_log/YYYY-MM-DD.md` | **Adaptive:** technical/code topic → `career/lesson_assignments/YYYY-MM-DD_<kebab-topic>.py` (like `ai`); conceptual/non-code → none (bank by using it, like `soft`). |
 
 - **If no track token is present and the request doesn't otherwise make the track obvious, ASK ONCE** which track ("secure-API interview prep, AI engineering, Python mastery, senior soft-skills, or something new — `/learn new <topic>`?") before reading anything. Do **not** silently default — all five are live.
-- **⏱ While the `api` track's clock is running (through 2026-08-17), it takes the peak window by default.** If Reese runs a bare `/learn` during the sprint, confirm the `api` track rather than asking the full menu — the other tracks are consciously paused (`DECISIONS.md`, 2026-08-10). After 08-17, delete this bullet and return the `api` row to normal priority.
+- **⏱ While the `api` track's clock is running (through 2026-08-17), it takes the peak window by default.** If Reese runs a bare `/learn` during the sprint, confirm the `api` track rather than asking the full menu — the other tracks are consciously paused (`DECISIONS.md`, 2026-08-10). **If the track is `api`, read the ⏱ TRACK ADDENDUM below (before Step 5) — it overrides Steps 5, 6, and 7.5.** After 08-17, delete this bullet, the addendum block, and return the `api` row to normal priority.
 - A section/unit reference (e.g. "1.2", "§3 streaming") is resolved against the **selected track's** roadmap, not the others.
 - **The technical tracks (`api`, `ai`, `py`, and `new` when the topic is technical) share** `career/concept_queue.md` (the `/sharpen` cold-defense queue) and `career/CAREER_LOG.md`. The **`soft` track does not use `concept_queue.md`** — soft skills aren't defended cold; they're deployed under real conditions. Everywhere below, "the roadmap," "the session log," and "the worksheet" mean the **selected track's** paths from this table.
 - **Track-specific adaptation for `soft`:** the domain is human/social, not code. The Four Rules still apply (research-first, struggle-first, current framing, hit the tier bar tied to his real situation) — but "his code" becomes "his real situations" (interviews, work conversations, reviews, the job search), the tier bar is *articulate-it + apply-it* rather than *teach-the-mechanism*, and Steps 7/7.5 change as noted there.
@@ -63,6 +63,51 @@ Ask what he already knows or would guess about it. Wait for his answer. Don't te
 
 Pull the current authoritative source for this exact unit. Confirm the present-day API/pattern, and identify precisely what a course would get wrong. Hold citations for the teach step. **This step is mandatory every session** — even on concepts you "know," verify currency.
 
+## ⏱ TRACK ADDENDUM — `api` only (through 2026-08-17)
+
+> **Applies to the `api` / `apisec` / `interview` track only.** The `ai`, `py`, `soft`, and `new` tracks are unaffected — skip this section entirely for them. **Delete this whole block on 2026-08-18**, when the sprint ends.
+>
+> **Why it exists:** the roadmap at `career/api-security-aws-prep/summary.md` is taught from scratch under a hard 7-day clock, and Reese asked for teaching in small chunks with checks *during* the lesson rather than one explain-back at the end. These three overrides implement that.
+
+**Override 1 — Step 5 becomes a chunk loop, not a single delivery.**
+The roadmap breaks each section into named chunks (`1.A`, `4.C`, …). Teach **one chunk at a time**:
+
+> **teach one idea (~8 min)** → **2–4 inline checks** → **one tiny snippet (3–8 lines)** → stop, then next chunk.
+
+Never deliver a whole section in one block. After each chunk, say which chunk is next and ask whether to continue or bank here — the clock is tight and stopping cleanly matters more than finishing a section.
+
+**Respect the unit's depth bar.** Every unit in the roadmap carries `[A]`, `[B]`, or `[C]` and a minute budget. This is the rationing decision, not a suggestion:
+- `[A]` ~30m — mechanism + why-this-over-that + the failure mode. Teach it so he could implement it cold. Every `[A]` unit has a `*Breaks if wrong:*` line — that line must be *earned*, not just read aloud.
+- `[B]` ~15m — the decision only. When to reach for it, the one-line why. Do **not** go into internals.
+- `[C]` ~5m — one or two sentences, then move. Resist the pull to teach it properly; the budget is the point. If a `[C]` unit genuinely needs more, say so and let Reese decide to promote it.
+
+**Override 2 — Step 6 fires per chunk, not per unit.**
+Inline checks replace the single end-of-unit explain-back. Every check is built on the house question mold — *why THIS over THAT · when it matters · what breaks if you get it wrong* — in one of three forms. Mix them; don't use the same form twice in a row.
+
+1. **Fill-in-the-blank** — for the lists and orderings that must become automatic.
+   > *"Validation order: verify the ______ before reading any claim, because otherwise ______."*
+   > *"A valid token missing a required scope returns ______, not ______."*
+
+2. **Short answer** — 1–3 sentences, cold, no notes. The default form.
+   > *"Why is asymmetric signing the only sane choice when the IdP is external?"*
+
+3. **Spot-the-bug** — a 3–8 line snippet containing exactly **one** real vulnerability; he names it before being told. **Use this at least once per security section (§3–§8).** It is how this interview will actually probe, and it is the highest-signal check available.
+   > ```python
+   > claims = jwt.decode(token, key, options={"verify_signature": False})
+   > if claims["scp"] == "records.read":
+   >     return get_records()
+   > ```
+   > *"One line here is a full auth bypass. Which, and why?"*
+
+Grade inline, briefly: correct → confirm and move. Partial → name the exact missing piece in one sentence, let him take another swing. Wrong → correct it immediately and re-ask a narrower version before continuing. Do **not** run a full `/sharpen`-style grading ceremony mid-chunk; it burns the clock.
+
+**Override 3 — Step 7.5 writes ONE worksheet per SECTION, not per unit.**
+Roughly 9 worksheets across the sprint, not ~60. Write it when the section's chunks are done and its capstone issue is named. Naming is the registered convention: `career/lesson_assignments/apisec-<section>-<kebab-name>.py` (e.g. `apisec-4-jwt-validation.py`). **Everything else about the worksheet is unchanged** — same house shape, same struggle-first bar, same lambda-based `_run_tests()`, same gated answer key at the bottom.
+
+**PART 3 of each worksheet is that section's capstone issue** from `~/workspace/secure-api-lab/docs/issues.md`, per the roadmap's Section → capstone map. §10 and §11 have no code and are worksheet-exempt — their capstones are the diagram drawn cold and the recorded mock.
+
+---
+
 ## Step 5 — Teach
 
 Deliver it at the tier bar, tied to his code, **current pattern only**:
@@ -88,7 +133,7 @@ For the two technical tracks (`ai`, `py`): every `/learn` session leaves behind 
 **Section order is fixed: soliloquy → concept questions → exercises → project.** The working sections go recall-first (answer cold), then hands-on drills, then the integrated build:
 
 1. **A short soliloquy** (module docstring) — what we're targeting and why, the 2–3 facts to *feel in the fingers*, and a "how to use this" note. Tie it to the lesson just taught.
-2. **PART 1 — concept questions** (this comes first): a few questions with a stated **requirement** (answer cold first; write the one-line "client version" of each). The gated **answer key** lives at the very bottom of the file.
+2. **PART 1 — concept questions** (this comes first): a few questions with a stated **requirement** — answer cold, before scrolling to the key. Each question should demand 2–4 discrete things (mechanism + boundary + failure mode), not a single definition. **No separate "client one-liner" is required** *(retired by Reese — a concise, correct concept answer banks it; the extra restatement was ceremony)*. The gated **answer key** lives at the very bottom of the file.
 3. **PART 2 — coding exercises**: a few tiny, isolated stub functions with `TODO` hints, **boilerplate/frameworks pre-filled** so he focuses on the *concept and the flow, not syntax*. Include only the scaffolding the concept needs — nothing more. **The TODO states intent and shape, never the solution line** — describe *what* the function must do and the algorithm in words ("split into words, then convert the word count to a token estimate using the ratio"), and pre-fill only genuine scaffolding (imports, a framework signature, a pre-built data structure). Copy-typing a pre-written answer line out of the comment is not struggling — if the TODO contains the code that makes the test pass, it's too easy. These drill the *facets* of the unit; the integrated build is the Project below.
 4. **PART 3 — project (the Step 7 build)**: the same bank-gate build you named in Step 7, written as a scaffolded stub he completes — pre-fill genuine scaffolding only, TODOs state intent not the solution line, same struggle-first bar as the exercises. This is where the drilled facets come together into the thing that banks the unit.
 

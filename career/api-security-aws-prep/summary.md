@@ -2,31 +2,76 @@
 
 > **Created 2026-08-10 under a 7-day clock.** Screening cleared for a backend role: FastAPI + OAuth2/JWT/mTLS + Okta + AWS (ECS/ALB/Route 53/ACM/WAF/CloudWatch) in a HIPAA environment. Next round ~**2026-08-17**, covering all three formats — verbal Q&A, live coding, and system design. This track outranks everything else in the system until then. See `DECISIONS.md` (2026-08-10).
 
-**What this is:** A ground-up curriculum in secure API engineering — FastAPI at depth, OAuth2/OIDC/JWT, mTLS, and the AWS platform layer that actually fronts a production API. Built like the AI and Python curricula: each unit is learned in-catalog via `/learn api`, **researched live against current official docs**, then handed to `/sharpen` (defend cold) and `/drill` (retain). This roadmap is the *what to cover*; the teaching is generated fresh each session so it never goes stale.
+**What this is:** A ground-up curriculum in secure API engineering, taught in-catalog via `/learn api`, **researched live against current official docs**, then handed to `/sharpen` (defend cold) and `/drill` (retain). This roadmap is the *what to cover and how deep*; the teaching is generated fresh each session so it never goes stale.
 
-**The framing — two different jobs, don't conflate them.** This track has an unusual shape because the gap analysis came back split:
+**The framing — build UP from zero.** Assume nothing is owned. Every unit starts at `[ ]`, **including things you ship at work today**, because the goal isn't *exposure* — it's being able to produce it cold under questioning. A thing you use daily but can't explain *why this over that* is the thing you'll fumble when the interviewer pushes one level past the happy path.
 
-- **§1, §2, §7, §9 are RECALIBRATION.** You already do these in production. `CAREER_LOG.md:52` rates FastAPI "Gap" while CreatorClip runs ~37k LOC of it with 1,774 test functions, and `CAREER_LOG.md:62` rates CI/CD "Gap" against 5+ live workflows and auto-deploy-on-main. The gap is not knowledge — it's **never having had to say it out loud.** Work these fast, out loud, anchored to your own code.
-- **§3, §4, §5, §6, §8 are ACQUISITION FROM ZERO.** A full-repo grep on 2026-08-10 returned **zero mentions** of mTLS, Okta, OIDC, SAML, ECS, ALB, Route 53, API Gateway, ACM, Private CA, WAF, Shield, CloudWatch, or Swagger. Not as gaps, not as queue items — absent. These need real reps, and §6 needs a real deploy.
+The one place your existing work is used: **as the worked example.** Where you have shipped code, the teaching anchors to CreatorClip or CFO Agent instead of a toy app. That's salience, not a shortcut — the unit still gets taught from the mechanism up.
 
 **Source of truth:** the job description (transcribed verbatim in Interview Intel below) and `career/helpful_notes_and_guides/AI Engineering Master Guide.md` for the mastery standard ("can I explain why THIS over THAT?").
 
-**The pipeline:**
-```
-/learn          →   /sharpen        →   /drill
-acquire (here)      defend cold         retain (spaced rep)
-researched live     100% / tier bar     against forgetting curve
-```
+---
 
-**Tiers** (interview-priority weighted, not generic importance):
-- **Tier 1 — They WILL test this** → 100%, "can teach it." Mechanism + why-this-over-that + failure mode. These are the requirements stated explicitly in the posting.
-- **Tier 2 — Likely probed / sets you apart** → Pareto 80/20, "explain the decision." The Desired Skills, and the depth that turns a pass into a "we want this person."
+## 📏 Depth bars — the whole point of this file
 
-**Status keys:** `[ ]` not started · `[~]` in progress / needs another pass · `[x]` learned (date) → can defend cold → enters `/sharpen` then `/drill` rotation.
+7 days × ~3hr ≈ **21 hours.** Taught genuinely from scratch, everything below prices out at ~19 hours of
+teaching + ~9 of building = **~28 hours. It does not fit.** So every unit carries a bar, and the bar is the
+rationing decision — it says how long to spend and what "done" means.
 
-**How to use:** Work top-down within a section. Under a 7-day clock the day-map at the bottom overrides pure dependency order. Don't skip a `[ ]` because you "already know it" — the whole failure mode this track exists to fix is *knowing something you can't say*.
+| Bar | Means | Done sounds like | Budget |
+|---|---|---|---|
+| **`[A]` BUILD IT** | Implement from scratch cold; name the failure mode | *"I can write it, say why this over that, and what breaks if I'm wrong."* | ~30 min |
+| **`[B]` EXPLAIN IT** | Defend the decision, not the internals | *"I know when to reach for it and the one-line why."* | ~15 min |
+| **`[C]` NAME IT** | One sentence — enough to not be blindsided | *"I know what that is and where it shows up."* | ~5 min |
 
-**The build is the spine.** Every Tier-1 section has a matching issue in `~/workspace/secure-api-lab/docs/issues.md`, driven by `/issue-workflow`. A concept isn't banked until the code exists — `concept_queue.md:93`, *"grilling without building is passive consumption with extra steps."* Worksheets, where a unit warrants one, land at `career/lesson_assignments/apisec-<section>-<kebab-unit>.py`.
+**Where the `[A]`s went, and why:** they cluster on what this interview will make you *produce* — the JWT
+validation path, the OAuth2 flow map, async/DI, `response_model`, cert-as-identity, the AWS request path,
+and the negative test matrix. Everything the JD lists under *Desired* rather than required is capped at `[B]`.
+
+**The honest consequence, stated up front:**
+- **§1–§7 and §10 get taught properly.** These are the posting's requirements.
+- **§8 (HIPAA) and §9 (CI/CD) are `[B]`/`[C]` only.** They're the *Desired* column. Studied honestly, claimed accurately — not mastered.
+- **§11 (positioning + stories) runs in evenings, never in the peak window.** It's drafting, not learning.
+- **If the week compresses further: cut Issue 8, never Issue 7.**
+
+**Status keys:** `[ ]` not started · `[~]` in progress / needs another pass · `[x]` learned (date) → enters `/sharpen` then `/drill` rotation.
+
+---
+
+## 🔁 How a session runs
+
+The unit of work is a **chunk** (~20–30 min), not a section. Each chunk is one loop:
+
+> **Teach one idea (~8 min)** → **2–4 inline checks** → **one tiny snippet (3–8 lines)** → next chunk.
+
+**The three check formats** — all built on the house question mold (*why THIS over THAT · when it matters · what breaks if you get it wrong*):
+
+1. **Fill-in-the-blank** — for the lists that have to be automatic.
+   *"Validation order: verify the ___ before reading any claim, because otherwise ___."*
+2. **Short answer** — 1–3 sentences, cold, no notes.
+3. **Spot-the-bug** — a 3–8 line snippet with one real vulnerability in it. Name it before being told.
+   *(The highest-signal format for a security interview: it's how they'll actually probe.)*
+
+**At the end of each section:** the capstone build issue, then the section's worksheet lands in
+`career/lesson_assignments/apisec-<section>-<kebab-name>.py` — same house shape as always
+(soliloquy → PART 1 short answers → PART 2 stubs with intent-only TODOs → PART 3 the capstone →
+`_run_tests()` → gated answer key).
+
+## 🎯 Section → capstone map
+
+One project per section. These are the already-written issues in `~/workspace/secure-api-lab/docs/issues.md`.
+
+| Section | Capstone |
+|---|---|
+| §1 + §2 | **Issue 1** — FastAPI skeleton + OpenAPI contract |
+| §3 | **Issue 2** — Okta tenant issuing real tokens |
+| §4 + §7 | **Issues 3 + 4** — validation dependency + negative test matrix |
+| §5 | **Issue 5** — mTLS with a local CA |
+| §8 | **Issue 6** — audit logging with PHI redaction |
+| §6 | **Issue 7** — the AWS deploy *(load-bearing)* |
+| §9 | **Issue 8** — CI/CD with OIDC federation |
+| §10 | *No code* — the diagram, drawn cold in under 4 minutes |
+| §11 | *No code* — the recorded mock |
 
 ---
 
@@ -46,196 +91,257 @@ researched live     100% / tier bar     against forgetting curve
 
 **How to read it (the subtext):**
 
-- **"high-performance, secure, and asynchronous"** — three words, three separate probes. *Asynchronous* means they will ask about the event loop and what happens when you block it. *High-performance* means workers, topology, pagination, streaming. *Secure* is the whole middle half of the posting. → **§1.**
-- **"API contract definition and maintenance using OpenAPI/Swagger"** — the word **maintenance** is doing work here. They're not asking "does FastAPI generate a spec" (it does, for free). They're asking whether you've *versioned* a contract, detected a breaking change, and handed a spec to a consuming team. → **§2.**
-- **"exposing APIs that support integration with IDP (like Okta)"** — this is the single most revealing line in the posting. "Exposing APIs that support integration with" means **your API is a Resource Server, not an authorization server.** You validate tokens Okta issued; you never issue them. If you get this backwards in the room, it's visible immediately. → **§3.**
-- **"mTLS for service-to-service"** — note the qualifier. They're not doing mTLS for browsers; this is internal service auth. That tells you they have a service mesh or an internal PKI, and it's why AWS Private CA is in the very next bullet. → **§5.**
-- **"ECS, ALB, Route 53, S3, API Gateway" + ACM/PCA + WAF/Shield + CloudWatch** — this is a complete, coherent request path, not a random service list. Learn it as **one diagram**, not eight facts. → **§6, §10.**
-- **"Proven ability to deploy, secure, and operate APIs on AWS"** — *proven* and *operate*. This is the bullet you cannot talk your way past, and it's why Issue 7 of the build is a real deploy. → **§6.**
-- **"test authentication, authorization, headers, and request/response flows"** — they are describing a **negative test matrix**, almost verbatim. Expired, wrong audience, bad signature, missing scope, missing header. → **§7.**
-- **HIPAA / PHI** — listed as *Desired*, not required. That's your honest opening: study it genuinely, claim it accurately. → **§8, §11.**
-
-**Where to spend the peak window:** §3, §4, §5, §6. That's ~70% of the posting and ~100% of your actual gap. §1/§2/§7/§9 are confirm-and-say-out-loud, not learn. §10 is the highest-leverage single hour of the week.
+- **"high-performance, secure, and asynchronous"** — three words, three separate probes. *Asynchronous* means the event loop and what happens when you block it. *High-performance* means workers, topology, pagination. *Secure* is the whole middle half of the posting. → **§1**
+- **"contract definition and maintenance"** — **maintenance** is the tell. Not "does FastAPI generate a spec" (it does, free) but: have you *versioned* one, caught a breaking change, handed a spec to a consuming team? → **§2**
+- **"exposing APIs that support integration with IDP (like Okta)"** — the most revealing line in the posting. It means **your API is a Resource Server, not an authorization server.** You validate tokens Okta issued; you never issue them. Getting this backwards is visible immediately. → **§3**
+- **"mTLS for service-to-service"** — note the qualifier. Not browsers; internal service auth. That implies a mesh or internal PKI, and it's why Private CA is the very next bullet. → **§5**
+- **"ECS, ALB, Route 53, S3, API Gateway" + ACM/PCA + WAF/Shield + CloudWatch** — a complete request path, not a random list. Learn it as **one diagram**. → **§6, §10**
+- **"Proven ability to deploy, secure, and operate"** — *proven* and *operate*. The one bullet you cannot talk past; it's why Issue 7 is a real deploy. → **§6**
+- **"test authentication, authorization, headers, and request/response flows"** — they are describing a **negative test matrix**, nearly verbatim. → **§7**
+- **HIPAA / PHI** — *Desired*, not required. That's the honest opening. → **§8, §11**
 
 ---
 
 ## ⚠ Currency Watch — verified live 2026-08-10; re-verify per unit
 
-The ecosystem moved, and several of these are *recent enough that most candidates won't know them.* That's the differentiator.
+Several of these are recent enough that most candidates won't know them. That's the differentiator.
 
-- **`python-jose` is out; `PyJWT` is in.** The official FastAPI security tutorial migrated from python-jose to PyJWT — python-jose is effectively unmaintained. Half the FastAPI/JWT tutorials online still teach python-jose; using it dates you instantly. For RS256 (which is what you need with Okta) install **`pyjwt[crypto]`** — the `cryptography` extra is required for asymmetric algorithms. → [FastAPI OAuth2-JWT docs](https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/)
-- **OAuth 2.1 is still an Internet-Draft, not an RFC** — `draft-ietf-oauth-v2-1-15` as of March 2026. Say *"OAuth 2.1 is the de-facto 2026 baseline, though it's still a draft"* — the precision is a credibility marker, and claiming it's a finished RFC is a small, catchable error. What it changes: **implicit grant removed**, **resource-owner-password-credentials removed**, **PKCE required for every client including confidential ones**, exact-match redirect URI validation, refresh-token rotation strongly recommended. → [oauth.net/2.1](https://oauth.net/2.1/)
-- **🔥 ALB can now verify JWTs itself — shipped 2025-11-12.** ALB supports client-credentials-flow JWT verification natively: you give the listener a JWKS endpoint and issuer, and it validates signature, expiry, and claims **before the request reaches your app**. HTTPS listeners only. This is nine months old and directly on-topic for this JD — most candidates will not know it exists. It reframes the §4 question "where do you validate the token?" into a real architectural tradeoff (edge vs in-app, and the defense-in-depth answer is *both*). → [AWS announcement](https://aws.amazon.com/about-aws/whats-new/2025/11/application-load-balancer-jwt-verification/)
-- **ALB mTLS has two distinct modes** — don't blur them. **Passthrough**: ALB completes the handshake and forwards the whole client cert chain in the `X-Amzn-Mtls-Clientcert` header for your app to authorize on. **Verify**: you create a **trust store** resource, upload a CA bundle + CRLs, attach it to the listener, and ALB rejects bad certs itself. Related headers exist for granularity: `X-Amzn-Mtls-Clientcert-Subject`, `-Issuer`, `-Serial-Number`, `-Validity`. → [ALB mTLS docs](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/configuring-mtls-with-elb.html)
-- **AWS Private CA has two pricing tiers, and the gap is the story.** General-purpose mode: **~$400/CA/month**. Short-lived-certificate mode: **~$50/CA/month + $0.058/cert**, max 7-day validity. The short-lived tier exists precisely because modern service-to-service mTLS wants frequently-rotated certs. Knowing both numbers *and why the cheap one is capped at 7 days* is a genuinely strong answer about internal PKI economics. **Neither gets created during this sprint** — see the cost guardrails. → [AWS Private CA pricing](https://aws.amazon.com/private-ca/pricing/)
-- **Okta specifics that bite people:** you need a **custom authorization server** to protect your own API (the org default one won't mint custom scopes). The **client-credentials flow cannot request OpenID scopes** — no user context exists, so you must define a custom scope. A resource server must validate **both `aud` and `cid`**, not just `aud`. Cache the JWKS and only re-fetch when an unknown `kid` appears — don't fetch per request, and don't cache forever. → [Okta client credentials guide](https://developer.okta.com/docs/guides/implement-grant-type/clientcreds/main/)
-- **Pydantic v2 / FastAPI current idioms** (carried over from the Python track, still load-bearing here): `model_dump()` not `.dict()`, `@field_validator` not `@validator`, `pydantic-settings` for `BaseSettings`, `lifespan` context manager not `@app.on_event`, and `Annotated[X, Depends(...)]` over the old `= Depends(...)` default-value form.
-- **`httpx.ASGITransport`** is the current async test-client pattern; `TestClient` remains fine for sync tests.
+- **`python-jose` is out; `PyJWT` is in.** The official FastAPI security tutorial migrated; python-jose is effectively unmaintained. Half the tutorials online still teach it. For RS256 (what Okta uses) install **`pyjwt[crypto]`**. → [FastAPI docs](https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/)
+- **OAuth 2.1 is still an Internet-Draft, not an RFC** — `draft-ietf-oauth-v2-1-15` as of March 2026. Say *"the de-facto 2026 baseline, though still a draft"* — the precision is a credibility marker. Changes: implicit removed, ROPC removed, **PKCE required for every client including confidential ones**, exact-match redirect URIs, refresh-token rotation. → [oauth.net/2.1](https://oauth.net/2.1/)
+- **🔥 ALB can verify JWTs itself — shipped 2025-11-12.** Give the listener a JWKS endpoint and issuer; it validates signature, expiry, and claims before the request reaches your app. HTTPS listeners only, supports client-credentials. Nine months old and directly on-topic. → [AWS announcement](https://aws.amazon.com/about-aws/whats-new/2025/11/application-load-balancer-jwt-verification/)
+- **ALB mTLS has two distinct modes.** **Passthrough**: ALB forwards the cert chain in `X-Amzn-Mtls-Clientcert` for your app to authorize on. **Verify**: a **trust store** resource with a CA bundle + CRLs, and ALB rejects bad certs itself. Related headers: `-Subject`, `-Issuer`, `-Serial-Number`, `-Validity`. → [ALB mTLS docs](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/configuring-mtls-with-elb.html)
+- **AWS Private CA has two tiers and the gap is the story.** General-purpose **~$400/CA/month**; short-lived-certificate mode **~$50/CA/month + $0.058/cert**, max 7-day validity. The cheap tier exists *because* modern service-to-service mTLS wants frequently-rotated certs. → [pricing](https://aws.amazon.com/private-ca/pricing/)
+- **Okta specifics that bite people:** you need a **custom authorization server** to protect your own API. **Client-credentials cannot request OpenID scopes** — no user exists, so define a custom scope. Validate **both `aud` and `cid`**. Cache JWKS; re-fetch only on an unknown `kid`. → [Okta guide](https://developer.okta.com/docs/guides/implement-grant-type/clientcreds/main/)
+- **Pydantic v2 / FastAPI idioms:** `model_dump()` not `.dict()`, `@field_validator` not `@validator`, `pydantic-settings` for `BaseSettings`, `lifespan` not `@app.on_event`, `Annotated[X, Depends(...)]` not `= Depends(...)`.
+- **`httpx.ASGITransport`** is the current async test-client pattern; `TestClient` is fine for sync.
 
 ---
 
-## Section 1 — FastAPI at depth (Tier 1) · *recalibration*
+## Section 1 — FastAPI at depth
+**Chunks:** 1.A the event loop → 1.B dependency injection → 1.C contracts & response shaping → 1.D lifecycle & errors
+**Capstone:** Issue 1 · **Budget:** ~150 min teaching + ~60 build
 
-*You have ~37k LOC of this in production across CreatorClip and CFO Agent. Nothing here is new information — it is the vocabulary for things you already do. Work it out loud, fast, and anchor every single answer to your own code.*
+### 1.A — The event loop
+- [ ] **1.1 ASGI vs WSGI** `[B] ~15m` — the concurrency model; why "high-performance" in this JD means the loop; uvicorn/gunicorn worker topology.
+- [ ] **1.2 `async def` vs `def`, and the threadpool trap** `[A] ~30m` — FastAPI runs plain `def` handlers in a threadpool; a blocking call inside an `async def` stalls **every** request on that worker. Covers `run_in_executor` and how to spot a blocking call in a library you didn't write. *The single most likely "do you actually understand async" question.* **Breaks if wrong:** one sync DB driver in an async handler and your p99 goes to seconds under any concurrency.
 
-- [ ] **ASGI vs WSGI, and why FastAPI is async** — the concurrency model, why "high-performance" in the JD means the event loop, uvicorn/gunicorn worker topology. `T1`
-- [ ] **`async def` vs `def` and the threadpool trap** — FastAPI runs plain `def` handlers in a threadpool; a blocking call inside an `async def` stalls the entire loop. *The single most likely "do you actually understand async" question in the room, and you already own the underlying concept cold (`CAREER_LOG.md:56`).* `T1`
-- [ ] **`Depends()` and why auth belongs in a dependency** — DI as the composition point, sub-dependencies, caching, `dependency_overrides` as the testing seam. *This is the mechanism the entire §4 JWT design rests on.* `T1`
-- [ ] **Pydantic v2 as the request/response contract** — validation at the boundary, `model_dump()`, why type params make the generated OpenAPI schema precise. `T1`
-- [ ] **`response_model` as a PHI-leak control** — response filtering isn't cosmetic; it's how you enforce HIPAA minimum-necessary at the serialization layer. *Connects §1 to §8 — say this connection in the interview.* `T1`
-- [ ] **Lifespan, exception handlers, and the error contract** — startup/shutdown resources, consistent error envelopes, never leaking internals in a 500. `T1`
-- [ ] **Middleware vs dependency — when each** — cross-cutting (correlation IDs, logging, timing) vs per-route authorization. `T1`
+### 1.B — Dependency injection
+- [ ] **1.3 `Depends()` and why auth belongs in a dependency** `[A] ~30m` — DI as the composition point; sub-dependencies; per-request caching; `dependency_overrides` as the testing seam. *The mechanism §4's entire JWT design rests on.* **Breaks if wrong:** auth-in-a-decorator can't be overridden in tests, so the auth path ships untested.
+- [ ] **1.4 The `Annotated` idiom** `[C] ~5m` — current form vs the old default-value style.
 
-## Section 2 — REST + OpenAPI/Swagger as a maintained contract (Tier 1) · *recalibration*
+### 1.C — Contracts & response shaping
+- [ ] **1.5 Pydantic v2 as the request contract** `[B] ~15m` — validation at the boundary; `model_dump()`; why precise type params make the generated OpenAPI schema precise.
+- [ ] **1.6 `response_model` as a PHI-leak control** `[A] ~30m` — response filtering isn't cosmetic; it's how HIPAA minimum-necessary gets enforced at the serialization layer. *Say this §1→§8 connection in the room — it's what separates studying a list from understanding a system.* **Breaks if wrong:** you return the ORM object, and every column ships — including the ones the caller has no right to.
 
-*Syllabus already existed at `mid-python-developer-prep/summary.md:79-89`, 100% unchecked. The JD's word is "maintenance" — aim there.*
+### 1.D — Lifecycle & errors
+- [ ] **1.7 `lifespan`** `[C] ~5m` — startup/shutdown resources; replaced the deprecated `@app.on_event`.
+- [ ] **1.8 Exception handlers and the error contract** `[B] ~15m` — consistent envelopes; never leaking internals or stack traces in a 500.
+- [ ] **1.9 Middleware vs dependency — when each** `[C] ~5m` — cross-cutting (correlation IDs, timing) vs per-route authorization.
 
-- [ ] **Verbs, status codes, and the 401/403/422 distinction** — 401 = I don't know who you are; 403 = I know, you can't; 422 = I understood, the body is invalid. *Get this wrong and it's a visible tell.* `T1`
-- [ ] **Statelessness, idempotency, and safe retries** — which verbs are idempotent, idempotency keys, why this matters behind a load balancer that retries. `T1`
-- [ ] **Pagination, versioning, and breaking changes** — cursor vs offset; URL vs header versioning; what actually constitutes a breaking change to a consumer. `T1`
-- [ ] **FastAPI's auto-generated OpenAPI + `securitySchemes`** — how the spec is produced, declaring OAuth2/bearer security in it, `/docs` vs `/redoc`, and locking the spec down in prod. `T1`
-- [ ] **Contract-first vs code-first — the actual tradeoff** — when a consuming team forces contract-first; exporting the spec as a CI artifact and diffing it to catch breaking changes. *This is the "maintenance" answer.* `T1`
+---
 
-## Section 3 — OAuth2, OIDC, and integrating with Okta (Tier 1) · *from zero*
+## Section 2 — REST + OpenAPI as a maintained contract
+**Chunks:** 2.A semantics → 2.B the contract
+**Capstone:** Issue 1 (shared with §1) · **Budget:** ~85 min
 
-*Zero repo footprint on Okta, OIDC, or SAML. `CAREER_LOG.md:78` says you can't currently draw the authn/authz decision tree. You HAVE shipped OAuth2 (YouTube publishing in CreatorClip) and you have real earned judgment about it — you cut auto-upload from v1 over sensitive-scope review risk (`agenda.md:131`). Use that story; it's better than most candidates'.*
+### 2.A — Semantics
+- [ ] **2.1 Verbs, and the 401 / 403 / 422 distinction** `[A] ~30m` — 401 = I don't know who you are · 403 = I know, and you can't · 422 = I understood, the body is invalid. Plus 200 vs 201 vs 204. *Getting this wrong is a visible tell, and §4 depends on it: a valid token missing a scope is **403**, not 401.* **Breaks if wrong:** clients build retry logic against the wrong signal and hammer you on an error that will never resolve.
+- [ ] **2.2 Statelessness, idempotency, and safe retries** `[B] ~15m` — which verbs are idempotent, idempotency keys, why it matters behind a load balancer that retries.
+- [ ] **2.3 Pagination** `[C] ~5m` — cursor vs offset, and when offset breaks.
 
-- [ ] **OAuth2 roles and the grant-type map** — resource owner / client / authorization server / **resource server**, and which grant for which situation. *Your API is the resource server. Internalize that framing before anything else.* `T1`
-- [ ] **What OAuth 2.1 removed and why** — implicit and ROPC gone, PKCE now required for all clients, exact-match redirect URIs. Each removal traces to a specific attack. ⚠ *still a draft — say so* `T1`
-- [ ] **Client credentials flow for service-to-service** — no user context, no OpenID scopes, custom scopes required. *This is the flow the JD's "service-to-service" bullet implies.* `T1`
-- [ ] **Authorization code + PKCE for user flows** — the code interception attack PKCE closes, and why confidential clients need it too now. `T1`
-- [ ] **OIDC vs OAuth2 = authentication vs authorization** — the ID token vs the access token, why you never authorize off an ID token, `/.well-known/openid-configuration` discovery. *The decision tree `CAREER_LOG.md:78` says you're missing.* `T1`
-- [ ] **Okta concretely** — custom authorization server, issuer, audience, custom scopes and claims, the JWKS endpoint, and validating **both `aud` and `cid`**. `T1`
-- [ ] **Scopes vs roles vs claims** — coarse API-level permission vs application RBAC, and where each is enforced. `T1`
+### 2.B — The contract
+- [ ] **2.4 Versioning and breaking changes** `[B] ~15m` — URL vs header versioning; what actually constitutes a breaking change to a consumer.
+- [ ] **2.5 FastAPI's generated OpenAPI + `securitySchemes`** `[B] ~15m` — how the spec is produced, declaring OAuth2/bearer security in it, `/docs` vs `/redoc`, locking it down in prod.
+- [ ] **2.6 Contract-first vs code-first** `[C] ~5m` — when a consuming team forces contract-first; exporting the spec as a CI artifact and diffing it. *This is the "maintenance" answer.*
 
-## Section 4 — JWT validation done correctly (Tier 1) · *from zero*
+---
 
-*`concept_queue.md:67` has "JWT + API key patterns" as Tier 2, unchecked. It is not Tier 2 for this interview — the JD says "secure handling and validation of JWT tokens" explicitly.*
+## Section 3 — OAuth2, OIDC, and integrating with Okta
+**Chunks:** 3.A the roles → 3.B the flows → 3.C OIDC vs OAuth2 → 3.D Okta concretely
+**Capstone:** Issue 2 · **Budget:** ~170 min teaching + ~45 build *(3.7–3.8 spill to evening if needed)*
 
-- [ ] **Anatomy: header, payload, signature** — base64url is encoding, not encryption; **anyone can read a JWT**; never put PHI in one. `T1`
-- [ ] **RS256 vs HS256 and why asymmetric with an external IdP** — you hold no secret, Okta signs, you verify with a public key. `T1`
-- [ ] **JWKS: fetch, `kid` selection, caching, rotation** — cache until an unknown `kid` appears; the failure mode of both over-fetching and never re-fetching. `T1`
-- [ ] **The validation checklist, memorized cold** — signature · `iss` · `aud` · `exp` · `nbf`/`iat` · **algorithm allow-list**. *Be able to recite six items without hesitating.* `T1`
-- [ ] **The attacks: `alg: none` and RS256→HS256 confusion** — why you pin algorithms explicitly, and why you never trust the payload before verifying the signature. *Naming these unprompted is a strong senior signal.* `T1`
-- [ ] **Revocation — the honest hard problem** — JWTs are bearer tokens valid until expiry; the answers are short TTL + refresh rotation, introspection, or a denylist, each with a real cost. `T1`
-- [ ] **Where to validate: edge vs app** — ALB JWT verification (⚠ new 2025-11) and API Gateway JWT authorizers vs in-app dependency; defense in depth says both, and know why. ⚠ *very recent — verify live* `T1`
+### 3.A — The roles
+- [ ] **3.1 The four roles, and which one you are** `[A] ~30m` — resource owner / client / authorization server / **resource server**. Your API validates; it never issues. *Internalize this framing before anything else in the section — the JD's Okta bullet is entirely about it.* **Breaks if wrong:** you design token issuance into a service that should only verify, and the whole architecture answer collapses.
 
-## Section 5 — mTLS for service-to-service (Tier 1) · *from zero*
+### 3.B — The flows
+- [ ] **3.2 The grant-type map, and what OAuth 2.1 removed** `[A] ~30m` — implicit and ROPC gone, PKCE now required for confidential clients too, exact-match redirect URIs. Each removal traces to a specific attack — know which. ⚠ *still a draft; say so precisely* **Breaks if wrong:** recommending implicit flow in 2026 dates you a decade.
+- [ ] **3.3 Client credentials, for service-to-service** `[A] ~30m` — no user context, no OpenID scopes, custom scopes required, client authentication methods. *This is the flow the JD's service-to-service bullet implies, and the one Issue 2 uses.* **Breaks if wrong:** you try to request `openid` in a machine flow and spend an hour on a confusing error.
+- [ ] **3.4 Authorization code + PKCE** `[B] ~15m` — the code-interception attack PKCE closes, and why confidential clients need it now too.
 
-*Zero repo footprint. Learn it hands-on with a local openssl CA — see the cost guardrails on why NOT with AWS Private CA.*
+### 3.C — OIDC vs OAuth2
+- [ ] **3.5 OIDC vs OAuth2 = authentication vs authorization** `[A] ~30m` — ID token vs access token, why you **never** authorize off an ID token, the `/.well-known/openid-configuration` discovery document. *The decision tree `CAREER_LOG.md` currently records as missing.* **Breaks if wrong:** you accept an ID token as an API credential — a real and common vulnerability, not a theoretical one.
 
-- [ ] **TLS handshake, then what "mutual" adds** — server proves identity to client; mTLS makes the client prove identity back. `T1`
-- [ ] **The client certificate as an identity** — extracting subject/SAN, mapping it to a service principal, why this authenticates the *workload* not the *user*. `T1`
-- [ ] **mTLS vs JWT vs both** — mTLS authenticates the channel and the calling workload; the JWT carries the caller's authorization context. **Both, layered, is the zero-trust answer.** *If you can articulate only one thing from §5, make it this.* `T1`
-- [ ] **Trust chains, CA hierarchy, revocation** — root vs intermediate, why you don't sign with the root, CRL vs OCSP and why revocation is genuinely hard. `T1`
-- [ ] **Termination: ALB passthrough vs verify mode** — the `X-Amzn-Mtls-Clientcert` header family vs an ALB trust store with a CA bundle. ⚠ *two distinct modes, don't blur them* `T1`
-- [ ] **Cert rotation and expiry — the #1 production failure mode** — automate or it will page you at 3am. Ties directly to why Private CA has a short-lived-cert tier. *Say this out loud in the room; it reads as operational experience.* `T1`
+### 3.D — Okta concretely
+- [ ] **3.6 Okta's model** `[B] ~15m` — custom authorization server vs the org default, issuer, audience, custom scopes and claims, the JWKS endpoint, validating **both `aud` and `cid`**.
+- [ ] **3.7 Scopes vs roles vs claims** `[B] ~15m` — coarse API permission vs application RBAC, and where each is enforced.
+- [ ] **3.8 SAML** `[C] ~5m` — what it is, why enterprises still have it, why it isn't in your path.
 
-## Section 6 — The AWS API & security stack as one request path (Tier 1) · *from zero*
+---
 
-*The whole section is one diagram. Learn it as a path, not as eight services. Issue 7 of the build deploys it for real.*
+## Section 4 — JWT validation done correctly
+**Chunks:** 4.A anatomy & signing → 4.B the checklist → 4.C JWKS & rotation → 4.D the attacks
+**Capstone:** Issues 3 + 4 · **Budget:** ~140 min teaching + ~90 build
+*The highest-density section in the sprint. If a day gets sacrificed, it is never this one.*
 
-- [ ] **The path, end to end** — Route 53 → ACM cert → WAF → ALB → ECS Fargate task → CloudWatch. *Draw it from memory in under 4 minutes. This is the §10 deliverable.* `T1`
-- [ ] **ECS Fargate** — task definition vs service vs task; **task role vs execution role** (*execution role = what ECS needs to pull the image, write logs, inject secrets; task role = what your app code can call*) — a classic interview question; ECR; health checks; rolling deploys. `T1`
-- [ ] **ALB** — listeners, rules, target groups, health checks, TLS termination; mTLS modes; and ⚠ native JWT verification (2025-11). `T1`
-- [ ] **Route 53 + ACM** — alias records vs CNAME, health checks and failover; DNS-validated public certs and auto-renewal; why ACM public certs are free and can't be exported. `T1`
-- [ ] **API Gateway vs ALB — when each** — HTTP API vs REST API, JWT authorizers, usage plans and throttling, request validation, VPC Link; and the honest cost/latency tradeoff vs an ALB. `T1`
-- [ ] **WAF and Shield** — managed rule groups, rate-based rules, what a web ACL attaches to, count-mode before block-mode; Shield Standard (free, always on) vs Advanced (~$3k/mo — know the number, never enable it). `T1`
-- [ ] **CloudWatch** — structured JSON logs, log groups and retention, metric filters, alarms, correlation IDs; what you alert on for an API (5xx rate, p99 latency, 401 spike as an attack signal). `T1`
-- [ ] **S3 + KMS for an API** — Block Public Access, bucket policy vs IAM, SSE-KMS, presigned URLs and their expiry as an access-control decision. `T1`
-- [ ] **IAM: roles over keys** — the assume-role model, least privilege, and why there should be no static access key anywhere in this architecture. `T1`
+### 4.A — Anatomy & signing
+- [ ] **4.1 Header, payload, signature** `[A] ~30m` — base64url is **encoding, not encryption**; anyone can read a JWT; therefore **never put PHI in one**. Claim vocabulary: `iss` `sub` `aud` `exp` `nbf` `iat` `jti` `scp` `cid` `kid`. **Breaks if wrong:** you store something sensitive in a token and hand it to the client.
+- [ ] **4.2 RS256 vs HS256** `[B] ~15m` — symmetric vs asymmetric; with an external IdP you hold no secret, Okta signs, you verify with a public key.
 
-## Section 7 — API testing & validation (Tier 1) · *recalibration*
+### 4.B — The checklist
+- [ ] **4.3 The six-item validation checklist, memorized** `[A] ~30m` — signature · `iss` · `aud` · `exp` · `nbf`/`iat` · **algorithm allow-list**, plus Okta's `cid`. *Recite six items without hesitating; this is the most likely single question in the interview.* **Breaks if wrong:** skip `aud` and you accept a token minted for a completely different service — a full auth bypass.
 
-*You have 1,774 test functions in CreatorClip and 177 in CFO Agent. The JD is describing a negative test matrix — you just need to name what you already do.*
+### 4.C — JWKS & rotation
+- [ ] **4.4 JWKS: fetch, `kid` selection, caching, rotation** `[A] ~30m` — cache until an unknown `kid` appears; the failure mode of fetching per-request (latency + a DoS on your IdP) *and* of caching forever (rotation breaks you at 3am). **Breaks if wrong:** the IdP rotates keys and every request 401s until someone redeploys.
 
-- [ ] **`TestClient` vs `httpx.ASGITransport`** — sync vs the current async pattern. ⚠ `T1`
-- [ ] **`dependency_overrides` to swap auth in tests** — the reason §1's "auth belongs in a dependency" matters practically. `T1`
-- [ ] **Minting test tokens** — a local RSA keypair + a fake JWKS endpoint so the auth path is tested for real, not mocked away. `T1`
-- [ ] **The negative matrix** — expired · wrong `aud` · wrong `iss` · bad signature · `alg: none` · missing scope · missing/malformed header. *Seven cases. The JD asks for exactly this.* `T1`
-- [ ] **Contract testing from the OpenAPI spec** — schemathesis / property-based testing against the generated schema; Postman/newman in CI. `T1`
+### 4.D — The attacks
+- [ ] **4.5 `alg: none` and RS256→HS256 confusion** `[A] ~30m` — the two classic JWT attacks. Confusion: sign with the *public* key as an HMAC secret, and a naive verifier accepts it. The fix in both cases is one line: pin the algorithm. *Naming these unprompted is a strong senior signal.* **Breaks if wrong:** anyone who can read your public key can mint valid tokens.
+- [ ] **4.6 Revocation — the honest hard problem** `[C] ~5m` — bearer tokens are valid until expiry; short TTL + refresh rotation vs introspection vs denylist, each with a real cost.
 
-## Section 8 — HIPAA & PHI for an API engineer (Tier 2) · *from zero*
+---
 
-*Listed as Desired, not required. Study it genuinely; claim it accurately. Your own prior guidance applies verbatim — `jobs/natera-sr-fwd-deployed/README.md:37`, "do not overclaim."*
+## Section 5 — mTLS for service-to-service
+**Chunks:** 5.A TLS → mutual → 5.B cert as identity → 5.C mTLS vs JWT → 5.D termination & rotation
+**Capstone:** Issue 5 · **Budget:** ~125 min teaching + ~60 build
 
-- [ ] **The three rules at altitude** — Privacy, Security, Breach Notification; what "covered entity" and "business associate" mean and which one a vendor engineer is. `T2`
-- [ ] **The Security Rule's technical safeguards, mapped to API surfaces** — access control → authn/authz; **audit controls** → who accessed which record when; integrity → tamper evidence; transmission security → TLS everywhere. `T2`
-- [ ] **Audit logging without logging PHI** — log the subject, actor, action, and timestamp; never the payload. Redaction and structured-log discipline. *Directly implemented in Issue 6 of the build.* `T2`
-- [ ] **Minimum necessary → `response_model`** — compliance enforced at the serialization layer, not by policy documents. `T2`
-- [ ] **Encryption in transit and at rest** — TLS 1.2+ everywhere, KMS, key rotation, and what "addressable vs required" actually means in the Security Rule. `T2`
-- [ ] **BAA + AWS shared responsibility + HIPAA-eligible services** — what AWS covers vs what stays yours. `T2`
-- [ ] **De-identification** — Safe Harbor's 18 identifiers vs expert determination; why de-identified data leaves scope. `T2`
+### 5.A — TLS → mutual
+- [ ] **5.1 The handshake, then what "mutual" adds** `[B] ~15m` — server proves identity to client; mTLS makes the client prove identity back.
 
-## Section 9 — CI/CD for API and UI (Tier 2) · *recalibration*
+### 5.B — Cert as identity
+- [ ] **5.2 The client certificate as an identity** `[A] ~30m` — extracting subject/SAN, mapping it to a service principal, why this authenticates the **workload** rather than a user. **Breaks if wrong:** you treat "presented a valid cert" as "authorized to do anything," and any service in the mesh can call any endpoint.
 
-*Rated "Gap" at `CAREER_LOG.md:62-64` against 5+ real workflows and CI auto-deploy on push to main. Claim what you've built.*
+### 5.C — mTLS vs JWT
+- [ ] **5.3 mTLS vs JWT vs both** `[A] ~30m` — mTLS authenticates the channel and calling workload; the JWT carries the caller's authorization context. **Both, layered, is the zero-trust answer.** *If only one thing survives from §5, make it this — candidates constantly present them as alternatives.* **Breaks if wrong:** you argue mTLS replaces tokens, and the interviewer knows a mesh still needs authorization.
 
-- [ ] **The pipeline you can sketch on a whiteboard** — checkout → lint → test → security scan → build image → push ECR → deploy ECS. `T2`
-- [ ] **GitHub Actions OIDC federation to an IAM role** — the modern answer: no long-lived AWS keys in CI, ever. *If they ask how you authenticate CI to AWS and you say "access keys in secrets," that's a miss.* `T2`
-- [ ] **Deploy strategies** — rolling vs blue/green via CodeDeploy, health-check gating, rollback. `T2`
-- [ ] **Migrations and secrets in a deploy** — where schema changes run; Secrets Manager / Parameter Store vs env vars. `T2`
+### 5.D — Termination & rotation
+- [ ] **5.4 Trust chains and CA hierarchy** `[B] ~15m` — root vs intermediate, why you never sign leaf certs with the root.
+- [ ] **5.5 ALB termination: passthrough vs verify** `[B] ~15m` — the `X-Amzn-Mtls-Clientcert` header family vs a trust store with a CA bundle. ⚠ *two distinct modes, don't blur them*
+- [ ] **5.6 Rotation and expiry — the #1 production failure mode** `[B] ~15m` — automate or get paged. Ties to why Private CA has a 7-day short-lived tier. *Saying this out loud reads as operational experience.*
+- [ ] **5.7 CRL vs OCSP** `[C] ~5m` — why revocation is genuinely hard in PKI too.
 
-## Section 10 — The system-design set-piece (Tier 1) · *synthesis*
+---
 
-*The highest-leverage hour of the sprint. One diagram containing every noun in the posting.*
+## Section 6 — The AWS API & security stack as one request path
+**Chunks:** 6.A the path → 6.B compute → 6.C edge & identity → 6.D observability
+**Capstone:** Issue 7 *(load-bearing)* · **Budget:** ~185 min, split Thu + Fri
 
-- [ ] **"Design a secure, HIPAA-compliant API on AWS that authenticates against Okta"** — drawn cold, under 4 minutes, narrated: the request path, where the token is validated (and why possibly twice), where mTLS sits, what's logged and what isn't, what's encrypted, what you'd alarm on, and what you'd do differently at 100× scale. `T1`
-- [ ] **The three follow-ups they will ask** — "what happens when Okta is down?" · "how do you revoke access immediately?" · "where could PHI leak in this design?" *Pre-build all three answers.* `T1`
+### 6.A — The path
+- [ ] **6.1 The request path, end to end** `[A] ~30m` — Route 53 → ACM → WAF → ALB → ECS Fargate → CloudWatch. *Learn the section as this one diagram; every other unit hangs off it. This is the §10 deliverable.* **Breaks if wrong:** you can't answer the system-design question, which is a third of the interview.
 
-## Section 11 — Honest positioning & the story bank (Tier 1)
+### 6.B — Compute
+- [ ] **6.2 ECS Fargate** `[B] ~15m` — task definition vs service vs task; ECR; health checks; rolling deploys.
+- [ ] **6.3 Task role vs execution role** `[A] ~30m` — **execution role** = what ECS needs (pull the image, write logs, inject secrets); **task role** = what your application code can call. *A classic interview question with a crisp answer.* **Breaks if wrong:** you grant the app the execution role's permissions and blow least-privilege wide open.
 
-*The section that keeps the other ten from backfiring.*
+### 6.C — Edge & identity
+- [ ] **6.4 ALB** `[B] ~15m` — listeners, rules, target groups, health checks, TLS termination; plus ⚠ native JWT verification (2025-11).
+- [ ] **6.5 Route 53 + ACM** `[B] ~15m` — alias vs CNAME, health checks; DNS-validated public certs, auto-renewal, why ACM public certs are free and non-exportable.
+- [ ] **6.6 API Gateway vs ALB — when each** `[B] ~15m` — HTTP API vs REST API, JWT authorizers, usage plans, request validation, VPC Link; the honest cost/latency tradeoff.
+- [ ] **6.7 Where to validate the token: edge vs app** `[B] ~15m` — ALB/API Gateway authorizers vs an in-app dependency. Defense in depth says both; know why each alone is insufficient. ⚠ *very recent — verify live*
+- [ ] **6.8 WAF and Shield** `[B] ~15m` — managed rule groups, rate-based rules, what a web ACL attaches to, **count mode before block mode**; Shield Standard (free, on) vs Advanced (~$3k/mo — know the number, never enable it).
+- [ ] **6.9 IAM: roles over keys** `[B] ~15m` — the assume-role model, least privilege, why no static access key should exist in this architecture.
 
-- [ ] **The have/haven't script** — one clean sentence separating what you've *operated* from what you've *studied*, for AWS ops, mTLS, and HIPAA. Base it on `jobs/natera-sr-fwd-deployed/README.md:37`, which already says it well. `T1`
-- [ ] **6–8 STAR stories mapped to JD bullets** — CreatorClip multi-tenant RLS + OAuth publishing; CFO Agent threat model + encryption at rest + 177 tests; Cognizant MCP/agent work at enterprise scale; the Playwright-over-Cypress decision (`CAREER_LOG.md:103`); the sensitive-scope call that cut a feature (`agenda.md:131`). `T1`
-- [ ] **Questions to ask them** — about their IdP topology, where they terminate mTLS, and how they handle token revocation. *Asking these proves §3–§5 better than answering does.* `T1`
+### 6.D — Observability
+- [ ] **6.10 CloudWatch** `[B] ~15m` — structured JSON logs, log groups and retention, metric filters, alarms, correlation IDs. What you actually alert on for an API: 5xx rate, p99 latency, and **a 401 spike as an attack signal**.
+- [ ] **6.11 S3 + KMS for an API** `[C] ~5m` — Block Public Access, bucket policy vs IAM, SSE-KMS, presigned URLs and expiry as an access-control decision.
+
+---
+
+## Section 7 — API testing & validation
+**Chunks:** 7.A the harness → 7.B the matrix
+**Capstone:** Issue 4 (shared with §4) · **Budget:** ~85 min
+
+- [ ] **7.1 `TestClient` vs `httpx.ASGITransport`** `[C] ~5m` — sync vs the current async pattern.
+- [ ] **7.2 `dependency_overrides` to swap auth** `[B] ~15m` — the practical payoff of §1.3.
+- [ ] **7.3 Minting test tokens against a fake JWKS** `[A] ~30m` — a local RSA keypair so the auth path is tested **for real** rather than mocked away. **Breaks if wrong:** you mock the validator, and the one function that matters most ships with zero real coverage.
+- [ ] **7.4 The negative matrix** `[A] ~30m` — expired · wrong `aud` · wrong `iss` · bad signature · `alg: none` · missing scope (403) · missing/malformed header (401). *Seven cases; the JD asks for exactly this.* **Breaks if wrong:** you can only prove the happy path, which proves nothing about security.
+- [ ] **7.5 Contract testing from the spec** `[C] ~5m` — schemathesis against the generated OpenAPI; Postman/newman in CI.
+
+---
+
+## Section 8 — HIPAA & PHI for an API engineer `[B]/[C] only`
+**Capstone:** Issue 6 · **Budget:** ~65 min
+*Listed as Desired, not required. Study it genuinely; claim it accurately — see §11.1.*
+
+- [ ] **8.1 The three rules** `[C] ~5m` — Privacy, Security, Breach Notification; covered entity vs business associate, and which one a vendor engineer is.
+- [ ] **8.2 The Security Rule's technical safeguards, mapped to API surfaces** `[B] ~15m` — access control → authn/authz · **audit controls** → who accessed what, when · integrity → tamper evidence · transmission security → TLS everywhere.
+- [ ] **8.3 Audit logging without logging PHI** `[B] ~15m` — log the actor, action, resource **reference**, timestamp, outcome. Never the payload. Redaction and structured-log discipline. *Directly implemented in Issue 6.*
+- [ ] **8.4 Minimum necessary → `response_model`** `[B] ~15m` — compliance enforced at the serialization layer rather than in a policy document. *The §1.6 connection, from the other direction.*
+- [ ] **8.5 Encryption in transit and at rest** `[C] ~5m` — TLS 1.2+, KMS, rotation; "addressable vs required" in the Security Rule.
+- [ ] **8.6 BAA + AWS shared responsibility** `[C] ~5m` — what AWS covers vs what stays yours; HIPAA-eligible services.
+- [ ] **8.7 De-identification** `[C] ~5m` — Safe Harbor's 18 identifiers vs expert determination.
+
+---
+
+## Section 9 — CI/CD for API and UI `[B]/[C] only`
+**Capstone:** Issue 8 *(the designated cut if the week compresses)* · **Budget:** ~40 min
+
+- [ ] **9.1 The pipeline you can sketch on a whiteboard** `[B] ~15m` — checkout → lint → test → security scan → build image → push ECR → deploy ECS.
+- [ ] **9.2 GitHub Actions OIDC federation to an IAM role** `[B] ~15m` — no long-lived AWS keys in CI, ever. *If asked how CI authenticates to AWS and you answer "access keys in secrets," that's a miss.*
+- [ ] **9.3 Deploy strategies** `[C] ~5m` — rolling vs blue/green via CodeDeploy, health-check gating, rollback.
+- [ ] **9.4 Migrations and secrets in a deploy** `[C] ~5m` — where schema changes run; Secrets Manager / Parameter Store vs env vars.
+
+---
+
+## Section 10 — The system-design set-piece
+**Capstone:** the diagram, drawn cold · **Budget:** ~60 min
+*The highest-leverage hour of the sprint. Everything above converges here.*
+
+- [ ] **10.1 "Design a secure, HIPAA-compliant API on AWS that authenticates against Okta"** `[A] ~30m` — drawn cold, under 4 minutes, narrated: the request path, where the token is validated (and why possibly twice), where mTLS sits, what's logged and what isn't, what's encrypted, what you'd alarm on, what changes at 100×. **Breaks if wrong:** this *is* a third of the interview.
+- [ ] **10.2 The three follow-ups they will ask** `[A] ~30m` — *"What happens when Okta is down?"* · *"How do you revoke access immediately?"* · *"Where could PHI leak in this design?"* Pre-build all three. **Breaks if wrong:** a strong diagram undone by the first probe past it.
+
+---
+
+## Section 11 — Honest positioning & the story bank `evenings only`
+**Capstone:** the recorded mock · **Budget:** ~50 min, non-peak
+*The section that keeps the other ten from backfiring. This is drafting, not learning — it must not cost a peak window.*
+
+- [ ] **11.1 The have/haven't script** `[B] ~15m` — one clean sentence separating what you've **operated** from what you've **studied**, for AWS ops, mTLS, and HIPAA. Base it on `jobs/natera-sr-fwd-deployed/README.md:37`, which already says it well: *"I've handled sensitive data before, so regulated-data discipline isn't new; the domain is what I'd ramp."* **Do not overclaim** — a caught overclaim ends an interview faster than an honest gap ever will.
+- [ ] **11.2 Six to eight STAR stories mapped to JD bullets** `[B] ~30m` — CreatorClip multi-tenant RLS + OAuth publishing; CFO Agent threat model, encryption at rest, 177 tests; Cognizant MCP/agent work at enterprise scale; the Playwright-over-Cypress decision (`CAREER_LOG.md`); the sensitive-scope call that cut a feature from v1 (`agenda.md`).
+- [ ] **11.3 Questions to ask them** `[C] ~5m` — their IdP topology, where they terminate mTLS, how they handle token revocation. *Asking these proves §3–§5 better than answering does.*
 
 ---
 
 ## 🗓 The 7-day map
 
-Peak block (90 min) = the `/learn api` unit · afternoon (60–90 min) = the build issue · evening (20 min) = `/drill` + log.
+Peak (90 min) = the chunks · afternoon (60–90 min) = the capstone issue · evening (20 min) = `/drill` + log, and §11 drafting.
 **Floor** = the ~45-min version that still counts the day. `habits/tracker.md:105` documents six all-or-nothing collapses — the floor exists so a bad day drops to it instead of to zero.
 
-| Day | Peak — `/learn api` | Build issue | Floor |
+| Day | Chunks | Build | Floor (~45m) |
 |---|---|---|---|
-| Sun 08-10 | §1 + §2 | Scaffold + Issue 1 | Skills recalibration; read the JD subtext aloud |
-| Mon 08-11 | §3 | Issue 2 — Okta tenant, real token | §3 concepts only |
-| Tue 08-12 | §4 | Issues 3 + 4 | The 6-item validation checklist, cold |
-| Wed 08-13 | §5 | Issues 5 + 6 · **mock #1** | mTLS vs JWT: when each, why both |
-| Thu 08-14 | §6 (the path) | Issue 7a — ECR → Fargate → ALB → ACM | Draw the request path from memory |
-| Fri 08-15 | §6 (WAF/CloudWatch/API GW) | Issue 7b + Issue 8 | Finish the deploy |
-| Sat 08-16 | §7 · §8 · §9 | **Teardown** + `/sharpen` §3–§6 | §8 HIPAA + the honest script |
-| Sun 08-17 | §10 + §11 | **Full mock** | The one-page cheat sheet |
+| **Sun 08-10** | §1 all four chunks *(~150m)* | Scaffold + Issue 1 | 1.2 + 1.3 + 1.6 only — the three `[A]`s |
+| Mon 08-11 | §2 *(~85m)* → §3.A–3.B *(~90m)* | Issue 2 — Okta tenant | 2.1 + 3.1 |
+| Tue 08-12 | §3.C–3.D *(~35m)* → §4.A–4.B *(~75m)* | Issue 3 | 3.5 + 4.3 |
+| Wed 08-13 | §4.C–4.D *(~65m)* → §5.A–5.C *(~75m)* | Issues 4 + 5 · **mock #1** | 4.5 + 5.3 |
+| Thu 08-14 | §5.D *(~50m)* → §6.A–6.B *(~45m)* | **Issue 7a** — ECR → Fargate → ALB → ACM | 6.1 — draw the path |
+| Fri 08-15 | §6.C–6.D *(~90m)* | **Issue 7b** + Issue 8 | Finish the deploy |
+| Sat 08-16 | §7 *(~85m)* · §8 *(~65m)* · §9 *(~40m)* | Issue 6 · **teardown** · `/sharpen` §3–§6 | 7.4 + 8.3 |
+| Sun 08-17 | §10 *(~60m)* | **Full mock** | The one-page cheat sheet |
 
 **Two mocks are mandatory.** Answering out loud is a different skill from knowing, and it's the one being graded.
+
+**§11 runs in the evenings**, Monday through Saturday — 10 minutes a night of drafting, not a peak block.
 
 ---
 
 ## 💸 Cost & safety guardrails — non-negotiable
 
-- **Never create an AWS Private CA.** General-purpose mode bills **~$400/month**, prorated from creation, and deleting it does not refund. Short-lived mode is ~$50/mo — still not worth it for a week. §5 uses a **local openssl CA**; you learn PCA's behavior and pricing from docs, and the pricing *is* the interview answer.
-- **Never enable Shield Advanced.** ~$3,000/month with a 1-year commitment. Shield Standard is free and already on.
-- **Run and tear down within ~2 days.** ALB ~$0.55/day · Fargate 0.25 vCPU ~$0.30/day · WAF $5/web ACL/mo + $1/rule/mo + $0.60/M requests · Route 53 hosted zone $0.50/mo · ACM public certs free. **Target: under $20 total.**
+- **Never create an AWS Private CA.** ~$400/mo general-purpose (~$50/mo short-lived), prorated from creation, no refund on delete. §5 uses a **local openssl CA**; PCA's behavior and pricing are learned from docs — and the pricing *is* the interview answer.
+- **Never enable Shield Advanced.** ~$3,000/month, 1-year commitment. Shield Standard is free and already on.
+- **Run and tear down within ~2 days.** ALB ~$0.55/day · Fargate 0.25 vCPU ~$0.30/day · WAF $5/web ACL/mo + $1/rule/mo · Route 53 zone $0.50/mo · ACM public certs free. **Target under $20.**
 - Route 53 + a public ACM cert require **a domain you control** — confirm before Thursday.
-- **Set a $25 AWS Budget alert on day one.** Tag everything `project=secure-api-lab`. Run `docs/TEARDOWN.md` on Saturday.
+- **Set a $25 AWS Budget alert on day one.** Tag everything `project=secure-api-lab`. Run `docs/TEARDOWN.md` Saturday.
 
 ---
 
 ## Connections & Application
 
-*(Populated as units land.)*
-
-- **§1 → §8:** `response_model` is a compliance control. Response filtering enforces HIPAA minimum-necessary at the serialization layer — the same line of code answers a FastAPI question and a compliance question. Say the connection out loud; it's the kind of thing that separates a candidate who studied a list from one who understands a system.
-- **§4 → §6:** "Where do you validate the JWT?" stopped being a settled question in November 2025 when ALB gained native JWT verification. Edge validation cuts latency and blocks bad traffic before it costs you compute; in-app validation survives an ALB misconfiguration and knows about business context. Defense in depth = both.
-- **§5 → §3:** mTLS and OAuth2 are not alternatives and candidates constantly present them as such. mTLS authenticates the *workload*; the JWT authorizes the *call*. A service mesh doing mTLS still needs tokens for authorization.
+- **§1.6 ↔ §8.4 — `response_model` is a compliance control.** The same line of code answers a FastAPI question and a HIPAA question. Say the connection out loud; it distinguishes someone who studied a list from someone who understands a system.
+- **§4 ↔ §6.7 — "where do you validate the JWT?" stopped being settled in November 2025.** Edge validation cuts latency and blocks bad traffic before it costs compute; in-app validation survives an ALB misconfiguration and knows business context. Defense in depth = both.
+- **§5.3 ↔ §3 — mTLS and OAuth2 are not alternatives.** mTLS authenticates the *workload*; the JWT authorizes the *call*. A mesh doing mTLS still needs tokens.
+- **§2.1 ↔ §4.3 — status codes are an auth design decision.** A valid token missing a scope is 403, not 401. Getting it right requires having thought about both sections at once.
 
 ## Honest Takeaways
 
-*(Populated as the sprint runs.)*
-
-- **2026-08-10 — the gap was narrower and more specific than the JD made it look.** A full-repo grep returned zero footprint on the entire AWS platform/edge/identity layer — but production FastAPI, async, OAuth2, testing at scale, and CI/CD were all already there and *self-rated as gaps.* Two different problems wearing the same label. Worth remembering the next time a posting looks overwhelming: separate "can't do" from "never had to say."
+- **2026-08-10 — the sprint's real constraint is hours, not aptitude.** From scratch, the material is ~28 hours against ~21 available. Naming the depth bar per unit is what makes that survivable; without it the peak window goes to whatever is next in the file rather than what the interview probes. The `[C]` tier is the honest part — some things are worth exactly five minutes.
 
 ## Entry Log
 

@@ -63,20 +63,24 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 | 8:30pm (20 min) | `/drill` + log the session | ☐ upside |
 | 10:25pm | 🧱 The Brick | ⬛ floor |
 
-**The day map** (full detail in the roadmap's 7-day table):
+**The day map** (full detail, with per-day floors, in the roadmap's 7-day table):
 
-| Day | Peak concept | Build |
-|---|---|---|
-| **Sun 08-10** | §1 FastAPI depth · §2 REST/OpenAPI | Scaffold + Issue 1 |
-| Mon 08-11 | §3 OAuth2 / OIDC / Okta | Issue 2 — Okta tenant, real token |
-| Tue 08-12 | §4 JWT validation + the attacks | Issues 3 + 4 |
-| Wed 08-13 | §5 mTLS | Issues 5 + 6 · **mock #1** |
-| Thu 08-14 | §6 the AWS request path | Issue 7a — ECR → Fargate → ALB → ACM |
-| Fri 08-15 | §6 WAF / CloudWatch / API GW | Issue 7b + Issue 8 |
-| Sat 08-16 | §7 testing · §8 HIPAA · §9 CI/CD | **Teardown** + `/sharpen` §3–§6 |
-| Sun 08-17 | §10 system design · §11 stories | **Full mock** |
+| Day | Peak — chunks | Build | Floor (~45m) |
+|---|---|---|---|
+| **Sun 08-10** | §1 FastAPI, all 4 chunks | Scaffold + Issue 1 | 1.2 · 1.3 · 1.6 — the three `[A]`s |
+| Mon 08-11 | §2 → §3.A–3.B | Issue 2 — Okta tenant | 2.1 · 3.1 |
+| Tue 08-12 | §3.C–3.D → §4.A–4.B | Issue 3 | 3.5 · 4.3 |
+| Wed 08-13 | §4.C–4.D → §5.A–5.C | Issues 4 + 5 · **mock #1** | 4.5 · 5.3 |
+| Thu 08-14 | §5.D → §6.A–6.B | **Issue 7a** — ECR → Fargate → ALB → ACM | 6.1 — draw the path |
+| Fri 08-15 | §6.C–6.D | **Issue 7b** + Issue 8 | Finish the deploy |
+| Sat 08-16 | §7 · §8 · §9 | Issue 6 · **teardown** · `/sharpen` | 7.4 · 8.3 |
+| Sun 08-17 | §10 system design | **Full mock** | The one-page cheat sheet |
 
-**🩹 The floor for this sprint — read this on a bad day.** `habits/tracker.md:105` has six instances of the all-or-nothing pattern: *"a 10 and a 0, and no median day."* A 7×3hr plan is exactly that shape, so each day has a **45-minute floor version** (listed per-day in the roadmap). Dropping to the floor **counts as a completed day.** The sprint survives four floor days. It does not survive one zero that becomes three.
+**📏 Depth bars are the whole design.** Taught from scratch this is ~28 hours against ~21 available, so every unit carries `[A]` build-it ~30m / `[B]` explain-it ~15m / `[C]` name-it ~5m. **§8 HIPAA and §9 CI/CD are `[B]`/`[C]` only** — the JD's *Desired* column, studied honestly and claimed accurately. **§11 stories run in evenings**, 10 min a night, never a peak block.
+
+**🔁 Each session is a chunk loop:** teach one idea (~8 min) → 2–4 inline checks (fill-in-the-blank · short answer · **spot-the-bug**) → one tiny snippet → next chunk. One worksheet per section, not per unit.
+
+**🩹 The floor for this sprint — read this on a bad day.** `habits/tracker.md:105` has six instances of the all-or-nothing pattern: *"a 10 and a 0, and no median day."* A 7×3hr plan is exactly that shape, so each day has a **45-minute floor version** — the day's `[A]` units only, listed above. Dropping to the floor **counts as a completed day.** The sprint survives four floor days. It does not survive one zero that becomes three.
 
 **What can't slip:** Thursday and Friday. Issue 7 is the real AWS deploy, and it's the only thing converting *"proven ability to deploy, secure, and operate APIs on AWS"* from a no into a yes. If a day has to be sacrificed, sacrifice Saturday's §9, not Thursday.
 
@@ -116,7 +120,7 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 
 **The read that came out of the gap analysis, and it's the useful part:** the JD looked overwhelming and wasn't. It split into two piles. *Recalibration* — FastAPI, async, OAuth2, testing, CI/CD are all already in production and all self-rated "Gap" (`CAREER_LOG.md` said "haven't built with it" against ~37k LOC of FastAPI, and "no hands-on experience" against 5+ live CI workflows). *Acquisition* — the AWS platform/edge layer, mTLS, Okta/OIDC, HIPAA, which a full-repo grep found **zero** mentions of. Two different problems that were wearing the same label. Notes corrected 08-10; levels held at Building until the cold defense on 08-16, per the standing rule.
 
-**First move:** §1 + §2 in the peak block, then scaffold Issue 1. **Also today, outside the terminal:** message the Editor lead about the 7-day pause.
+**First move:** `/learn api` → §1.A (ASGI + the threadpool trap), then the rest of §1's chunks, then Issue 1. **Also today, outside the terminal:** message the Editor lead about the 7-day pause.
 
 *Deferred until 08-18 (not dropped):* §1.3 worksheet 16/19 → 19/19 (COACH NOTES in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` — fields-vs-values, missing enum, unused `review_comment`); Cold Bench rep #1 on the Editor pipeline.
 
