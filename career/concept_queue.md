@@ -78,6 +78,7 @@ Work top-down within each tier. Tier 1 before Tier 2 unless a real project need 
 - [ ] `[A]` **`Depends()` and why auth belongs in a dependency** — the composition point, and the `dependency_overrides` testing seam
 - [ ] `[A]` **`response_model` as a PHI-leak control** — minimum-necessary enforced at the serialization layer, not in a policy doc
 - [ ] `[A]` **401 vs 403 vs 422** — and why a valid token missing a scope is 403
+- [ ] `[B]` **ASGI vs WSGI — the concurrency model** — both are *specifications*, not packages. WSGI's unit of concurrency is an OS thread (~8 MB stack + scheduler entry); ASGI's is a heap-allocated coroutine, so *waiting* is nearly free. Wins on I/O-bound work, buys nothing on CPU-bound, and done wrong is **strictly worse** than WSGI. Plus the container rule: one uvicorn process per ECS task, because nested process managers make a hung worker invisible to ECS *(acquired 2026-08-11 via `/learn api` §1.1 — defend cold)*
 - [ ] `[B]` **JWT revocation** — bearer tokens are valid until expiry; short TTL + rotation vs introspection vs denylist, and what each costs
 - [ ] `[B]` **Where to validate the token: edge vs app** — ALB native JWT verification (new 2025-11) and API Gateway authorizers vs an in-app dependency; defense in depth says both
 - [ ] `[B]` **ALB mTLS: passthrough vs verify mode** — `X-Amzn-Mtls-Clientcert` header family vs a trust store with a CA bundle + CRLs. Two distinct modes, don't blur them

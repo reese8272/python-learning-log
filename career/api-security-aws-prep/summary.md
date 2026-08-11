@@ -57,6 +57,29 @@ The unit of work is a **chunk** (~20–30 min), not a section. Each chunk is one
 (soliloquy → PART 1 short answers → PART 2 stubs with intent-only TODOs → PART 3 the capstone →
 `_run_tests()` → gated answer key).
 
+### 📝 Learning notes — every section carries one *(convention added 2026-08-11, Reese's call)*
+
+Each section ends with a **`### 📝 Learning notes`** block, written by `/learn api` as the section is
+taught and appended to *during* the session, not reconstructed after. It is **not** a summary of the
+material — the material is the section above it. It is a record of **how the learning went**, so a
+future session (or a `/sharpen` grader) knows where the soft spots are without re-teaching to find them.
+
+Four fixed headings, kept terse:
+
+- **Asked** — the questions Reese raised unprompted. These map his real mental model; a question asked
+  is a better signal of the edge than a check answered.
+- **Landed** — what he restated correctly and cold. Safe to build on.
+- **Tripped** — what he got wrong or fuzzy, **and the corrected version in one line.** This is the
+  highest-value part of the block: it's the pre-built `/drill` list and it tells the next session what
+  to re-ask before moving on.
+- **Watch** — recurring patterns across the section (a habit of reasoning, a vocabulary gap, a place
+  he consistently over- or under-claims). Coach-level, not content-level.
+
+**Why it exists:** this track is taught from zero under a 7-day clock, and the failure mode is a unit
+marked `[x]` on a confident-sounding explain-back that was actually 80% there. *Tripped* catches that
+in writing. Rule: **a section's notes get written even if the section isn't finished** — a partial
+block beats a missing one.
+
 ## 🎯 Section → capstone map
 
 One project per section. These are the already-written issues in `~/workspace/secure-api-lab/docs/issues.md`.
@@ -122,7 +145,7 @@ Several of these are recent enough that most candidates won't know them. That's 
 **Capstone:** Issue 1 · **Budget:** ~150 min teaching + ~60 build
 
 ### 1.A — The event loop
-- [ ] **1.1 ASGI vs WSGI** `[B] ~15m` — the concurrency model; why "high-performance" in this JD means the loop; uvicorn/gunicorn worker topology.
+- [x] **1.1 ASGI vs WSGI** `[B] ~15m` *(2026-08-11)* — the concurrency model; why "high-performance" in this JD means the loop; uvicorn/gunicorn worker topology.
 - [ ] **1.2 `async def` vs `def`, and the threadpool trap** `[A] ~30m` — FastAPI runs plain `def` handlers in a threadpool; a blocking call inside an `async def` stalls **every** request on that worker. Covers `run_in_executor` and how to spot a blocking call in a library you didn't write. *The single most likely "do you actually understand async" question.* **Breaks if wrong:** one sync DB driver in an async handler and your p99 goes to seconds under any concurrency.
 
 ### 1.B — Dependency injection
@@ -137,6 +160,38 @@ Several of these are recent enough that most candidates won't know them. That's 
 - [ ] **1.7 `lifespan`** `[C] ~5m` — startup/shutdown resources; replaced the deprecated `@app.on_event`.
 - [ ] **1.8 Exception handlers and the error contract** `[B] ~15m` — consistent envelopes; never leaking internals or stack traces in a 500.
 - [ ] **1.9 Middleware vs dependency — when each** `[C] ~5m` — cross-cutting (correlation IDs, timing) vs per-route authorization.
+
+### 📝 Learning notes — Section 1
+
+*(In progress — 1.1 taught 2026-08-11. Append as the remaining chunks land.)*
+
+**Asked** *(2026-08-11, chunk 1.A)*
+- Do I need the acronyms? Is "contract" the agreed format between two things?
+- What are ongoing channels / WebSockets?
+- **"If both send the same data, how does ASGI cost less?"** — the best question of the session; it's the mechanism of the whole unit, and he found it himself rather than accepting the table.
+- How is a connection physically established, and how does an idle process know to stay open vs. close? (Answered: `epoll`/`kqueue` — the kernel wakes the process; it never polls.)
+- Are WSGI/ASGI just standards rather than frameworks or packages?
+- Is uvicorn the same thing as FastAPI?
+
+**Landed**
+- ASGI wins on I/O-bound waiting, buys nothing on CPU-bound work. ✅ cold, first try.
+- **WSGI/ASGI are specifications, not packages** — he arrived at this unprompted and stated it cleanly.
+- uvicorn = server / FastAPI = framework, correctly separated.
+- Heap = the pool for objects that must outlive the call that created them.
+- One uvicorn process per container on ECS (had the answer before the reason).
+
+**Tripped** → *(the pre-built drill list)*
+- **"WSGI is better for CPU-bound work"** → ❌ Neither helps. CPU work is core-bound; both scale it with processes. The asymmetry is that WSGI *degrades* (one thread burns) while ASGI *stalls* (the only thread burns).
+- **"ASGI becomes WSGI if you handle async badly"** → ❌ It becomes **strictly worse** than WSGI — WSGI still has N other threads; a blocked loop has nothing.
+- **"The ASGI connection stays open for the app's lifetime"** → ❌ Two sockets, not one tunnel: the **listening** socket is app-lifetime; a **connection** socket is client-lifetime, and ASGI is invoked once *per connection*.
+- **`await` groups coroutines** → ❌ `await` is a *suspend point*; concurrency-within-a-request is `asyncio.gather` / `TaskGroup`.
+- **Heap = "stack-like with fast lookups"** → ❌ conflated with a hash map / the heap data structure.
+- One-worker-per-container *reason* → had the rule, not the why. Correct why: **nested process managers — ECS can't observe or restart a worker inside a task, so a hung worker looks healthy.**
+
+**Watch**
+- **States the rule, not the reason.** Twice (workers-per-container, ASGI-vs-WSGI) he produced the correct answer and then restated it instead of justifying it. This is exactly the failure mode the interview probes with "why?" — grade the *second* sentence, not the first.
+- **Vocabulary gap, not a knowledge gap.** He self-described the work as "vibe coded — I know what I want, the plumbing may as well be foreign." That's accurate about the plumbing and *understated* about the judgment: he had the Celery-off-the-request-path answer available and didn't recognize it as a Section 1 answer. Pattern for the rest of the sprint: **before teaching a unit from zero, check whether he has already operated it and just lacks the words.**
+- Asks precisely and pushes past the analogy to the mechanism. Let him — the questions have been higher-yield than the checks.
 
 ---
 
@@ -346,3 +401,5 @@ Peak (90 min) = the chunks · afternoon (60–90 min) = the capstone issue · ev
 ## Entry Log
 
 *(Links added by `/learn api` at each session's persist step.)*
+
+- [2026-08-11](reflection_log/2026-08-11.md) — §1 chunk 1.A (partial): **1.1 ASGI vs WSGI `[x]`**. Schedule call: §1 run today instead of §2, since §1's three `[A]`s underpin §3–§4. Live-verified the current worker guidance (gunicorn recipe is gone from the docs; one uvicorn process per container on ECS). Six foundational questions answered off-script — sockets, `epoll`, stack vs heap, `await` vs `gather`. Four misconceptions corrected. Notes-page convention added. **Stopped at 1.2.**

@@ -116,11 +116,12 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 - ✅ Check-ins: restarts today (08-10)
 - 🧭 Ownership touches: 0 — rep #1 is today's Issue 1 in `secure-api-lab`
 
-**Stopped at:** 08-10 — the board changed. A screening cleared for a secure-API role (FastAPI/OAuth2/JWT/mTLS/Okta/AWS, HIPAA), next round ~08-17 across Q&A + live coding + system design. Built the track (`career/api-security-aws-prep/summary.md`), seeded the queue, scaffolded the build repo, and paused the Editor for seven days.
+**Stopped at:** 08-11 — first real `/learn api` rep. **§1.1 ASGI vs WSGI banked `[x]`**; stopped before **1.2 (`async def` vs `def` + the threadpool trap, `[A]`)** — that's tomorrow's opener, and the re-entry question is already written at the bottom of `career/api-security-aws-prep/reflection_log/2026-08-11.md`. Schedule call made: §1 ran today instead of the map's §2+§3, because §1's three `[A]`s underpin §4's JWT design — **the sprint is ~1 day behind the written map, and §2 has to compress into Tuesday.** New convention: every roadmap section now carries a `📝 Learning notes` block (Asked / Landed / Tripped / Watch).
+> *(08-10, for context — the board changed: a screening cleared for a secure-API role, next round ~08-17 across Q&A + live coding + system design. Built the track, seeded the queue, scaffolded the build repo, paused the Editor for seven days.)*
 
 **The read that came out of the gap analysis, and it's the useful part:** the JD looked overwhelming and wasn't. It split into two piles. *Recalibration* — FastAPI, async, OAuth2, testing, CI/CD are all already in production and all self-rated "Gap" (`CAREER_LOG.md` said "haven't built with it" against ~37k LOC of FastAPI, and "no hands-on experience" against 5+ live CI workflows). *Acquisition* — the AWS platform/edge layer, mTLS, Okta/OIDC, HIPAA, which a full-repo grep found **zero** mentions of. Two different problems that were wearing the same label. Notes corrected 08-10; levels held at Building until the cold defense on 08-16, per the standing rule.
 
-**First move:** `/learn api` → §1.A (ASGI + the threadpool trap), then the rest of §1's chunks, then Issue 1. **Also today, outside the terminal:** message the Editor lead about the 7-day pause.
+**First move:** `/learn api` → **1.2 the threadpool trap** `[A]`, then chunk 1.B (`Depends()` `[A]`), 1.C (`response_model` `[A]`), 1.D — then Issue 1. §2 compresses in behind it. **Still outstanding, outside the terminal:** message the Editor lead about the 7-day pause.
 
 *Deferred until 08-18 (not dropped):* §1.3 worksheet 16/19 → 19/19 (COACH NOTES in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` — fields-vs-values, missing enum, unused `review_comment`); Cold Bench rep #1 on the Editor pipeline.
 

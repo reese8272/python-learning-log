@@ -4,6 +4,26 @@ A log of explicit design decisions that change or deviate from what the planning
 
 ---
 
+## 2026-08-11 — Every roadmap section carries a `📝 Learning notes` block; §1 taught before §2 despite the map
+
+**What changed:**
+
+1. **A `### 📝 Learning notes` block is now appended to every section** of `career/api-security-aws-prep/summary.md`, written *during* the session rather than reconstructed after. Four fixed headings: **Asked** (questions he raised unprompted — a better map of the mental model than a check answered) · **Landed** (restated cold, safe to build on) · **Tripped** (wrong or fuzzy, *plus the corrected line* — this doubles as the pre-built `/drill` list) · **Watch** (coach-level patterns, not content). Spec written into the roadmap's *How a session runs* section. Rule: the block gets written even when the section is unfinished — a partial block beats a missing one.
+2. **The 7-day map's day assignment was overridden on day 2.** The map put §1 on Sun 08-10 and §2+§3.A–B on Mon 08-11, but 08-10 went to building the track, not walking it. §1 was run today instead of §2. The sprint is now ~1 day behind the written map and §2 must compress into Tuesday.
+3. **Standing teaching instruction added:** before teaching an `api` unit from zero, check whether Reese has already *operated* it and merely lacks the vocabulary. §1 demonstrated the failure mode in both directions — he couldn't define ASGI, but already had the "CPU work leaves the request path, that's what Celery does in CreatorClip" answer and didn't recognize it as a Section 1 answer.
+
+**Why:**
+
+- **(1)** This track is taught from zero under a hard clock, and its specific failure mode is marking a unit `[x]` off a confident-sounding explain-back that was actually 80% right. In the first session alone, four misconceptions survived answers that *sounded* correct — "WSGI is better for CPU-bound work," "bad ASGI degrades to WSGI" (it's strictly worse), "the ASGI connection is app-lifetime," "`await` groups coroutines." None would have been recoverable from a `[x]` and a summary. Reese proposed the notes page himself and asked that the convention be written down so future sessions follow it.
+- **(2)** §1.2, §1.3, and §1.6 are the three `[A]`s that §4's JWT validation design and §8's PHI story rest on. Teaching auth-in-a-dependency (§3–§4) before dependency injection is owned inverts the build order; §2 is ~85 min and mostly `[B]`, so it's the cheaper thing to slide.
+- **(3)** The gap analysis of 08-10 already split the JD into *recalibration* vs *acquisition*, and the 08-10 revision (below) correctly dropped that as a **teaching** directive. This is narrower and survives that: teach from zero regardless, but *source the worked example* from what he's already run, because the recall is free and the salience is real.
+
+**Source / evidence:** the 2026-08-11 session log (`career/api-security-aws-prep/reflection_log/2026-08-11.md`) — Reese's proposal verbatim: *"You think adding a notes page at the end of each section is good? Like simply saying what I asked and understood and what tripped me up."* Currency claims in that session verified live against [FastAPI — Concurrency](https://fastapi.tiangolo.com/async/) and [FastAPI — Server Workers](https://fastapi.tiangolo.com/deployment/server-workers/) (the gunicorn worker-class recipe is absent from current docs; one uvicorn process per container is the stated container guidance).
+
+**Date:** 2026-08-11
+
+---
+
 ## 2026-08-10 (later same day) — The `api` track is taught from scratch with three depth bars, in chunks, with inline checks
 
 **What changed** (revising the entry below, written hours earlier):
