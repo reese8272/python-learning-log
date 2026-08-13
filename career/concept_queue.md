@@ -4,13 +4,16 @@ The prioritized list of concepts to grill with `/sharpen`. Seeded from Reese's o
 
 **Where this sits in the pipeline:** `/learn` (acquire from zero, via `readings/ai-engineering-curriculum/`) → **`/sharpen` (this queue — defend cold)** → `/drill` (retain). A unit learned via `/learn` lands here to be defended. Concepts from his own shipped code start here directly (already built, just need defending). Two ledgers: this file tracks *acquisition/defense*; `CAREER_LOG.md` tracks *mastery + review cadence*.
 
-**Two tiers** (see `.claude/commands/sharpen.md`):
-- **Tier 1 — Foundational / agentic core** → 100%, "can teach it." Mechanism + why-this-over-that + failure mode. Defend cold.
-- **Tier 2 — Periphery** → Pareto 80/20, "explain the decision." Enough to make the call, not teach the internals.
+**Depth bars** (see `.claude/commands/sharpen.md`), which replaced Tier 1/Tier 2 on 2026-08-13:
+- **`[A]` BUILD IT** → mechanism + why-this-over-that + failure mode, cold and unaided. **95% is a miss.**
+- **`[B]` EXPLAIN IT** → the decision only. "When I'd reach for it and the one-line why" is a complete pass; don't grade internals.
+- **`[C]` NAME IT** → **deliberately not in this queue.** Defending "what Shield Standard is" cold is ceremony.
 
-`[ ]` = not yet owned · `[~]` = needs another rep · `[x]` = owned (date) — moves to `/drill` spaced-repetition rotation.
+*Legacy notation: the section headings below still read **Tier 1** / **Tier 2**. Map **T1 ≈ `[A]`/`[B]`**, **T2 ≈ `[C]`/`[B]`**, and re-bar a row when you touch it — no bulk rewrite.*
 
-Work top-down within each tier. Tier 1 before Tier 2 unless a real project need jumps the line.
+`[ ]` = not yet owned · `[~]` = needs another rep · `[x]` = owned (date) — moves to `/drill` rotation.
+
+Work top-down. Higher bars before lower unless a real project need jumps the line.
 
 ---
 
@@ -52,9 +55,9 @@ Work top-down within each tier. Tier 1 before Tier 2 unless a real project need 
 - [ ] **Python data model** — `is` vs `==` + small-int cache, mutable-default evaluated-once, `__eq__`/`__hash__` contract + invariant, first-class functions *(acquired 2026-06-26 via /learn §1.1; build banked 2026-06-29 — GridCell value object. Ready to defend cold in /sharpen.)*
 - [ ] **Type hints in earnest** — hints inert at runtime; nullable (`| None`, the type) vs required (the default) as independent axes; Pydantic v2 makes `x: int|None` required → 422 (v1 implicit-None default removed); builtin generics `list[str]`/`dict[str,float]`; `Protocol` structural typing for shapes you don't own + `@runtime_checkable` gotcha *(acquired 2026-06-30 via /learn §1.2; build pending — four-corner ForecastQuery model. Defend cold once built.)*
 
-### Secure API on AWS — interview prep *(roadmap: `career/api-security-aws-prep/`)* ⏱ **interview 2026-08-17**
+### Secure API on AWS *(roadmap: `career/secure-api-engineering/`)* — 🟢 **the ACTIVE track**
 
-*Tier 1 **because the posting names them explicitly**, not by generic importance. Several are promoted out of Tier 2 below for the duration of the sprint — see the note there. Build: `~/workspace/secure-api-lab`.*
+*Seeded 2026-08-10 from a real posting's requirements; **de-timeboxed 2026-08-13** when that role closed. The clock is gone, the queue isn't — this is the production-API and security layer under the capstone. Build: `~/workspace/secure-api-lab`.*
 
 **Depth bars carry over from the roadmap, and they define what "Owned" means in `/sharpen`:**
 - **`[A]`** — the `/sharpen` bar is full: mechanism + why-this-over-that + failure mode, cold. 95% is a miss.
@@ -78,7 +81,7 @@ Work top-down within each tier. Tier 1 before Tier 2 unless a real project need 
 - [ ] `[A]` **`Depends()` and why auth belongs in a dependency** — the composition point, and the `dependency_overrides` testing seam
 - [ ] `[A]` **`response_model` as a PHI-leak control** — minimum-necessary enforced at the serialization layer, not in a policy doc
 - [ ] `[A]` **401 vs 403 vs 422** — and why a valid token missing a scope is 403
-- [ ] `[B]` **ASGI vs WSGI — the concurrency model** — both are *specifications*, not packages. WSGI's unit of concurrency is an OS thread (~8 MB stack + scheduler entry); ASGI's is a heap-allocated coroutine, so *waiting* is nearly free. Wins on I/O-bound work, buys nothing on CPU-bound, and done wrong is **strictly worse** than WSGI. Plus the container rule: one uvicorn process per ECS task, because nested process managers make a hung worker invisible to ECS *(acquired 2026-08-11 via `/learn api` §1.1 — defend cold)*
+- [ ] `[B]` **ASGI vs WSGI — the concurrency model** — both are *specifications*, not packages. WSGI's unit of concurrency is an OS thread (~8 MB stack + scheduler entry); ASGI's is a heap-allocated coroutine, so *waiting* is nearly free. Wins on I/O-bound work, buys nothing on CPU-bound, and done wrong is **strictly worse** than WSGI. Plus the container rule: one uvicorn process per ECS task, because nested process managers make a hung worker invisible to ECS *(acquired 2026-08-11 via `/learn` §1.1 — defend cold)*
 - [ ] `[B]` **JWT revocation** — bearer tokens are valid until expiry; short TTL + rotation vs introspection vs denylist, and what each costs
 - [ ] `[B]` **Where to validate the token: edge vs app** — ALB native JWT verification (new 2025-11) and API Gateway authorizers vs an in-app dependency; defense in depth says both
 - [ ] `[B]` **ALB mTLS: passthrough vs verify mode** — `X-Amzn-Mtls-Clientcert` header family vs a trust store with a CA bundle + CRLs. Two distinct modes, don't blur them
@@ -98,10 +101,10 @@ Work top-down within each tier. Tier 1 before Tier 2 unless a real project need 
 - [ ] **S3 basics** — when/why
 
 ### Security
-> ⏱ **Promoted to Tier 1 through 2026-08-17** — the first two rows below are named explicitly in the interview posting and now live in the "Secure API on AWS" block above. Work them there; return them here afterward.
+> **Promoted to Tier 1 permanently (2026-08-13).** The first two rows below now live in the "Secure API on AWS" block above. They were promoted for a posting; they stay promoted because they're foundational to anything that authenticates a caller. Work them there.
 
-- [ ] **authn vs authz** — the decision tree, not just the words *(→ promoted, see interview-prep block)*
-- [ ] **JWT + API key patterns** — issue/sign/verify, when each *(→ promoted, see interview-prep block)*
+- [ ] **authn vs authz** — the decision tree, not just the words *(→ promoted, see the Secure API block)*
+- [ ] **JWT + API key patterns** — issue/sign/verify, when each *(→ promoted, see the Secure API block)*
 - [ ] **OWASP Top 10** — read once, all ten, one sitting
 - [ ] **Secrets management** — .env, never committing keys, prod patterns
 - [ ] **Prompt injection defense** — pre/post hooks as guardrails *(partly owned via hooks)*

@@ -54,7 +54,15 @@ Governed by `career/helpful_notes_and_guides/Focus & Time Block Protocol.md` —
 
 ## Layer 4 — The learning engine (what you wanna know)
 
-Three-stage, in-catalog, phone-friendly, always live-researched: **`/learn`** (acquire from zero) → **`/sharpen`** (defend cold at the tier bar) → **`/drill`** (retain, spaced). Walks `readings/ai-engineering-curriculum/summary.md` and `career/concept_queue.md`; logs mastery to `CAREER_LOG.md`. Courses are gap-fillers only. **Build before you bank** — a concept isn't owned until code using it exists somewhere real; five minutes counts. **Cadence** (not floor): one peak rep + one non-peak drill per day.
+Governed by `career/helpful_notes_and_guides/Learning Science Protocol.md` — the evidence base for every rule below, plus the diagnostic for when something won't stick.
+
+Three-stage, in-catalog, phone-friendly, always live-researched: **`/learn`** (acquire from zero) → **`/sharpen`** (defend cold at the depth bar) → **`/drill`** (retain, spaced + interleaved). **One track is ACTIVE at a time** (declared on the Card); the rest are dormant, because over-launch is how this has died before. Logs mastery to `CAREER_LOG.md`. Courses are gap-fillers only.
+
+- **Depth bars** `[A]` build it / `[B]` explain it / `[C]` name it — the bar is the rationing decision and binds both ways.
+- **The Ladder** — fill-in-the-blank → short answer → spot-the-bug → completion problem → the project. Scaffolding is removed one rung at a time and never re-added; the fade *is* the teaching.
+- **Build before you bank** — a concept isn't owned until code using it exists somewhere real; five minutes counts.
+- **Delayed `[x]`** — a teaching session can only mark `[~]`. Banking requires the worksheet green or a cold re-ask in a *later* session. Confidence measured right after learning is the least reliable signal there is.
+- **Cadence** (not floor): one peak rep + one non-peak drill per day.
 
 ## Layer 5 — The career engine (where you wanna go)
 

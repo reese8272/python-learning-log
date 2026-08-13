@@ -37,67 +37,56 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history. (Older stopped-at lines live in git history.)*
 
-**Date:** 2026-08-10 (Sunday) — re-entry after a 6-day gap, and the day the board changed. A screening cleared. Streak restarts today; nothing is owed backward.
+**Date:** 2026-08-13 (Thursday) — the interview clock came off. Streak restarts today; nothing is owed backward.
 
-> **🔒 THE INTERVIEW CLOCK (added 08-10 — this now outranks everything, including the 🏈 Editor clock):** screening cleared for a **secure-API role** — FastAPI + OAuth2/JWT/mTLS + Okta + AWS (ECS/ALB/Route 53/ACM/WAF/CloudWatch), HIPAA environment. Next round **~08-17**, covering verbal Q&A, live coding, **and** system design. Seven days. Roadmap: `career/api-security-aws-prep/summary.md` (`/learn api`). Build: `~/workspace/secure-api-lab` (`/issue-workflow`). Full block: **🔒 SEVEN DAYS** below.
+> **🔒 THE INTERVIEW CLOCK — REMOVED 08-13.** The secure-API role closed on **years-of-experience, before an interview happened.** Nothing was tested and nothing was failed. It came inbound; the outbound pipeline was already retired on 07-25, so **strategically nothing moved.** What the seven days actually produced was the best format work in this system's history — depth bars, the chunk loop, the three check formats, the `📝 Learning notes` block — all now **evergreen across every track** rather than dying with the sprint on 08-18. See `DECISIONS.md` (2026-08-13).
 
-> **⚡ PIVOT (2026-07-25, by Reese's call):** the job pipeline is **retired from the daily system** — after John's review, the priority is owning and growing the Cognizant role. `jobs/` is archive. **⏱ Suspended 08-10 for the duration of this interview sprint** — this opportunity came inbound, it wasn't pipeline work. The pivot's *intent* (mastery over scattershot applications) is intact: this sprint is 90% depth on skills the Cognizant role needs anyway. Reinstate 08-18. Full response system: `career/helpful_notes_and_guides/Independence Protocol.md`.
+> **🟢 ACTIVE TRACK: `secure-api-engineering`.** One track runs at a time; `ai`, `py`, and `soft` are dormant. A bare **`/learn`** goes straight to it — no menu. Roadmap: `career/secure-api-engineering/summary.md`. Build: `~/workspace/secure-api-lab` (`/issue-workflow`). The curriculum survived the role because it's the security and production-API layer under the capstone.
+>
+> **The Ladder** — how a unit gets learned, one rung at a time: fill-in-the-blank → short answer → spot-the-bug → completion problem (worksheet) → **the project** (a real issue, no scaffolding). **`[~]` never becomes `[x]` in the session that taught it** — banking needs the worksheet green or a cold re-ask next session. Why: `career/helpful_notes_and_guides/Learning Science Protocol.md`.
 
-> **🏈 THE CLOCK (added 08-04, PAUSED 08-10):** the AI YouTube Editor ships to one real lead by **NFL Week 1 (~09-10)**. **Paused through 08-17 by Reese's call** — see `DECISIONS.md` (2026-08-10). Post-sprint budget: ~8 usable days against a ~24-day calendar. ⚠️ **The lead gets a message today** — silence damages that relationship, a stated delay does not.
+> **⚡ PIVOT (2026-07-25, by Reese's call) — REINSTATED 08-13.** The job pipeline stays **retired from the daily system**; after John's review the priority is owning and growing the Cognizant role. `jobs/` is archive. The 08-10 suspension was for one inbound opportunity, and that opportunity is closed. **The rejection changes nothing here** — this was already not the strategy. Full response system: `career/helpful_notes_and_guides/Independence Protocol.md`.
+
+> **🏈 THE CLOCK (added 08-04) — UNPAUSED 08-13, four days early.** The AI YouTube Editor ships to one real lead by **NFL Week 1 (~09-10)**. The 08-10 pause was scoped to the interview sprint, and the sprint is over. ⚠️ **The lead still has not been messaged** — that was owed on 08-10 and the news is now *better* than expected. Send it. Silence damages the relationship; a stated delay never did.
+>
+> **⚠️ This is now the only hard external date in the system, and that matters more than it looks.** The record is unambiguous that this system runs hot against a named date and cold without one — the seven-day sprint out-produced any comparable stretch. Two clocks are gone (interview, and the sprint that came with it) and one remains. **Open decision: does the Editor take the peak window, or does `secure-api-engineering`?** They can't both have it. See `CAREER_LOG.md` → Active Struggles, "No deadline currently drives the learning."
 
 **The Floor — weekdays:** 🧱 the brick + 🧭 one ownership touch (a doc/audit line on his own code, or the close-out done).
 **The Floor — weekends (new rule, named by Reese 07-25):** weekends owe *nothing* professional. Weekend floor = **the brick** (or full presence with the kids). Any ownership touch, check-in, or rep on a weekend = bonus win, never owed.
 
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts.
 
-### 🔒 SEVEN DAYS (Sun 08-10 → Sun 08-17) — the interview sprint
+### 🎯 The shape of a day
 
-**One track runs. `/learn api`.** The nine-row Daily Protocol stays suspended. The AI Editor is paused. The other three learning tracks are dormant until 08-18.
-
-**The shape of every day:**
+*The seven-day sprint map is gone (it expired with the interview). This is the sustainable version — the same shape, without a countdown attached. The nine-row Daily Protocol stays suspended; it lived four days in July and re-launching it is a container, not a fix.*
 
 | When | What | Owed? |
 |---|---|---|
-| Peak (90 min) | `/learn api` — the day's concept, to the tier bar | ⬛ **The rep** |
-| Afternoon (60–90 min) | `/issue-workflow` — the day's build issue in `~/workspace/secure-api-lab` | ⬛ **The build** |
-| 8:30pm (20 min) | `/drill` + log the session | ☐ upside |
+| Peak (90 min) | **`/learn`** — one unit to its depth bar, via the chunk loop. Open with Step 1.5: re-ask last session's `Tripped` list. | ⬛ **The rep** |
+| Afternoon (60–90 min) | `/issue-workflow` — the current issue in `~/workspace/secure-api-lab`. This is the top rung: the concept becomes code. | ☐ upside on a normal day, ⬛ on a build day |
+| 8:30pm (20 min) | `/drill` — 3–5 items, **mixed domains**, varied question forms | ☐ upside |
 | 10:25pm | 🧱 The Brick | ⬛ floor |
 
-**The day map** (full detail, with per-day floors, in the roadmap's 7-day table):
+**🩹 The floor version — read this on a bad day.** `habits/tracker.md:105` records six instances of the all-or-nothing pattern: *"a 10 and a 0, and no median day."* The floor is **one `[A]` unit, ~30 minutes, and nothing else.** That **counts as a completed day.** The system survives an unlimited number of floor days. It does not survive one zero that becomes three — which is exactly what 08-12 and 08-13 were.
 
-| Day | Peak — chunks | Build | Floor (~45m) |
-|---|---|---|---|
-| **Sun 08-10** | §1 FastAPI, all 4 chunks | Scaffold + Issue 1 | 1.2 · 1.3 · 1.6 — the three `[A]`s |
-| Mon 08-11 | §2 → §3.A–3.B | Issue 2 — Okta tenant | 2.1 · 3.1 |
-| Tue 08-12 | §3.C–3.D → §4.A–4.B | Issue 3 | 3.5 · 4.3 |
-| Wed 08-13 | §4.C–4.D → §5.A–5.C | Issues 4 + 5 · **mock #1** | 4.5 · 5.3 |
-| Thu 08-14 | §5.D → §6.A–6.B | **Issue 7a** — ECR → Fargate → ALB → ACM | 6.1 — draw the path |
-| Fri 08-15 | §6.C–6.D | **Issue 7b** + Issue 8 | Finish the deploy |
-| Sat 08-16 | §7 · §8 · §9 | Issue 6 · **teardown** · `/sharpen` | 7.4 · 8.3 |
-| Sun 08-17 | §10 system design | **Full mock** | The one-page cheat sheet |
+**📏 Depth bars.** `[A]` build-it ~30m · `[B]` explain-it ~15m · `[C]` name-it ~5m. Binding in both directions — over-teaching a `[C]` is as much a miss as under-teaching an `[A]`.
 
-**📏 Depth bars are the whole design.** Taught from scratch this is ~28 hours against ~21 available, so every unit carries `[A]` build-it ~30m / `[B]` explain-it ~15m / `[C]` name-it ~5m. **§8 HIPAA and §9 CI/CD are `[B]`/`[C]` only** — the JD's *Desired* column, studied honestly and claimed accurately. **§11 stories run in evenings**, 10 min a night, never a peak block.
+**🔁 The chunk loop:** teach one idea (~8 min) → 2–4 inline checks (fill-in-the-blank · short answer · **spot-the-bug**) → one tiny snippet → stop. One worksheet per section, not per unit.
 
-**🔁 Each session is a chunk loop:** teach one idea (~8 min) → 2–4 inline checks (fill-in-the-blank · short answer · **spot-the-bug**) → one tiny snippet → next chunk. One worksheet per section, not per unit.
+**💸 Two hard money rules:** never create an **AWS Private CA** (~$400/mo general-purpose, ~$50/mo short-lived, prorated from creation, no refund on delete) and never enable **Shield Advanced** (~$3k/mo, 1-yr commit). mTLS is learned with a local openssl CA. Set a **$25 Budget alert** before touching AWS; tag everything `project=secure-api-lab`; run `docs/TEARDOWN.md` the same day you deploy.
 
-**🩹 The floor for this sprint — read this on a bad day.** `habits/tracker.md:105` has six instances of the all-or-nothing pattern: *"a 10 and a 0, and no median day."* A 7×3hr plan is exactly that shape, so each day has a **45-minute floor version** — the day's `[A]` units only, listed above. Dropping to the floor **counts as a completed day.** The sprint survives four floor days. It does not survive one zero that becomes three.
-
-**What can't slip:** Thursday and Friday. Issue 7 is the real AWS deploy, and it's the only thing converting *"proven ability to deploy, secure, and operate APIs on AWS"* from a no into a yes. If a day has to be sacrificed, sacrifice Saturday's §9, not Thursday.
-
-**💸 Two hard money rules:** never create an **AWS Private CA** (~$400/mo general-purpose, ~$50/mo short-lived, prorated from creation, no refund on delete) and never enable **Shield Advanced** (~$3k/mo, 1-yr commit). mTLS is learned with a local openssl CA. Set a **$25 Budget alert** before touching AWS; tag everything `project=secure-api-lab`; run `docs/TEARDOWN.md` Saturday.
-
-**Blocks to put on the calendar today:**
+**Blocks on the calendar:**
 
 | Time | Block |
 |---|---|
-| Peak 90 min | 🔒 `/learn api` — rename the block to the actual unit each night |
-| Afternoon 60–90 | 🔨 `/issue-workflow` — the day's issue |
+| Peak 90 min | 🎯 `/learn` — **rename the block to the actual unit each night** (a generic title at 9:45 means the 10:15 ritual was skipped — that's the tell) |
+| Afternoon 60–90 | 🔨 `/issue-workflow` — the current issue |
 | 1:00–2:00 | Nicks (existing, untouched) |
 | 8:30pm · 10:15pm · 10:25pm | 🃏 /drill · 🌙 Set tomorrow · 🧱 The Brick |
 
-**Cognizant's clock stays untouched** (`agenda.md` 07-25 rule, John's review note about balancing professional development with client priorities). This runs before work, after work, and on the weekend — not during it.
+**Cognizant's clock stays untouched** (07-25 rule, John's review note about balancing professional development with client priorities). This runs before work, after work, and on the weekend — not during it.
 
-**Weekend rule consciously suspended** through 08-17. It comes back 08-18, unchanged.
+**Weekend rule restored 08-13** (it was suspended for the sprint): weekends owe nothing professional. Weekend floor = the brick, or full presence with the kids.
 
 *(CFO Agent graph topology → queued as rep #2 material. Cognizant code you didn't write is still the escalation target.)*
 
@@ -109,29 +98,37 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 - 🏋️ 6am gym — **paused (hamstring)**. Installer ritual keeps running so the cue is ready the day the leg is.
 - 🪞 Shower affirmations — cue: water on → line one. Worst-day: identity line only. **Notecard INSTALLED 07-28 — trial live from Wednesday's shower.**
 
-**Daily rep cadence:** ⏱ **through 08-17 the peak block is `/learn api`, every day** — the other three tracks are dormant, not competing. Evening `/drill` unchanged. Acquire → build → defend → retain. Normal cadence (`/sharpen` or `/learn`, dealer's choice of track) resumes 08-18.
+**Daily rep cadence:** peak block = **`/learn`** on the active track. Evening `/drill`. Acquire → build → defend → retain. One track at a time; the menu is gone.
 
 **Streaks:** all restart today. No commentary, no archaeology.
 - 🧱 Brick: 0 — restarts tonight
-- ✅ Check-ins: restarts today (08-10)
-- 🧭 Ownership touches: 0 — rep #1 is today's Issue 1 in `secure-api-lab`
+- ✅ Check-ins: restarts today (08-13)
+- 🧭 Ownership touches: 0 — rep #1 is Issue 1 in `secure-api-lab`
+- 🎯 **Learning reps: 0 — restarts tomorrow morning** *(new counter, added 08-13.* A rep = one `/learn` unit taught or one `/sharpen` defense. **This was never counted before**, which is a real gap: the rep is the thing the whole system exists to produce, and it was the only load-bearing behavior with no number attached. Brick and ownership touches had counters; the rep didn't.*)*
 
-**Stopped at:** 08-11 — first real `/learn api` rep. **§1.1 ASGI vs WSGI banked `[x]`**; stopped before **1.2 (`async def` vs `def` + the threadpool trap, `[A]`)** — that's tomorrow's opener, and the re-entry question is already written at the bottom of `career/api-security-aws-prep/reflection_log/2026-08-11.md`. Schedule call made: §1 ran today instead of the map's §2+§3, because §1's three `[A]`s underpin §4's JWT design — **the sprint is ~1 day behind the written map, and §2 has to compress into Tuesday.** New convention: every roadmap section now carries a `📝 Learning notes` block (Asked / Landed / Tripped / Watch).
-> *(08-10, for context — the board changed: a screening cleared for a secure-API role, next round ~08-17 across Q&A + live coding + system design. Built the track, seeded the queue, scaffolded the build repo, paused the Editor for seven days.)*
+**Stopped at:** 08-13 — **no learning happened 08-12 or 08-13; the rejection landed and the reps stopped.** That's the documented all-or-nothing signature, named early rather than after a week. Last actual rep was 08-11: **§1.1 ASGI vs WSGI banked `[x]`**, stopped before **1.2 (`async def` vs `def` + the threadpool trap, `[A]`)**. The re-entry question is already written at the bottom of `career/secure-api-engineering/reflection_log/2026-08-11.md` and it is still the right first move.
 
-**The read that came out of the gap analysis, and it's the useful part:** the JD looked overwhelming and wasn't. It split into two piles. *Recalibration* — FastAPI, async, OAuth2, testing, CI/CD are all already in production and all self-rated "Gap" (`CAREER_LOG.md` said "haven't built with it" against ~37k LOC of FastAPI, and "no hands-on experience" against 5+ live CI workflows). *Acquisition* — the AWS platform/edge layer, mTLS, Okta/OIDC, HIPAA, which a full-repo grep found **zero** mentions of. Two different problems that were wearing the same label. Notes corrected 08-10; levels held at Building until the cold defense on 08-16, per the standing rule.
+**What 08-13 was spent on instead:** merging the sprint's format work into the evergreen learning engine before its scheduled 08-18 deletion, plus a new `Learning Science Protocol.md`. **That was the labor of the assistant, not the peak window** — which is the only reason it isn't a repeat of the 08-04 STOP item (*"building containers during sprints"*). **The container is paid for by tomorrow's rep, not instead of it.**
 
-**First move:** `/learn api` → **1.2 the threadpool trap** `[A]`, then chunk 1.B (`Depends()` `[A]`), 1.C (`response_model` `[A]`), 1.D — then Issue 1. §2 compresses in behind it. **Still outstanding, outside the terminal:** message the Editor lead about the 7-day pause.
+**The read that came out of the gap analysis, and it's still the useful part:** the JD looked overwhelming and wasn't. It split into two piles. *Recalibration* — FastAPI, async, OAuth2, testing, CI/CD are all already in production and were all self-rated "Gap" (`CAREER_LOG.md` said "haven't built with it" against ~37k LOC of FastAPI, and "no hands-on experience" against 5+ live CI workflows). *Acquisition* — the AWS platform/edge layer, mTLS, Okta/OIDC, HIPAA, which a full-repo grep found **zero** mentions of. Two different problems wearing the same label. **The rejection didn't touch either pile** — it was decided on a number, not on knowledge. The pile is exactly where it was on 08-10.
 
-*Deferred until 08-18 (not dropped):* §1.3 worksheet 16/19 → 19/19 (COACH NOTES in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` — fields-vs-values, missing enum, unused `review_comment`); Cold Bench rep #1 on the Editor pipeline.
+**First move (tomorrow, peak block):** `/learn` → **Step 1.5 re-asks §1.1's `Tripped` list** (six items, already written), then **1.2 the threadpool trap** `[A]`. Then 1.B (`Depends()` `[A]`), 1.C (`response_model` `[A]`), 1.D — then Issue 1.
+
+**Still outstanding, outside the terminal:** ⚠️ **message the Editor lead.** Owed since 08-10, now four days late, and the news is better than the message you were going to send.
+
+*Deferred, not dropped:* §1.3 worksheet 16/19 → 19/19 (COACH NOTES in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` — fields-vs-values, missing enum, unused `review_comment`); Cold Bench rep #1 on the Editor pipeline.
 
 ---
 
-## 🏈 SHIP BY KICKOFF — AI YouTube Editor v1 (scoped 2026-08-04) · ⏸ **PAUSED 08-10 → 08-17**
+## 🏈 SHIP BY KICKOFF — AI YouTube Editor v1 (scoped 2026-08-04) · ▶️ **UNPAUSED 08-13**
 
-> **⏸ Paused, not descoped (2026-08-10, Reese's call).** The interview sprint (🔒 above) outranks this for seven days. Everything below stays valid and is picked up **08-18** with ~8 usable days against a ~24-day calendar — tighter than the original ~18, so expect a scope conversation on the 18th, not a schedule conversation. **Action owed today:** tell the lead. A stated delay costs nothing; silence costs the relationship. See `DECISIONS.md` (2026-08-10).
+> **▶️ Unpaused 2026-08-13, four days early.** The pause was scoped to the interview sprint (08-10 → 08-17) and the sprint ended when the role closed. Everything below stays valid, with **~12 usable days against a ~28-day calendar** — better than the ~8 the pause was going to cost, worse than the original ~18. Expect a **scope** conversation, not a schedule one.
+>
+> ⚠️ **Action owed since 08-10 and still not done: tell the lead.** Four days of silence on a delay that turned out to be shorter than planned. A stated delay costs nothing; silence costs the relationship. Send it before anything else on this list.
+>
+> **And the strategic question this now raises:** with the interview clock gone, **this is the only hard external date left in the system.** The record says this system runs hot against a named date and cold without one. Either the Editor takes the peak window and `secure-api-engineering` drops to evenings, or the reverse — but running both at full weight is the over-launch signature. Decide it explicitly rather than by drift. See `DECISIONS.md` (2026-08-10, 2026-08-13).
 
-*The most time-sensitive, highest-upside thing in the system — and until 08-04 it existed nowhere in it, running entirely in his head while the Card tracked worksheet fixes. This section outranks the Weekly and Monthly blocks below (but not the interview sprint) until it ships.*
+*The most time-sensitive, highest-upside thing in the system — and until 08-04 it existed nowhere in it, running entirely in his head while the Card tracked worksheet fixes. This section outranks the Weekly and Monthly blocks below until it ships. **As of 08-13 it is also the only thing in the system with a real external date on it.***
 
 **Deadline:** NFL Week 1, ~**2026-09-10**. From 08-04 that's five calendar weeks.
 **Honest budget:** ~**18 usable days**, not 35 — the summer cadence is a 10-day sprint followed by a 5–9 day blackout (Jul 02–10 → 9 dark → Jul 20–29 → 5 dark). Plan against 18, not 35.

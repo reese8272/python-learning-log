@@ -36,10 +36,22 @@ Tone is unchanged and non-negotiable: process praise not trait praise, "and" not
 
 These rules exist because the ADHD brain's motivation system requires engineered structure, not more willpower. When coaching a learning session, enforce these — don't work around them.
 
+**`career/helpful_notes_and_guides/Learning Science Protocol.md` is the "how do I make things stick" reference** — the evidence base under every rule in this section, plus a diagnostic for when a concept won't stay landed. Its sibling, the Focus & Time Block Protocol, owns *attention and initiation*; this one owns *encoding and retention*. Read it before changing anything about how learning sessions run.
+
 **The primary learning engine is concept-driven, not course-driven** — a three-stage in-catalog pipeline, all phone-friendly, all logged to `CAREER_LOG.md`:
-- **`/learn`** — acquire a concept from zero, researched live against current docs, tied to his code. Walks the technical curriculum at `readings/ai-engineering-curriculum/summary.md`. *Replaces taking online courses.*
-- **`/sharpen`** — defend what he's learned/built cold, at the tier bar. Walks `career/concept_queue.md`.
-- **`/drill`** — retain landed concepts on a spaced schedule.
+- **`/learn`** — acquire a concept from zero, researched live against current docs, tied to his code. Walks the ACTIVE track's roadmap. *Replaces taking online courses.*
+- **`/sharpen`** — defend what he's learned/built cold, at the depth bar. Walks `career/concept_queue.md`.
+- **`/drill`** — retain landed concepts, spaced and interleaved.
+
+**One track is ACTIVE at a time**, declared on the Card; the others are explicitly dormant. A bare `/learn` goes straight to the active track — do not present the track menu. Over-launch is a documented failure mode (`SYSTEM.md`), and the menu itself is a decision cost on a brain that pays extra for those.
+
+**Depth bars replace tiers.** `[A]` build it (~30m) · `[B]` explain it (~15m) · `[C]` name it (~5m), each with a "done sounds like" bar. Binding in both directions — don't over-teach a `[C]`. Legacy `T1`/`T2` rows map as T1 ≈ `[A]`/`[B]`, T2 ≈ `[C]`/`[B]`; migrate a row when you touch it, never in bulk.
+
+**The Ladder — multiple ways to learn, up to a project.** fill-in-the-blank → short answer → spot-the-bug → completion problem → the project. Rungs 1–3 are in-session per chunk; 4–5 are the solo worksheet. Scaffolding comes off one rung at a time and is never re-added — the fade is the load-bearing part.
+
+**Delayed banking — enforce this.** A teaching session may only mark a unit `[~]`. `[x]` requires the worksheet running green **or** a clean cold re-ask at the start of a *later* session (`/learn` Step 1.5). Self-assessment immediately after learning is the least accurate moment available, and it's a documented ADHD calibration weak point — the 2026-08-11 session banked four misconceptions behind confident answers.
+
+**Every session writes a `📝 Learning notes` block** (Asked · Landed · Tripped · Watch) into the track roadmap, *during* the session. **Tripped** carries the correction inline and is consumed by both Step 1.5 and `/drill` — it's the mechanism, not a record.
 
 Online courses are **not taken**; their content was mined into the curriculum (minus deprecated patterns — see the curriculum's Currency Watch). The Master Guide (`career/helpful_notes_and_guides/AI Engineering Master Guide.md`) is the reference that anchors all of it (North Star, capstone, resource pool). Live research every technical session — never teach/grade from memory; the ecosystem moves too fast.
 

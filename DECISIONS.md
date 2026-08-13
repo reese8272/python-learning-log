@@ -4,6 +4,35 @@ A log of explicit design decisions that change or deviate from what the planning
 
 ---
 
+## 2026-08-13 — The interview sprint's format work is promoted to the evergreen learning engine; the track is de-timeboxed; a learning-science reference doc is added
+
+**What changed:**
+
+1. **The `⏱ TRACK ADDENDUM` in `.claude/commands/learn.md` is deleted, and everything in it is now evergreen.** It was explicitly marked *"Delete this whole block on 2026-08-18."* Promoted out of it and into all five tracks: the **chunk loop** (teach ~8 min → 2–4 inline checks → one tiny snippet → stop), the **depth bars**, the mandatory **`Breaks if wrong:`** clause on `[A]` units, and the three **check formats**.
+2. **Depth bars `[A]`/`[B]`/`[C]` replace Tier 1/Tier 2 as the system's vocabulary**, in `learn.md`, `sharpen.md`, `concept_queue.md`, and `CLAUDE.md`. Three levels with a "done sounds like" sentence and a minute budget beat two levels with neither, and the budget is what makes rationing a ~90-unit curriculum possible. **Legacy `T1`/`T2` rows are mapped (T1 ≈ `[A]`/`[B]`, T2 ≈ `[C]`/`[B]`) and migrated only when touched** — a bulk rewrite of ~150 rows is system-tinkering.
+3. **The Ladder is named** — fill-in-the-blank → short answer → spot-the-bug → completion problem → the project. Rungs 1–3 in-session per chunk, rungs 4–5 the solo worksheet. **Spot-the-bug is generalized off security** with a per-track defect catalog (`ai`: prompt injection, unbounded context; `py`: mutable default, N+1, leaked resource).
+4. **The delayed-`[x]` rule.** A teaching session may only mark `[~]`. Banking requires the worksheet green **or** a clean cold re-ask at a new **Step 1.5**, which opens every session by re-asking the last session's `Tripped` list. Step 3 is also reframed explicitly as a **pretest** — a wrong guess is the mechanism, not a setback.
+5. **`📝 Learning notes` (Asked · Landed · Tripped · Watch) is promoted from the api track to all tracks.** `Tripped` is now load-bearing rather than a record: it is consumed by Step 1.5 and by `/drill`, and `/drill` strikes items from it on a Solid verdict.
+6. **`/drill` interleaves.** 3–5 items across *different domains* with *varied question forms*, rather than one topic several ways, and it now skips anything reviewed within the last week.
+7. **New: `career/helpful_notes_and_guides/Learning Science Protocol.md`** — seven cited entries with effect sizes, matching the Focus & Time Block Protocol's format. Scope split stated in both: **Focus Protocol owns attention and initiation; this owns encoding and retention.** Wired into `SYSTEM.md` Layer 4 and `CLAUDE.md`.
+8. **The track is de-timeboxed and renamed:** `career/api-security-aws-prep/` → **`career/secure-api-engineering/`**. §11 (story bank) deleted, §10 (system-design set-piece) demoted to a recurring `/drill` exercise, §5 mostly re-barred `[A]`→`[B]`, the 7-day map and Interview Intel removed (the JD survives as a short "why these units" market-evidence note). `secure-api-lab` keeps all 8 issues as the Ladder's top rung.
+9. **One ACTIVE track at a time**, declared on the Card. `secure-api-engineering` is active; `ai`, `py`, `soft` are dormant; `new` stays always-available. **A bare `/learn` goes straight to the active track — the menu is gone.**
+10. **A learning-rep counter is added to the Card's Streaks.** Brick, check-ins, and ownership touches were counted; the rep — the thing the system exists to produce — was not.
+
+**Why:** the secure-API role closed on years-of-experience before an interview happened. The sprint's *content* was interview-shaped but its *format* was the best work in the system's history, and it was five days from automatic deletion. Reese's framing, verbatim: *"I don't think there is a world where integrating the learning I was GOING to do in that is a bad idea… I think having multiple ways to learn UP TO a project might be the move going forward."* That instinct turned out to be a documented effect (guidance fading), which is what made it worth encoding as the Ladder rather than as a preference.
+
+**Source / evidence:** live research this session, all cited in `Learning Science Protocol.md`. The findings that actually changed behavior rather than confirming it:
+- **Delayed judgments of learning.** [Knouse, Paradise & Dunlosky 2006](https://pubmed.ncbi.nlm.nih.gov/17085626/) — adults with ADHD show *higher relative accuracy for delayed* metamemory judgments, while [calibration trends toward overconfidence](https://link.springer.com/article/10.1007/s12144-026-09164-9). This is the direct counter to the 08-11 failure mode (four misconceptions survived confident-sounding answers) and is why `[x]` left the teaching session.
+- **Guidance fading / expertise reversal.** [Fading worked solution steps](https://link.springer.com/content/pdf/10.1023/B:TRUC.0000021815.74806.f6.pdf), [expertise reversal](https://www.researchgate.net/publication/226748784_The_expertise_reversal_effect_and_worked_examples_in_tutored_problem_solving) — this is the Ladder, and it independently confirms the fading-scaffold row Reese invented at `career/patterns.md:148` on 07-28.
+- **Delay-of-reinforcement gradient in ADHD.** [Feedback timing modulates learning in adults with ADHD](https://www.nature.com/articles/s41598-018-33551-3) — the mechanism behind per-chunk grading, and the missing citation under the 07-27 reward-loop note.
+- **Correction made:** `sharpen.md` claimed the testing effect at **g ≈ 0.55**. That number is the *exercise → inhibitory control* figure from the Focus Protocol, mis-transcribed. The testing effect is [**g = 0.50** (Rowland 2014)](https://pubmed.ncbi.nlm.nih.gov/25150680/) / **g = 0.61** (Adesope 2017). Fixed.
+
+**What was deliberately NOT done:** the nine-row Daily Protocol stays suspended (it lived four days in July); `/session-start` and `Learning System Guide.md` remain stale and are flagged, not fixed; no bulk re-bar of existing roadmap rows. The 08-04 STOP item is *"building containers during sprints"* — this pass was scoped to consolidation of work that already existed, done outside the peak window, and it is paid for by a rep the following morning.
+
+**Left open, deliberately:** **nothing currently supplies an external deadline.** The seven-day sprint out-produced any comparable stretch in the record and it had a date on it. The only hard date left is the AI Editor's NFL Week 1 (~09-10), now unpaused — which forces a peak-window allocation decision between it and `secure-api-engineering`. Logged in `CAREER_LOG.md` Active Struggles; Reese's call, not the coach's.
+
+---
+
 ## 2026-08-11 — Every roadmap section carries a `📝 Learning notes` block; §1 taught before §2 despite the map
 
 **What changed:**

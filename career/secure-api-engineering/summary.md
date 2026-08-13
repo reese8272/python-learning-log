@@ -1,22 +1,20 @@
-# Secure API Engineering on AWS — interview sprint roadmap
+# Secure API Engineering on AWS — roadmap
 
-> **Created 2026-08-10 under a 7-day clock.** Screening cleared for a backend role: FastAPI + OAuth2/JWT/mTLS + Okta + AWS (ECS/ALB/Route 53/ACM/WAF/CloudWatch) in a HIPAA environment. Next round ~**2026-08-17**, covering all three formats — verbal Q&A, live coding, and system design. This track outranks everything else in the system until then. See `DECISIONS.md` (2026-08-10).
+> **🟢 ACTIVE TRACK.** Created 2026-08-10 as a 7-day interview sprint; **de-timeboxed 2026-08-13** when that role closed on years-of-experience before an interview happened. The clock is gone. The curriculum stayed, because it's the production-API and security layer under everything else being built — the capstone spec is FastAPI + `Depends()` auth + Docker + AWS, and `secure-api-lab` is the only fully-specified project in the system. See `DECISIONS.md` (2026-08-13).
 
-**What this is:** A ground-up curriculum in secure API engineering, taught in-catalog via `/learn api`, **researched live against current official docs**, then handed to `/sharpen` (defend cold) and `/drill` (retain). This roadmap is the *what to cover and how deep*; the teaching is generated fresh each session so it never goes stale.
+**What this is:** A ground-up curriculum in secure API engineering, taught in-catalog via `/learn`, **researched live against current official docs**, then handed to `/sharpen` (defend cold) and `/drill` (retain). This roadmap is the *what to cover and how deep*; the teaching is generated fresh each session so it never goes stale.
 
-**The framing — build UP from zero.** Assume nothing is owned. Every unit starts at `[ ]`, **including things you ship at work today**, because the goal isn't *exposure* — it's being able to produce it cold under questioning. A thing you use daily but can't explain *why this over that* is the thing you'll fumble when the interviewer pushes one level past the happy path.
+**The framing — build UP from zero.** Assume nothing is owned. Every unit starts at `[ ]`, **including things you ship at work today**, because the goal isn't *exposure* — it's being able to produce it cold. A thing you use daily but can't explain *why this over that* is the thing that falls apart one level past the happy path.
 
-The one place your existing work is used: **as the worked example.** Where you have shipped code, the teaching anchors to CreatorClip or CFO Agent instead of a toy app. That's salience, not a shortcut — the unit still gets taught from the mechanism up.
+The one place your existing work is used: **as the worked example.** Where you have shipped code, the teaching anchors to CreatorClip or CFO Agent instead of a toy app. That's salience, not a shortcut — the unit still gets taught from the mechanism up. **And check first whether he's already operated it** *(standing instruction, 2026-08-11)*: in §1 the gap turned out to be vocabulary, not understanding — CPU-bound work leaving the request path is exactly what Celery does in CreatorClip. Teach the name onto the thing he already built rather than teaching the thing.
 
-**Source of truth:** the job description (transcribed verbatim in Interview Intel below) and `career/helpful_notes_and_guides/AI Engineering Master Guide.md` for the mastery standard ("can I explain why THIS over THAT?").
+**Source of truth:** current official docs (live-researched every session), `career/helpful_notes_and_guides/AI Engineering Master Guide.md` for the mastery standard ("can I explain why THIS over THAT?"), and `career/helpful_notes_and_guides/Learning Science Protocol.md` for how the sessions are shaped.
 
 ---
 
-## 📏 Depth bars — the whole point of this file
+## 📏 Depth bars
 
-7 days × ~3hr ≈ **21 hours.** Taught genuinely from scratch, everything below prices out at ~19 hours of
-teaching + ~9 of building = **~28 hours. It does not fit.** So every unit carries a bar, and the bar is the
-rationing decision — it says how long to spend and what "done" means.
+Every unit carries a bar. The bar says how long to spend and what "done" means, and it **binds in both directions** — don't over-teach a `[C]`. Full definitions live in `/learn`; the table is here for reading the roadmap.
 
 | Bar | Means | Done sounds like | Budget |
 |---|---|---|---|
@@ -24,67 +22,27 @@ rationing decision — it says how long to spend and what "done" means.
 | **`[B]` EXPLAIN IT** | Defend the decision, not the internals | *"I know when to reach for it and the one-line why."* | ~15 min |
 | **`[C]` NAME IT** | One sentence — enough to not be blindsided | *"I know what that is and where it shows up."* | ~5 min |
 
-**Where the `[A]`s went, and why:** they cluster on what this interview will make you *produce* — the JWT
-validation path, the OAuth2 flow map, async/DI, `response_model`, cert-as-identity, the AWS request path,
-and the negative test matrix. Everything the JD lists under *Desired* rather than required is capped at `[B]`.
+**Where the `[A]`s cluster:** on what you'd have to *produce* cold — the JWT validation path, the OAuth2 flow map, async/DI, `response_model`, the AWS request path, and the negative test matrix. **§8 (HIPAA) and §9 (CI/CD) stay capped at `[B]`/`[C]`** — context, not craft. **§5 (mTLS) was mostly re-barred `[A]`→`[B]` on 2026-08-13**, since those `[A]`s existed because one specific posting named mTLS as a hard requirement.
 
-**The honest consequence, stated up front:**
-- **§1–§7 and §10 get taught properly.** These are the posting's requirements.
-- **§8 (HIPAA) and §9 (CI/CD) are `[B]`/`[C]` only.** They're the *Desired* column. Studied honestly, claimed accurately — not mastered.
-- **§11 (positioning + stories) runs in evenings, never in the peak window.** It's drafting, not learning.
-- **If the week compresses further: cut Issue 8, never Issue 7.**
+**Status keys:** `[ ]` not started · `[~]` taught, not yet banked · `[x]` banked (date) → enters `/sharpen` then `/drill` rotation.
 
-**Status keys:** `[ ]` not started · `[~]` in progress / needs another pass · `[x]` learned (date) → enters `/sharpen` then `/drill` rotation.
+> ⚠️ **`[~]` → `[x]` is not a teaching session's call.** Banking requires the section worksheet running green **or** a clean cold re-ask at Step 1.5 of a later session. See `Learning Science Protocol.md` #5.
 
 ---
 
 ## 🔁 How a session runs
 
-The unit of work is a **chunk** (~20–30 min), not a section. Each chunk is one loop:
+The session protocol — the chunk loop, the Ladder, the three in-session check formats, and the Learning notes convention — **is now evergreen and lives in `/learn`** (`.claude/commands/learn.md`). It was invented here during the sprint and promoted out on 2026-08-13 so every track gets it. Nothing about it is track-specific anymore.
 
-> **Teach one idea (~8 min)** → **2–4 inline checks** → **one tiny snippet (3–8 lines)** → next chunk.
+The two things still specific to this track:
+- **Chunks are predeclared** per section below (`1.A`, `4.C`, …), so a session can stop cleanly mid-section.
+- **Worksheets are one per SECTION**, at `career/lesson_assignments/apisec-<section>-<kebab-name>.py`, and **PART 3 of each is that section's real issue** in `~/workspace/secure-api-lab/docs/issues.md`.
 
-**The three check formats** — all built on the house question mold (*why THIS over THAT · when it matters · what breaks if you get it wrong*):
+## 🎯 Section → project map
 
-1. **Fill-in-the-blank** — for the lists that have to be automatic.
-   *"Validation order: verify the ___ before reading any claim, because otherwise ___."*
-2. **Short answer** — 1–3 sentences, cold, no notes.
-3. **Spot-the-bug** — a 3–8 line snippet with one real vulnerability in it. Name it before being told.
-   *(The highest-signal format for a security interview: it's how they'll actually probe.)*
+One project per section — the already-written issues in `~/workspace/secure-api-lab/docs/issues.md`. This is the top rung of the Ladder: the place where a taught unit becomes code with no scaffolding under it.
 
-**At the end of each section:** the capstone build issue, then the section's worksheet lands in
-`career/lesson_assignments/apisec-<section>-<kebab-name>.py` — same house shape as always
-(soliloquy → PART 1 short answers → PART 2 stubs with intent-only TODOs → PART 3 the capstone →
-`_run_tests()` → gated answer key).
-
-### 📝 Learning notes — every section carries one *(convention added 2026-08-11, Reese's call)*
-
-Each section ends with a **`### 📝 Learning notes`** block, written by `/learn api` as the section is
-taught and appended to *during* the session, not reconstructed after. It is **not** a summary of the
-material — the material is the section above it. It is a record of **how the learning went**, so a
-future session (or a `/sharpen` grader) knows where the soft spots are without re-teaching to find them.
-
-Four fixed headings, kept terse:
-
-- **Asked** — the questions Reese raised unprompted. These map his real mental model; a question asked
-  is a better signal of the edge than a check answered.
-- **Landed** — what he restated correctly and cold. Safe to build on.
-- **Tripped** — what he got wrong or fuzzy, **and the corrected version in one line.** This is the
-  highest-value part of the block: it's the pre-built `/drill` list and it tells the next session what
-  to re-ask before moving on.
-- **Watch** — recurring patterns across the section (a habit of reasoning, a vocabulary gap, a place
-  he consistently over- or under-claims). Coach-level, not content-level.
-
-**Why it exists:** this track is taught from zero under a 7-day clock, and the failure mode is a unit
-marked `[x]` on a confident-sounding explain-back that was actually 80% there. *Tripped* catches that
-in writing. Rule: **a section's notes get written even if the section isn't finished** — a partial
-block beats a missing one.
-
-## 🎯 Section → capstone map
-
-One project per section. These are the already-written issues in `~/workspace/secure-api-lab/docs/issues.md`.
-
-| Section | Capstone |
+| Section | Project |
 |---|---|
 | §1 + §2 | **Issue 1** — FastAPI skeleton + OpenAPI contract |
 | §3 | **Issue 2** — Okta tenant issuing real tokens |
@@ -93,41 +51,27 @@ One project per section. These are the already-written issues in `~/workspace/se
 | §8 | **Issue 6** — audit logging with PHI redaction |
 | §6 | **Issue 7** — the AWS deploy *(load-bearing)* |
 | §9 | **Issue 8** — CI/CD with OIDC federation |
-| §10 | *No code* — the diagram, drawn cold in under 4 minutes |
-| §11 | *No code* — the recorded mock |
 
 ---
 
-## 🎯 Interview Intel — what they actually asked for
+## 📌 Why these units — evidence from a real posting
 
-**Verbatim from the posting:**
+*This curriculum wasn't assembled from a syllabus. It was reverse-engineered from a live 2026 job description for a secure-API role (FastAPI + OAuth2/JWT/mTLS + Okta + AWS, HIPAA environment). That role closed on years-of-experience, but **the posting remains good evidence of what this skill set is actually worth in the market** — which is why the section list survived the role. Kept as market evidence; the interview framing is gone.*
 
-> **API Development (Backend)** — Strong experience building REST APIs using Python, with FastAPI as the primary framework · Development of high-performance, secure, and asynchronous API services using FastAPI · API contract definition and maintenance using OpenAPI / Swagger · Experience exposing APIs that support integration with IDP (like Okta)
->
-> **Security & Identity** — Implementation of OAuth2 authentication and authorization flows · Secure handling and validation of JWT tokens · Experience with mTLS (mutual TLS) for service-to-service communication · Strong understanding of API security protocols and secure communication standards
->
-> **AWS Services for API & Security** — Hands-on experience with AWS services: ECS, ALB, Route 53, S3, API Gateway · Certificate management using AWS Certificate Manager (ACM) and AWS Private Certificate Authority · API protection using AWS WAF and AWS Shield · Monitoring, logging, and alerting using Amazon CloudWatch · Proven ability to deploy, secure, and operate APIs on AWS
->
-> **API Testing & Validation** — Proficiency with API testing and validation · Ability to test authentication, authorization, headers, and request/response flows
->
-> **Desired Skills** — *Compliance & Security Context:* Prior experience working in HIPAA-compliant environments · Secure handling of PHI, including access control, encryption, and audit logging. *DevOps & Source Control:* Familiarity with CI/CD pipelines for API and UI deployments.
-
-**How to read it (the subtext):**
-
-- **"high-performance, secure, and asynchronous"** — three words, three separate probes. *Asynchronous* means the event loop and what happens when you block it. *High-performance* means workers, topology, pagination. *Secure* is the whole middle half of the posting. → **§1**
+- **"high-performance, secure, and asynchronous"** — three words, three separate probes. *Asynchronous* means the event loop and what happens when you block it. *High-performance* means workers, topology, pagination. *Secure* is a whole half of the job. → **§1**
 - **"contract definition and maintenance"** — **maintenance** is the tell. Not "does FastAPI generate a spec" (it does, free) but: have you *versioned* one, caught a breaking change, handed a spec to a consuming team? → **§2**
-- **"exposing APIs that support integration with IDP (like Okta)"** — the most revealing line in the posting. It means **your API is a Resource Server, not an authorization server.** You validate tokens Okta issued; you never issue them. Getting this backwards is visible immediately. → **§3**
+- **"exposing APIs that support integration with IDP (like Okta)"** — the most revealing line. It means **your API is a Resource Server, not an authorization server.** You validate tokens Okta issued; you never issue them. Getting this backwards is visible immediately. → **§3**
 - **"mTLS for service-to-service"** — note the qualifier. Not browsers; internal service auth. That implies a mesh or internal PKI, and it's why Private CA is the very next bullet. → **§5**
-- **"ECS, ALB, Route 53, S3, API Gateway" + ACM/PCA + WAF/Shield + CloudWatch** — a complete request path, not a random list. Learn it as **one diagram**. → **§6, §10**
-- **"Proven ability to deploy, secure, and operate"** — *proven* and *operate*. The one bullet you cannot talk past; it's why Issue 7 is a real deploy. → **§6**
-- **"test authentication, authorization, headers, and request/response flows"** — they are describing a **negative test matrix**, nearly verbatim. → **§7**
-- **HIPAA / PHI** — *Desired*, not required. That's the honest opening. → **§8, §11**
+- **"ECS, ALB, Route 53, S3, API Gateway" + ACM/PCA + WAF/Shield + CloudWatch** — a complete request path, not a random list. Learn it as **one diagram**. → **§6**
+- **"Proven ability to deploy, secure, and operate"** — *proven* and *operate*. The bullet you cannot talk past; it's why Issue 7 is a real deploy. → **§6**
+- **"test authentication, authorization, headers, and request/response flows"** — a **negative test matrix**, described nearly verbatim. → **§7**
+- **HIPAA / PHI, CI/CD** — listed as *Desired*, not required. Hence the `[C]` cap. → **§8, §9**
 
 ---
 
-## ⚠ Currency Watch — verified live 2026-08-10; re-verify per unit
+## ⚠ Currency Watch — verified live 2026-08-10 · **stale since then — re-verify per unit before teaching**
 
-Several of these are recent enough that most candidates won't know them. That's the differentiator.
+Several of these are recent enough that most people working in this space don't know them yet. **The dates below are the point:** anything more than a few months old here should be re-checked live, not trusted. That's Rule 1.
 
 - **`python-jose` is out; `PyJWT` is in.** The official FastAPI security tutorial migrated; python-jose is effectively unmaintained. Half the tutorials online still teach it. For RS256 (what Okta uses) install **`pyjwt[crypto]`**. → [FastAPI docs](https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/)
 - **OAuth 2.1 is still an Internet-Draft, not an RFC** — `draft-ietf-oauth-v2-1-15` as of March 2026. Say *"the de-facto 2026 baseline, though still a draft"* — the precision is a credibility marker. Changes: implicit removed, ROPC removed, **PKCE required for every client including confidential ones**, exact-match redirect URIs, refresh-token rotation. → [oauth.net/2.1](https://oauth.net/2.1/)
@@ -142,7 +86,7 @@ Several of these are recent enough that most candidates won't know them. That's 
 
 ## Section 1 — FastAPI at depth
 **Chunks:** 1.A the event loop → 1.B dependency injection → 1.C contracts & response shaping → 1.D lifecycle & errors
-**Capstone:** Issue 1 · **Budget:** ~150 min teaching + ~60 build
+**Project:** Issue 1 · **Budget:** ~150 min teaching + ~60 build
 
 ### 1.A — The event loop
 - [x] **1.1 ASGI vs WSGI** `[B] ~15m` *(2026-08-11)* — the concurrency model; why "high-performance" in this JD means the loop; uvicorn/gunicorn worker topology.
@@ -197,7 +141,7 @@ Several of these are recent enough that most candidates won't know them. That's 
 
 ## Section 2 — REST + OpenAPI as a maintained contract
 **Chunks:** 2.A semantics → 2.B the contract
-**Capstone:** Issue 1 (shared with §1) · **Budget:** ~85 min
+**Project:** Issue 1 (shared with §1) · **Budget:** ~85 min
 
 ### 2.A — Semantics
 - [ ] **2.1 Verbs, and the 401 / 403 / 422 distinction** `[A] ~30m` — 401 = I don't know who you are · 403 = I know, and you can't · 422 = I understood, the body is invalid. Plus 200 vs 201 vs 204. *Getting this wrong is a visible tell, and §4 depends on it: a valid token missing a scope is **403**, not 401.* **Breaks if wrong:** clients build retry logic against the wrong signal and hammer you on an error that will never resolve.
@@ -213,7 +157,7 @@ Several of these are recent enough that most candidates won't know them. That's 
 
 ## Section 3 — OAuth2, OIDC, and integrating with Okta
 **Chunks:** 3.A the roles → 3.B the flows → 3.C OIDC vs OAuth2 → 3.D Okta concretely
-**Capstone:** Issue 2 · **Budget:** ~170 min teaching + ~45 build *(3.7–3.8 spill to evening if needed)*
+**Project:** Issue 2 · **Budget:** ~170 min teaching + ~45 build *(3.7–3.8 spill to evening if needed)*
 
 ### 3.A — The roles
 - [ ] **3.1 The four roles, and which one you are** `[A] ~30m` — resource owner / client / authorization server / **resource server**. Your API validates; it never issues. *Internalize this framing before anything else in the section — the JD's Okta bullet is entirely about it.* **Breaks if wrong:** you design token issuance into a service that should only verify, and the whole architecture answer collapses.
@@ -235,7 +179,7 @@ Several of these are recent enough that most candidates won't know them. That's 
 
 ## Section 4 — JWT validation done correctly
 **Chunks:** 4.A anatomy & signing → 4.B the checklist → 4.C JWKS & rotation → 4.D the attacks
-**Capstone:** Issues 3 + 4 · **Budget:** ~140 min teaching + ~90 build
+**Project:** Issues 3 + 4 · **Budget:** ~140 min teaching + ~90 build
 *The highest-density section in the sprint. If a day gets sacrificed, it is never this one.*
 
 ### 4.A — Anatomy & signing
@@ -256,16 +200,17 @@ Several of these are recent enough that most candidates won't know them. That's 
 
 ## Section 5 — mTLS for service-to-service
 **Chunks:** 5.A TLS → mutual → 5.B cert as identity → 5.C mTLS vs JWT → 5.D termination & rotation
-**Capstone:** Issue 5 · **Budget:** ~125 min teaching + ~60 build
+**Project:** Issue 5 · **Budget:** ~95 min teaching + ~60 build
+*Re-barred `[A]`→`[B]` on 2026-08-13: 5.2 and 5.3 were `[A]` because one JD named mTLS as a hard requirement. Absent that, this is decision-level. **5.3 is the exception — it stays `[A]`**, because "mTLS vs JWT" is a genuine architecture decision you'll make on your own systems, not a posting artifact.*
 
 ### 5.A — TLS → mutual
 - [ ] **5.1 The handshake, then what "mutual" adds** `[B] ~15m` — server proves identity to client; mTLS makes the client prove identity back.
 
 ### 5.B — Cert as identity
-- [ ] **5.2 The client certificate as an identity** `[A] ~30m` — extracting subject/SAN, mapping it to a service principal, why this authenticates the **workload** rather than a user. **Breaks if wrong:** you treat "presented a valid cert" as "authorized to do anything," and any service in the mesh can call any endpoint.
+- [ ] **5.2 The client certificate as an identity** `[B] ~15m` — extracting subject/SAN, mapping it to a service principal, why this authenticates the **workload** rather than a user.
 
 ### 5.C — mTLS vs JWT
-- [ ] **5.3 mTLS vs JWT vs both** `[A] ~30m` — mTLS authenticates the channel and calling workload; the JWT carries the caller's authorization context. **Both, layered, is the zero-trust answer.** *If only one thing survives from §5, make it this — candidates constantly present them as alternatives.* **Breaks if wrong:** you argue mTLS replaces tokens, and the interviewer knows a mesh still needs authorization.
+- [ ] **5.3 mTLS vs JWT vs both** `[A] ~30m` — mTLS authenticates the channel and calling workload; the JWT carries the caller's authorization context. **Both, layered, is the zero-trust answer.** *If only one thing survives from §5, make it this — these get presented as alternatives constantly, and they aren't.* **Breaks if wrong:** you build a mesh with mTLS and skip tokens, and you have authentication with no authorization — every service can call every endpoint.
 
 ### 5.D — Termination & rotation
 - [ ] **5.4 Trust chains and CA hierarchy** `[B] ~15m` — root vs intermediate, why you never sign leaf certs with the root.
@@ -277,10 +222,10 @@ Several of these are recent enough that most candidates won't know them. That's 
 
 ## Section 6 — The AWS API & security stack as one request path
 **Chunks:** 6.A the path → 6.B compute → 6.C edge & identity → 6.D observability
-**Capstone:** Issue 7 *(load-bearing)* · **Budget:** ~185 min, split Thu + Fri
+**Project:** Issue 7 *(load-bearing)* · **Budget:** ~185 min, split Thu + Fri
 
 ### 6.A — The path
-- [ ] **6.1 The request path, end to end** `[A] ~30m` — Route 53 → ACM → WAF → ALB → ECS Fargate → CloudWatch. *Learn the section as this one diagram; every other unit hangs off it. This is the §10 deliverable.* **Breaks if wrong:** you can't answer the system-design question, which is a third of the interview.
+- [ ] **6.1 The request path, end to end** `[A] ~30m` — Route 53 → ACM → WAF → ALB → ECS Fargate → CloudWatch. *Learn the section as this one diagram; every other unit hangs off it, and it's what the standing set-piece drill asks you to draw cold.* **Breaks if wrong:** you can't reason about where anything belongs — which layer terminates TLS, which one you'd alarm on, where a change at 100× actually lands.
 
 ### 6.B — Compute
 - [ ] **6.2 ECS Fargate** `[B] ~15m` — task definition vs service vs task; ECR; health checks; rolling deploys.
@@ -302,7 +247,7 @@ Several of these are recent enough that most candidates won't know them. That's 
 
 ## Section 7 — API testing & validation
 **Chunks:** 7.A the harness → 7.B the matrix
-**Capstone:** Issue 4 (shared with §4) · **Budget:** ~85 min
+**Project:** Issue 4 (shared with §4) · **Budget:** ~85 min
 
 - [ ] **7.1 `TestClient` vs `httpx.ASGITransport`** `[C] ~5m` — sync vs the current async pattern.
 - [ ] **7.2 `dependency_overrides` to swap auth** `[B] ~15m` — the practical payoff of §1.3.
@@ -313,8 +258,8 @@ Several of these are recent enough that most candidates won't know them. That's 
 ---
 
 ## Section 8 — HIPAA & PHI for an API engineer `[B]/[C] only`
-**Capstone:** Issue 6 · **Budget:** ~65 min
-*Listed as Desired, not required. Study it genuinely; claim it accurately — see §11.1.*
+**Project:** Issue 6 · **Budget:** ~65 min
+*Context, not craft — capped at `[B]`/`[C]` by design. Study it genuinely; claim it accurately. **Never overclaim HIPAA experience** — a caught overclaim on a compliance topic is worse than an honest gap, every time.*
 
 - [ ] **8.1 The three rules** `[C] ~5m` — Privacy, Security, Breach Notification; covered entity vs business associate, and which one a vendor engineer is.
 - [ ] **8.2 The Security Rule's technical safeguards, mapped to API surfaces** `[B] ~15m` — access control → authn/authz · **audit controls** → who accessed what, when · integrity → tamper evidence · transmission security → TLS everywhere.
@@ -327,7 +272,7 @@ Several of these are recent enough that most candidates won't know them. That's 
 ---
 
 ## Section 9 — CI/CD for API and UI `[B]/[C] only`
-**Capstone:** Issue 8 *(the designated cut if the week compresses)* · **Budget:** ~40 min
+**Project:** Issue 8 *(the designated cut if the week compresses)* · **Budget:** ~40 min
 
 - [ ] **9.1 The pipeline you can sketch on a whiteboard** `[B] ~15m` — checkout → lint → test → security scan → build image → push ECR → deploy ECS.
 - [ ] **9.2 GitHub Actions OIDC federation to an IAM role** `[B] ~15m` — no long-lived AWS keys in CI, ever. *If asked how CI authenticates to AWS and you answer "access keys in secrets," that's a miss.*
@@ -336,54 +281,28 @@ Several of these are recent enough that most candidates won't know them. That's 
 
 ---
 
-## Section 10 — The system-design set-piece
-**Capstone:** the diagram, drawn cold · **Budget:** ~60 min
-*The highest-leverage hour of the sprint. Everything above converges here.*
+## 🎨 The standing set-piece — a `/drill` exercise, not a section
 
-- [ ] **10.1 "Design a secure, HIPAA-compliant API on AWS that authenticates against Okta"** `[A] ~30m` — drawn cold, under 4 minutes, narrated: the request path, where the token is validated (and why possibly twice), where mTLS sits, what's logged and what isn't, what's encrypted, what you'd alarm on, what changes at 100×. **Breaks if wrong:** this *is* a third of the interview.
-- [ ] **10.2 The three follow-ups they will ask** `[A] ~30m` — *"What happens when Okta is down?"* · *"How do you revoke access immediately?"* · *"Where could PHI leak in this design?"* Pre-build all three. **Breaks if wrong:** a strong diagram undone by the first probe past it.
+*Was §10. Demoted 2026-08-13: it isn't material to learn, it's a **rehearsal of everything else**, so it belongs in the retention loop rather than the acquisition roadmap. Once §6 is banked, this becomes a recurring `/drill` item — pull it every few weeks, cold, timed.*
 
----
+> **"Design a secure, HIPAA-compliant API on AWS that authenticates against Okta."**
+> Drawn cold in under 4 minutes and narrated: the request path, where the token is validated (and why possibly twice), where mTLS sits, what's logged and what isn't, what's encrypted, what you'd alarm on, what changes at 100×.
 
-## Section 11 — Honest positioning & the story bank `evenings only`
-**Capstone:** the recorded mock · **Budget:** ~50 min, non-peak
-*The section that keeps the other ten from backfiring. This is drafting, not learning — it must not cost a peak window.*
+**The three follow-ups, pre-built:** *"What happens when Okta is down?"* · *"How do you revoke access immediately?"* · *"Where could PHI leak in this design?"* A strong diagram undone by the first probe past it is the actual failure mode — the follow-ups are the exercise, not a bonus round.
 
-- [ ] **11.1 The have/haven't script** `[B] ~15m` — one clean sentence separating what you've **operated** from what you've **studied**, for AWS ops, mTLS, and HIPAA. Base it on `jobs/natera-sr-fwd-deployed/README.md:37`, which already says it well: *"I've handled sensitive data before, so regulated-data discipline isn't new; the domain is what I'd ramp."* **Do not overclaim** — a caught overclaim ends an interview faster than an honest gap ever will.
-- [ ] **11.2 Six to eight STAR stories mapped to JD bullets** `[B] ~30m` — CreatorClip multi-tenant RLS + OAuth publishing; CFO Agent threat model, encryption at rest, 177 tests; Cognizant MCP/agent work at enterprise scale; the Playwright-over-Cypress decision (`CAREER_LOG.md`); the sensitive-scope call that cut a feature from v1 (`agenda.md`).
-- [ ] **11.3 Questions to ask them** `[C] ~5m` — their IdP topology, where they terminate mTLS, how they handle token revocation. *Asking these proves §3–§5 better than answering does.*
-
----
-
-## 🗓 The 7-day map
-
-Peak (90 min) = the chunks · afternoon (60–90 min) = the capstone issue · evening (20 min) = `/drill` + log, and §11 drafting.
-**Floor** = the ~45-min version that still counts the day. `habits/tracker.md:105` documents six all-or-nothing collapses — the floor exists so a bad day drops to it instead of to zero.
-
-| Day | Chunks | Build | Floor (~45m) |
-|---|---|---|---|
-| **Sun 08-10** | §1 all four chunks *(~150m)* | Scaffold + Issue 1 | 1.2 + 1.3 + 1.6 only — the three `[A]`s |
-| Mon 08-11 | §2 *(~85m)* → §3.A–3.B *(~90m)* | Issue 2 — Okta tenant | 2.1 + 3.1 |
-| Tue 08-12 | §3.C–3.D *(~35m)* → §4.A–4.B *(~75m)* | Issue 3 | 3.5 + 4.3 |
-| Wed 08-13 | §4.C–4.D *(~65m)* → §5.A–5.C *(~75m)* | Issues 4 + 5 · **mock #1** | 4.5 + 5.3 |
-| Thu 08-14 | §5.D *(~50m)* → §6.A–6.B *(~45m)* | **Issue 7a** — ECR → Fargate → ALB → ACM | 6.1 — draw the path |
-| Fri 08-15 | §6.C–6.D *(~90m)* | **Issue 7b** + Issue 8 | Finish the deploy |
-| Sat 08-16 | §7 *(~85m)* · §8 *(~65m)* · §9 *(~40m)* | Issue 6 · **teardown** · `/sharpen` §3–§6 | 7.4 + 8.3 |
-| Sun 08-17 | §10 *(~60m)* | **Full mock** | The one-page cheat sheet |
-
-**Two mocks are mandatory.** Answering out loud is a different skill from knowing, and it's the one being graded.
-
-**§11 runs in the evenings**, Monday through Saturday — 10 minutes a night of drafting, not a peak block.
+*(Deleted 2026-08-13: §11, "Honest positioning & the story bank." It was interview drafting — a have/haven't script, STAR stories, questions to ask them. Nothing to learn, and it was tied to one posting. If an interview appears, rebuild it then from `CAREER_LOG.md`, which is where the raw material lives anyway.)*
 
 ---
 
 ## 💸 Cost & safety guardrails — non-negotiable
 
-- **Never create an AWS Private CA.** ~$400/mo general-purpose (~$50/mo short-lived), prorated from creation, no refund on delete. §5 uses a **local openssl CA**; PCA's behavior and pricing are learned from docs — and the pricing *is* the interview answer.
+*The clock is gone, so there is no reason to rush a deploy or eat cost. Everything here still stands — these are guardrails against an expensive mistake, not against a deadline.*
+
+- **Never create an AWS Private CA.** ~$400/mo general-purpose (~$50/mo short-lived), prorated from creation, no refund on delete. §5 uses a **local openssl CA**; PCA's behavior and pricing are learned from docs.
 - **Never enable Shield Advanced.** ~$3,000/month, 1-year commitment. Shield Standard is free and already on.
-- **Run and tear down within ~2 days.** ALB ~$0.55/day · Fargate 0.25 vCPU ~$0.30/day · WAF $5/web ACL/mo + $1/rule/mo · Route 53 zone $0.50/mo · ACM public certs free. **Target under $20.**
-- Route 53 + a public ACM cert require **a domain you control** — confirm before Thursday.
-- **Set a $25 AWS Budget alert on day one.** Tag everything `project=secure-api-lab`. Run `docs/TEARDOWN.md` Saturday.
+- **Stand up and tear down inside one sitting.** ALB ~$0.55/day · Fargate 0.25 vCPU ~$0.30/day · WAF $5/web ACL/mo + $1/rule/mo · Route 53 zone $0.50/mo · ACM public certs free. Issue 7 is the only unit that costs anything; **target under $20 for the whole track.**
+- Route 53 + a public ACM cert require **a domain you control** — confirm before starting Issue 7.
+- **Set a $25 AWS Budget alert before the first `terraform apply`.** Tag everything `project=secure-api-lab`. Run `docs/TEARDOWN.md` the same day you deploy.
 
 ---
 
@@ -396,10 +315,11 @@ Peak (90 min) = the chunks · afternoon (60–90 min) = the capstone issue · ev
 
 ## Honest Takeaways
 
-- **2026-08-10 — the sprint's real constraint is hours, not aptitude.** From scratch, the material is ~28 hours against ~21 available. Naming the depth bar per unit is what makes that survivable; without it the peak window goes to whatever is next in the file rather than what the interview probes. The `[C]` tier is the honest part — some things are worth exactly five minutes.
+- **2026-08-10 — the real constraint is hours, not aptitude.** From scratch, the material priced out at ~28 hours against ~21 available. Naming the depth bar per unit is what made that survivable; without it the peak window goes to whatever is next in the file rather than what actually matters. The `[C]` bar is the honest part — some things are worth exactly five minutes.
+- **2026-08-13 — the format outlived the deadline, and that's the finding.** The role closed on years-of-experience before an interview happened. What the seven days actually produced wasn't interview readiness — it was the depth bars, the chunk loop, the three check formats, and the Learning notes block, all of which are now evergreen across every track. **The uncomfortable half:** those inventions came out of a week with a real external date on it, and the date is gone. Nothing here replaces it yet. Worth deciding what does — a cert exam, a demo to John, a public repo milestone — because the record is clear that this system runs hot against a deadline and cold without one.
 
 ## Entry Log
 
-*(Links added by `/learn api` at each session's persist step.)*
+*(Links added by `/learn` at each session's persist step.)*
 
 - [2026-08-11](reflection_log/2026-08-11.md) — §1 chunk 1.A (partial): **1.1 ASGI vs WSGI `[x]`**. Schedule call: §1 run today instead of §2, since §1's three `[A]`s underpin §3–§4. Live-verified the current worker guidance (gunicorn recipe is gone from the docs; one uvicorn process per container on ECS). Six foundational questions answered off-script — sockets, `epoll`, stack vs heap, `await` vs `gather`. Four misconceptions corrected. Notes-page convention added. **Stopped at 1.2.**
