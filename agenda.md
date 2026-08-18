@@ -110,7 +110,7 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 - 🧱 Brick: 0 — restarts tonight
 - ✅ Check-ins: restarts today (08-13)
 - 🧭 Ownership touches: 0 — rep #1 is Issue 1 in `secure-api-lab`
-- 🎯 **Learning reps: 0 — restarts tomorrow morning** *(new counter, added 08-13.* A rep = one `/learn` unit taught or one `/sharpen` defense. **This was never counted before**, which is a real gap: the rep is the thing the whole system exists to produce, and it was the only load-bearing behavior with no number attached. Brick and ownership touches had counters; the rep didn't.*)*
+- 🎯 **Learning reps: 1** — §1.2a, 08-18 (counter opened; the 08-13 line said "restarts tomorrow morning" and tomorrow arrived) *(new counter, added 08-13.* A rep = one `/learn` unit taught or one `/sharpen` defense. **This was never counted before**, which is a real gap: the rep is the thing the whole system exists to produce, and it was the only load-bearing behavior with no number attached. Brick and ownership touches had counters; the rep didn't.*)*
 
 **Stopped at:** 08-18 — **`/learn api` §1 chunk 1.2a. Unit 1.2 (`async def` vs `def` + the threadpool trap) is `[~]`, not banked.** The 6-day stall (08-12 → 08-17) after the rejection was the all-or-nothing signature again; it ended today with a full peak-window rep. Pretest went **0 for 3** — he predicted `async def` beats plain `def` on a blocking call, and it's **25× worse** (~100s vs ~4s). Session: `career/secure-api-engineering/reflection_log/2026-08-18.md`.
 
