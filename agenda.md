@@ -51,6 +51,12 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 >
 > **⚠️ This is now the only hard external date in the system, and that matters more than it looks.** The record is unambiguous that this system runs hot against a named date and cold without one — the seven-day sprint out-produced any comparable stretch. Two clocks are gone (interview, and the sprint that came with it) and one remains. **Open decision: does the Editor take the peak window, or does `secure-api-engineering`?** They can't both have it. See `CAREER_LOG.md` → Active Struggles, "No deadline currently drives the learning."
 
+> **🎚 THE RATIO IS THE PROBLEM, NOT THE PACE (named 08-18, coaching session — `reflections/2026-08-18.md`).** First real status count: **4 banked units of 233** across all four roadmaps — and **every track has exactly one `[x]`.** Four launches, four stalls at unit 2. Effort split since 06-01: **28 system/card commits · 17 learn · 2 sharpen · 2 drill.** The read: system-tinkering is the most sophisticated procrastination available here, because from the inside it's indistinguishable from progress. **The protocols are finished — nothing left to carve.**
+>
+> **The two calls: (1) `/drill` tonight, 8:30pm — sockets first, missed twice.** It's the mechanism named as most crucial and it's at zero; spaced repetition without the spacing is just a session. **(2) `/learn` §1.2b at peak tomorrow.**
+>
+> **🧭 The ownership block gets a new verb.** Not "read the project file by file" — reading is *recognition*, and recognition is already the strong mode. Force **generation before exposure**: pick a file, **don't open it**, say what it does → open it, find **one** non-obvious decision → answer only ***what breaks if this is wrong?*** → verify live against docs → log one line (file · decision · failure mode). **The "why" of code is what it costs when it's wrong** — the same `Breaks if wrong:` format already written into every `[A]` unit of the api roadmap. Precedent: the 07-28 fading-scaffold protocol he invented himself and never turned on his own repo.
+
 **The Floor — weekdays:** 🧱 the brick + 🧭 one ownership touch (a doc/audit line on his own code, or the close-out done).
 **The Floor — weekends (new rule, named by Reese 07-25):** weekends owe *nothing* professional. Weekend floor = **the brick** (or full presence with the kids). Any ownership touch, check-in, or rep on a weekend = bonus win, never owed.
 
