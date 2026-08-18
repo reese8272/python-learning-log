@@ -37,7 +37,7 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 ## 📍 The Card
 *Updated by `/checkin` — this always reflects NOW, not history. (Older stopped-at lines live in git history.)*
 
-**Date:** 2026-08-13 (Thursday) — the interview clock came off. Streak restarts today; nothing is owed backward.
+**Date:** 2026-08-18 (Tuesday) — **the reps restarted.** A peak-window `/learn` ran after a 6-day gap (08-12 → 08-17, no learning). The gap is data; it's logged and closed. Nothing is owed backward.
 
 > **🔒 THE INTERVIEW CLOCK — REMOVED 08-13.** The secure-API role closed on **years-of-experience, before an interview happened.** Nothing was tested and nothing was failed. It came inbound; the outbound pipeline was already retired on 07-25, so **strategically nothing moved.** What the seven days actually produced was the best format work in this system's history — depth bars, the chunk loop, the three check formats, the `📝 Learning notes` block — all now **evergreen across every track** rather than dying with the sprint on 08-18. See `DECISIONS.md` (2026-08-13).
 
@@ -106,7 +106,11 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 - 🧭 Ownership touches: 0 — rep #1 is Issue 1 in `secure-api-lab`
 - 🎯 **Learning reps: 0 — restarts tomorrow morning** *(new counter, added 08-13.* A rep = one `/learn` unit taught or one `/sharpen` defense. **This was never counted before**, which is a real gap: the rep is the thing the whole system exists to produce, and it was the only load-bearing behavior with no number attached. Brick and ownership touches had counters; the rep didn't.*)*
 
-**Stopped at:** 08-13 — **no learning happened 08-12 or 08-13; the rejection landed and the reps stopped.** That's the documented all-or-nothing signature, named early rather than after a week. Last actual rep was 08-11: **§1.1 ASGI vs WSGI banked `[x]`**, stopped before **1.2 (`async def` vs `def` + the threadpool trap, `[A]`)**. The re-entry question is already written at the bottom of `career/secure-api-engineering/reflection_log/2026-08-11.md` and it is still the right first move.
+**Stopped at:** 08-18 — **`/learn api` §1 chunk 1.2a. Unit 1.2 (`async def` vs `def` + the threadpool trap) is `[~]`, not banked.** The 6-day stall (08-12 → 08-17) after the rejection was the all-or-nothing signature again; it ended today with a full peak-window rep. Pretest went **0 for 3** — he predicted `async def` beats plain `def` on a blocking call, and it's **25× worse** (~100s vs ~4s). Session: `career/secure-api-engineering/reflection_log/2026-08-18.md`.
+
+**Next step:** **chunk 1.2b** — spotting a blocking call in a library you didn't write, the two escape hatches, and a spot-the-bug. ~12 min, research already cited in the log. **Owed first (5 min, the bank gate):** the `scratch_blocking.py` build in `~/workspace/secure-api-lab` — three routes, one uvicorn worker, 50 concurrent requests, write down the three wall-clock numbers. He has never observed this, because it is invisible at concurrency 1.
+
+**⚠️ The call from 08-18, carried forward into every session:** *states the rule, not the reason* — four occurrences now. Recall is good; **justification is the gap.** In force: when asked "why," the first sentence may not contain the thing being explained. Grade the second sentence, not the first.
 
 **What 08-13 was spent on instead:** merging the sprint's format work into the evergreen learning engine before its scheduled 08-18 deletion, plus a new `Learning Science Protocol.md`. **That was the labor of the assistant, not the peak window** — which is the only reason it isn't a repeat of the 08-04 STOP item (*"building containers during sprints"*). **The container is paid for by tomorrow's rep, not instead of it.**
 

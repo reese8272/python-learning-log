@@ -90,7 +90,7 @@ Several of these are recent enough that most people working in this space don't 
 
 ### 1.A — The event loop
 - [x] **1.1 ASGI vs WSGI** `[B] ~15m` *(2026-08-11)* — the concurrency model; why "high-performance" in this JD means the loop; uvicorn/gunicorn worker topology.
-- [ ] **1.2 `async def` vs `def`, and the threadpool trap** `[A] ~30m` — FastAPI runs plain `def` handlers in a threadpool; a blocking call inside an `async def` stalls **every** request on that worker. Covers `run_in_executor` and how to spot a blocking call in a library you didn't write. *The single most likely "do you actually understand async" question.* **Breaks if wrong:** one sync DB driver in an async handler and your p99 goes to seconds under any concurrency.
+- [~] **1.2 `async def` vs `def`, and the threadpool trap** `[A] ~30m` *(chunk 1.2a taught 2026-08-18; **1.2b pending**; build assigned, not run)* — FastAPI runs plain `def` handlers in a threadpool; a blocking call inside an `async def` stalls **every** request on that worker. Covers `run_in_executor` and how to spot a blocking call in a library you didn't write. *The single most likely "do you actually understand async" question.* **Breaks if wrong:** one sync DB driver in an async handler and your p99 goes to seconds under any concurrency.
 
 ### 1.B — Dependency injection
 - [ ] **1.3 `Depends()` and why auth belongs in a dependency** `[A] ~30m` — DI as the composition point; sub-dependencies; per-request caching; `dependency_overrides` as the testing seam. *The mechanism §4's entire JWT design rests on.* **Breaks if wrong:** auth-in-a-decorator can't be overridden in tests, so the auth path ships untested.
@@ -107,7 +107,7 @@ Several of these are recent enough that most people working in this space don't 
 
 ### 📝 Learning notes — Section 1
 
-*(In progress — 1.1 taught 2026-08-11. Append as the remaining chunks land.)*
+*(In progress — 1.1 taught 2026-08-11; 1.2a taught 2026-08-18. Append as the remaining chunks land.)*
 
 **Asked** *(2026-08-11, chunk 1.A)*
 - Do I need the acronyms? Is "contract" the agreed format between two things?
@@ -117,6 +117,10 @@ Several of these are recent enough that most people working in this space don't 
 - Are WSGI/ASGI just standards rather than frameworks or packages?
 - Is uvicorn the same thing as FastAPI?
 
+**Asked** *(2026-08-18, chunk 1.2a)*
+- Does `timeout=10` mean the request waits 10 seconds and then fails — and is that a 502? *(Answered: it's a **ceiling, not a duration**; if it fired → `ReadTimeout` → unhandled → **500** from the app. 502 is what a **proxy** returns — an ALB in front of a dead task.)*
+- **"What is `async with`? Is it like `with open(file) as f` — automatic open and close?"** — exactly right, and he got there from the analogy unprompted. The `async` prefix means `__aenter__`/`__aexit__` are coroutines, so setup/teardown can themselves await (closing pooled sockets is I/O).
+
 **Landed**
 - ASGI wins on I/O-bound waiting, buys nothing on CPU-bound work. ✅ cold, first try.
 - **WSGI/ASGI are specifications, not packages** — he arrived at this unprompted and stated it cleanly.
@@ -124,18 +128,41 @@ Several of these are recent enough that most people working in this space don't 
 - Heap = the pool for objects that must outlive the call that created them.
 - One uvicorn process per container on ECS (had the answer before the reason).
 
+**Landed** *(2026-08-18, chunk 1.2a)*
+- `await` = **suspend point**, and `asyncio.gather` is what makes three 1s calls take 1s. ✅ cold — **clears an 08-11 Tripped item.**
+- Fill-in-the-blank: `def` → **threadpool** → **40** slots; `async def` + a blocking call → effective concurrency **1**. ✅ cold, all three.
+- `ceil(N / pool) × duration` as the threadpool throughput formula — **method produced cold** (arithmetic slipped, see Tripped).
+- **His own sentence, better than the one I gave him:** *"unless we write our own await logic too, we are not only not guaranteed concurrency, but we are explicitly not helped from our own blockage, whereas `def` will help us."* **`async def` is opting *out* of the safety net.** This is the one to say out loud.
+- `async with` = context manager, arrived at via his own `open(file) as f` analogy.
+
 **Tripped** → *(the pre-built drill list)*
 - **"WSGI is better for CPU-bound work"** → ❌ Neither helps. CPU work is core-bound; both scale it with processes. The asymmetry is that WSGI *degrades* (one thread burns) while ASGI *stalls* (the only thread burns).
 - **"ASGI becomes WSGI if you handle async badly"** → ❌ It becomes **strictly worse** than WSGI — WSGI still has N other threads; a blocked loop has nothing.
 - **"The ASGI connection stays open for the app's lifetime"** → ❌ Two sockets, not one tunnel: the **listening** socket is app-lifetime; a **connection** socket is client-lifetime, and ASGI is invoked once *per connection*.
-- **`await` groups coroutines** → ❌ `await` is a *suspend point*; concurrency-within-a-request is `asyncio.gather` / `TaskGroup`.
+- ~~**`await` groups coroutines**~~ → ✅ **cleared 2026-08-18**, re-asked cold and correct (`asyncio.gather` / `TaskGroup`).
 - **Heap = "stack-like with fast lookups"** → ❌ conflated with a hash map / the heap data structure.
-- One-worker-per-container *reason* → had the rule, not the why. Correct why: **nested process managers — ECS can't observe or restart a worker inside a task, so a hung worker looks healthy.**
+- One-worker-per-container *reason* → had the rule, not the why. Correct why: **nested process managers — ECS can't observe or restart a worker inside a task, so a hung worker looks healthy.** *(⚠ re-asked 2026-08-18 and **still missed** — answered "work goes to the other 3," which is the mechanism of the danger, not what ECS observes. Re-ask again in the reason form: **ECS sees a HEALTHY task** — PID 1 alive, health check passes ~75% of the time, silent 75% capacity forever, no alarm, no restart.)*
+- **Listening vs connection socket** → ❌ **missed twice** (08-11, 08-18). **Listening** socket = bound to the port, process-lifetime, carries no request data. **Connection** socket = one per client, client-lifetime. The ASGI app callable is invoked **once per connection**. Nothing to do with WebSockets and nothing to do with threads. **Top of the next Step 1.5.**
+
+**Tripped** *(2026-08-18, chunk 1.2a)*
+- **"`async def` means all 50 requests finish in ~2 seconds"** → ❌ ~**100s**. He computed 100s first, then talked himself out of it. `async def` is a *promise to the loop*, not a capability from it — `requests.get` has no `await` in front of it, so there is no suspend point and the loop is held for the full 2s, fifty times.
+- **Plain `def` version of the same handler = 100s** → ❌ ~**4s**. The *less* async-looking version is **25× faster**, because FastAPI ships `def` handlers to the 40-wide threadpool.
+- **Throughput formula = `N × duration`** → ❌ `ceil(N / pool) × duration`.
+- **`200 / 40 = 50`** → ❌ **= 5**. Method was right, arithmetic slipped 10× (**25s**, not 250s). Worth catching: 25s vs 250s is the difference between "degraded" and "the ALB health check timed out and ECS is cycling your tasks."
+- **"WSGI can pawn off CPU-bound work to other threads"** → ❌ No handoff exists; the request *arrives* on its own thread. **WSGI degrades to 39/40 capacity; ASGI goes to zero.**
+- **Idle CPU + 8s p99 → "no await was established"** → ⚠️ true but not an answer to *why those symptoms discriminate*. All three candidates give high latency. **Undersized instance → CPU pegged, not idle. Slow DB → slow even at concurrency 1. Blocked loop → a single request is *fast*; latency is pure queue depth, linear in request rate, CPU flat.** The test is one sentence: **"send one request to an idle box."**
 
 **Watch**
 - **States the rule, not the reason.** Twice (workers-per-container, ASGI-vs-WSGI) he produced the correct answer and then restated it instead of justifying it. This is exactly the failure mode the interview probes with "why?" — grade the *second* sentence, not the first.
 - **Vocabulary gap, not a knowledge gap.** He self-described the work as "vibe coded — I know what I want, the plumbing may as well be foreign." That's accurate about the plumbing and *understated* about the judgment: he had the Celery-off-the-request-path answer available and didn't recognize it as a Section 1 answer. Pattern for the rest of the sprint: **before teaching a unit from zero, check whether he has already operated it and just lacks the words.**
 - Asks precisely and pushes past the analogy to the mechanism. Let him — the questions have been higher-yield than the checks.
+
+**Watch** *(updated 2026-08-18 — the 08-11 pattern escalated to a named call)*
+- **"States the rule, not the reason" is now at four occurrences and it is the section's headline finding.** 08-11: workers-per-container, ASGI-vs-WSGI. 08-18: what ECS *sees* (Step 1.5 ④) and the idle-CPU differential (check ②). **The call, delivered and accepted: recall is genuinely good; justification is the actual gap.** Not knowledge, not aptitude — he retrieves the correct fact and, asked *why*, paraphrases the fact louder. That is exactly what fails at the **second** question in any technical conversation: the first checks whether you read it, the second checks whether you understand it.
+  - **Mechanical fix, in force from 2026-08-18:** when asked "why," **the first sentence may not contain the thing being explained.** If the answer to *"why is the loop the problem?"* opens with *"because the loop…"*, scrap it and restart from what someone **observes**. Grade the restart, not the reflex.
+- **He argues himself out of correct first instincts.** Pretest A: wrote ~100s, then appended *"but because it's an async, all 50 should be done in about 2 seconds right?"* The first answer was right and the override was the textbook misconception. Pattern to test deliberately — ask for a first answer, then ask him to defend it *before* offering a revision.
+- **Arithmetic slips under conceptual load.** `200/40 = 50`. The concept was fully owned; the division wasn't. Not a math gap — a bandwidth symptom. Worth watching whether it recurs specifically on the checks that come *after* a hard reframe.
+- **The "already operated it" check came back NO for the first time, and the reason is the finding.** *"Everything is done in prod."* This trap is **invisible at concurrency 1**, which is how he develops and smoke-tests. Whole categories of production behavior are unavailable to him not through inexperience but because **he has no local concurrency harness.** That's a fixable tooling gap with outsized returns — hence the build.
 
 ---
 
@@ -323,3 +350,4 @@ Several of these are recent enough that most people working in this space don't 
 *(Links added by `/learn` at each session's persist step.)*
 
 - [2026-08-11](reflection_log/2026-08-11.md) — §1 chunk 1.A (partial): **1.1 ASGI vs WSGI `[x]`**. Schedule call: §1 run today instead of §2, since §1's three `[A]`s underpin §3–§4. Live-verified the current worker guidance (gunicorn recipe is gone from the docs; one uvicorn process per container on ECS). Six foundational questions answered off-script — sockets, `epoll`, stack vs heap, `await` vs `gather`. Four misconceptions corrected. Notes-page convention added. **Stopped at 1.2.**
+- [2026-08-18](reflection_log/2026-08-18.md) — §1 chunk **1.2a**: **1.2 `async def` vs `def` `[~]`** (1.2b pending). First rep after a 6-day gap. Delayed re-ask scored 1 clean / 2 partial / 1 miss; `await`-vs-`gather` cleared, sockets missed a second time. **Pretest 0 for 3** — predicted `async def` would be *faster* than `def` on a blocking call; it's **25× slower** (~100s vs ~4s). Taught the **three-way routing rule** and the shared 40-token anyio limiter, with the §1.3/§4 tie-in (a sync JWKS fetch in the auth dependency silently caps the whole API at 40). Live-confirmed the FastAPI async page still carries **neither** the blocking-in-`async-def` warning **nor** the threadpool size. **The read: "states the rule, not the reason" hit four occurrences and was escalated to a named call.** **Stopped at 1.2b.**
