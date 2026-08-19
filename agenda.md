@@ -41,7 +41,7 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 
 > **🔒 THE INTERVIEW CLOCK — REMOVED 08-13.** The secure-API role closed on **years-of-experience, before an interview happened.** Nothing was tested and nothing was failed. It came inbound; the outbound pipeline was already retired on 07-25, so **strategically nothing moved.** What the seven days actually produced was the best format work in this system's history — depth bars, the chunk loop, the three check formats, the `📝 Learning notes` block — all now **evergreen across every track** rather than dying with the sprint on 08-18. See `DECISIONS.md` (2026-08-13).
 
-> **🟢 ACTIVE TRACK: `secure-api-engineering`.** One track runs at a time; `ai`, `py`, and `soft` are dormant. A bare **`/learn`** goes straight to it — no menu. Roadmap: `career/secure-api-engineering/summary.md`. Build: `~/workspace/secure-api-lab` (`/issue-workflow`). The curriculum survived the role because it's the security and production-API layer under the capstone.
+> **🟢 ACTIVE TRACK: `secure-api-engineering`.** One track runs at a time; `ai`, `py`, and `soft` are dormant. A bare **`/learn`** goes straight to it — no menu. Roadmap: `career/secure-api-engineering/summary.md`. Build: `career/lesson_assignments/secure-api-lab` (`/issue-workflow`). The curriculum survived the role because it's the security and production-API layer under the capstone.
 >
 > **The Ladder** — how a unit gets learned, one rung at a time: fill-in-the-blank → short answer → spot-the-bug → completion problem (worksheet) → **the project** (a real issue, no scaffolding). **`[~]` never becomes `[x]` in the session that taught it** — banking needs the worksheet green or a cold re-ask next session. Why: `career/helpful_notes_and_guides/Learning Science Protocol.md`.
 
@@ -69,7 +69,7 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 | When | What | Owed? |
 |---|---|---|
 | Peak (90 min) | **`/learn`** — one unit to its depth bar, via the chunk loop. Open with Step 1.5: re-ask last session's `Tripped` list. | ⬛ **The rep** |
-| Afternoon (60–90 min) | `/issue-workflow` — the current issue in `~/workspace/secure-api-lab`. This is the top rung: the concept becomes code. | ☐ upside on a normal day, ⬛ on a build day |
+| Afternoon (60–90 min) | `/issue-workflow` — the current issue in `career/lesson_assignments/secure-api-lab`. This is the top rung: the concept becomes code. | ☐ upside on a normal day, ⬛ on a build day |
 | 8:30pm (20 min) | `/drill` — 3–5 items, **mixed domains**, varied question forms | ☐ upside |
 | 10:25pm | 🧱 The Brick | ⬛ floor |
 
@@ -114,7 +114,7 @@ Every row above is a recurring event on the primary calendar (America/New_York) 
 
 **Stopped at:** 08-18 — **`/learn api` §1 chunk 1.2a. Unit 1.2 (`async def` vs `def` + the threadpool trap) is `[~]`, not banked.** The 6-day stall (08-12 → 08-17) after the rejection was the all-or-nothing signature again; it ended today with a full peak-window rep. Pretest went **0 for 3** — he predicted `async def` beats plain `def` on a blocking call, and it's **25× worse** (~100s vs ~4s). Session: `career/secure-api-engineering/reflection_log/2026-08-18.md`.
 
-**Next step:** **chunk 1.2b** — spotting a blocking call in a library you didn't write, the two escape hatches, and a spot-the-bug. ~12 min, research already cited in the log. **Owed first (5 min, the bank gate):** the `scratch_blocking.py` build in `~/workspace/secure-api-lab` — three routes, one uvicorn worker, 50 concurrent requests, write down the three wall-clock numbers. He has never observed this, because it is invisible at concurrency 1.
+**Next step:** **chunk 1.2b** — spotting a blocking call in a library you didn't write, the two escape hatches, and a spot-the-bug. ~12 min, research already cited in the log. **Owed first (5 min, the bank gate):** the `scratch_blocking.py` build in `career/lesson_assignments/secure-api-lab` — three routes, one uvicorn worker, 50 concurrent requests, write down the three wall-clock numbers. He has never observed this, because it is invisible at concurrency 1.
 
 **⚠️ The call from 08-18, carried forward into every session:** *states the rule, not the reason* — four occurrences now. Recall is good; **justification is the gap.** In force: when asked "why," the first sentence may not contain the thing being explained. Grade the second sentence, not the first.
 

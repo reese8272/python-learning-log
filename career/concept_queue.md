@@ -57,7 +57,7 @@ Work top-down. Higher bars before lower unless a real project need jumps the lin
 
 ### Secure API on AWS *(roadmap: `career/secure-api-engineering/`)* — 🟢 **the ACTIVE track**
 
-*Seeded 2026-08-10 from a real posting's requirements; **de-timeboxed 2026-08-13** when that role closed. The clock is gone, the queue isn't — this is the production-API and security layer under the capstone. Build: `~/workspace/secure-api-lab`.*
+*Seeded 2026-08-10 from a real posting's requirements; **de-timeboxed 2026-08-13** when that role closed. The clock is gone, the queue isn't — this is the production-API and security layer under the capstone. Build: `career/lesson_assignments/secure-api-lab`.*
 
 **Depth bars carry over from the roadmap, and they define what "Owned" means in `/sharpen`:**
 - **`[A]`** — the `/sharpen` bar is full: mechanism + why-this-over-that + failure mode, cold. 95% is a miss.

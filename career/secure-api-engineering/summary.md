@@ -36,11 +36,11 @@ The session protocol — the chunk loop, the Ladder, the three in-session check 
 
 The two things still specific to this track:
 - **Chunks are predeclared** per section below (`1.A`, `4.C`, …), so a session can stop cleanly mid-section.
-- **Worksheets are one per SECTION**, at `career/lesson_assignments/apisec-<section>-<kebab-name>.py`, and **PART 3 of each is that section's real issue** in `~/workspace/secure-api-lab/docs/issues.md`.
+- **Worksheets are one per SECTION**, at `career/lesson_assignments/apisec-<section>-<kebab-name>.py`, and **PART 3 of each is that section's real issue** in `career/lesson_assignments/secure-api-lab/docs/issues.md`.
 
 ## 🎯 Section → project map
 
-One project per section — the already-written issues in `~/workspace/secure-api-lab/docs/issues.md`. This is the top rung of the Ladder: the place where a taught unit becomes code with no scaffolding under it.
+One project per section — the already-written issues in `career/lesson_assignments/secure-api-lab/docs/issues.md`. This is the top rung of the Ladder: the place where a taught unit becomes code with no scaffolding under it.
 
 | Section | Project |
 |---|---|

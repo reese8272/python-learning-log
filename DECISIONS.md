@@ -4,6 +4,18 @@ A log of explicit design decisions that change or deviate from what the planning
 
 ---
 
+## 2026-08-19 — `secure-api-lab` moves inside the repo; all lab/lesson artifacts live under `career/`
+
+**What changed:** `~/workspace/secure-api-lab` is now **`career/lesson_assignments/secure-api-lab/`**, tracked by life-log's git. Its nested `.git` (2 scaffold commits, **no remote**) was removed so life-log can track the files normally; the full history is bundled at `secure-api-lab-history.bundle` in the session scratchpad. Its `.claude/commands/issue-workflow.md` was deleted as a byte-identical duplicate of the repo-root one — nested `.claude/` in a subdirectory is never loaded anyway. Every `~/workspace/secure-api-lab` path reference was rewritten across `agenda.md`, `CAREER_LOG.md`, `concept_queue.md`, `.claude/commands/learn.md`, `DECISIONS.md`, and the `secure-api-engineering` roadmap + session log. The lab's own `.gitignore` moved with it, so `certs/`, `.env`, and venvs stay ignored under life-log's git.
+
+**Why:** Reese's call — nothing lesson- or lab-shaped should live outside `life-log/career/`. The split was a real cost, not a cosmetic one: the top rung of the Ladder (the build) lived in a repo with no remote, no backup, and no connection to the roadmap that assigns it, while every other rung was version-controlled and pushed nightly. The 08-18 read was that four tracks stall at unit 2 and the build is the step that gets skipped — a lab sitting outside the system it belongs to is one more reason to skip it.
+
+**Deliberately NOT moved:** `NLP Learning Course/`, `college_assignments/`, `bootdev/hoopla/`. Dead archives with venvs and their own `.git` dirs; consolidating them would bloat the journal repo without feeding the learning engine. Real products (`Youtube-Video-AI-Editor`, `CFO-analyzer`) stay where they are — they're portfolio work, not lessons.
+
+**Source / evidence:** `git bundle` backup verified before the nested `.git` was removed; post-move `grep -rn "workspace/secure-api-lab"` returns zero hits.
+
+---
+
 ## 2026-08-13 — The interview sprint's format work is promoted to the evergreen learning engine; the track is de-timeboxed; a learning-science reference doc is added
 
 **What changed:**
@@ -86,7 +98,7 @@ A log of explicit design decisions that change or deviate from what the planning
 **What changed:**
 
 1. **New track — `career/api-security-aws-prep/`**, reachable via `/learn api` (also `apisec`, `interview`). Eleven sections covering FastAPI at depth, REST/OpenAPI-as-contract, OAuth2/OIDC/Okta, JWT validation, mTLS, the AWS platform/edge stack, API testing, HIPAA/PHI, CI/CD, a system-design set-piece, and honest positioning. Registered in the Step 0 routing table of `.claude/commands/learn.md`, which now reads "four curated curricula" and gives this track the peak window by default through 08-17.
-2. **New build repo — `~/workspace/secure-api-lab`**, driven by `/issue-workflow` over 8 dependency-ordered issues, ending in a real ECS/ALB/ACM/WAF/CloudWatch deployment.
+2. **New build repo — `career/lesson_assignments/secure-api-lab`**, driven by `/issue-workflow` over 8 dependency-ordered issues, ending in a real ECS/ALB/ACM/WAF/CloudWatch deployment.
 3. **🏈 AI YouTube Editor paused 08-10 → 08-17.** It had outranked the Weekly and Monthly blocks since 08-04; the interview sprint now outranks it.
 4. **⚡ The 07-25 job-pipeline pivot is suspended for the sprint**, and reinstated 08-18.
 5. **Skills Tracker notes corrected** in `CAREER_LOG.md` — FastAPI, REST API design, CI/CD concepts, GitHub Actions. Levels moved Gap → Building as a *factual correction*, not a mastery bump.
