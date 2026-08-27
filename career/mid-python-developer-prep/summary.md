@@ -1,5 +1,18 @@
 # Python Mastery Roadmap *(underpins the AI-Engineering path)*
 
+> ## ⏸ PAUSED — 2026-08-27 (Phase 3)
+>
+> **This track is formally paused, not abandoned and not deleted.** All four curriculum tracks were paused together in the Phase 3 rewrite. The honest number that drove it: **4 banked units out of 233 across all four roadmaps since April — one `[x]` apiece.** Every track launched and stalled at unit 2. That's not a pace problem; it's a signature.
+>
+> **What this file is now:** a **reference catalog**, not a backlog. Nothing here is owed. There is no ACTIVE track and no track menu. Look things up here freely; do not "resume the roadmap."
+>
+> **What replaced it:** work generates the curriculum now. Craft reps (the Cognizant project) and Business reps (client work) throw off things that couldn't be explained — those get captured, and `/drill` and `/sharpen` walk the captures. `/learn new <topic>` handles on-demand acquisition when a capture needs real teaching.
+>
+> **The material is good and it was never the problem.** The one time learning visibly converted to career movement (07-28 → 07-29, the work quiz then the boss call) it was a **defense** rep under real stakes, not an acquisition rep. Phase 3 stops manufacturing stakes and uses the real ones.
+>
+> Un-pausing is an `/audit` decision, not a mid-session one. See `SYSTEM.md` Layer 2 and `DECISIONS.md` (2026-08-27).
+
+
 > **Repurposed 2026-07-07.** The specific mid-level Python role that seeded this ($115k, FastAPI weather-data shop) **closed before it was filled.** The work is *not* discarded — its purpose is re-pointed. Python mastery is foundational for an AI engineer: you can't debug an agent framework you don't understand at the language level. The external driver disappeared; the value didn't. Walk this track via `/learn py`. The FastAPI/weather-data intel below is retained as concrete, high-quality practice material — treat it as *a* realistic target shop, not *the* job. See `DECISIONS.md` (2026-07-07).
 
 **What this is:** A ground-up technical curriculum in Python at depth — the language internals, FastAPI, and data-serving patterns an AI engineer leans on. Built the same way as the AI curriculum: each unit is learned in-catalog via `/learn py` (researched live against current docs), then handed to `/sharpen` (defend cold) and `/drill` (retain). This roadmap is the *what to cover*; the teaching is generated fresh each session so it never goes stale.

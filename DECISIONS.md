@@ -4,6 +4,80 @@ A log of explicit design decisions that change or deviate from what the planning
 
 ---
 
+## 2026-08-27 — **Phase 3**: the system is rebuilt around four lanes, a router, and an audit
+
+**The trigger, in Reese's words:** *"I know I am reworking something but this is simply just my life constantly evolving. I got a great project for my job and learning so much on the job. Ian is giving me great work to continue building my business, and learning is being sidelined because of other life obligations... I need a way to concretely keep my life a series of systems and audit the system and habits heavily."*
+
+**The read that had to be delivered first:** this request is the system's own #1 documented risk. The 08-18 count was **28 system/card commits against 17 `/learn`, 2 `/sharpen`, 2 `/drill` since 06-01**, and the finding was that *system-tinkering is the most sophisticated procrastination available here, because from the inside it is indistinguishable from progress.* A "severe rewrite" nine days after that read is exactly the shape of the failure mode.
+
+**And the rewrite is still correct**, for one reason that doesn't apply to the previous rebuilds: **the life described in `SYSTEM.md` no longer exists.** The 07-23 constitution was built for a life with one engine (learning toward an exit) and a predictable day (the 9:45 peak block). The job pipeline was retired 07-25. The peak block sits inside client hours on a project that is now genuinely good and genuinely teaching. A second income stream (Ian) appeared and has no representation anywhere in the repo. The document was describing July.
+
+**The resolution:** the rewrite is legitimate because it **subtracted far more than it added** — 8 retirements and 4 paused tracks against 2 additions — and because it ships the mechanism that stops the *next* one (the Change Window, below).
+
+### What changed
+
+**1. Life is four lanes.** Every rep belongs to exactly one, named before the rep starts.
+- 🏡 **Home** — the ground; the bad-day non-negotiable. Not a competitor for time.
+- 💼 **Craft** (Cognizant) — own the project, perform without AI visibly. The rep: predict a file → open it → one non-obvious decision → **what breaks if this is wrong** → verify live → one line.
+- 🛠 **Business** (Ian's contract work + own products) — convert skill into money that isn't hours. New folder `business/` with `LEDGER.md`. **Ian is client work, distinct from the Editor/autoclip product thread** (Reese's clarification).
+- 🧠 **Depth** — **derived, never scheduled.** Runs on the residue of the other two.
+
+New failure mode named: **lane blur** — three lanes touched in a busy day, none moved. Lanes are audited separately so a Dark lane can't hide behind a busy one.
+
+**2. The peak window is retired.** Reese's call: *"I don't want a peak window or anything — I need a dynamic scheduling program based on the needs of the day."* Replaced by **`/today` — the route**: declare the day type (🟩 Deep / 🟨 Split / 🟥 Survival), pick one lane, name one thing. 60 seconds, phone.
+
+The design principle: **don't schedule the time, schedule the decision.** The route is a fixed cue with dynamic content — which preserves the *infrastructure over intention* lesson (04-06) while letting the content flex, and answers the new failure mode this choice creates (**the fluid-schedule trap**: "dynamic" quietly becoming "never decided").
+
+**The load-bearing rule: 🟥 is a legitimate, counted day that carries no debt.** This is the real counter to the all-or-nothing collapse (six instances: 4/09, 5/01, 6/16, Jul 11–19, Jul 30–Aug 3, Aug 12–17). The collapse has never actually been a discipline problem — it lives in the gap between *"I can't do the full thing"* and *"so I did nothing and felt bad about it."* Every prior counter (the Floor, `/checkin`) reduced the cost of a small day. This one makes the small day a **choice** — the only real miss is now a day with **no declaration at all.** The post-meds window survives as a *routing input*, not a reservation.
+
+**3. All four curriculum tracks are paused** — `api` secure-api-engineering, `ai` ai-engineering-curriculum, `py` mid-python-developer-prep, `soft` senior-engineering-soft-skills. Paused, not deleted: each file carries a banner and remains a **reference catalog**, not a backlog. There is no ACTIVE track and no track menu.
+
+The number: **4 banked units of 233 since April, one `[x]` per track.** Every track launched and stalled at unit 2 — a signature, not a pace problem. **Work generates the curriculum now:** Craft and Business reps throw off things that couldn't be explained; those are captured, and `/drill` and `/sharpen` walk the captures. `/learn new <topic>` handles on-demand acquisition.
+
+The supporting evidence, from 08-18: the one time learning visibly converted to career movement (07-28 → 07-29, the work quiz then the boss call) it was a **defense** rep under real stakes, not an acquisition rep — against a ratio of 17 learn : 2 sharpen : 2 drill. Phase 3 stops manufacturing stakes and uses the real ones.
+
+**4. `/audit` — the new heavy loop, and the answer to "audit heavily."** Five passes: **Evidence** (count before concluding) → **Lane** (Moving/Stalled/Dark) → **Habit** (Installed/Installing/**Not installed**/Retired) → **Subtraction (mandatory)** → **The one change** (capped at one, only after a cut). Weekly through the transition, then monthly.
+
+**5. The Change Window — the rule this whole phase depends on.**
+
+> **The system may only be changed during an `/audit`.** Outside an audit, a system idea goes to `PARKING.md` as one line and is not built.
+
+This converts the tinkering impulse from a leak into a scheduled, bounded, *subtractive* valve. It costs one line to obey and removes the only mechanism by which this system has ever eaten itself. **It binds Claude more than Reese** — most of those 28 system commits happened because a session drifted into improving the system instead of running it. The one exception: a genuine contradiction or breakage is a **repair**, not a change.
+
+**6. The habit tracker is regraded on installation, not consistency.** Active/Building/Aspirational → **Installed / Installing / Not installed / Retired**. The old split conflated *tried and didn't hold* with *never physically put in the world* — on 07-27 both the affirmation stack and the night-before gym setup were called failures when the honest verdict was that neither had ever been installed. **A cue isn't designed until it's physically installed; the tape counts, not the design session.**
+
+The regrade immediately reclassified six habits out of "failing" and into "never tried," and left exactly **one** habit genuinely Installed: the brick. That is the honest picture, and it is the argument for building slowly — one habit that survives every collapse is worth more than six that don't.
+
+### What was retired (no silent abandonment — the rule applies to system components too)
+
+| Retired | Why |
+|---|---|
+| The 9:45 peak block | Reese's call; the hours aren't predictable and the slot sat inside client hours (which John's review flagged) |
+| The nine-row Daily Protocol | Built 07-25, dark by 07-29 — four days. A container, not a fix. |
+| The four active curriculum tracks | 4 of 233 banked; every track stalled at unit 2. Paused as a reference catalog. |
+| The `$6k rule` | Priced an urgency that ended when the pipeline was retired 07-25 |
+| The weekly Cold Bench + its ledger | Ledger at **zero from 07-25 to 08-27**. The principle survives inside the Craft rep (first pass unassisted; AI examines, never authors). A weekly obligation with an empty ledger is theater. |
+| Fixed clock-time cues (10:15 set-tomorrow, 12:00 ownership block, 8:30pm drill) | Replaced by transition cues. A clock cue that fires during a client meeting trains you to ignore cues. The brick's 10:25 survives — it's a transition (phone → charger), not an appointment. |
+| Wake-at-6am · morning deep-work block · must-listen playlist · 15-min creativity block | Marked Active since 04-01 and unevidenced since May. Carried four months on a good three-week stretch in April. Retired honestly rather than left as decoration. |
+| The "Ideal Day — Full Habit Map" | A picture of a day that no longer exists. The lanes replace it. |
+
+### What was added (two things, both mechanisms, neither a habit)
+
+| Added | Why it earns its place |
+|---|---|
+| `/today` + `PARKING.md` + the Change Window | The router replaces what was retired; the parking lot is what makes the Change Window enforceable (a rule with nowhere to put the idea fails) |
+| `/audit` + `business/` | The audit is the explicit ask; `business/` is the only lane with real external commitments and it had **zero** representation in the repo |
+
+### Open, and deliberately not decided here
+
+1. **The AI YouTube Editor.** No recorded work since 08-04; NFL Week 1 is ~2 weeks out; it now competes with two live lanes. Three honest options — re-scope / move the date / shelf it with a retirement note. **First `/audit` decides.** Drifting past 09-10 without choosing is the only bad outcome.
+2. **The Business weekly ceiling.** Needs Reese's number. Set at the first audit. This is the counter to **client-load creep** — the Business lane is the only one with someone else waiting, so it expands by default.
+3. **The Editor lead's message** — owed since 08-10, **17+ days**. Not a decision, just undone. It is the oldest open item in the system and it costs five minutes.
+
+---
+
+---
+
 ## 2026-08-19 — `secure-api-lab` moves inside the repo; all lab/lesson artifacts live under `career/`
 
 **What changed:** `~/workspace/secure-api-lab` is now **`career/lesson_assignments/secure-api-lab/`**, tracked by life-log's git. Its nested `.git` (2 scaffold commits, **no remote**) was removed so life-log can track the files normally; the full history is bundled at `secure-api-lab-history.bundle` in the session scratchpad. Its `.claude/commands/issue-workflow.md` was deleted as a byte-identical duplicate of the repo-root one — nested `.claude/` in a subdirectory is never loaded anyway. Every `~/workspace/secure-api-lab` path reference was rewritten across `agenda.md`, `CAREER_LOG.md`, `concept_queue.md`, `.claude/commands/learn.md`, `DECISIONS.md`, and the `secure-api-engineering` roadmap + session log. The lab's own `.gitignore` moved with it, so `certs/`, `.env`, and venvs stay ignored under life-log's git.

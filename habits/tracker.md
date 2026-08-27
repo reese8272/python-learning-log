@@ -1,104 +1,103 @@
 # Habit Tracker
 
-This is a living document. It gets updated through coaching — when a habit is confirmed working, when one slips, when a new one earns its place. The dated logs are the raw record; this is the honest picture.
+A living document. Updated through coaching — and, since 2026-08-27, **graded at `/audit`**, where every row gets one of four verdicts. This is not a log; it's the honest picture.
 
----
+**Restructured 2026-08-27 (Phase 3).** The old Active / Building / Aspirational split graded habits by *consistency*, which quietly conflated two completely different states: a habit that was tried and didn't hold, and a habit whose cue **was never physically put in the world.** On 07-27 both the affirmation stack and the night-before gym setup were called failures — and the honest verdict was zero setup nights ever run and a notecard that never went up. Neither had failed. Neither had been tried.
 
-## Ideal Day — Full Habit Map
-
-*Reference this in the morning. This is the full picture of what you're building toward.*
-
-| Time of Day | Habit |
-|---|---|
-| Morning | Wake at 6am |
-| Morning | Sunlight within 30 min of waking |
-| Morning | Must-listen playlist |
-| Morning | Morning deep work block |
-| Morning | 15-min creativity block |
-| Daytime | Gym |
-| Daytime | Daily walk (20 min, ideally no headphones) |
-| Daytime | Nonfiction reading |
-| Daytime | Dedicated learning block |
-| Evening | End day with 3 things you're grateful for |
-| Evening | Mental load dump — write everything on your mind |
+> **The install rule — the sharpest diagnostic this system has produced:**
+> **A cue isn't designed until it's physically installed. The tape counts, not the design session.**
+> Every *Installing* row names its physical install and the date it went up. When an install is named in a session, do it **within the minute** — 07-28 proved the notecard takes 60 seconds from prompt to tape.
 
 ---
 
 ## The Floor — the minimum day
 
-*Added 2026-07-05. The counter to the all-or-nothing collapse pattern (4/09, 5/01, 6/16). A day COUNTS when these two happen — everything in the Ideal Day map above is upside, never owed.*
+*The counter to the all-or-nothing collapse (six recorded instances: 4/09, 5/01, 6/16, Jul 11–19, Jul 30–Aug 3, Aug 12–17). A day COUNTS when these two happen — everything else is upside, never owed.*
 
 | # | Floor item | Cue |
 |---|---|---|
-| 1 | 🧱 15-min reading brick, 10:30pm, in bed | Phone on the charger FIRST → book in hand, before horizontal |
-| 2 | 🧭 One ownership touch — a doc/audit line on his own code, or the workday close-out done *(weekdays only)* | The 12:00 Ownership block on the calendar; queue lives in `Independence Protocol.md` |
+| 1 | 🧱 The 15-min reading brick, ~10:25pm, in bed | Phone on the charger FIRST → book in hand, before horizontal |
+| 2 | 🎯 **The day's declared rep** — whatever `/today` named | The route named it → start it, timer on. **Worst-day min: 10 minutes of the named thing.** |
 
-**Weekend rule (named by Reese 2026-07-25):** weekends owe nothing professional. Weekend floor = the brick (or full presence with the kids). Any ownership touch, check-in, or rep on a weekend is a bonus win, never owed.
+**🟥 Survival days:** the declared rep is explicitly *none*, so **🟥 + the brick is a counted day.** It carries no debt into tomorrow. This is the load-bearing rule of Phase 3: the collapse pattern lives in the gap between *"I can't do the full thing"* and *"so I did nothing and felt bad about it."* Declaring the small day closes that gap. **The only real miss is a day with no declaration at all.**
 
-*(Floor #2 was a job-pipeline touch 2026-07-05 → 2026-07-25 — retired by choice after John's mid-year review; the priority is owning and growing the Cognizant role.)*
+**Weekend rule (Reese's call, 07-25):** weekends owe nothing professional. Weekend floor = the brick, or full presence with the kids. Any Craft or Business touch on a weekend is a bonus, never owed.
 
 **Bad-day rule:** when everything breaks, ONE non-negotiable keeps the identity intact — full presence with the kids, or the brick. That day still counts. The streak is "days that counted," not "perfect days."
 
-**Interface:** `/checkin` — 3 minutes, phone-friendly, any time. It updates the Card, logs the day, and restarts streaks after gaps with zero guilt. After any gap, the way back is `/checkin`, not a make-up session.
+**Interface:** `/today` sets the day (60 sec). `/checkin` closes it (3 min). After any gap, the way back is `/checkin`, not a make-up session.
+
+*(Floor #2 history: job-pipeline touch 07-05 → 07-25 · ownership touch 07-25 → 08-27 · now the declared rep, which is lane-agnostic and absorbs the ownership touch on Craft days.)*
 
 ---
 
-## Active — Locked In
+## ✅ Installed — running, cue fires, protect these
 
-These habits are showing up consistently. The goal is to protect them.
-
-| Habit | Notes | Since |
+| Habit | The cue, and the evidence | Since |
 |---|---|---|
-| Gym | 5 weeks straight, no missed days — this is identity now | ~2026-02-24 |
-| Wake at 6am | Holding; creates the morning before the house wakes up | 2026-04-01 |
-| Morning deep work block | Pre-kids work time — high leverage, protect it | 2026-04-01 |
-| Must-listen playlist | Daily mindset content, part of the morning stack | 2026-04-01 |
-| Nonfiction reading — the 10:30 brick | 15 min at 10:30pm, in bed, phone-on-charger cue. Fell in the May–June spiral, rebuilt as the re-entry brick 6/16, cue hardened 6/22. **Proof of ownership: held through the entire 7/13–7/19 vacation with zero scaffolding — no Card, no check-ins, different bed. The cue travels with the phone. Re-confirmed Active 2026-07-20.** | 2026-04-01 (re-locked 2026-07-20) |
+| **🧱 The reading brick** | Phone on charger FIRST → book in hand. **The most-proven behavior in this log.** Fell in the May–June spiral, rebuilt as the re-entry brick 6/16, cue hardened 6/22. Held through the entire 7/13–7/19 vacation with zero scaffolding — no Card, no check-ins, different bed. *The cue travels with the phone.* Every collapse since April has ended with it. | 2026-04-01 (re-locked 2026-07-20) |
+
+*One row. That is the honest picture, and it is not a small thing — one habit that survives every collapse is worth more than six that don't.*
 
 ---
 
-## Building — In Progress
+## 🔧 Installing — cue is physically in the world, not yet consistent
 
-These are intentional but not yet consistent. Worth tracking closely.
+*Each row must name **what was installed** and **when it went up.** No install, no row — it belongs in the section below.*
 
-| Habit | Goal | Status |
+| Habit | Physical install | Installed on | Status |
+|---|---|---|---|
+| **🪞 Shower affirmation stack (3 lines)** | One notecard taped at eye level in the shower. Cue: **water turns on → line one.** Worst-day min: the identity line only. | **2026-07-28** (taped mid-`/reflect`, 60 seconds from prompt to tape) | Trial ran from 07-29; **no verdict recorded since.** First `/audit` grades it. |
+| **🎯 The route (`/today`)** | The command itself + the Card's route block. Cue: **first sit-down at the desk → 60 seconds.** | **2026-08-27** | Brand new. Zero runs. The one behavior Phase 3 rests on. |
+
+---
+
+## ⬜ Not installed — designed, discussed, never physically put in the world
+
+*This is a **diagnostic, not a shame list.** These have not failed; they have not been tried. Each needs one question answered at the audit: **"What is the physical install, and can it happen in the next 60 seconds?"***
+
+*A habit that is Not installed across **three consecutive audits** gets retired — not because he failed, but because it's proven it isn't wanted enough to install, and carrying it taxes every future audit.*
+
+| Habit | What the install would be | History |
 |---|---|---|
-| Morning shake | First domino for eating — sit down, drink it, 10 min. Cue re-anchored 07-20: **back from gym → shake in hand first.** Stacks onto the gym build. Offered as the second build 07-20; he chose affirmations instead — this stays next in line. | New 2026-04-09 — cue redesigned 2026-07-20, not yet tested |
-| 15-min creativity block | Daily — open Claude, explore, fail, learn | Two consecutive days (4/07–4/08) — LangChain, Sleeping Beauty paradox, enterprise architecture spitball. Showing up naturally. Watch for consistency. |
-| Dedicated learning block (peak window) | The 90–180 min post-medication window reserved for hardest learning. The window is the asset — and it now has an engine (/learn, /sharpen, worksheets). | **First real week of reps 7/20–7/25:** one /learn (§1.3), two cold defenses (7/22), worksheet to 16/19. "Not protected yet" is out of date — now consolidating. Watch for a second consecutive week. |
-| Cleaning | Daily tidying — picking up momentum | Showing up 2026-04-08; noted as a "big win" — watch for consistency |
-| Daily walk | Clear the mind, physical reset | Showing up — not yet consistent |
-| Peak-window mindfulness (5 min) | Therapist homework. 5 min eyes-closed/breath as the *doorway* into the peak block — before the first hard thing. Cue: post-meds, right where cardio pre-load already sits. Also the antidote to the work-superiority reflex. | New 2026-07-07 — grafted to peak-window cue, restart in progress |
-| **Affirmation stack (3 lines)** — the second build | Therapist homework, chosen 07-20 as the week's second build. Hard cue: **water turns on → line one starts** — supported by **one notecard taped at eye level in the shower** (the 7/23 fix). Worst-day minimum: just the identity line. **Week-1 verdict (07-27): the cue never failed — it was never installed.** Notecard never went up; lines didn't hold. **INSTALLED 2026-07-28** — card taped in the bathroom mid-`/reflect`, 60 seconds from prompt to tape. Trial live from the 07-29 morning shower. | New 2026-07-07 — cue locked 07-20; **installed 2026-07-28**, trial runs from there |
-| **Contingency gate (earned play)** — Premack lever | Phone/games are *earned by* the rep (a sharpen/learn/hard-work thing), not adjacent to it. Not a new design — the 07-28 car-ride lever, run same-day as a one-day experiment. **Day-1 verdict (07-28): gelled** — focus notably better in work blocks *and* play was cleaner (earned = no guilt-static). Keep running exactly as-is per the design freeze; no expansion, no new rules. Watch: does it hold a full week without becoming a bill? | New 2026-07-28 — running as-is, first review at weekly |
-| **Morning gym (6am)** — THE keystone build | *I will wake at 6am (alarm across room), put on clothes/shoes laid out the night before, drive to the gym.* Worst-day min: show up, do one thing, 10 min. New build, not a revival — the old midday cue was evicted by work. **Week-1 verdict (07-27): workouts happened, 6am did not — and the night-before setup ran ZERO nights.** Not a cue failure; a never-installed cue. The 🌙 10:15 set-tomorrow ritual is now the designated installer (clothes out, alarm moved are line items in it). Morning stretching stays the on-ramp, not a separate habit. | New 2026-07-07 — restart 07-21; **installation night 2026-07-27**, count restarts from there |
+| **Morning shake** | Shake made the night before, sitting where the cue fires. | Named the "first domino for eating" on 04-09. Cue re-anchored 07-20 (back from gym → shake in hand). Offered as a build 07-20; affirmations chosen instead. **Never installed.** |
+| **Night-before setup** | Clothes/shoes out, bag by door, alarm across the room. | The designated installer for other cues, and it **ran zero nights** in its trial week (07-27 verdict). Its own anchor (the 10:15 ritual) is now gone with the fixed-time cues. Needs re-grafting to a transition. |
+| **Peak-window mindfulness (5 min)** | Therapist homework. Was grafted to the peak-window doorway. | **Its cue no longer exists** — the peak window was retired 08-27. This is textbook **cue eviction**: re-graft to a transition that still happens, as a new build, or retire it. Audit decides. |
+| **Daily walk** | 20 min, ideally no headphones. | "Showing up, not consistent" since April. Never had a cue at all — that's the whole finding. |
+| **End-of-day gratitude (3 things)** | Rides the brick slot: lights out → 3 things. | Fires reliably **when prompted inside `/reflect`** (07-07, 07-28, 08-04) and has never once self-started. That's a cue problem with a known shape and a cheap fix. |
+| **Daily tidying** | — | Momentum noted 04-08, nothing since. |
 
 ---
 
-## Aspirational — On Deck
-
-Things worth building eventually. Not forcing yet.
-
-| Habit | Notes |
-|---|---|
-| New experiences | Intentional, regular — not defined yet |
-| Family/relationship time (intentional) | Already a value; want to make it a deliberate practice |
-| Alarm-anchored triggers | Use alarms to anchor habit cues — not yet set up |
-| End-of-day gratitude (3 things) | Say 3 things you're grateful for before bed — closes the day right |
-
----
-
-## Dropped / Paused
-
-Habits that were tried and set aside, with context why.
+## 🅿️ Retired / Paused — with the reason, in writing
 
 | Habit | Reason | Date |
 |---|---|---|
-| Daily mindset videos | Redundant with the must-listen playlist — same mindset content, same slot. Consciously retired during the 07-09 daily scheduling session; first entry in this table. | 2026-07-08 |
+| Daily mindset videos | Redundant with the must-listen playlist — same content, same slot. Consciously retired. | 2026-07-08 |
+| **🏋️ 6am gym (as a fixed 6am build)** | **Paused for a hamstring 07-27 and never re-installed.** The honest note: it had only 1–3 days installed *before* the injury (build day 1 = 07-21), so "the hamstring paused it" partly hides that it never fully installed — don't treat the leg as the whole explanation. **Phase 3 replaces it** with *movement: 20 min of anything, before the hardest thing when possible* — a lower bar with a cue that survives a day with no fixed morning. Re-graft the real gym build at an audit, not on a motivated night. | Paused 2026-07-27 · reframed 2026-08-27 |
+| **The nine-row Daily Protocol** | Built 07-25, dark by 07-29 — **four days.** A container, not a fix. Suspended 08-04, retired outright 08-27. | 2026-08-27 |
+| **The 9:45 peak block** | Retired by Reese's call: *"I don't want a peak window — I need dynamic scheduling based on the needs of the day."* It also sat inside client hours, which John's review flagged. The post-meds window survives as a **routing input**, not an appointment. | 2026-08-27 |
+| **Fixed clock-time cues** (10:15 set-tomorrow, 12:00 ownership block, 8:30pm drill) | Replaced by transition cues. A clock cue that fires during a client meeting trains you to ignore cues — and that's what happened. The brick's 10:25 survives because it's a transition (phone → charger), not an appointment. | 2026-08-27 |
+| **The weekly Cold Bench + ledger** | Ledger sat at **zero from 07-25 to 08-27.** The principle survives inside the Craft rep (first pass unassisted; AI examines, never authors). A weekly obligation with an empty ledger is theater. | 2026-08-27 |
+| Wake at 6am · Morning deep-work block · Must-listen playlist · 15-min creativity block | Marked **Active** since 04-01 and **not evidenced anywhere in the log since May.** Carried on the tracker for four months on the strength of a good three-week stretch in April. Retired honestly rather than left as decoration — any of them can come back as a real build with a real install. | 2026-08-27 |
+
+---
+
+## 📊 Audit verdict history
+
+*Filled by `/audit`. One row per audit — the point is the trend, not the snapshot.*
+
+| Audit date | Installed | Installing | Not installed | Retired this audit | Floor hit rate |
+|---|---|---|---|---|---|
+| 2026-08-27 (Phase 3 rewrite — baseline) | 1 | 2 | 6 | 8 | — (new counters) |
 
 ---
 
 ## Coach Notes
+
+*Updated through `/reflect`, `/weekly-review`, `/audit`, and `/monthly-review` as patterns emerge.*
+
+- **2026-08-27 (Phase 3 rewrite)** — Reese asked for a heavy rework: the job now has a great project that's genuinely teaching him, Ian is feeding real contract work, and formal learning is being squeezed by life. He asked for two things — *"keep my life a series of systems"* and *"audit the system and habits heavily."* **The read delivered:** the request itself is the system's #1 documented risk (28 system commits : 17 learn : 2 sharpen : 2 drill since 06-01 — system-tinkering is indistinguishable from progress from the inside), **and** the constitution genuinely described a life he no longer lives, so the rewrite was warranted. The resolution: the rewrite is legitimate because it **subtracted far more than it added** (8 retirements, 4 tracks paused, 2 additions), and it ships with the mechanism that stops the next one — the **Change Window** (system changes only inside `/audit`; everything else goes to `PARKING.md`). **Structural changes:** peak window retired at his call, replaced by `/today` (declare the day type, pick one lane, name one thing); life modeled as four lanes with Depth derived rather than scheduled; the tracker regraded on **installed vs. never-installed** rather than consistency, which immediately reclassified six habits that were being counted as failures. **The number that should not be lost:** only **one** habit is genuinely Installed (the brick) — and it has survived every collapse since April, which is the argument for building slowly, not the argument for building more. Watch: (1) does the route get declared seven days running — that's the whole phase in one metric; (2) does the first `/audit` actually subtract, or does it become a planning session; (3) does the Editor lead finally get messaged, 17 days late; (4) does `/drill` come off 2 commits ever.
 
 *Updated through `/reflect`, `/weekly-review`, and `/monthly-review` as patterns emerge.*
 

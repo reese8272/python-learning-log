@@ -1,6 +1,19 @@
 # Secure API Engineering on AWS — roadmap
 
-> **🟢 ACTIVE TRACK.** Created 2026-08-10 as a 7-day interview sprint; **de-timeboxed 2026-08-13** when that role closed on years-of-experience before an interview happened. The clock is gone. The curriculum stayed, because it's the production-API and security layer under everything else being built — the capstone spec is FastAPI + `Depends()` auth + Docker + AWS, and `secure-api-lab` is the only fully-specified project in the system. See `DECISIONS.md` (2026-08-13).
+> ## ⏸ PAUSED — 2026-08-27 (Phase 3)
+>
+> **This track is formally paused, not abandoned and not deleted.** All four curriculum tracks were paused together in the Phase 3 rewrite. The honest number that drove it: **4 banked units out of 233 across all four roadmaps since April — one `[x]` apiece.** Every track launched and stalled at unit 2. That's not a pace problem; it's a signature.
+>
+> **What this file is now:** a **reference catalog**, not a backlog. Nothing here is owed. There is no ACTIVE track and no track menu. Look things up here freely; do not "resume the roadmap."
+>
+> **What replaced it:** work generates the curriculum now. Craft reps (the Cognizant project) and Business reps (client work) throw off things that couldn't be explained — those get captured, and `/drill` and `/sharpen` walk the captures. `/learn new <topic>` handles on-demand acquisition when a capture needs real teaching.
+>
+> **The material is good and it was never the problem.** The one time learning visibly converted to career movement (07-28 → 07-29, the work quiz then the boss call) it was a **defense** rep under real stakes, not an acquisition rep. Phase 3 stops manufacturing stakes and uses the real ones.
+>
+> Un-pausing is an `/audit` decision, not a mid-session one. See `SYSTEM.md` Layer 2 and `DECISIONS.md` (2026-08-27).
+
+
+> **⏸ PAUSED 2026-08-27 (was ACTIVE).** Created 2026-08-10 as a 7-day interview sprint; **de-timeboxed 2026-08-13** when that role closed on years-of-experience before an interview happened. The clock is gone. The curriculum stayed, because it's the production-API and security layer under everything else being built — the capstone spec is FastAPI + `Depends()` auth + Docker + AWS, and `secure-api-lab` is the only fully-specified project in the system. See `DECISIONS.md` (2026-08-13).
 
 **What this is:** A ground-up curriculum in secure API engineering, taught in-catalog via `/learn`, **researched live against current official docs**, then handed to `/sharpen` (defend cold) and `/drill` (retain). This roadmap is the *what to cover and how deep*; the teaching is generated fresh each session so it never goes stale.
 

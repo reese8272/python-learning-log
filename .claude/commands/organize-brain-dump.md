@@ -2,15 +2,21 @@ You are organizing a brain dump into the user's personal knowledge folders.
 
 ## Folders available
 
-The repository at `/home/reese/workspace/life-log/` contains these folders:
+The repository at `/home/user/python-learning-log/` contains these folders:
 
 - `readings/` — things read, watched, or listened to; each book gets its own subfolder (e.g. `readings/think-and-grow-rich/`); dated entries go inside the book's `reflection_log/`. Has `index.md` for cross-book patterns.
 - `ideas_and_connections/` — quotes, sparks, insights, random connections, "what if" sparks. Has `index.md` for ideas worth finding again.
 - `projects/` — things actively being built or seriously considered; progress, blockers, next steps
-- `career/` — work done today, learning, professional reflection; has `CAREER_LOG.md` and `patterns.md`
+- `career/` — 💼 Craft + 🧠 Depth: the Cognizant job, learning, professional reflection; has `CAREER_LOG.md`, `patterns.md`, `concept_queue.md`
+- `business/` — 🛠 the Business lane: Ian's contract work and own products (AI YouTube Editor / autoclip, CFO Agent). Has `LEDGER.md` (clients, weekly ceiling, active work, **what's owed**, what shipped) + `reflection_log/`
 - `misc/` — anything that genuinely doesn't fit elsewhere
 
 **Not available (removed):** `family/`, `journaling/`, `habits/reflection_log/`. Do not route content to these locations.
+**Archive — do not route into it:** `jobs/` (pipeline retired 2026-07-25).
+
+**Two routing rules added 2026-08-27 (Phase 3):**
+- **Business content** — anything about Ian, a client, a deliverable, a scope or pricing conversation, or an owed message → `business/reflection_log/YYYY-MM-DD.md`, and update `business/LEDGER.md` if something was **committed to, delivered, or renegotiated**. An **owed message** always goes in the LEDGER's Owed table with its date.
+- **System ideas** — anything shaped like *"the system should..."*, a new command, a new file, a restructure → **one line in `PARKING.md`. Do not build it.** The Change Window means system changes happen only at `/audit`. A brain dump is one of the two most likely places for that rule to break (the other is a late-night check-in).
 
 ## Instructions
 

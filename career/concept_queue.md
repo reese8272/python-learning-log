@@ -2,7 +2,11 @@
 
 The prioritized list of concepts to grill with `/sharpen`. Seeded from Reese's own shipped code (the richest curriculum — defend what you already built) and the genuine gaps on the AI Engineering Master Guide path.
 
-**Where this sits in the pipeline:** `/learn` (acquire from zero, via `readings/ai-engineering-curriculum/`) → **`/sharpen` (this queue — defend cold)** → `/drill` (retain). A unit learned via `/learn` lands here to be defended. Concepts from his own shipped code start here directly (already built, just need defending). Two ledgers: this file tracks *acquisition/defense*; `CAREER_LOG.md` tracks *mastery + review cadence*.
+> **⚠️ Phase 3 (2026-08-27) — the source changed.** The four curricula are **paused** (4 banked of 233). This queue is now seeded by **real work**: 💼 Craft reps on the Cognizant project and 🛠 Business reps on Ian's client work. The selection rule is unchanged and still the best one in the system — **pick the slice you feel you *should* already be able to explain and quietly can't.** That flinch is the targeting system.
+>
+> `/sharpen` is also now the highest-value command in the Depth lane: the one time learning visibly converted to career movement (07-28 → 07-29) it was a **defense** rep under real stakes, against a lifetime ratio of 17 learn : 2 sharpen : 2 drill.
+
+**Where this sits in the pipeline:** real work (Craft / Business) → a capture → **`/sharpen` (this queue — defend cold)** → `/drill` (retain). `/learn new <topic>` feeds in when a capture needs real teaching. A unit learned via `/learn` lands here to be defended. Concepts from his own shipped code start here directly (already built, just need defending). Two ledgers: this file tracks *acquisition/defense*; `CAREER_LOG.md` tracks *mastery + review cadence*.
 
 **Depth bars** (see `.claude/commands/sharpen.md`), which replaced Tier 1/Tier 2 on 2026-08-13:
 - **`[A]` BUILD IT** → mechanism + why-this-over-that + failure mode, cold and unaided. **95% is a miss.**

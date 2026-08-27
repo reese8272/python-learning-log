@@ -1,5 +1,16 @@
 # The Independence Protocol — the 6-month answer to the mid-year review
 
+> ## ⚠️ PHASE 3 amendment (2026-08-27) — the thesis stands, two mechanisms changed
+>
+> **This document is still the governing answer to John's mid-year review.** Layer 1 (the learning ladder: recall → primary source → build by hand → **AI as examiner, never author** → bank) is unchanged and is now the standard for every rep in every lane.
+>
+> **Two mechanisms below are retired and folded in:**
+> - **The weekly Cold Bench and its ledger** — the ledger sat at **zero from 07-25 to 08-27**. A weekly obligation with an empty ledger is theater. The *principle* survives inside the 💼 Craft rep: the first pass is unassisted, AI examines rather than authors. Stress inoculation now happens on real work with real stakes instead of a manufactured weekly slot.
+> - **The 12:00 Ownership block** — the fixed clock slot is gone with the rest of the fixed-time cues. **The rep itself is now the Craft lane's definition of a rep**, run whenever `/today` routes it: predict a file before opening it → find one non-obvious decision → answer ***what breaks if this is wrong*** → verify live against docs → one line logged (file · decision · failure mode).
+>
+> The 08-18 read that drove this: *reading is recognition, and recognition is already the strong mode.* The block was always the right 30 minutes; **generation before exposure** is the verb that makes it work.
+
+
 **Created:** 2026-07-25, in response to John's six GoPerform notes (primary source: `career/reflection_log/2026-07-25.md`).
 **Horizon:** Aug 2026 → Jan 2027 (year-end review).
 **One-line thesis:** Use AI to *learn faster than anyone*, and prove capability *without* it — visibly, on a scoreboard John himself wrote.

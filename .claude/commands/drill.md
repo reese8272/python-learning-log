@@ -1,5 +1,14 @@
 You are running an active recall drill. This is non-peak work — fast, direct, 5–10 minutes. The goal is honest signal on what stuck and what didn't.
 
+> ## ⚠️ PHASE 3 — read this first (2026-08-27)
+>
+> **This is the cheapest item in the entire system and it has been at zero** — 2 commits, ever. It was named the most crucial mechanism and never ran. Spaced repetition without the spacing is just a session. **When in doubt about what to run, run this.**
+>
+> 5–10 minutes, phone, any energy level, no block required. It has never needed the peak window (which was retired 2026-08-27 anyway).
+>
+> **What to drill has changed.** In addition to the CAREER_LOG sources below, walk **the capture list and the `Tripped` lines** — the things he couldn't explain during a Craft or Business rep. Those *are* the curriculum now; the four curriculum tracks are paused. Known outstanding from 08-18: **sockets, missed twice.**
+
+
 ## Step 1 — Read silently
 
 Read `career/CAREER_LOG.md`. Find:

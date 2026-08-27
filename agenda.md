@@ -1,142 +1,124 @@
 # Agenda
 
-This is the one-stop shop for current goals and intentions across all time horizons. The **Card** below is the front door of the whole system — glanceable current state, updated by `/checkin` (daily) and `/reflect`. Weekly and Monthly are updated by `/weekly-review` and `/monthly-review`.
+The one-stop shop for current goals and intentions across all time horizons. The **Card** below is the front door of the whole system — glanceable current state, updated by `/today` (the route) and `/checkin` (the floor). Weekly and Monthly are updated by `/weekly-review` and `/monthly-review`. The system itself is only changed at `/audit`.
 
-**Re-entry rule:** if you've been away — a day, a week, a month — the way back is `/checkin`. Three minutes. The streak restarts today. No archaeology, no guilt, no catching up on what went stale. Read the Card, answer three questions, done.
+**Re-entry rule:** if you've been away — a day, a week, a month — the way back is `/checkin`. Three minutes. The streak restarts today. No archaeology, no guilt, no catching up on what went stale.
 
 ---
 
-## 🗓 The Daily Protocol — the one checklist (added 2026-07-25, post-review)
+## 🧭 How a day works now — Phase 3 (2026-08-27)
 
-*The time-anchored daily system for the Independence Protocol (`career/helpful_notes_and_guides/Independence Protocol.md`). This is what "learning effectively" looks like as a day. `/checkin` scores against it. The Floor still rules: only the two ⬛ items make the day count — everything else is upside, never owed. A missed item is data, not debt.*
+*The nine-row Daily Protocol and the fixed 9:45 peak window are **retired**. There is no grid. See `SYSTEM.md` Layer 3.*
 
-| When | ✓ | Item | Which layer |
-|---|---|---|---|
-| 6:00 | ☐ | Gym (worst-day: show up, one thing, 10 min) | Build — dopamine pre-load for the peak block |
-| Shower | ☐ | Affirmation stack (worst-day: identity line only) | Build |
-| Standup | ☐ | **Honest 3-parter** — yesterday / today / blocker named *specifically*, today not "when it's a crisis" | Work-visible: comms floor |
-| First work block | ☐ | **First hour AI-free** on the hardest ticket — read code, read docs, 5-line plan *before* any AI | Work-visible: independence they can see |
-| 9:45 peak (90 min) | ☐ | **The rep** — one `/learn` or `/sharpen` concept to the bar, via the ladder (recall → docs → hand-build → AI examines). **Cold Bench day: this block, timer on, no AI.** End with a stopped-at line. | Learning ladder / Cold Bench |
-| 12:00 | ⬛ | **Ownership block** — audit + doc one slice of your own code (autoclip / CFO Agent); Floor #2 = one ownership touch | Floor / Ownership Audit |
-| Workday close | ☐ | **Close-out**: written update in the channel · pull/rebase · commits pushed, every line explainable cold | Work-visible: own every line + merge hygiene |
-| Evening (non-peak) | ☐ | `/drill` — 5–10 min, phone-friendly | Retention |
-| 10:25 | ⬛ | **The brick** — alarm → phone on charger → 15 min reading (Floor #1) | Floor |
+**`/today` — the route. 60 seconds, phone, at the first sit-down.** Three moves:
 
-**Weekly riders:** one peak block = **Cold Bench** (pick the task at `/weekly-review`; ledger row after) · `/weekly-review` checks: ledger row ✓, comms floor held ✓, one scoreboard artifact moved ✓.
+1. **Declare the day type** — 🟩 Deep (a real 60–90+ min block exists) · 🟨 Split (fragments only) · 🟥 Survival (obligations own the day).
+2. **Pick one lane** — 💼 Craft (Cognizant) · 🛠 Business (Ian / products) · 🧠 Depth (drill / sharpen / capture) · 🏡 Home.
+3. **Name the one thing** — specific enough to start without deciding again.
 
-**The scoring question at `/checkin`:** not "did I do everything" — it's *"did the day count (⬛×2), and did I get a rep in (peak block or drill)?"* Two ⬛ + any one rep = a genuinely effective day. Full column = a great one.
+> **🟥 is a legitimate, counted day.** It carries no debt into tomorrow. The collapse pattern lives in the gap between *"I can't do the full thing"* and *"so I did nothing and felt bad about it"* — declaring 🟥 closes that gap. **The only real miss is a day with no declaration at all.**
 
-### 📅 This table lives in Google Calendar now (synced 2026-07-25)
-
-Every row above is a recurring event on the primary calendar (America/New_York) — the calendar **is** the daily interface; this table is the spec behind it. Existing events kept: 🏋️ Gym 6:00 · 🎯 Peak 9:45–11:15 · 🧭 Ownership block 12:00 (the former pipeline slot, repurposed 2026-07-25 for the code audit practice — Independence Protocol Layer 2.5). Added: 🗣 Standup 8:15 + 🚫🤖 First-hour-AI-free 8:30 + ✅ Close-out 4:45 (all weekdays — **drag these three to match the real work schedule**, the anchor matters, not the clock time) · 🧊 Cold Bench Fri 9:45 (overrides the generic 🎯 on Fridays) · 🃏 /drill 8:30pm daily · 🌙 Set-tomorrow 10:15pm daily · 🧱 Brick 10:25pm daily · 📋 /weekly-review Sun 8pm.
-
-**The linchpin ritual — 🌙 Set tomorrow (10:15pm, 60 seconds):** read the stopped-at line → **rename tomorrow's 🎯 peak block to the actual concept** ("🎯 /learn — XML tagging", "🎯 /sharpen — prompt anatomy cold defense"; Fridays: name the Cold Bench task) → gym clothes out → phone on charger → brick. This is what makes the morning decision-free: wake up, and the calendar already says what you're learning. A generic "🎯 Peak block" title at 9:45am means last night's ritual was skipped — that's the tell, fix it at `/checkin`. Any Claude session (including `/checkin`) can do the rename via the Calendar connector when asked.
+**Don't schedule the time — schedule the decision.** The route is the fixed part; what it produces changes every day. The post-meds window is a *routing input*, not a reservation: if it's open on a 🟩 day, the hardest rep goes there.
 
 ---
 
 ## 📍 The Card
-*Updated by `/checkin` — this always reflects NOW, not history. (Older stopped-at lines live in git history.)*
+*Updated by `/today` and `/checkin` — this always reflects NOW, not history. (Older stopped-at lines live in git history.)*
 
-**Date:** 2026-08-18 (Tuesday) — **the reps restarted.** A peak-window `/learn` ran after a 6-day gap (08-12 → 08-17, no learning). The gap is data; it's logged and closed. Nothing is owed backward.
+**Date:** 2026-08-27 (Thursday) — **Phase 3 begins.** The system was rewritten today for a life with three real lanes instead of one. Last activity before this: 08-19. **That's an 8-day gap, it's data, and nothing is owed backward.**
 
-> **🔒 THE INTERVIEW CLOCK — REMOVED 08-13.** The secure-API role closed on **years-of-experience, before an interview happened.** Nothing was tested and nothing was failed. It came inbound; the outbound pipeline was already retired on 07-25, so **strategically nothing moved.** What the seven days actually produced was the best format work in this system's history — depth bars, the chunk loop, the three check formats, the `📝 Learning notes` block — all now **evergreen across every track** rather than dying with the sprint on 08-18. See `DECISIONS.md` (2026-08-13).
+**Today:** 2026-08-27 · *route not yet run* · Lane: —
+**The rep:** *run `/today` to set it*
+**The floor:** 🧱 the brick + the day's declared rep (🟥 → the brick alone)
 
-> **🟢 ACTIVE TRACK: `secure-api-engineering`.** One track runs at a time; `ai`, `py`, and `soft` are dormant. A bare **`/learn`** goes straight to it — no menu. Roadmap: `career/secure-api-engineering/summary.md`. Build: `career/lesson_assignments/secure-api-lab` (`/issue-workflow`). The curriculum survived the role because it's the security and production-API layer under the capstone.
->
-> **The Ladder** — how a unit gets learned, one rung at a time: fill-in-the-blank → short answer → spot-the-bug → completion problem (worksheet) → **the project** (a real issue, no scaffolding). **`[~]` never becomes `[x]` in the session that taught it** — banking needs the worksheet green or a cold re-ask next session. Why: `career/helpful_notes_and_guides/Learning Science Protocol.md`.
+> **🔁 WHAT CHANGED TODAY — the short version.**
+> - **The peak window is gone.** Reese's call: *"I don't want a peak window — I need dynamic scheduling based on the needs of the day."* Replaced by `/today`.
+> - **Life is four lanes now:** 🏡 Home (the ground) · 💼 Craft (Cognizant — the project that's actually teaching him) · 🛠 Business (Ian's contract work + the products) · 🧠 Depth (derived — runs on the residue of the other two).
+> - **All four curriculum tracks are paused.** 4 banked of 233 since April. They stay on disk as a reference catalog. **Work generates the curriculum now.**
+> - **`/audit` is the new heavy loop** — five passes on evidence, and it must subtract. **The Change Window: the system may only be changed inside an audit.** Everything else goes to `PARKING.md`.
+> - Full rationale: `SYSTEM.md`, `DECISIONS.md` (2026-08-27).
 
-> **⚡ PIVOT (2026-07-25, by Reese's call) — REINSTATED 08-13.** The job pipeline stays **retired from the daily system**; after John's review the priority is owning and growing the Cognizant role. `jobs/` is archive. The 08-10 suspension was for one inbound opportunity, and that opportunity is closed. **The rejection changes nothing here** — this was already not the strategy. Full response system: `career/helpful_notes_and_guides/Independence Protocol.md`.
-
-> **🏈 THE CLOCK (added 08-04) — UNPAUSED 08-13, four days early.** The AI YouTube Editor ships to one real lead by **NFL Week 1 (~09-10)**. The 08-10 pause was scoped to the interview sprint, and the sprint is over. ⚠️ **The lead still has not been messaged** — that was owed on 08-10 and the news is now *better* than expected. Send it. Silence damages the relationship; a stated delay never did.
->
-> **⚠️ This is now the only hard external date in the system, and that matters more than it looks.** The record is unambiguous that this system runs hot against a named date and cold without one — the seven-day sprint out-produced any comparable stretch. Two clocks are gone (interview, and the sprint that came with it) and one remains. **Open decision: does the Editor take the peak window, or does `secure-api-engineering`?** They can't both have it. See `CAREER_LOG.md` → Active Struggles, "No deadline currently drives the learning."
-
-> **🎚 THE RATIO IS THE PROBLEM, NOT THE PACE (named 08-18, coaching session — `reflections/2026-08-18.md`).** First real status count: **4 banked units of 233** across all four roadmaps — and **every track has exactly one `[x]`.** Four launches, four stalls at unit 2. Effort split since 06-01: **28 system/card commits · 17 learn · 2 sharpen · 2 drill.** The read: system-tinkering is the most sophisticated procrastination available here, because from the inside it's indistinguishable from progress. **The protocols are finished — nothing left to carve.**
->
-> **The two calls: (1) `/drill` tonight, 8:30pm — sockets first, missed twice.** It's the mechanism named as most crucial and it's at zero; spaced repetition without the spacing is just a session. **(2) `/learn` §1.2b at peak tomorrow.**
->
-> **🧭 The ownership block gets a new verb.** Not "read the project file by file" — reading is *recognition*, and recognition is already the strong mode. Force **generation before exposure**: pick a file, **don't open it**, say what it does → open it, find **one** non-obvious decision → answer only ***what breaks if this is wrong?*** → verify live against docs → log one line (file · decision · failure mode). **The "why" of code is what it costs when it's wrong** — the same `Breaks if wrong:` format already written into every `[A]` unit of the api roadmap. Precedent: the 07-28 fading-scaffold protocol he invented himself and never turned on his own repo.
-
-**The Floor — weekdays:** 🧱 the brick + 🧭 one ownership touch (a doc/audit line on his own code, or the close-out done).
-**The Floor — weekends (new rule, named by Reese 07-25):** weekends owe *nothing* professional. Weekend floor = **the brick** (or full presence with the kids). Any ownership touch, check-in, or rep on a weekend = bonus win, never owed.
-
+**The Floor — weekdays:** 🧱 the brick + the day's declared rep.
+**The Floor — weekends:** weekends owe *nothing* professional. Weekend floor = the brick, or full presence with the kids. Any Craft or Business touch on a weekend is a bonus, never owed.
 **Bad day?** One non-negotiable keeps the identity: full presence with the kids, OR the brick. That still counts.
-
-### 🎯 The shape of a day
-
-*The seven-day sprint map is gone (it expired with the interview). This is the sustainable version — the same shape, without a countdown attached. The nine-row Daily Protocol stays suspended; it lived four days in July and re-launching it is a container, not a fix.*
-
-| When | What | Owed? |
-|---|---|---|
-| Peak (90 min) | **`/learn`** — one unit to its depth bar, via the chunk loop. Open with Step 1.5: re-ask last session's `Tripped` list. | ⬛ **The rep** |
-| Afternoon (60–90 min) | `/issue-workflow` — the current issue in `career/lesson_assignments/secure-api-lab`. This is the top rung: the concept becomes code. | ☐ upside on a normal day, ⬛ on a build day |
-| 8:30pm (20 min) | `/drill` — 3–5 items, **mixed domains**, varied question forms | ☐ upside |
-| 10:25pm | 🧱 The Brick | ⬛ floor |
-
-**🩹 The floor version — read this on a bad day.** `habits/tracker.md:105` records six instances of the all-or-nothing pattern: *"a 10 and a 0, and no median day."* The floor is **one `[A]` unit, ~30 minutes, and nothing else.** That **counts as a completed day.** The system survives an unlimited number of floor days. It does not survive one zero that becomes three — which is exactly what 08-12 and 08-13 were.
-
-**📏 Depth bars.** `[A]` build-it ~30m · `[B]` explain-it ~15m · `[C]` name-it ~5m. Binding in both directions — over-teaching a `[C]` is as much a miss as under-teaching an `[A]`.
-
-**🔁 The chunk loop:** teach one idea (~8 min) → 2–4 inline checks (fill-in-the-blank · short answer · **spot-the-bug**) → one tiny snippet → stop. One worksheet per section, not per unit.
-
-**💸 Two hard money rules:** never create an **AWS Private CA** (~$400/mo general-purpose, ~$50/mo short-lived, prorated from creation, no refund on delete) and never enable **Shield Advanced** (~$3k/mo, 1-yr commit). mTLS is learned with a local openssl CA. Set a **$25 Budget alert** before touching AWS; tag everything `project=secure-api-lab`; run `docs/TEARDOWN.md` the same day you deploy.
-
-**Blocks on the calendar:**
-
-| Time | Block |
-|---|---|
-| Peak 90 min | 🎯 `/learn` — **rename the block to the actual unit each night** (a generic title at 9:45 means the 10:15 ritual was skipped — that's the tell) |
-| Afternoon 60–90 | 🔨 `/issue-workflow` — the current issue |
-| 1:00–2:00 | Nicks (existing, untouched) |
-| 8:30pm · 10:15pm · 10:25pm | 🃏 /drill · 🌙 Set tomorrow · 🧱 The Brick |
-
-**Cognizant's clock stays untouched** (07-25 rule, John's review note about balancing professional development with client priorities). This runs before work, after work, and on the weekend — not during it.
-
-**Weekend rule restored 08-13** (it was suspended for the sprint): weekends owe nothing professional. Weekend floor = the brick, or full presence with the kids.
-
-*(CFO Agent graph topology → queued as rep #2 material. Cognizant code you didn't write is still the escalation target.)*
-
-**Selection rule for every rep after this:** pick the slice you feel you *should* already be able to explain and quietly can't. That flinch is the targeting system. (Rep #2 escalates to Cognizant code you didn't write — that's the real muscle. Next week's problem.)
-
-**🦵 Hamstring pulled this weekend** — gym paused until healed, not dropped. The floor never included the gym; nothing is owed. Walks count as movement while it heals.
-
-**Builds (protect):**
-- 🏋️ 6am gym — **paused (hamstring)**. Installer ritual keeps running so the cue is ready the day the leg is.
-- 🪞 Shower affirmations — cue: water on → line one. Worst-day: identity line only. **Notecard INSTALLED 07-28 — trial live from Wednesday's shower.**
-
-**Daily rep cadence:** peak block = **`/learn`** on the active track. Evening `/drill`. Acquire → build → defend → retain. One track at a time; the menu is gone.
-
-**Streaks:** all restart today. No commentary, no archaeology.
-- 🧱 Brick: 0 — restarts tonight
-- ✅ Check-ins: restarts today (08-13)
-- 🧭 Ownership touches: 0 — rep #1 is Issue 1 in `secure-api-lab`
-- 🎯 **Learning reps: 0 — restarts tomorrow morning** *(new counter, added 08-13.* A rep = one `/learn` unit taught or one `/sharpen` defense. **This was never counted before**, which is a real gap: the rep is the thing the whole system exists to produce, and it was the only load-bearing behavior with no number attached. Brick and ownership touches had counters; the rep didn't.*)*
-
-**Stopped at:** 08-18 — **`/learn api` §1 chunk 1.2a. Unit 1.2 (`async def` vs `def` + the threadpool trap) is `[~]`, not banked.** The 6-day stall (08-12 → 08-17) after the rejection was the all-or-nothing signature again; it ended today with a full peak-window rep. Pretest went **0 for 3** — he predicted `async def` beats plain `def` on a blocking call, and it's **25× worse** (~100s vs ~4s). Session: `career/secure-api-engineering/reflection_log/2026-08-18.md`.
-
-**Next step:** **chunk 1.2b** — spotting a blocking call in a library you didn't write, the two escape hatches, and a spot-the-bug. ~12 min, research already cited in the log. **Owed first (5 min, the bank gate):** the `scratch_blocking.py` build in `career/lesson_assignments/secure-api-lab` — three routes, one uvicorn worker, 50 concurrent requests, write down the three wall-clock numbers. He has never observed this, because it is invisible at concurrency 1.
-
-**⚠️ The call from 08-18, carried forward into every session:** *states the rule, not the reason* — four occurrences now. Recall is good; **justification is the gap.** In force: when asked "why," the first sentence may not contain the thing being explained. Grade the second sentence, not the first.
-
-**What 08-13 was spent on instead:** merging the sprint's format work into the evergreen learning engine before its scheduled 08-18 deletion, plus a new `Learning Science Protocol.md`. **That was the labor of the assistant, not the peak window** — which is the only reason it isn't a repeat of the 08-04 STOP item (*"building containers during sprints"*). **The container is paid for by tomorrow's rep, not instead of it.**
-
-**The read that came out of the gap analysis, and it's still the useful part:** the JD looked overwhelming and wasn't. It split into two piles. *Recalibration* — FastAPI, async, OAuth2, testing, CI/CD are all already in production and were all self-rated "Gap" (`CAREER_LOG.md` said "haven't built with it" against ~37k LOC of FastAPI, and "no hands-on experience" against 5+ live CI workflows). *Acquisition* — the AWS platform/edge layer, mTLS, Okta/OIDC, HIPAA, which a full-repo grep found **zero** mentions of. Two different problems wearing the same label. **The rejection didn't touch either pile** — it was decided on a number, not on knowledge. The pile is exactly where it was on 08-10.
-
-**First move (tomorrow, peak block):** `/learn` → **Step 1.5 re-asks §1.1's `Tripped` list** (six items, already written), then **1.2 the threadpool trap** `[A]`. Then 1.B (`Depends()` `[A]`), 1.C (`response_model` `[A]`), 1.D — then Issue 1.
-
-**Still outstanding, outside the terminal:** ⚠️ **message the Editor lead.** Owed since 08-10, now four days late, and the news is better than the message you were going to send.
-
-*Deferred, not dropped:* §1.3 worksheet 16/19 → 19/19 (COACH NOTES in `career/lesson_assignments/2026-07-20_zero-few-shot-role-prompting.py` — fields-vs-values, missing enum, unused `review_comment`); Cold Bench rep #1 on the Editor pipeline.
 
 ---
 
-## 🏈 SHIP BY KICKOFF — AI YouTube Editor v1 (scoped 2026-08-04) · ▶️ **UNPAUSED 08-13**
+### 🚦 The lanes — current state
 
-> **▶️ Unpaused 2026-08-13, four days early.** The pause was scoped to the interview sprint (08-10 → 08-17) and the sprint ended when the role closed. Everything below stays valid, with **~12 usable days against a ~28-day calendar** — better than the ~8 the pause was going to cost, worse than the original ~18. Expect a **scope** conversation, not a schedule one.
+| Lane | Mission | One rep = | Status as of 08-27 |
+|---|---|---|---|
+| 🏡 **Home** | The ground everything stands on | Undistracted presence | The bad-day non-negotiable. Unchanged. |
+| 💼 **Craft** — Cognizant | Own the project; perform without AI, visibly | Predict a file → open it → one non-obvious decision → **what breaks if this is wrong** → verify live → one line logged | 🟢 **The strongest lane right now.** A great project, learning happening on the job. This is new, and it's the reason the old architecture no longer fits. |
+| 🛠 **Business** — Ian + products | Convert skill into money that isn't hours | One delivery touch: a shipped slice, a client message sent, a decision closed | 🟢 Ian is feeding real contract work. **Ledger is thin** — `business/LEDGER.md` needs the actual scope filled in. |
+| 🧠 **Depth** — derived | Runs on the residue of the other two | One capture, one `/drill`, or one `/sharpen` | 🔴 **Near zero.** `/drill` has 2 commits *ever*. It is the cheapest thing in the system and the piece named most crucial. |
+
+---
+
+### ⚠️ The two things outstanding, oldest first
+
+**1. 📨 The Editor lead has not been messaged. Owed since 08-10 — 17+ days.**
+The message that was owed said "delayed"; the true news is *better* than that. A stated delay costs nothing; silence costs the relationship. **This is the oldest open item in the system and it costs five minutes.** Send it, or formally close the Editor commitment — but decide, don't drift. (`business/LEDGER.md` → Owed.)
+
+**2. 🏈 The AI YouTube Editor needs a decision, not a schedule.**
+NFL Week 1 (~09-10) is ~2 weeks out and the Editor has had no recorded work since 08-04. With three lanes live and time that's genuinely fluid, "ship it by Week 1" is no longer a plan — it's a wish with a date attached. The honest options: **re-scope to what one lead can actually see by 09-10**, **move the date and say so**, or **shelf it and write the retirement note** (the no-silent-abandonment rule). Any of the three is fine. Drifting past 09-10 without choosing is the one bad outcome. **First `/audit` decides it.**
+
+---
+
+### 🧠 Depth — how learning works now
+
+**There is no active track and no track menu.** The four roadmaps (`api`, `ai`, `py`, `soft`) are paused and are now a **reference catalog** — nothing in them is owed.
+
+| Command | What it's for now |
+|---|---|
+| **`/drill`** | Retain what's landed — 5–10 min, phone, spaced and interleaved. Walks the **capture list and the Tripped lines**. *When in doubt what to run, run this.* It's the cheapest item in the system and it has been at zero. |
+| **`/sharpen`** | Defend cold at the depth bar. Walks `career/concept_queue.md`, seeded now by Craft and Business reps. **Defense is the rep that converts** — the one time learning visibly moved his career (07-28 → 07-29) it was a defense rep under real stakes. |
+| **`/learn new <topic>`** | On-demand acquisition when a capture is big enough to need teaching. Driven by what work threw at him — never by a roadmap position. |
+
+**The capture cue:** anything you couldn't explain today → one line, immediately. That line *is* the curriculum.
+
+**⚠️ Standing calibration flag, carried forward:** *states the rule, not the reason* — four occurrences as of 08-18. Recall is good; **justification is the gap.** When asked "why," the first sentence may not contain the thing being explained. **Grade the second sentence.**
+
+**The reframe that does the work:** the "why" of a piece of code is **what it costs when it's wrong.** Can't name a failure mode → you don't own that line yet. That's a finding, not a failure.
+
+---
+
+### 🔒 The Change Window — read this before touching the system
+
+> **The system may only be changed during an `/audit`.** Outside an audit, a system idea goes to `PARKING.md` as one line and **is not built.**
+
+The number behind this rule: **28 system/card commits against 17 learn, 2 sharpen, 2 drill since 06-01.** System-tinkering is the most sophisticated procrastination available here, because from the inside it is indistinguishable from progress. *(This rewrite is itself a system change — it's legitimate because the life it describes actually changed, and because it **subtracted** far more than it added. The next one waits for an audit.)*
+
+**Next `/audit`: within the week.** It sets the Business weekly ceiling, decides the Editor, and assigns every habit its install verdict.
+
+---
+
+### 🧱 Builds (protect)
+
+- **🧱 The brick** — 10:25pm, phone on charger FIRST → book in hand. The most-proven behavior in the entire log: it survived a full vacation with zero scaffolding (07-13 → 07-19) and every collapse since April has ended with it. **Installed.**
+- **🏋️ Movement** — the 6am gym build was paused for a hamstring (07-27) and never re-installed; note honestly that it had only 1–3 days installed *before* the injury. **Phase 3 downgrades it from "6am gym" to "20 minutes of anything, before the hardest thing when possible"** — the cue was evicted by a life that no longer has a fixed morning. Re-graft it as a new build at an audit, not tonight.
+- **🪞 Shower affirmations** — notecard installed 07-28. Verdict pending at the first audit's habit pass.
+
+**Streaks:** all restart today. No commentary, no archaeology.
+- 🧱 Brick: 0 — restarts tonight
+- ✅ Routes run (`/today`): 0 — new counter, starts with the first route
+- 💼 Craft reps: 0 · 🛠 Business reps: 0 · 🧠 Depth reps: 0
+
+**Stopped at:** 08-27 — the Phase 3 rewrite. `SYSTEM.md` and `CLAUDE.md` rebuilt around four lanes, the router, and the audit; four curriculum tracks paused; `business/` and `PARKING.md` created.
+
+**Next step:** run **`/today`** and declare the day. Then, whatever the day type — **send the Editor lead the message.** It's five minutes and it's 17 days old.
+
+---
+
+## 🏈 AI YouTube Editor v1 (scoped 2026-08-04) · ⚠️ **NEEDS A DECISION — 2026-08-27**
+
+> **⚠️ Status as of 08-27: no recorded work since 08-04, and NFL Week 1 (~09-10) is ~2 weeks out.** The "ship by kickoff" framing below was written when this was the only lane competing for time. It now competes with a real Cognizant project and real contract work from Ian, and the record is unambiguous that this system does not run three full-weight commitments at once — that's the over-launch signature.
 >
-> ⚠️ **Action owed since 08-10 and still not done: tell the lead.** Four days of silence on a delay that turned out to be shorter than planned. A stated delay costs nothing; silence costs the relationship. Send it before anything else on this list.
+> **This is a decision, not a schedule.** Three honest options, all fine: **(a) re-scope** to what one lead can actually see by 09-10 · **(b) move the date** and tell the lead · **(c) shelf it** and write the 100-word retirement note (`misc/reflection_log/`), per the no-silent-abandonment rule. **Drifting past 09-10 without choosing is the only bad outcome.** First `/audit` decides.
 >
-> **And the strategic question this now raises:** with the interview clock gone, **this is the only hard external date left in the system.** The record says this system runs hot against a named date and cold without one. Either the Editor takes the peak window and `secure-api-engineering` drops to evenings, or the reverse — but running both at full weight is the over-launch signature. Decide it explicitly rather than by drift. See `DECISIONS.md` (2026-08-10, 2026-08-13).
+> ⚠️ **And regardless of which option: the lead still has not been messaged. Owed since 08-10 — 17+ days.** The news is *better* than the message that was going to be sent. Send it before anything else on this list. A stated delay costs nothing; silence costs the relationship.
+>
+> Everything below stays as the scoping record — the spine, the acceptance test, and the cut list are still right if (a) or (b) is chosen.
 
 *The most time-sensitive, highest-upside thing in the system — and until 08-04 it existed nowhere in it, running entirely in his head while the Card tracked worksheet fixes. This section outranks the Weekly and Monthly blocks below until it ships. **As of 08-13 it is also the only thing in the system with a real external date on it.***
 
@@ -176,21 +158,25 @@ Cut by Reese's own call 08-04. **He can use the clipping engine while the rest g
 ## Weekly
 *Updated by `/weekly-review` — replace each Monday with the new week's priorities*
 
-**Week of 2026-07-27 → 08-02 (set at weekly review, 07-27) — installation week, not design week**
+**Week of 2026-08-27 → 09-02 — the first week of Phase 3. Run it, don't tune it.**
 
-1. **Install the cues tonight, then keep the rep cadence.** 🌙 10:15 ritual = the installer: notecard taped in the shower, clothes/shoes out, alarm across the room (~4 min). Monday 9:45 is loaded: three fixes → §1.3 worksheet 19/19. A cue isn't designed until it's physically installed — the tape counts, not the design session.
-2. **Daily Protocol runs as a menu, never a bill.** Score stays ⬛×2 + one rep = a good day; stacked rows are upside. The tell: the first missed row that generates *guilt* — catch it at `/checkin` same day. Zero new habit/system design this week — installation and reps only.
-3. **One artifact row on the new scoreboard by Friday.** Cold Bench (Fri 9:45) or the first ownership-audit slice. "Barren" was the between-scoreboards feeling; one visible row kills it.
+1. **Run `/today` every day.** The metric this week is not reps — it's **declarations**. Seven declared days (🟩, 🟨 or 🟥, any mix) is a perfect week. An undeclared day is the only miss. This is the one behavior the whole phase rests on.
+2. **Send the Editor lead the message, and run the first `/audit`.** The message is 17 days old and costs five minutes. The audit sets the Business weekly ceiling, decides the Editor (re-scope / move / shelf), and assigns every habit its install verdict.
+3. **One `/drill`.** Any night, phone, ten minutes. It has 2 commits ever, it's the cheapest thing in the system, and it's the piece named most crucial. One is a win; the counter coming off zero is the point.
+
+**Not this week:** no new habits, no new commands, no system edits outside the audit. Ideas go to `PARKING.md`. This is the week that tests whether the Change Window holds.
 
 ---
 
 ## Monthly
 *Updated by `/monthly-review` — replace each month with the new month's vision*
 
-**July 2026 — The pipeline month**
+**August → September 2026 — the two-engine month**
 
-The North Star is generational wealth through AI positioning, and positioning is two things this month:
+The North Star is unchanged: **generational wealth through AI positioning — knowledge as power, not trading time for money.** What changed is the route. It is no longer "escape to a $120k role" (pipeline retired 07-25). It is **two engines running at once:**
 
-1. **Get seen** — work `jobs/TODO.md` to completion: visibility, all 7 Tier 1+2 applications, recruiter outreach, Tier-3 batch. The next role is $130–175k against ~$80k now; no habit is worth more than this move.
-2. **Get defensible** — daily `/sharpen`//`/learn` reps converting shipped work (CFO Agent, autoclip, Cognizant systems) into consultant-grade judgment. Interviews are won by "why THIS over THAT."
-3. **Keep the floor alive** — the Card's two-item floor, every day. The system that survives bad days is the one that compounds.
+1. **Own the Cognizant role.** The project is good and it's teaching him — that's genuinely new, and it's the answer to John's mid-year review. The rep that proves it: *what breaks if this is wrong*, on his own systems, out loud, without AI writing it.
+2. **Build the business.** Ian's contract work is the bridge; the products are the destination. Contract work is money for hours — necessary, and not the point. The audit's weekly ceiling is what keeps the bridge from becoming the whole road.
+3. **Let learning be a byproduct, and prove it.** Four paused roadmaps and 4 banked units of 233 is the evidence that scheduled acquisition wasn't working. The month's test: does capture-plus-`/drill` produce more defensible knowledge than four curricula did? If it doesn't, that's a real finding and the audit will say so.
+
+**The one number to watch this month:** declared days ÷ calendar days. Everything else in this system has always followed from showing up in a way that counts.

@@ -1,5 +1,18 @@
 # Senior Engineering — Soft Skills & Social Craft Roadmap
 
+> ## ⏸ PAUSED — 2026-08-27 (Phase 3)
+>
+> **This track is formally paused, not abandoned and not deleted.** All four curriculum tracks were paused together in the Phase 3 rewrite. The honest number that drove it: **4 banked units out of 233 across all four roadmaps since April — one `[x]` apiece.** Every track launched and stalled at unit 2. That's not a pace problem; it's a signature.
+>
+> **What this file is now:** a **reference catalog**, not a backlog. Nothing here is owed. There is no ACTIVE track and no track menu. Look things up here freely; do not "resume the roadmap."
+>
+> **What replaced it:** work generates the curriculum now. Craft reps (the Cognizant project) and Business reps (client work) throw off things that couldn't be explained — those get captured, and `/drill` and `/sharpen` walk the captures. `/learn new <topic>` handles on-demand acquisition when a capture needs real teaching.
+>
+> **The material is good and it was never the problem.** The one time learning visibly converted to career movement (07-28 → 07-29, the work quiz then the boss call) it was a **defense** rep under real stakes, not an acquisition rep. Phase 3 stops manufacturing stakes and uses the real ones.
+>
+> Un-pausing is an `/audit` decision, not a mid-session one. See `SYSTEM.md` Layer 2 and `DECISIONS.md` (2026-08-27).
+
+
 **What this is:** A ground-up curriculum for the *human* layer of great engineering — the work and struggle of becoming a senior engineer in a real org: communication, judgment made visible, disagreeing well, multiplying others. Built the same way as the AI and Python tracks: each unit is learned in-catalog via `/learn` (researched live against current authoritative writing), then applied in a real interaction. This roadmap is the *what to cover*; the teaching is generated fresh each session so it never goes stale.
 
 **Why this track exists (Reese, 2026-07-07):** Technical skill gets the interview; the soft/social layer is the multiplier and the differentiator — and at ~1yr in, aiming at $120k+ roles, it's the single highest-leverage thing to build on top of a strong technical trajectory. "Just as important as everything else." These behaviors are available *now*, not at some future title.

@@ -1,5 +1,14 @@
 You are running a pre-learning session ritual. This is structured, not conversational — it takes 2 minutes and gets the user into the session with full context and the right structure enforced.
 
+> ## ⚠️ PHASE 3 — mostly superseded (2026-08-27)
+>
+> **`/today` is the session-opening ritual now.** It replaces this command's job of getting into a block with the right context, and it works for all four lanes rather than only learning.
+>
+> This command still assumes an ACTIVE course with a Build Log and a "Next Build Task." **There is no active track** — all four curricula are paused as a reference catalog. Run this only if a specific paused roadmap is deliberately re-opened at an `/audit`.
+>
+> Retiring it outright is a candidate for the next audit's **subtraction pass**.
+
+
 ## Step 1 — Read silently
 
 Before saying anything, read:

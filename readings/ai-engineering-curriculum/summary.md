@@ -1,5 +1,18 @@
 # AI Engineering Curriculum — self-taught, live-researched
 
+> ## ⏸ PAUSED — 2026-08-27 (Phase 3)
+>
+> **This track is formally paused, not abandoned and not deleted.** All four curriculum tracks were paused together in the Phase 3 rewrite. The honest number that drove it: **4 banked units out of 233 across all four roadmaps since April — one `[x]` apiece.** Every track launched and stalled at unit 2. That's not a pace problem; it's a signature.
+>
+> **What this file is now:** a **reference catalog**, not a backlog. Nothing here is owed. There is no ACTIVE track and no track menu. Look things up here freely; do not "resume the roadmap."
+>
+> **What replaced it:** work generates the curriculum now. Craft reps (the Cognizant project) and Business reps (client work) throw off things that couldn't be explained — those get captured, and `/drill` and `/sharpen` walk the captures. `/learn new <topic>` handles on-demand acquisition when a capture needs real teaching.
+>
+> **The material is good and it was never the problem.** The one time learning visibly converted to career movement (07-28 → 07-29, the work quiz then the boss call) it was a **defense** rep under real stakes, not an acquisition rep. Phase 3 stops manufacturing stakes and uses the real ones.
+>
+> Un-pausing is an `/audit` decision, not a mid-session one. See `SYSTEM.md` Layer 2 and `DECISIONS.md` (2026-08-27).
+
+
 **What this is:** The technical learning path that replaces taking online courses. Each unit is learned in-catalog via `/learn` — researched live against current official docs, taught at its tier, then handed to `/sharpen` (defend cold) and `/drill` (retain). The course syllabi (Eden Marco, MCP Masterclass, RAG-evals, LangChain Academy, Anthropic prompt-eng) were mined for *what to cover*; the actual teaching is generated fresh each session so it never goes stale.
 
 **Source of truth:** `career/helpful_notes_and_guides/AI Engineering Master Guide.md` (North Star, capstone, salary ladder, resource pool). This file is the *technical curriculum* derived from it.

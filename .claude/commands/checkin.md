@@ -18,7 +18,7 @@ The system's documented failure mode is all-or-nothing collapse (4/09, 5/01, 6/1
 
 ## Step 1 — Read silently
 
-- `agenda.md` — the Card (Daily section)
+- `agenda.md` — the Card (Daily section), including today's route block
 - `habits/tracker.md` — The Floor section only
 
 Do not output anything yet.
@@ -27,7 +27,7 @@ Do not output anything yet.
 
 Open with one short line (grounded in the Card — e.g. name what today's floor was). Then exactly these three, in one message:
 
-1. **Floor check** — "Brick last night? Pipeline touch today?" (yes/no each is a complete answer)
+1. **Floor check** — "Brick last night? And did today's rep happen?" (yes/no each is a complete answer. **If the day was declared 🟥, the rep was *none* — that's a yes.** If no route was run at all, don't interrogate it; just note it and move on.)
 2. **One win** — "One win from today, any size."
 3. **Stopped at** — "What were you last in the middle of, and what's the first move tomorrow?"
 
@@ -36,25 +36,27 @@ That's it. No fourth question unless he offers more.
 ## Step 3 — Update the system (after his answer)
 
 1. **Rewrite the Card** in `agenda.md` (Daily section — replace, don't append):
-   - Tomorrow's date and floor (the two floor items; swap in the current pipeline next-action from `jobs/TODO.md` if it moved)
+   - Tomorrow's date and floor (the brick + the day's declared rep). Leave tomorrow's route block as *"not yet run"* — **`/checkin` does not set tomorrow's rep.** That's `/today`'s job, run tomorrow against tomorrow's actual shape. Pre-deciding it is the fixed-schedule reflex the router exists to replace.
    - Bad-day non-negotiable line (keep it — it's load-bearing)
    - Upside list (only reorder if something changed)
-   - **Streaks** — update brick streak and weekly pipeline-touch count honestly. A missed night = streak resets to 0 with no commentary beyond "restarts tonight."
+   - **Streaks** — update the brick streak, the routes-run count, and the per-lane rep counters honestly. A missed night = streak resets to 0 with no commentary beyond "restarts tonight."
    - **Stopped at / Next step** — his exact answer, tightened to one line
 2. **Log a micro entry** — append to `reflections/YYYY-MM-DD.md` (create if missing) a short section:
    ```
    ## Micro check-in
-   - Floor: brick [Y/N] · pipeline [Y/N]
+   - Day: 🟩/🟨/🟥/undeclared · Lane: [lane]
+   - Floor: brick [Y/N] · rep [Y/N]
    - Win: [his words, one line]
    - Stopped at: [X] → Next: [Y]
    ```
    This feeds `/weekly-review` — the check-ins are the game film when full reflections didn't happen.
 3. **Tracker only on real signal** — update `habits/tracker.md` ONLY for milestones: brick streak hits 7 (note it in Coach Notes / consider moving toward Active), a habit consciously dropped, a pattern across multiple check-ins. Never touch it for a routine yes/no day.
-4. **Milestone escalation** — if the answers reveal a big event (applied to a job, interview scheduled, CFO Agent demoable, streak milestone), mirror it in ONE other place if warranted (`jobs/_tracker.md` status column, or flag "worth a `/reflect` on this"). One line, not a project.
+4. **Milestone escalation** — if the answers reveal a big event (a client deliverable shipped, a scope conversation, a streak milestone), mirror it in ONE other place if warranted (`business/LEDGER.md`, or flag "worth a `/reflect` on this"). One line, not a project.
+5. **Never build anything.** If a system idea comes up, one line in `PARKING.md`, say "parked," and close. The Change Window means system changes happen only at `/audit` — and a 10:40pm check-in is the single most likely place for that rule to get broken.
 
 ## Step 4 — Close in one line (+ at most one read)
 
-Tomorrow's floor + the first move. Example: *"Floor tomorrow: brick at 10:30, ConglomerateIT application before noon. First move: repos public. Done — go to bed."*
+Tomorrow's floor + the first move. Example: *"Floor tomorrow: brick, plus whatever the route names. First move: run `/today` when you sit down. Done — go to bed."*
 
 No coach's assessment. No summary of the summary.
 
@@ -63,6 +65,7 @@ No coach's assessment. No summary of the summary.
 Hard limits, because this is the floor and the floor must stay cheap:
 - One sentence. Never two. Never a follow-up question attached.
 - Never on a return-from-gap check-in — the re-entry rule outranks this completely.
+- **Never about a 🟥 day.** A declared survival day is the system working; commenting on it is how it stops being cheap. The only day-type read worth one sentence is a *third consecutive 🟥*, and even then it points at `/audit` rather than diagnosing.
 - Never when the read would land as criticism at 10:40pm. If it needs care, say *"worth a real `/reflect`"* and leave it.
 - If nothing genuine surfaced, say nothing. A manufactured observation is worse than a clean close.
 
@@ -77,4 +80,6 @@ Commit everything with a short message (`/checkin YYYY-MM-DD`) and push directly
 - `/checkin` — daily floor, 3 min, any device. The minimum viable touch.
 - `/reflect` — the full session, when there's something to process (2–3×/week is great)
 - `/weekly-review` — Mondays; reads the week's reflections AND micro check-ins
-- `/sharpen` · `/learn` · `/drill` — peak-window learning engine; separate from this
+- `/today` — the route, 60 sec: declare the day type, pick one lane, name one thing. Runs at the START of the day; `/checkin` closes it.
+- `/audit` — the heavy loop: the system and habits graded on evidence, weekly through the Phase 3 transition then monthly. **The only place the system changes.**
+- `/drill` · `/sharpen` · `/learn new <topic>` — the Depth lane. No active track; work generates the curriculum now.
