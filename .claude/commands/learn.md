@@ -67,7 +67,7 @@ The full evidence base, with effect sizes and sources, is **`career/helpful_note
 - **The previous session's log** — specifically its **`Tripped`** list and its **Stopped at / Next step** line. You need these for Step 1.5.
 - `career/CAREER_LOG.md` — Skills Tracker (current level) + Judgment Log (what's already logged).
 - `career/concept_queue.md` — what's already queued for defense.
-- Confirm the peak window is appropriate. If he flags low energy, suggest `/drill` instead — this is hard acquisition.
+- Confirm the energy is there for hard acquisition. If he flags low energy, suggest `/drill` instead. *(Repaired 2026-09-08: this line said "confirm the peak window is appropriate," contradicting the banner at the top of this file. There is no peak window.)*
 
 Do not respond yet.
 

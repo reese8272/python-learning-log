@@ -50,6 +50,10 @@ This is not a downgrade. The record is explicit: 17 `/learn` sessions produced 4
 
 **There is no peak window and no fixed daily protocol.** Both are retired by decision (2026-08-27, Reese's call: *"I don't want a peak window — I need dynamic scheduling based on the needs of the day"*). The 9:45 block also sat inside client hours, which John's review explicitly flagged.
 
+> The nightly build (`SCHEDULER.md`) writes a proposal for tomorrow into the calendar. It is **not** a protocol and not a grid: it caps at three blocks, it is computed fresh from tomorrow's real commitments, and it has no authority. The route ratifies it or discards it. A plan `/today` overrules is a plan working correctly.
+
+*Adopted at the 2026-09-08 audit with two amendments the audit imposed on its own spec: the kill condition is now a **start** condition (`SCHEDULER.md` §9), and the run must sweep stale auto-events rather than let them accumulate (§5, guardrail 9). Both exist because an unratified proposal is not free — it is a clock cue you are learning to ignore, which is the mechanism that killed fixed clock-time cues on 08-27.*
+
 What replaces them is **`/today` — the route.** 60 seconds. Phone-friendly. Fixed cue, dynamic content.
 
 > **The principle: don't schedule the time, schedule the decision.**

@@ -35,9 +35,9 @@ A living document. Updated through coaching — and, since 2026-08-27, **graded 
 
 | Habit | The cue, and the evidence | Since |
 |---|---|---|
-| **🧱 The reading brick** | Phone on charger FIRST → book in hand. **The most-proven behavior in this log.** Fell in the May–June spiral, rebuilt as the re-entry brick 6/16, cue hardened 6/22. Held through the entire 7/13–7/19 vacation with zero scaffolding — no Card, no check-ins, different bed. *The cue travels with the phone.* Every collapse since April has ended with it. | 2026-04-01 (re-locked 2026-07-20) |
+| *(none)* | — | — |
 
-*One row. That is the honest picture, and it is not a small thing — one habit that survives every collapse is worth more than six that don't.*
+> **⚠️ 2026-09-08: this section is empty for the first time since it was written.** The brick dropped to *Installing* at this audit. **Zero habits in this system are currently Installed.** That is not a reason to build more — it is the argument for putting one thing back and nothing else.
 
 ---
 
@@ -47,8 +47,16 @@ A living document. Updated through coaching — and, since 2026-08-27, **graded 
 
 | Habit | Physical install | Installed on | Status |
 |---|---|---|---|
-| **🪞 Shower affirmation stack (3 lines)** | One notecard taped at eye level in the shower. Cue: **water turns on → line one.** Worst-day min: the identity line only. | **2026-07-28** (taped mid-`/reflect`, 60 seconds from prompt to tape) | Trial ran from 07-29; **no verdict recorded since.** First `/audit` grades it. |
-| **🎯 The route (`/today`)** | The command itself + the Card's route block. Cue: **first sit-down at the desk → 60 seconds.** | **2026-08-27** | Brand new. Zero runs. The one behavior Phase 3 rests on. |
+| **🧱 The reading brick** | Phone on charger FIRST → book in hand, before horizontal. **The 10:25 phone alarm is the backstop** — set 07-06 (`reflections/2026-07-06.md`), present state unverified. | 2026-04-01 · re-locked 2026-07-20 · **re-anchored 2026-09-08** | ⬇️ **Downgraded from Installed at the 09-08 audit — it went dark for 12 days.** First time in the log the brick has failed a collapse: it survived 4/09, 5/01, 6/16, Jul 11–19, Jul 30–Aug 3, Aug 12–17, and the entire 7/13–7/19 vacation with zero scaffolding. **The re-install question is one tap: is the 10:25 alarm still on the phone?** COACHING.md's own canonical example of a cue diagnosis is *"the two weeks it held are the two weeks the phone alarm was set."* |
+| **🪞 Shower affirmation stack (3 lines)** | One notecard taped at eye level in the shower. Cue: **water turns on → line one.** Worst-day min: the identity line only. | **2026-07-28** (taped mid-`/reflect`, 60 seconds from prompt to tape) | ⚠️ **Second consecutive audit with no verdict possible** — trial ran from 07-29, nothing recorded in 42 days. One more ungraded audit and it retires under the three-audit rule. |
+
+---
+
+## ⬜ Not installed — *promoted to this section 2026-09-08*
+
+| Habit | What the install would be | Why it moved here |
+|---|---|---|
+| **🎯 The route (`/today`)** | Not the command — the command already exists. The install is a **physical cue on the phone**: the route's own trigger, placed where the first sit-down happens. | **Listed *Installing* on 08-27 on the strength of "the command exists." The command is not the install** — that is this tracker's founding rule, applied to itself and failed. **0 runs in 12 days.** This is the single most consequential row in the 09-08 audit: everything in Phase 3, including the nightly build, is downstream of a 60-second command that has never run. |
 
 ---
 
@@ -60,7 +68,8 @@ A living document. Updated through coaching — and, since 2026-08-27, **graded 
 
 | Habit | What the install would be | History |
 |---|---|---|
-| **Morning shake** | Shake made the night before, sitting where the cue fires. | Named the "first domino for eating" on 04-09. Cue re-anchored 07-20 (back from gym → shake in hand). Offered as a build 07-20; affirmations chosen instead. **Never installed.** |
+| **🌙 The nightly build glance** | The automation is installed (Cowork task, 9:00pm Sun–Thu, adopted 09-08). **The human half — the 60-second glance before the brick — is not**, and it cannot be installed independently: the glance rides the route, and the route is in this section too. | **Deliberately not counted as an install this period.** Adding a second habit while the floor is broken is the over-launch pattern (07-07, 07-10, 07-20, 07-27). The automation costs nothing to leave running; the glance waits for the route. Its start condition is in `SCHEDULER.md` §9. |
+| **Morning shake** | Shake made the night before, sitting where the cue fires. | Named the "first domino for eating" on 04-09. Cue re-anchored 07-20 (back from gym → shake in hand). Offered as a build 07-20; affirmations chosen instead. **Never installed.** *(Audit 1 of 3.)* |
 | **Night-before setup** | Clothes/shoes out, bag by door, alarm across the room. | The designated installer for other cues, and it **ran zero nights** in its trial week (07-27 verdict). Its own anchor (the 10:15 ritual) is now gone with the fixed-time cues. Needs re-grafting to a transition. |
 | **Peak-window mindfulness (5 min)** | Therapist homework. Was grafted to the peak-window doorway. | **Its cue no longer exists** — the peak window was retired 08-27. This is textbook **cue eviction**: re-graft to a transition that still happens, as a new build, or retire it. Audit decides. |
 | **Daily walk** | 20 min, ideally no headphones. | "Showing up, not consistent" since April. Never had a cue at all — that's the whole finding. |
@@ -90,12 +99,15 @@ A living document. Updated through coaching — and, since 2026-08-27, **graded 
 | Audit date | Installed | Installing | Not installed | Retired this audit | Floor hit rate |
 |---|---|---|---|---|---|
 | 2026-08-27 (Phase 3 rewrite — baseline) | 1 | 2 | 6 | 8 | — (new counters) |
+| **2026-09-08 (audit 1)** | **0** | 2 | 8 | 5 | **0 / 12** — brick dark, 0 routes, 0 check-ins |
 
 ---
 
 ## Coach Notes
 
 *Updated through `/reflect`, `/weekly-review`, `/audit`, and `/monthly-review` as patterns emerge.*
+
+- **2026-09-08 (`/audit` #1 — the first real audit)** — **The headline: the brick went dark, and the Installed section is empty for the first time.** Twelve days, 0 routes, 0 check-ins, 0 reps, four lanes dark. But the shape matters more than the count, and Reese's own read reframes it: **Home was good — that's where the time went.** So this is a *reallocation*, not the seventh collapse, and it should not be graded as one. Three professional lanes going quiet during a good family stretch is a legitimate 🟥-shaped fortnight, and Phase 3's whole point is that such a fortnight owes nothing. **One thing does not fit that story: the brick.** Fifteen minutes in bed does not compete with family time — it never has, which is precisely why it survived 4/09, 5/01, 6/16, Jul 11–19, Jul 30–Aug 3, Aug 12–17, *and* a full vacation with zero scaffolding. Reallocation explains Craft, Business, and Depth. It does not explain the brick, and no one should pretend it does. **The cue-level hypothesis, and the one-tap install:** the 10:25 phone alarm was set 07-06 (`reflections/2026-07-06.md`) and its present state is unverified. COACHING.md's own canonical example of a cue diagnosis is *"the two weeks it held are the two weeks the phone alarm was set."* Check the phone before theorizing about discipline. **The second finding, and it indicts the tracker itself:** `/today` was filed under *Installing* on 08-27 because the command existed — violating this file's founding rule (*the command is not the install; the tape counts, not the design session*) on the very day that rule was restated at the top of the file. It has been demoted to *Not installed*, where it always belonged. **The cross-time read delivered:** on 08-18 the count came back 28 system commits : 21 reps, and the finding was that system-tinkering is indistinguishable from progress from the inside. Phase 3 was built nine days later *as the answer to that finding*. In the 21 days since, this repo contains **one** substantive commit and it is the system rewrite — and this audit convened because a 235-line scheduler spec arrived. The spec is excellent; the specs were never the problem. The nine-row protocol was also well-designed and ran four days. **What was cut:** 5 things (`/daily-scheduler`, `/session-start`, two dead Notion properties, `late_sesh.md` routed after 125 days at the root). **What was added:** the nightly build, on probation, with a start condition instead of a kill condition — because a glance that never started cannot stop. **The glance is deliberately not being installed this period.** One anchor at a time; the anchor is the brick. Watch: (1) is the 10:25 alarm on the phone tonight — that's the whole habit pass in one tap; (2) does `/today` come off 0 — the nightly build is retired at the next audit if it hasn't hit 5; (3) does the Editor shelf message actually get sent, now 29 days owed; (4) does the affirmation card get a verdict, or retire ungraded at audit 3.
 
 - **2026-08-27 (Phase 3 rewrite)** — Reese asked for a heavy rework: the job now has a great project that's genuinely teaching him, Ian is feeding real contract work, and formal learning is being squeezed by life. He asked for two things — *"keep my life a series of systems"* and *"audit the system and habits heavily."* **The read delivered:** the request itself is the system's #1 documented risk (28 system commits : 17 learn : 2 sharpen : 2 drill since 06-01 — system-tinkering is indistinguishable from progress from the inside), **and** the constitution genuinely described a life he no longer lives, so the rewrite was warranted. The resolution: the rewrite is legitimate because it **subtracted far more than it added** (8 retirements, 4 tracks paused, 2 additions), and it ships with the mechanism that stops the next one — the **Change Window** (system changes only inside `/audit`; everything else goes to `PARKING.md`). **Structural changes:** peak window retired at his call, replaced by `/today` (declare the day type, pick one lane, name one thing); life modeled as four lanes with Depth derived rather than scheduled; the tracker regraded on **installed vs. never-installed** rather than consistency, which immediately reclassified six habits that were being counted as failures. **The number that should not be lost:** only **one** habit is genuinely Installed (the brick) — and it has survived every collapse since April, which is the argument for building slowly, not the argument for building more. Watch: (1) does the route get declared seven days running — that's the whole phase in one metric; (2) does the first `/audit` actually subtract, or does it become a planning session; (3) does the Editor lead finally get messaged, 17 days late; (4) does `/drill` come off 2 commits ever.
 

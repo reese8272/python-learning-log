@@ -53,7 +53,7 @@ If a concept has no bar, ask the user to set one, then add it to the queue.
 - `career/concept_queue.md` — the prioritized backlog. Find the highest-priority `[ ]` (not-yet-owned) concept, respecting its bar and any "next" marker.
 - **The active track's roadmap `### 📝 Learning notes` blocks** — specifically the **`Tripped`** lists. If the concept you're about to grill has recorded trip-ups from its `/learn` session, those are the exact edges to push on. Don't re-discover a known soft spot; go straight at it.
 - `career/CAREER_LOG.md` — Skills Tracker (current level of the target skill) and Judgment Log (so you know what's already been logged).
-- Confirm the peak window is appropriate (this is hard learning — if the user flags low energy, suggest `/drill` instead).
+- Confirm the energy is there (this is hard learning — if the user flags low energy, suggest `/drill` instead). *(Repaired 2026-09-08: this line said "confirm the peak window is appropriate," contradicting the banner at the top of this file. There is no peak window.)*
 
 **Lesson assignments — inspiration, not a crutch.** If the concept has a worksheet in `career/lesson_assignments/`, you may glance at it for *angles* — which facets the unit has, what a good failure-mode question looks like. But **never** read its prompts verbatim, and **never** open its answer key before he's struggled. Cold defense stays cold: the whole mechanism is that he produces it unaided. The worksheet tells you what *could* be asked; it must not become the script you read from.
 

@@ -25,18 +25,20 @@ The one-stop shop for current goals and intentions across all time horizons. The
 ## 📍 The Card
 *Updated by `/today` and `/checkin` — this always reflects NOW, not history. (Older stopped-at lines live in git history.)*
 
-**Date:** 2026-08-27 (Thursday) — **Phase 3 begins.** The system was rewritten today for a life with three real lanes instead of one. Last activity before this: 08-19. **That's an 8-day gap, it's data, and nothing is owed backward.**
+**Date:** 2026-09-08 (Tuesday) — **`/audit` #1 ran.** The 12 days since Phase 3 shipped were a **reallocation to Home, not a collapse** — that's your read and the audit took it. Nothing is owed backward. One thing didn't fit that story and it's the only item that needs action tonight: **the brick went dark.**
 
-**Today:** 2026-08-27 · *route not yet run* · Lane: —
+**Today:** 2026-09-08 · *route not yet run* · Lane: —
 **The rep:** *run `/today` to set it*
 **The floor:** 🧱 the brick + the day's declared rep (🟥 → the brick alone)
 
-> **🔁 WHAT CHANGED TODAY — the short version.**
-> - **The peak window is gone.** Reese's call: *"I don't want a peak window — I need dynamic scheduling based on the needs of the day."* Replaced by `/today`.
-> - **Life is four lanes now:** 🏡 Home (the ground) · 💼 Craft (Cognizant — the project that's actually teaching him) · 🛠 Business (Ian's contract work + the products) · 🧠 Depth (derived — runs on the residue of the other two).
-> - **All four curriculum tracks are paused.** 4 banked of 233 since April. They stay on disk as a reference catalog. **Work generates the curriculum now.**
-> - **`/audit` is the new heavy loop** — five passes on evidence, and it must subtract. **The Change Window: the system may only be changed inside an audit.** Everything else goes to `PARKING.md`.
-> - Full rationale: `SYSTEM.md`, `DECISIONS.md` (2026-08-27).
+> **🔁 WHAT CHANGED AT THE AUDIT — the short version.**
+> - **🧱 The brick dropped from Installed to Installing.** 12 dark nights — the first time it has ever failed a collapse. **The Installed section is now empty; zero habits are installed.** That's an argument for putting *one* thing back, not for building more.
+> - **🎯 `/today` dropped to Not installed.** It was filed as *Installing* on 08-27 because the command existed. **The command is not the install.** 0 runs in 12 days.
+> - **🌙 The nightly build was adopted** — automated 9pm scheduler, up to 3 cued calendar blocks for the next weekday. **On probation with a start condition:** if `/today` hasn't run 5 times by the next audit, it's retired. Spec: `SCHEDULER.md`.
+> - **🅿️ The AI YouTube Editor is shelved** (your call). Retirement note: `misc/reflection_log/2026-09-08.md`. The 29-day owed message *is* the shelf message.
+> - **✂️ Five things cut:** `/daily-scheduler`, `/session-start`, two dead Notion properties, and `late_sesh.md` (routed after 125 days at the root).
+> - **🛠 Business ceiling set: 8 hrs/week.** Above it is a scope conversation with Ian, never silent absorption.
+> - Full rationale: `DECISIONS.md` (2026-09-08).
 
 **The Floor — weekdays:** 🧱 the brick + the day's declared rep.
 **The Floor — weekends:** weekends owe *nothing* professional. Weekend floor = the brick, or full presence with the kids. Any Craft or Business touch on a weekend is a bonus, never owed.
@@ -48,20 +50,22 @@ The one-stop shop for current goals and intentions across all time horizons. The
 
 | Lane | Mission | One rep = | Status as of 08-27 |
 |---|---|---|---|
-| 🏡 **Home** | The ground everything stands on | Undistracted presence | The bad-day non-negotiable. Unchanged. |
-| 💼 **Craft** — Cognizant | Own the project; perform without AI, visibly | Predict a file → open it → one non-obvious decision → **what breaks if this is wrong** → verify live → one line logged | 🟢 **The strongest lane right now.** A great project, learning happening on the job. This is new, and it's the reason the old architecture no longer fits. |
-| 🛠 **Business** — Ian + products | Convert skill into money that isn't hours | One delivery touch: a shipped slice, a client message sent, a decision closed | 🟢 Ian is feeding real contract work. **Ledger is thin** — `business/LEDGER.md` needs the actual scope filled in. |
-| 🧠 **Depth** — derived | Runs on the residue of the other two | One capture, one `/drill`, or one `/sharpen` | 🔴 **Near zero.** `/drill` has 2 commits *ever*. It is the cheapest thing in the system and the piece named most crucial. |
+| 🏡 **Home** | The ground everything stands on | Undistracted presence | 🟢 **Moving — and it's where the last 12 days went.** Your read at the audit. This is the reason the other three rows below are not a collapse. |
+| 💼 **Craft** — Cognizant | Own the project; perform without AI, visibly | Predict a file → open it → one non-obvious decision → **what breaks if this is wrong** → verify live → one line logged | ⚫ **Dark — 42 days.** Last `career/reflection_log/` entry 07-28. On 08-27 this Card called it "the strongest lane right now"; the files disagree. One rep resets it. |
+| 🛠 **Business** — Ian + products | Convert skill into money that isn't hours | One delivery touch: a shipped slice, a client message sent, a decision closed | ⚫ **Dark — never moved.** `LEDGER.md` created 08-27; Ian's row still reads *"needs filling."* `business/reflection_log/` is empty. **Ceiling now 8 hrs/wk.** The one available action is the shelf message. |
+| 🧠 **Depth** — derived | Runs on the residue of the other two | One capture, one `/drill`, or one `/sharpen` | ⚫ **Dark — 21 days.** Last `/drill` 08-18. Still the cheapest item in the system and still the one named most crucial. |
 
 ---
 
 ### ⚠️ The two things outstanding, oldest first
 
-**1. 📨 The Editor lead has not been messaged. Owed since 08-10 — 17+ days.**
-The message that was owed said "delayed"; the true news is *better* than that. A stated delay costs nothing; silence costs the relationship. **This is the oldest open item in the system and it costs five minutes.** Send it, or formally close the Editor commitment — but decide, don't drift. (`business/LEDGER.md` → Owed.)
+**1. 🧱 The brick, tonight. And it's one tap, not a resolution.**
+Twelve dark nights — the first time the brick has failed a collapse. It survived 4/09, 5/01, 6/16, Jul 11–19, Jul 30–Aug 3, Aug 12–17, and a full vacation with zero scaffolding, because 15 minutes in bed never competed with family time. So "the time went to Home" explains Craft, Business, and Depth — **it does not explain this.**
 
-**2. 🏈 The AI YouTube Editor needs a decision, not a schedule.**
-NFL Week 1 (~09-10) is ~2 weeks out and the Editor has had no recorded work since 08-04. With three lanes live and time that's genuinely fluid, "ship it by Week 1" is no longer a plan — it's a wish with a date attached. The honest options: **re-scope to what one lead can actually see by 09-10**, **move the date and say so**, or **shelf it and write the retirement note** (the no-silent-abandonment rule). Any of the three is fine. Drifting past 09-10 without choosing is the one bad outcome. **First `/audit` decides it.**
+Before theorizing about discipline, check the cue: **is the 10:25 alarm still on your phone?** It was set 07-06. `COACHING.md`'s own canonical example of a cue diagnosis is *"the two weeks it held are the two weeks the phone alarm was set."* If it's gone, that's the whole finding and re-setting it is the whole fix.
+
+**2. 📨 The Editor shelf message. Owed 29 days — and it's now five minutes to close two things.**
+The Editor was **shelved** at the 09-08 audit (`misc/reflection_log/2026-09-08.md`). That turns the owed message from an awkward delay note into an honest one: you're not building it. **One send closes the oldest open item in the system and the biggest open decision at the same time.** A stated delay costs nothing; silence costs the relationship — and 29 days of silence followed by a third date would cost more than the truth. (`business/LEDGER.md` → Owed.)
 
 ---
 
@@ -89,36 +93,45 @@ NFL Week 1 (~09-10) is ~2 weeks out and the Editor has had no recorded work sinc
 
 The number behind this rule: **28 system/card commits against 17 learn, 2 sharpen, 2 drill since 06-01.** System-tinkering is the most sophisticated procrastination available here, because from the inside it is indistinguishable from progress. *(This rewrite is itself a system change — it's legitimate because the life it describes actually changed, and because it **subtracted** far more than it added. The next one waits for an audit.)*
 
-**Next `/audit`: within the week.** It sets the Business weekly ceiling, decides the Editor, and assigns every habit its install verdict.
+**Last `/audit`: 2026-09-08** (#1) — ceiling set, Editor decided, every habit graded, 5 cuts, 1 addition on probation.
+**Next `/audit`: 2026-09-15.** Weekly cadence holds through the transition. It reads three counters: **routes run (needs 5)**, brick nights, and whether Ian's row in `LEDGER.md` is still a question mark.
+
+*A note on how audit #1 came about, kept honest: the nightly build was **built on 08-30 outside the Change Window** and ratified retroactively here. That's a real exception, it's recorded in `DECISIONS.md`, and the rule stands unchanged for everything else.*
 
 ---
 
 ### 🧱 Builds (protect)
 
-- **🧱 The brick** — 10:25pm, phone on charger FIRST → book in hand. The most-proven behavior in the entire log: it survived a full vacation with zero scaffolding (07-13 → 07-19) and every collapse since April has ended with it. **Installed.**
+- **🧱 The brick** — 10:25pm, phone on charger FIRST → book in hand. Survived a full vacation with zero scaffolding (07-13 → 07-19) and every collapse since April ended with it — **until this one.** ⬇️ **Installing** as of 09-08 after 12 dark nights. Re-anchor tonight; the backstop is the 10:25 phone alarm (set 07-06, present state unverified). **This is the one thing being installed this period. Nothing else gets added on top of it.**
 - **🏋️ Movement** — the 6am gym build was paused for a hamstring (07-27) and never re-installed; note honestly that it had only 1–3 days installed *before* the injury. **Phase 3 downgrades it from "6am gym" to "20 minutes of anything, before the hardest thing when possible"** — the cue was evicted by a life that no longer has a fixed morning. Re-graft it as a new build at an audit, not tonight.
-- **🪞 Shower affirmations** — notecard installed 07-28. Verdict pending at the first audit's habit pass.
+- **🪞 Shower affirmations** — notecard installed 07-28. ⚠️ **Second audit running with no verdict possible** (nothing recorded in 42 days). One more and it retires ungraded under the three-audit rule.
+- **🌙 The nightly build** — automated, running 9pm Sun–Thu. **The automation is installed; the human glance is not, deliberately.** It waits for the route and for the brick. One anchor at a time.
 
 **Streaks:** all restart today. No commentary, no archaeology.
 - 🧱 Brick: 0 — restarts tonight
-- ✅ Routes run (`/today`): 0 — new counter, starts with the first route
+- ✅ **Routes run (`/today`): 0 of 5** — this counter now decides whether the nightly build lives. 5 before the next audit or it's retired.
 - 💼 Craft reps: 0 · 🛠 Business reps: 0 · 🧠 Depth reps: 0
 
-**Stopped at:** 08-27 — the Phase 3 rewrite. `SYSTEM.md` and `CLAUDE.md` rebuilt around four lanes, the router, and the audit; four curriculum tracks paused; `business/` and `PARKING.md` created.
+**Stopped at:** 09-08 — `/audit` #1. Nightly build adopted on probation; 5 things cut; Editor shelved; Business ceiling set at 8 hrs/wk; brick and route both downgraded on the tracker.
 
-**Next step:** run **`/today`** and declare the day. Then, whatever the day type — **send the Editor lead the message.** It's five minutes and it's 17 days old.
+**Next step, in this order — and it is deliberately short:**
+1. **Check the phone for the 10:25 alarm.** One tap. Do it before reading further.
+2. **Send the Editor lead the shelf message.** Five minutes, 29 days owed.
+3. **Run `/today`.** Whatever it declares — 🟥 is a complete day and costs nothing.
+
+*Nothing else is owed. Three dark lanes carry no debt; the audit already graded that period and it graded it as Home.*
 
 ---
 
-## 🏈 AI YouTube Editor v1 (scoped 2026-08-04) · ⚠️ **NEEDS A DECISION — 2026-08-27**
+## 🅿️ AI YouTube Editor v1 (scoped 2026-08-04) · **SHELVED 2026-09-08**
 
-> **⚠️ Status as of 08-27: no recorded work since 08-04, and NFL Week 1 (~09-10) is ~2 weeks out.** The "ship by kickoff" framing below was written when this was the only lane competing for time. It now competes with a real Cognizant project and real contract work from Ian, and the record is unambiguous that this system does not run three full-weight commitments at once — that's the over-launch signature.
+> **🅿️ Decided at `/audit` #1, Reese's call: shelved — two days before the date it would otherwise have quietly slipped past.** Retirement note: **`misc/reflection_log/2026-09-08.md`**. Ledger: `business/LEDGER.md` → Products.
 >
-> **This is a decision, not a schedule.** Three honest options, all fine: **(a) re-scope** to what one lead can actually see by 09-10 · **(b) move the date** and tell the lead · **(c) shelf it** and write the 100-word retirement note (`misc/reflection_log/`), per the no-silent-abandonment rule. **Drifting past 09-10 without choosing is the only bad outcome.** First `/audit` decides.
+> **The evidence:** 35 days of zero recorded work since 08-04, including a 12-day window with enough energy for a full system rewrite and a 235-line scheduler spec. That's the answer on whether it ships, and it isn't a scheduling problem. Moving the date a second time would have been a way of not deciding.
 >
-> ⚠️ **And regardless of which option: the lead still has not been messaged. Owed since 08-10 — 17+ days.** The news is *better* than the message that was going to be sent. Send it before anything else on this list. A stated delay costs nothing; silence costs the relationship.
+> **This section stays as the scoping record, not as a live commitment.** The spine, the acceptance test, and the cut list below are good work and they survive intact — if this ever comes back it comes back with the 08-04 scoping done. The conditions for that are written in the retirement note: a *moving* Business lane, someone actually waiting, and an `/audit` — never a motivated night.
 >
-> Everything below stays as the scoping record — the spine, the acceptance test, and the cut list are still right if (a) or (b) is chosen.
+> 📨 **Still open: the shelf message to the lead, 29 days owed.** Shelving without telling them would be the silent abandonment this rule exists to prevent.
 
 *The most time-sensitive, highest-upside thing in the system — and until 08-04 it existed nowhere in it, running entirely in his head while the Card tracked worksheet fixes. This section outranks the Weekly and Monthly blocks below until it ships. **As of 08-13 it is also the only thing in the system with a real external date on it.***
 

@@ -26,6 +26,8 @@ This costs one line to obey. It removes the only mechanism by which this system 
 
 <!-- add lines below; do not build them -->
 
+2026-09-08 — `/plan-tomorrow`: run the nightly build on demand instead of waiting for 9pm. (Appealing because the day changes after 9pm and the plan goes stale. **Parked at audit 1 of 3** — it is a second addition and the audit allows one; the nightly build was it. Revisit only once the nightly build has cleared its start condition, since an on-demand rerun of a task nobody reads is two ways of generating the same noise.)
+
 ---
 
 ## Killed / Built
@@ -35,3 +37,4 @@ This costs one line to obey. It removes the only mechanism by which this system 
 | Date | Idea | Disposition |
 |---|---|---|
 | 2026-08-27 | *(file created — nothing parked yet)* | — |
+| 2026-09-08 | **The nightly build** (automated 9pm scheduler → 3 cued calendar blocks) | ✅ **Built** — audit 1's one addition, on probation with a start condition. Never parked; built outside the Change Window on 08-30 and ratified retroactively at the audit. Paid for with 5 subtractions. See `SCHEDULER.md`, `DECISIONS.md` 2026-09-08. |

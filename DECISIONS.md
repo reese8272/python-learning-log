@@ -4,6 +4,83 @@ A log of explicit design decisions that change or deviate from what the planning
 
 ---
 
+## 2026-09-08 — `/audit` #1: the nightly build lands on probation, five things are cut, and the Editor is shelved
+
+*The first real `/audit`. Period covered: 2026-08-27 → 2026-09-08, 12 days.*
+
+### The evidence it ran on
+
+0 routes · 0 check-ins · 0 reps · 4 lanes dark · brick dark · 1 owed message at 29 days · 0 parked lines. The one commit in the window (08-30) was a merge of the `course-content-sharpen` branch, whose tip is dated **08-18** — it carried three-week-old work across and produced nothing new. **The last actual rep in this repo is 2026-08-18.**
+
+Reese's read on the shape, which the audit accepted and which changes the grade: **Home was good — that is where the twelve days went.** This is recorded as a *reallocation*, not the seventh instance of the all-or-nothing collapse. Three professional lanes going quiet during a good family stretch owes nothing under Phase 3, and grading it as failure would be the system contradicting its own load-bearing rule.
+
+**The exception, recorded plainly: the brick went dark.** That does not fit the reallocation story — 15 minutes in bed has never competed with family time, which is why it survived every prior collapse and a full vacation. See the habit decision below.
+
+---
+
+### Decision 1 — Adopt the nightly build (the one addition)
+
+**Decision:** Adopt an automated nightly scheduler that writes up to three cued, placed time blocks into Google Calendar for the next weekday. Spec: `SCHEDULER.md`. Prompt: `.claude/nightly-build-prompt.md`.
+
+**Why this is not a reinstatement of the grid.** The 08-27 retirement killed the peak window and the nine-row protocol on the grounds that a fixed container cannot survive an unpredictable day. This is computed nightly from the day's real commitments, capped at three blocks and 60% of free time, and has no authority — `/today` ratifies or discards it. The rule it must never break: **it proposes, the route decides.**
+
+**What made it worth building anyway.** The route asks for the shape of the day, the lane, and the one thing. The first of those is a question the calendar can already answer, and answering it from memory at the cue is wasted effort. The scheduler does that arithmetic in advance.
+
+**The evidence that changed the design.** Three findings moved this away from the obvious build: if-then plans beat scheduled appointments (d=.43 vs .29) and place nearly doubles the effect (.46 vs .25), so blocks are cued and placed rather than timed; planning more than ~3 goals at once destroys the benefit entirely (Dalton & Spiller), which is where the hard cap comes from; and slack only works when it is named and feels costly (Sharif & Shu), which is why there is one Emergency Reserve rather than invisible padding. Eat-the-frog, Pomodoro, batching, body doubling, self-imposed deadlines, "66 days to form a habit," and a widely-cited-but-fabricated 23-minute refocus statistic were all checked and none survived — see `SCHEDULER.md` §3. **A spec that argued that hard with itself is the reason this was approved rather than parked.**
+
+**The tension being accepted knowingly.** Fixed clock-time cues were retired 08-27 because a clock cue that fires during a client meeting trains you to ignore cues. A calendar block is a clock cue. This is mitigated (transition cues in the title, three blocks not nine, rough windows for anything non-work) but not eliminated.
+
+**Two amendments the audit imposed on the spec — it was not accepted as written.**
+
+1. **§9's kill condition was rewritten as a start condition.** As drafted it read *"if the morning glance stops happening for a week."* That is unfalsifiable: `/today` stood at **0 runs in 12 days** on audit day, and a glance that never started cannot stop. It now reads: **if `/today` has not run at least 5 times before the next audit, the nightly build is retired regardless of how good the plans were.** A proposal with no ratifier is not a plan; it is calendar noise.
+2. **§5 gained a ninth guardrail.** The spec's claim that this *"costs nothing when ignored"* is **false**. The prompt cleared only tomorrow's `[auto:nightly-build]` events, so at 0 routes an unswept month deposits ~90 dead blocks — which is precisely the ignore-your-cues mechanism the 08-27 retirement was about. Every run now sweeps all auto-events dated tomorrow **or earlier**.
+
+**The honest prior, unsoftened.** The Notion time-blocked day (2025-12-04) ran once. The nine-row Daily Protocol ran four days. This is the third attempt at giving the day a shape in advance and the prior is that it fails. Two things make it different, and only two: **it runs whether or not Reese does**, and the condition for calling it dead was written before the first run. Design quality is *not* one of the two — the nine-row protocol was also well-designed.
+
+**Not installed as a habit this period.** `SCHEDULER.md` §7 correctly identifies the human half as *the 60-second glance*. The glance rides the route, the route is at zero, and the floor is currently broken — so installing a second habit now is the documented over-launch pattern (07-07, 07-10, 07-20, 07-27). The automation runs; the glance waits. Tracker row filed under **Not installed**, deliberately.
+
+### Decision 2 — Five subtractions (the addition had to be paid for)
+
+| Cut | Reason |
+|---|---|
+| `.claude/commands/daily-scheduler.md` | 166 lines duplicating the nightly build with no 3-block cap, already opening with a banner disclaiming its own contents. A command that begins by retracting itself is finished. |
+| `.claude/commands/session-start.md` | **Zombie.** Question 1 was *"Is this your peak window?"* — gating a session on a mechanism retired 08-27 — and with all four tracks paused it had no live caller. |
+| Notion `Moved the needle` (Importance option) | 0 uses across 69 rows. Neither a scheduling input nor a review output. |
+| Notion `Time` (text property) | **6** uses, last one **2026-04-07**, all on completed rows. It was the first attempt at what the scheduler now does. *(The handoff said "7 uses, abandoned since 2025-12" — both numbers were wrong; the audit counted rather than inherited them.)* |
+| `late_sesh.md` (repo root) | Dated 2026-05-06, marked *"to be added to brain dump and logged tomorrow,"* still unprocessed 125 days later at the front door. **Routed** to `misc/reflection_log/2026-05-06.md` — the content is real, the location was not. |
+
+**Three repairs, not changes** (contradictions and dangling paths, per the Change Window's one exception):
+
+1. `learn.md` and `sharpen.md` each carried a "there is no peak window" banner at the top and a *"confirm the peak window is appropriate"* instruction further down. Both lines fixed.
+2. `career/helpful_notes_and_guides/Learning System Guide.md` routed to `/session-start` in three places, including its Quick Reference table. Repointed; the three rules worth keeping from that command (the build rule, the ready-to-resume note, energy honesty) are now stated inline rather than hidden in a retired command. **This file was flagged as stale in an earlier `DECISIONS.md` entry and left unfixed — it is fixed now.**
+3. **The Card was 12 days stale** (`2026-08-27 · route not yet run`), which `SYSTEM.md` calls a system bug outright. Rewritten to current state.
+
+### Decision 3 — The AI YouTube Editor is shelved, and the shelf message clears the owed item
+
+**Decision (Reese's call, at the audit):** **Shelf it.** Retirement note in `misc/reflection_log/2026-09-08.md` per the no-silent-abandonment rule; `business/LEDGER.md` Products row moved to Shelved.
+
+**Why, on evidence.** No recorded work since 08-04 — **35 days** — including a 12-day window with enough energy for a full system rewrite and a research-backed scheduler spec. That is the answer to whether it gets shipped, and it is not a time problem. The 08-04 "ship by Week 1" scope was written when the Editor was the only lane competing for attention; it now competes with a live Cognizant project and paid contract work, and the record is unambiguous that this system does not carry three full-weight commitments at once.
+
+**The move that makes it cheap:** the 29-day owed message *becomes* the shelf message. One five-minute action closes the oldest open item in the system and the biggest open decision at the same time — and telling a lead honestly that you're not building it beats a second confidently-chosen date. The standing rule holds: an owed message is worse than a late delivery.
+
+### Decision 4 — The habit calls
+
+- **🧱 The brick: Installed → Installing.** It went dark for 12 days. **First time in the log it has failed a collapse.** The re-install is one tap and it is a *cue* question, not a discipline question: the 10:25 phone alarm was set 07-06 and its present state is unverified. Do not theorize about willpower before checking the phone.
+- **🎯 The route: Installing → Not installed.** It was filed as *Installing* on 08-27 because the command existed. **The command is not the install** — this tracker's founding rule, violated on the day it was restated at the top of the file. 0 runs in 12 days.
+- **The Installed section is now empty.** Zero habits in this system are currently installed. That is an argument for putting *one* thing back, not for building more.
+
+### Decision 5 — The Business weekly ceiling is set: **8 hrs/week**
+
+Unset since the lane was created on 08-27. Reese's number. Above it is a scope conversation with Ian, never a silent absorption into evenings and weekends. Deliberately conservative given three lanes and a currently-dark Business lane; raise it at an audit if Ian's work genuinely outgrows it.
+
+### Parked, not built
+
+`/plan-tomorrow` — an on-demand rerun of the nightly build. Genuinely useful (the day changes after 9pm and the plan goes stale) and it is a **second** addition, which the audit rule does not allow. One line in `PARKING.md`; next audit decides.
+
+### Next audit: **2026-09-15** (weekly cadence holds through the transition)
+
+---
+
 ## 2026-08-27 — **Phase 3**: the system is rebuilt around four lanes, a router, and an audit
 
 **The trigger, in Reese's words:** *"I know I am reworking something but this is simply just my life constantly evolving. I got a great project for my job and learning so much on the job. Ian is giving me great work to continue building my business, and learning is being sidelined because of other life obligations... I need a way to concretely keep my life a series of systems and audit the system and habits heavily."*

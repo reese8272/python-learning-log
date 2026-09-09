@@ -12,7 +12,8 @@
 
 | Set on | Ceiling | Actual | Note |
 |---|---|---|---|
-| 2026-08-27 | **not yet set** — first `/audit` sets it | — | Needs Reese's number: hours/week or deliverables/week |
+| 2026-08-27 | *not set* | — | Superseded — the first `/audit` set it below. |
+| **2026-09-08** (`/audit` #1) | **8 hrs/week** | **0** (lane dark since creation) | Reese's number. Deliberately conservative — three lanes live and this one has never recorded a rep. Above 8 is a **scope conversation with Ian**, never a silent absorption into evenings and weekends. Raise it at an audit if the work genuinely outgrows it. |
 
 ---
 
@@ -34,7 +35,7 @@ If anything in **Owed** below has been outstanding more than 48 hours, every ses
 
 | Product | What it is | Status |
 |---|---|---|
-| **AI YouTube Editor** | v1 scoped 08-04 to the spine: upload → good shorts → titles/captions → download. Had a hard date of NFL Week 1 (~09-10). | ⚠️ **Needs a decision** — see Owed |
+| **AI YouTube Editor** | v1 scoped 08-04 to the spine: upload → good shorts → titles/captions → download. Had a hard date of NFL Week 1 (~09-10). | 🅿️ **SHELVED 2026-09-08** at `/audit` #1, Reese's call. 35 days of zero recorded work — including a 12-day window with the energy for a full system rewrite. That's the answer on whether it ships, and it isn't a scheduling problem. Retirement note: `misc/reflection_log/2026-09-08.md`. **Not silently abandoned** — the shelf is written down and the lead is being told. |
 | **autoclip.studio** | The contractor gig / product line the Editor sits under | Dormant |
 | **CFO Agent** | Demo-ready 08-04; a recruiter circulated it unprompted. Redis-backed LangGraph checkpointing, 177 tests. | Demoable, not being sold |
 
@@ -44,7 +45,7 @@ If anything in **Owed** below has been outstanding more than 48 hours, every ses
 
 | # | Client / product | The work | Committed | Due | Status |
 |---|---|---|---|---|---|
-| 1 | Ian | *(needs filling — what is he actually feeding you?)* | — | — | 🟡 undefined in the log |
+| 1 | Ian | *(still needs filling — what is he actually feeding you?)* | — | — | 🔴 **Undefined for 12 days.** This row read exactly the same on 08-27. The Business lane cannot be audited while its only client's work is a question mark — next `/audit` either fills it or asks whether the lane is real. |
 
 ---
 
@@ -52,7 +53,9 @@ If anything in **Owed** below has been outstanding more than 48 hours, every ses
 
 | Since | To whom | What | Days late |
 |---|---|---|---|
-| 2026-08-10 | The Editor lead | A message. The Editor was paused for the interview sprint; the sprint ended 08-13 and the news is **better** than the message that was going to be sent. Never sent. | **17+** |
+| 2026-08-10 | The Editor lead | **The shelf message.** Originally a delay note; the 09-08 audit shelved the Editor, so this is now the message that says so honestly. **One send closes the oldest item in the system and the biggest open decision at once.** Telling a lead you're not building it beats a second confidently-chosen date. | **29** |
+
+> **This is the only row here, it is 29 days old, and it is five minutes.** Per the standing rule above, every session names it until it's sent. As of `/audit` #1 it is also the **single highest-value action available in the Business lane** — the lane has no other defined work.
 
 ---
 

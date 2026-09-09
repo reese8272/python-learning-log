@@ -10,11 +10,17 @@ Project-specific instructions for Claude Code. These override global defaults wh
 
 This is a personal journaling repo with a single owner. **Always commit and push directly to `main`.** No feature branches, no PRs. Every session ends with a clean push to main.
 
+**Since 2026-09-08 this is a dependency, not hygiene.** The nightly build reads this repo over `raw.githubusercontent.com/reese8272/python-learning-log/main/…` — the WSL UNC path does not mount for the scheduled task. **It therefore sees the last pushed state, not the working tree.** An unpushed Card means tomorrow gets planned against stale context. If a session changes the Card and does not push, it has broken the scheduler, silently.
+
+*(Note the remote is still named `python-learning-log`. Renaming the GitHub repo breaks the scheduler's URLs — it will report the gap rather than fail silently, but the task prompt in `.claude/nightly-build-prompt.md` would need updating.)*
+
 ---
 
 ## The Blueprint
 
 `SYSTEM.md` (repo root) is the constitution — the whole system in one place: identity → chemistry → **the four lanes** → the router → the floor → **the audit** → feedback loops, plus the Cue Map and the Failure-Mode Playbook. When a question is about how the *system itself* works, why a rule exists, or what to do when something breaks, start there. The sections below are the operating rules; SYSTEM.md is the design they come from.
+
+**`SCHEDULER.md`** (repo root, added 2026-09-08) is the third root doc: the spec for the automated nightly build — what it reads, the evidence behind every placement rule, the guardrails, and the start condition that retires it. It governs one narrow thing (a proposal written into tomorrow's calendar) and has **no authority over the route**. The operational prompt lives at `.claude/nightly-build-prompt.md`; when the two disagree, `SCHEDULER.md` is the spec and the prompt is the bug.
 
 ---
 
@@ -54,6 +60,10 @@ Everything Reese does belongs to exactly one lane, and **the lane is named befor
 ## The Router — dynamic scheduling, not a fixed schedule
 
 **There is no peak window and no daily protocol table.** Both retired 2026-08-27 by Reese's call. Do not reinstate either, and do not build a replacement grid — that's the container reflex, and it has a documented body count.
+
+> The one sanctioned exception is the nightly build, adopted 2026-08-30 with the grid's retirement explicitly in view. It survives the rule because it proposes rather than decides, caps at three blocks, and yields to the route. If it ever starts filling days, it has become the thing it replaced — kill it at the audit that notices.
+
+**It is on probation, and the probation is measurable.** `SCHEDULER.md` §9 is a **start** condition, not a stop condition: if `/today` has not run at least 5 times by the next audit, the nightly build is retired regardless of how good the plans were. A proposal with no ratifier is not a plan — it is calendar noise, and calendar noise is how you learn to ignore cues.
 
 `/today` is the interface: 60 seconds, phone-friendly, three moves.
 
@@ -240,6 +250,7 @@ Sections: **The Floor** · **Installed** (running, protect these) · **Installin
 | `jobs/` | **Archive.** Pipeline retired 07-25. Do not add to it or route work into it. |
 | `misc/` | `reflection_log/` — anything that doesn't fit elsewhere |
 | `reflections/` | Daily, weekly, monthly review logs — the coaching record |
+| `SCHEDULER.md` | The nightly build — spec, evidence, guardrails, start condition. Root-level, sibling to `SYSTEM.md`. Prompt at `.claude/nightly-build-prompt.md`. |
 | `PARKING.md` | System ideas, parked. Opened and emptied only at `/audit`. |
 | `DECISIONS.md` | Explicit design decisions that changed what the planning docs said |
 | `brain-dump.md` | Single entry point — everything flows from here into folders |
