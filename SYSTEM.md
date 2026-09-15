@@ -50,20 +50,22 @@ This is not a downgrade. The record is explicit: 17 `/learn` sessions produced 4
 
 **There is no peak window and no fixed daily protocol.** Both are retired by decision (2026-08-27, Reese's call: *"I don't want a peak window — I need dynamic scheduling based on the needs of the day"*). The 9:45 block also sat inside client hours, which John's review explicitly flagged.
 
-> The nightly build (`SCHEDULER.md`) writes a proposal for tomorrow into the calendar. It is **not** a protocol and not a grid: it caps at three blocks, it is computed fresh from tomorrow's real commitments, and it has no authority. The route ratifies it or discards it. A plan `/today` overrules is a plan working correctly.
+> The nightly build (`SCHEDULER.md`) computes tomorrow from the real calendar and writes up to three cued blocks into it. It is **not** a protocol and not a grid: it caps at three, it is recomputed fresh every night, and it sweeps its own stale output.
 
-*Adopted at the 2026-09-08 audit with two amendments the audit imposed on its own spec: the kill condition is now a **start** condition (`SCHEDULER.md` §9), and the run must sweep stale auto-events rather than let them accumulate (§5, guardrail 9). Both exist because an unratified proposal is not free — it is a clock cue you are learning to ignore, which is the mechanism that killed fixed clock-time cues on 08-27.*
+*Adopted at the 2026-09-08 audit. **Rewritten at the 2026-09-15 audit**, which found it had run 5/5 weekdays and written **zero** work blocks — the Notion task list it feeds on held one incomplete row, from February, tagged in a way the algorithm excludes. The machine was never the problem; it was starved.*
 
-What replaces them is **`/today` — the route.** 60 seconds. Phone-friendly. Fixed cue, dynamic content.
+**What replaces the route: the build declares.** `/today` was retired 2026-09-15 after **0 runs in 19 days**. The decision still gets made — it just moves from the first sit-down, by hand, to 9pm the night before, by machine.
 
-> **The principle: don't schedule the time, schedule the decision.**
-> A fluid schedule fails when "fluid" quietly becomes "never decided." The route is the fixed part. What it produces changes every single day.
+> **The principle, amended: don't schedule the time, schedule the decision — and if the decision isn't getting made, move it to something that shows up.**
+> The original principle was right and the route was the wrong carrier for it. Nineteen days of zero is not a motivation problem to coach; it is a design answer to accept. The nightly build has never missed a night.
 
-**The route, in three moves:**
+**The day, in three moves — none of which he performs:**
 
-1. **Declare the day type.** Not discovered at 9pm — *declared*, out loud, at the cue.
-2. **Pick the lane** that needs it most today. One lane gets the rep. Not all three.
-3. **Name the one thing** — specific enough that starting requires no further decision.
+1. **The day type is declared** from tomorrow's largest real gap.
+2. **Up to three blocks are placed** by `State`, inside a 60%-of-free-time budget.
+3. **He works them, or he doesn't.** A block ignored is not a debt, and 🟥 remains a complete, counted day.
+
+> ⚠️ **What was given up, stated plainly.** The route was the human check that kept this from becoming a grid, and it is gone. **The cap of 3 and the 60% budget are now the only things holding that line.** If an audit finds days routinely full of unworked `[auto:nightly-build]` blocks, that is the grid returning — kill it, don't tune it. The nine-row Daily Protocol ran four days; this is attempt three at giving the day a shape in advance, and the prior is that it fails.
 
 ### The three day types
 
@@ -116,7 +118,7 @@ Every audit writes its verdicts to `habits/tracker.md` and its decisions to `DEC
 
 ## Layer 6 — Feedback loops
 
-`/today` (the route, 60 sec) → `/checkin` (daily floor, 3 min) → `/reflect` (when there's something to process) → `/weekly-review` (game film) → `/audit` (the system and habits, on evidence) → `/monthly-review` (the arc).
+the nightly build (9pm, automated — replaced `/today` on 2026-09-15) → `/checkin` (daily floor, 3 min) → `/reflect` (when there's something to process) → `/weekly-review` (game film) → `/audit` (the system and habits, on evidence) → `/monthly-review` (the arc).
 
 Content survives the **3-iteration filter** (daily → weekly → monthly) or it wasn't load-bearing. Design changes land in `DECISIONS.md`; habit truth lives in `habits/tracker.md`; coaching memory in Coach Notes.
 
@@ -130,8 +132,8 @@ Content survives the **3-iteration filter** (daily → weekly → monthly) or it
 
 | Behavior | Cue (if → then) | Worst-day minimum |
 |---|---|---|
-| **The route** | First sit-down at the desk (or first coffee) → `/today`, 60 seconds | Declare the day type. That alone is the route. |
-| **The rep** | The route named it → start it, timer on | 10 minutes of the named thing |
+| **The route** | *Retired 2026-09-15 — the nightly build declares the day type at 9pm instead.* | — |
+| **The rep** | First sit-down → open the calendar, start the first `[auto:nightly-build]` block, timer on | 10 minutes of the named thing |
 | **Craft ownership touch** | Before the workday close-out → one file, one decision, one failure mode | One line: *file · decision · what breaks if wrong* |
 | **Business touch** | Kids down → one message sent or one commit pushed | The message. Sent beats perfect. |
 | **Capture (Depth)** | Anything you couldn't explain today → one line, immediately | The line itself |

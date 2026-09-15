@@ -45,7 +45,7 @@ If anything in **Owed** below has been outstanding more than 48 hours, every ses
 
 | # | Client / product | The work | Committed | Due | Status |
 |---|---|---|---|---|---|
-| 1 | Ian | *(still needs filling — what is he actually feeding you?)* | — | — | 🔴 **Undefined for 12 days.** This row read exactly the same on 08-27. The Business lane cannot be audited while its only client's work is a question mark — next `/audit` either fills it or asks whether the lane is real. |
+| 1 | Ian | *(still needs filling — what is he actually feeding you?)* | — | — | 🔴 **Undefined for 19 days, unchanged across two audits.** Now a Notion task dated 2026-09-16 (`Quick`, 15 min) rather than a standing complaint in this file. **At `/audit` #3 this either has content or the question becomes whether this lane is real** — a client lane whose work nobody can name for three weeks is a lane on paper only. |
 
 ---
 
@@ -53,9 +53,9 @@ If anything in **Owed** below has been outstanding more than 48 hours, every ses
 
 | Since | To whom | What | Days late |
 |---|---|---|---|
-| 2026-08-10 | The Editor lead | **The shelf message.** Originally a delay note; the 09-08 audit shelved the Editor, so this is now the message that says so honestly. **One send closes the oldest item in the system and the biggest open decision at once.** Telling a lead you're not building it beats a second confidently-chosen date. | **29** |
+| 2026-08-10 | The Editor lead | **The shelf message.** Originally a delay note; the 09-08 audit shelved the Editor, so this is now the message that says so honestly. **One send closes the oldest item in the system and the biggest open decision at once.** Telling a lead you're not building it beats a second confidently-chosen date. | **36** |
 
-> **This is the only row here, it is 29 days old, and it is five minutes.** Per the standing rule above, every session names it until it's sent. As of `/audit` #1 it is also the **single highest-value action available in the Business lane** — the lane has no other defined work.
+> **This is the only row here, it is 36 days old, and it is five minutes.** Per the standing rule above, every session names it until it's sent. As of `/audit` #2 it is **a Notion task dated 2026-09-16** (`⚠️ Important` / `⏰ Urgent` / `Quick` / 5 min) — so for the first time it can actually be placed on the calendar rather than living only in this file. Naming it in a ledger for 36 days did not send it; that is itself the finding.
 
 ---
 

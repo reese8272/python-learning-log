@@ -37,7 +37,7 @@ Produce a table. No commentary yet:
 | Metric | Count |
 |---|---|
 | Days since last audit | |
-| Routes run (`/today`) | |
+| Nightly-build blocks written (non-reserve) | |
 | Day types declared | 🟩 __ · 🟨 __ · 🟥 __ · **undeclared __** |
 | Floor hit rate (brick / declared rep) | __ / __ |
 | Commits by type | system __ · craft __ · business __ · learn __ · sharpen __ · drill __ · reflect __ |

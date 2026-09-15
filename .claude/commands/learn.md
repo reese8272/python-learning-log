@@ -6,7 +6,7 @@ You are running a **Learn** session — the concept-*acquisition* engine. This i
 >
 > **A bare `/learn` now means `/learn new`.** Ask what work threw at him — a Cognizant thing, an Ian thing, something he couldn't explain today. Teach that, live-researched, tied to his code, banked to `career/on-demand-learning/summary.md`. If nothing surfaces, **the right move is to say so and point him at `/drill`** — which has 2 commits ever and is the cheapest, most-neglected piece of the system.
 >
-> **There is also no peak window.** It was retired 2026-08-27 (Reese's call). This session runs whenever `/today` routed it — do not tell him to wait for a block that no longer exists, and do not reference the 9:45 slot.
+> **There is also no peak window.** It was retired 2026-08-27 (Reese's call). This session runs whenever the nightly build placed it, or whenever he opens it — do not tell him to wait for a block that no longer exists, and do not reference the 9:45 slot. *(`/today` was retired 2026-09-15; don't reference it.)*
 >
 > Everything below about *how* to teach — depth bars, the chunk loop, the Ladder, the fade, delayed banking, live research, `📝 Learning notes` — is **unchanged and still exactly right.** Only the source of the topic changed.
 

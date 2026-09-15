@@ -4,6 +4,69 @@ A log of explicit design decisions that change or deviate from what the planning
 
 ---
 
+## 2026-09-15 — `/audit` #2: the route is retired, the build declares, and the machine turns out to have been starved
+
+*Period covered: 2026-09-08 → 2026-09-15, 7 days.*
+
+### The evidence it ran on
+
+| Metric | Count |
+|---|---|
+| Commits, all types | **0** |
+| Routes run (`/today`) | **0** (19 days total since 08-27) |
+| Check-ins | 0 |
+| Day types declared | 🟩 0 · 🟨 0 · 🟥 0 · **undeclared 7 of 7** |
+| Lanes: days since last movement | 💼 49 (07-28) · 🛠 never (created 08-27) · 🧠 28 (08-18) |
+| Owed messages | 1 — the Editor shelf message, **36 days** |
+| **Nightly build: runs** | **5 of 5 weekdays** (09-09, 09-10, 09-11, 09-14, 09-15) |
+| **Nightly build: non-reserve blocks written** | **0** |
+| Notion `My Task List`: incomplete rows | **1** — `My Personal Laundry`, created 2026-02-27, `Urgency: Habit` |
+| Notion: dated rows since 08-20 | **2**, both completed |
+
+### What changed, and why
+
+**1. The finding that reframed the audit: the scheduler was starved, not broken.**
+Five flawless runs, zero work blocks. The cause was not the algorithm and not the days being too full — a standing weekday here carries 5–7 commitments and still yields a **~200-minute open block** (verified on 09-15). The cause was an empty task pool: one incomplete Notion row, from February, tagged `Habit`, which Step 4.4 excludes from ranking. Guardrail 6 then correctly scheduled only the reserve, every night. **Evidence:** Google Calendar `[auto:nightly-build]` events 09-09 → 09-15; SQL against `collection://185a21f2-73aa-81bc-90d8-000b49835c2e`.
+
+**2. `/today` is retired.** 0 runs in 19 days across two audits. Retired rather than installed a second time, **on Reese's call** — asked what system he wanted, he described one that fills his calendar and that he executes, containing no ratification step. The 🟩/🟨/🟥 declaration survives and **moves to the nightly build**, which now *declares* the day type rather than proposing it. The mechanism is kept; the carrier is replaced.
+*Deviation from:* `SYSTEM.md` Layer 3 and `CLAUDE.md`, which both made the route the centre of Phase 3. Both rewritten.
+**The cost, recorded so it is not rediscovered later:** the route was the human check that kept the build from becoming a grid. The cap of 3 and the 60% budget are now the only things holding that line. If a future audit finds days routinely full of unworked `[auto:nightly-build]` blocks, **kill the build — do not tune the placement.**
+
+**3. `SCHEDULER.md` §9 replaced: start condition → output condition.**
+The 09-08 audit rewrote §9 *because it was unfalsifiable*. The replacement was unfalsifiable too — it conditioned on the **ratifier** (`/today`) while the **generator** had no input, so it could be neither satisfied nor disproven. Twice in two revisions, one week apart. New condition: **≥8 non-reserve blocks written before the next audit, or the build is retired.** Reserve-only nights count as zero.
+*The rule that generalises:* **measure the thing nearest the failure, not the thing furthest downstream.**
+
+**4. Step 2's day-type rule was ambiguous and wrong in the dangerous direction — repaired.**
+`< 30 min, or ≥4 commitments → 🟥` matched two rows at once on a real day (200-min gap, 6 commitments) and, read either way, marks every weekday here Survival forever. Commitment count no longer overrides the gap; it only downgrades one step when **≥6 commitments *and* largest gap < 120 min**.
+
+**5. Study finally has a pipe into the scheduler.** The Depth lane could not be scheduled because `concept_queue.md` and the capture list are repo files, and guardrail 6 forbids the build from using the repo as a task source. Fixed as **data, not system**: a standing weekday Notion row — *"Depth rep — /drill or /sharpen"*, `⚠️ Important` / `Not Urgent` / `State: Flow` / 25 min. Two other real rows seeded from the ledger (the Editor shelf message, defining Ian's work).
+
+### Retired this audit (4)
+
+| Thing | Reason |
+|---|---|
+| **`/today`** | 0 runs in 19 days; its owner described a system without it. Declaration moved to the 9pm build. |
+| **The nightly-build glance** | Rode the route; unreachable once the route is gone. |
+| **The shower affirmation stack** | Third consecutive audit with no verdict possible — taped 07-28, nothing recorded in 49 days. Three-audit rule. *Not a failed install; an ungraded one.* |
+| **Peak-window mindfulness** | Cue evicted with the peak window on 08-27, never re-grafted across two audits. **Therapist homework — retiring it is a conscious decision, and if it still matters it returns as a new build on a live cue.** |
+
+### Added this audit (1)
+
+**The build declares instead of proposes.** One change, after four cuts.
+
+### Deliberately *not* done
+
+- **A bigger or smarter scheduler.** The requested features (energy curve, lunch gap, evening flex, 10pm–6am protected) were already in the spec — six of eight asked-for behaviours shipped on 08-30. Building more before the existing one has ever been fed would be designing against untested guesses.
+- **Raising the 3-block cap**, despite a request for a "very very efficient" schedule. The cap is the Dalton & Spiller result and the nine-row Daily Protocol (built 07-25, dark by 07-29) is the local body count. Revisit at audit #3 with a week of real blocks behind it.
+- **A protected lunch carve-out.** Parked, not built: on this calendar it would cut the only Flow window roughly in half. Needs real data first.
+- **Moving the run to 10pm** as asked. Held at 9pm because 10:25 is the reading brick's cue and a phone in hand at 10pm is the documented way that habit dies. **Reese's call to override.**
+
+### Still open
+
+**The question the audit asked and did not get answered:** whether these seven days were another legitimate reallocation to Home, or something that didn't feel like a choice. The session moved to building before it was answered. It is the most important open item and it belongs at the top of audit #3.
+
+---
+
 ## 2026-09-08 — `/audit` #1: the nightly build lands on probation, five things are cut, and the Editor is shelved
 
 *The first real `/audit`. Period covered: 2026-08-27 → 2026-09-08, 12 days.*

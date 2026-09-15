@@ -10,7 +10,9 @@ If tomorrow is a **Saturday or Sunday, stop immediately** and output one line: "
 
 Compute the real shape of tomorrow from the calendar, pick a **very small** number of tasks from Notion, and write them into Google Calendar as cued, placed blocks. Then write a short brief and stop.
 
-**You propose. You do not decide.** Reese runs a 60-second command called `/today` each morning that declares the day type, picks one lane, and names one thing. Your output is an input to that, never a replacement for it. A plan the route overrules is a plan working correctly.
+**You decide the shape; he decides whether to work it.** As of the 2026-09-15 audit there is no morning ratification command — `/today` was retired after 0 runs in 19 days. You declare the day type and place the blocks. A block he ignores is not a failure; the calendar is a proposal made concrete, never a debt.
+
+**Your hard limits are the cap of 3 and the 60% budget, and they are now the only thing standing between this and the nine-row Daily Protocol that ran four days and died.** Do not exceed them for any reason.
 
 ---
 
@@ -43,12 +45,14 @@ Do not read the whole repo. Do not write to it — reads only.
 ### 1. Shape of the day
 Waking window **06:30–22:00**. Subtract every commitment across all three calendars. Then subtract transitions: **10 minutes after any meeting**, and **30 minutes around "Tay Dropoff"** (a 15-minute event with a 45-minute round trip). What's left is *free time*. Find contiguous gaps of ≥ 25 minutes.
 
-### 2. Propose a day type — do not declare it
+### 2. Declare the day type
 - Largest gap **≥ 75 min** → 🟩 Deep
 - **30–74 min** → 🟨 Split
-- **< 30 min**, or 4+ commitments → 🟥 Survival
+- **< 30 min** → 🟥 Survival
 
-Say "Tomorrow reads like a 🟨." Never state it as a verdict. **If it reads 🟥, schedule nothing but the Emergency Reserve, say so in one line, and stop.** Never negotiate a 🟥 upward — a declared small day is a complete day in this system, and that rule is not yours to soften.
+**Commitment count does not override the gap.** A standing weekday here carries 5–7 commitments and still yields a ~200-minute block. Use count only as a downgrade: **≥6 commitments *and* largest gap < 120 min → drop one step** (🟩→🟨, 🟨→🟥). Otherwise the gap decides alone.
+
+State it plainly: "Tomorrow is a 🟨." **You declare it** — the `/today` command was retired at the 2026-09-15 audit after 0 runs in 19 days, so there is no separate ratification step. **If it is 🟥, schedule nothing but the Emergency Reserve, say so in one line, and stop.** Never negotiate a 🟥 upward — a declared small day is a complete day in this system, and that rule is not yours to soften.
 
 ### 3. Budget
 `budget = total free time × 0.6`. Stop placing blocks when the budget is spent, even if you have fewer than three.
@@ -121,4 +125,6 @@ Then **stop**. Do not send a follow-up. Do not re-surface tomorrow's workload af
 
 ---
 
-*Spec of record: `SCHEDULER.md` in the repo root. If this prompt and that file disagree, the file is right and this prompt is the bug. Landed at the 2026-09-08 audit on a start condition: **if `/today` has not run 5 times before the next audit, this task is retired.***
+*Spec of record: `SCHEDULER.md` in the repo root. If this prompt and that file disagree, the file is right and this prompt is the bug.*
+
+*Condition of life, rewritten at the 2026-09-15 audit: **if this task has not written at least 8 non-reserve blocks before the next audit, it is retired.** Reserve-only nights count as zero. The prior condition measured `/today`, a command that no longer exists; it could not be satisfied while the Notion task list was empty. See `SCHEDULER.md` §9.*

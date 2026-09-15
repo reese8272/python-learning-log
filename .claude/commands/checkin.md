@@ -36,10 +36,10 @@ That's it. No fourth question unless he offers more.
 ## Step 3 — Update the system (after his answer)
 
 1. **Rewrite the Card** in `agenda.md` (Daily section — replace, don't append):
-   - Tomorrow's date and floor (the brick + the day's declared rep). Leave tomorrow's route block as *"not yet run"* — **`/checkin` does not set tomorrow's rep.** That's `/today`'s job, run tomorrow against tomorrow's actual shape. Pre-deciding it is the fixed-schedule reflex the router exists to replace.
+   - Tomorrow's date and floor (the brick + the day's declared rep). **`/checkin` does not set tomorrow's rep** — the 9pm nightly build does, against tomorrow's actual shape. Pre-deciding it here is the fixed-schedule reflex the router exists to replace. *(This was `/today`'s job until it was retired 2026-09-15.)*
    - Bad-day non-negotiable line (keep it — it's load-bearing)
    - Upside list (only reorder if something changed)
-   - **Streaks** — update the brick streak, the routes-run count, and the per-lane rep counters honestly. A missed night = streak resets to 0 with no commentary beyond "restarts tonight."
+   - **Streaks** — update the brick streak and the per-lane rep counters honestly. A missed night = streak resets to 0 with no commentary beyond "restarts tonight."
    - **Stopped at / Next step** — his exact answer, tightened to one line
 2. **Log a micro entry** — append to `reflections/YYYY-MM-DD.md` (create if missing) a short section:
    ```
@@ -56,7 +56,7 @@ That's it. No fourth question unless he offers more.
 
 ## Step 4 — Close in one line (+ at most one read)
 
-Tomorrow's floor + the first move. Example: *"Floor tomorrow: brick, plus whatever the route names. First move: run `/today` when you sit down. Done — go to bed."*
+Tomorrow's floor + the first move. Example: *"Floor tomorrow: brick, plus whatever the 9pm build placed. First move: open the calendar when you sit down and start the first block. Done — go to bed."*
 
 No coach's assessment. No summary of the summary.
 
@@ -80,6 +80,6 @@ Commit everything with a short message (`/checkin YYYY-MM-DD`) and push directly
 - `/checkin` — daily floor, 3 min, any device. The minimum viable touch.
 - `/reflect` — the full session, when there's something to process (2–3×/week is great)
 - `/weekly-review` — Mondays; reads the week's reflections AND micro check-ins
-- `/today` — the route, 60 sec: declare the day type, pick one lane, name one thing. Runs at the START of the day; `/checkin` closes it.
+- *(`/today` — retired 2026-09-15 after 0 runs in 19 days. The 9pm nightly build declares the day type and places the blocks; `/checkin` still closes the day.)*
 - `/audit` — the heavy loop: the system and habits graded on evidence, weekly through the Phase 3 transition then monthly. **The only place the system changes.**
 - `/drill` · `/sharpen` · `/learn new <topic>` — the Depth lane. No active track; work generates the curriculum now.

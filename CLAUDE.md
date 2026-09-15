@@ -63,13 +63,15 @@ Everything Reese does belongs to exactly one lane, and **the lane is named befor
 
 > The one sanctioned exception is the nightly build, adopted 2026-08-30 with the grid's retirement explicitly in view. It survives the rule because it proposes rather than decides, caps at three blocks, and yields to the route. If it ever starts filling days, it has become the thing it replaced — kill it at the audit that notices.
 
-**It is on probation, and the probation is measurable.** `SCHEDULER.md` §9 is a **start** condition, not a stop condition: if `/today` has not run at least 5 times by the next audit, the nightly build is retired regardless of how good the plans were. A proposal with no ratifier is not a plan — it is calendar noise, and calendar noise is how you learn to ignore cues.
+**It is on probation, and the probation is measurable.** `SCHEDULER.md` §9 is now an **output** condition: if the nightly build has not written **at least 8 non-reserve blocks** by the next audit, it is retired. Reserve-only nights count as zero. *(This replaced a start condition on `/today` at the 09-15 audit — that condition measured the ratifier while the generator was starved, and so could be neither satisfied nor falsified. Measure the thing nearest the failure.)*
 
-`/today` is the interface: 60 seconds, phone-friendly, three moves.
+**`/today` was retired 2026-09-15 after 0 runs in 19 days. The nightly build now declares the day type itself.** Do not rebuild the route, and do not ask him to run it. The declaration still happens — it just happens at 9pm the night before, by machine, instead of at the first sit-down, by hand.
 
-1. **Declare the day type** — 🟩 Deep (a real block exists) · 🟨 Split (fragments only) · 🟥 Survival (obligations own the day).
-2. **Pick one lane** that needs it most today.
-3. **Name the one thing**, specific enough to start without deciding again.
+1. **The day type is declared** — 🟩 Deep (a real block exists) · 🟨 Split (fragments only) · 🟥 Survival (obligations own the day).
+2. **Up to three blocks are placed**, by `State`, inside a 60%-of-free-time budget.
+3. **He works them or he doesn't.** A block ignored is not a debt. **🟥 remains a complete, counted day.**
+
+> **The guardrail that replaces the human check:** the cap of 3 and the 60% budget are now the *only* things keeping this from becoming the nine-row grid. If an audit ever finds days routinely full of unworked `[auto:nightly-build]` blocks, **kill it** — do not tune the placement.
 
 **The rule that matters most, and that you must never soften:** 🟥 **is a legitimate, counted day.** A declared 🟥 costs nothing, carries no debt, and is not a failure. The collapse pattern lives in the gap between "I can't do the full thing" and "so I did nothing and felt bad" — 🟥 closes that gap. If he declares 🟥, the correct coaching response is *"good — that's the system working,"* not a negotiation.
 

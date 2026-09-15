@@ -4,7 +4,7 @@ You are running a **Sharpen** session — the concept-acquisition engine. This i
 >
 > **`/sharpen` is now the most important command in the Depth lane.** The 08-18 evidence: 17 `/learn` : 2 `/sharpen` : 2 `/drill`, and the *one* time learning visibly converted to career movement (07-28 → 07-29, the work quiz then the boss call) it was a **defense** rep under real stakes, not an acquisition rep. Defense is the rep that converts.
 >
-> **There is no peak window** — retired 2026-08-27. Run this whenever `/today` routed it. Don't reference the 9:45 block; it doesn't exist.
+> **There is no peak window** — retired 2026-08-27. Run this whenever the nightly build placed it, or whenever he opens it. Don't reference the 9:45 block; it doesn't exist. *(`/today` was retired 2026-09-15 — don't reference that either.)*
 >
 > **What to grill has changed.** `career/concept_queue.md` is now seeded by **Craft reps (the Cognizant project) and Business reps (Ian's work)** — not by a roadmap position. The best target is always the same: **the slice he feels he should already be able to explain and quietly can't.** That flinch is the targeting system.
 >

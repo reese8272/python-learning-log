@@ -10,11 +10,13 @@ The one-stop shop for current goals and intentions across all time horizons. The
 
 *The nine-row Daily Protocol and the fixed 9:45 peak window are **retired**. There is no grid. See `SYSTEM.md` Layer 3.*
 
-**`/today` — the route. 60 seconds, phone, at the first sit-down.** Three moves:
+**The nightly build — 9pm, automated, no command to run.** *(Replaced `/today` on 2026-09-15 after 0 runs in 19 days.)* Three moves, none of which you perform:
 
-1. **Declare the day type** — 🟩 Deep (a real 60–90+ min block exists) · 🟨 Split (fragments only) · 🟥 Survival (obligations own the day).
-2. **Pick one lane** — 💼 Craft (Cognizant) · 🛠 Business (Ian / products) · 🧠 Depth (drill / sharpen / capture) · 🏡 Home.
-3. **Name the one thing** — specific enough to start without deciding again.
+1. **The day type is declared** from tomorrow's largest real gap — 🟩 Deep (≥75 min) · 🟨 Split (30–74) · 🟥 Survival (<30).
+2. **Up to three blocks are placed** by `State`, inside 60% of free time, plus one `⛑ Emergency Reserve`.
+3. **Your move: open the calendar at the first sit-down and start the first block.** That's it.
+
+> **Your only input is Notion.** The build can only schedule what's in `My Task List`. On 09-09 → 09-15 it ran 5/5 nights and wrote **zero** work blocks because that list held one incomplete row, from February. **An empty list is an empty day — the machine can't invent work, and by design it won't.**
 
 > **🟥 is a legitimate, counted day.** It carries no debt into tomorrow. The collapse pattern lives in the gap between *"I can't do the full thing"* and *"so I did nothing and felt bad about it"* — declaring 🟥 closes that gap. **The only real miss is a day with no declaration at all.**
 
@@ -25,20 +27,21 @@ The one-stop shop for current goals and intentions across all time horizons. The
 ## 📍 The Card
 *Updated by `/today` and `/checkin` — this always reflects NOW, not history. (Older stopped-at lines live in git history.)*
 
-**Date:** 2026-09-08 (Tuesday) — **`/audit` #1 ran.** The 12 days since Phase 3 shipped were a **reallocation to Home, not a collapse** — that's your read and the audit took it. Nothing is owed backward. One thing didn't fit that story and it's the only item that needs action tonight: **the brick went dark.**
+**Date:** 2026-09-15 (Tuesday) — **`/audit` #2 ran.** The finding was not about discipline. **The scheduler was starved, not broken:** it ran 5 of 5 weeknights flawlessly and wrote zero work blocks, because your Notion task list held **one** incomplete row — *My Personal Laundry*, dated 2026-02-27, tagged in a way the algorithm excludes. Nothing was entering the system from any direction.
 
-**Today:** 2026-09-08 · *route not yet run* · Lane: —
-**The rep:** *run `/today` to set it*
+**Today:** 2026-09-15 · the build declares tomorrow at 9pm · Lane: —
+**Your move tomorrow:** open the calendar at the first sit-down, start the first `[auto:nightly-build]` block.
 **The floor:** 🧱 the brick + the day's declared rep (🟥 → the brick alone)
 
 > **🔁 WHAT CHANGED AT THE AUDIT — the short version.**
-> - **🧱 The brick dropped from Installed to Installing.** 12 dark nights — the first time it has ever failed a collapse. **The Installed section is now empty; zero habits are installed.** That's an argument for putting *one* thing back, not for building more.
-> - **🎯 `/today` dropped to Not installed.** It was filed as *Installing* on 08-27 because the command existed. **The command is not the install.** 0 runs in 12 days.
-> - **🌙 The nightly build was adopted** — automated 9pm scheduler, up to 3 cued calendar blocks for the next weekday. **On probation with a start condition:** if `/today` hasn't run 5 times by the next audit, it's retired. Spec: `SCHEDULER.md`.
-> - **🅿️ The AI YouTube Editor is shelved** (your call). Retirement note: `misc/reflection_log/2026-09-08.md`. The 29-day owed message *is* the shelf message.
-> - **✂️ Five things cut:** `/daily-scheduler`, `/session-start`, two dead Notion properties, and `late_sesh.md` (routed after 125 days at the root).
-> - **🛠 Business ceiling set: 8 hrs/week.** Above it is a scope conversation with Ian, never silent absorption.
-> - Full rationale: `DECISIONS.md` (2026-09-08).
+> - **🎯 `/today` is retired.** 0 runs in 19 days across two audits. **The 🟩/🟨/🟥 declaration survives — it moved to the 9pm build.** The mechanism is kept; the carrier is replaced. You no longer run anything in the morning.
+> - **🌙 The build now DECLARES instead of proposing**, and its condition of life changed: **≥8 non-reserve blocks before the next audit, or it's retired.** Reserve-only nights count as zero. *(The old condition measured `/today` — a ratifier that had nothing to ratify. Unfalsifiable twice in two revisions.)*
+> - **🧠 Study finally has a pipe.** A standing weekday Notion row — *Depth rep — /drill or /sharpen*, `Flow`, 25 min — now enters the ranking like any other task. **Set it to repeat on weekdays; that's your 60-second install.**
+> - **✂️ Four things cut:** `/today`, the nightly-build glance, the shower affirmation stack (3rd ungraded audit), peak-window mindfulness (cue evicted 08-27 — *therapist homework, so decide consciously if it comes back*).
+> - **🅿️ Parked, not built:** a protected lunch block, and raising the 3-block cap. Both need a week of real data first.
+> - Full rationale: `DECISIONS.md` (2026-09-15).
+
+> ⚠️ **The one thing this audit gave up, written down so it isn't rediscovered the hard way.** The route was the human check that kept the build from becoming a grid. **The cap of 3 and the 60% budget are now the only things holding that line.** If a future audit finds days full of unworked auto-blocks, that's the nine-row protocol returning under a new name — **kill it, don't tune it.**
 
 **The Floor — weekdays:** 🧱 the brick + the day's declared rep.
 **The Floor — weekends:** weekends owe *nothing* professional. Weekend floor = the brick, or full presence with the kids. Any Craft or Business touch on a weekend is a bonus, never owed.
@@ -50,22 +53,25 @@ The one-stop shop for current goals and intentions across all time horizons. The
 
 | Lane | Mission | One rep = | Status as of 08-27 |
 |---|---|---|---|
-| 🏡 **Home** | The ground everything stands on | Undistracted presence | 🟢 **Moving — and it's where the last 12 days went.** Your read at the audit. This is the reason the other three rows below are not a collapse. |
-| 💼 **Craft** — Cognizant | Own the project; perform without AI, visibly | Predict a file → open it → one non-obvious decision → **what breaks if this is wrong** → verify live → one line logged | ⚫ **Dark — 42 days.** Last `career/reflection_log/` entry 07-28. On 08-27 this Card called it "the strongest lane right now"; the files disagree. One rep resets it. |
-| 🛠 **Business** — Ian + products | Convert skill into money that isn't hours | One delivery touch: a shipped slice, a client message sent, a decision closed | ⚫ **Dark — never moved.** `LEDGER.md` created 08-27; Ian's row still reads *"needs filling."* `business/reflection_log/` is empty. **Ceiling now 8 hrs/wk.** The one available action is the shelf message. |
-| 🧠 **Depth** — derived | Runs on the residue of the other two | One capture, one `/drill`, or one `/sharpen` | ⚫ **Dark — 21 days.** Last `/drill` 08-18. Still the cheapest item in the system and still the one named most crucial. |
+| 🏡 **Home** | The ground everything stands on | Undistracted presence | ❓ **Unread — and this is the open question from audit #2.** Last audit's read was "the time went to Home, and that's legitimate." Whether that's still true for 09-08 → 09-15 was asked and not answered. **It's the first item at audit #3.** |
+| 💼 **Craft** — Cognizant | Own the project; perform without AI, visibly | Predict a file → open it → one non-obvious decision → **what breaks if this is wrong** → verify live → one line logged | ⚫ **Dark — 49 days.** Last `career/reflection_log/` entry 07-28. One rep resets it. |
+| 🛠 **Business** — Ian + products | Convert skill into money that isn't hours | One delivery touch: a shipped slice, a client message sent, a decision closed | ⚫ **Dark — never moved.** `LEDGER.md` created 08-27; Ian's row still reads *"needs filling"* — unchanged across two audits. **Ceiling 8 hrs/wk.** Both available actions are now Notion tasks dated 09-16. |
+| 🧠 **Depth** — derived | Runs on the residue of the other two | One capture, one `/drill`, or one `/sharpen` | ⚫ **Dark — 28 days.** Last `/drill` 08-18. **As of 09-15 it finally has a scheduling pipe** — a standing weekday Notion row. First time this lane has ever been reachable by the router. |
 
 ---
 
 ### ⚠️ The two things outstanding, oldest first
 
-**1. 🧱 The brick, tonight. And it's one tap, not a resolution.**
-Twelve dark nights — the first time the brick has failed a collapse. It survived 4/09, 5/01, 6/16, Jul 11–19, Jul 30–Aug 3, Aug 12–17, and a full vacation with zero scaffolding, because 15 minutes in bed never competed with family time. So "the time went to Home" explains Craft, Business, and Depth — **it does not explain this.**
+**1. 🧱 The brick — and the same one-tap question, now asked at two consecutive audits without an answer.**
+Nineteen dark nights. It survived 4/09, 5/01, 6/16, Jul 11–19, Jul 30–Aug 3, Aug 12–17, and a full vacation with zero scaffolding, because 15 minutes in bed never competed with family time.
 
-Before theorizing about discipline, check the cue: **is the 10:25 alarm still on your phone?** It was set 07-06. `COACHING.md`'s own canonical example of a cue diagnosis is *"the two weeks it held are the two weeks the phone alarm was set."* If it's gone, that's the whole finding and re-setting it is the whole fix.
+**Is the 10:25 alarm still on your phone?** Set 07-06. `COACHING.md`'s canonical cue diagnosis is *"the two weeks it held are the two weeks the phone alarm was set."* If it's gone, that's the whole finding and re-setting it is the whole fix. **This is the cheapest open item in the system and it has now outlived two audits.**
 
-**2. 📨 The Editor shelf message. Owed 29 days — and it's now five minutes to close two things.**
-The Editor was **shelved** at the 09-08 audit (`misc/reflection_log/2026-09-08.md`). That turns the owed message from an awkward delay note into an honest one: you're not building it. **One send closes the oldest open item in the system and the biggest open decision at the same time.** A stated delay costs nothing; silence costs the relationship — and 29 days of silence followed by a third date would cost more than the truth. (`business/LEDGER.md` → Owed.)
+**2. 📨 The Editor shelf message. Owed 36 days.**
+Shelved at the 09-08 audit (`misc/reflection_log/2026-09-08.md`), so this is the honest message, not a delay note: you're not building it. **It is now a Notion task dated 09-16** — five minutes, and it closes the oldest open item in the system. A stated delay costs nothing; silence costs the relationship. (`business/LEDGER.md` → Owed.)
+
+**3. 🔁 Keep Notion fed. This is the new failure mode and it has no cue yet.**
+The build can only schedule what's in `My Task List`, and that list ran dry for 26 days without anyone noticing. **Three rows are seeded for 09-16.** If nothing goes in after that, 09-17 is another reserve-only night and the build retires at audit #3 on its own output condition — correctly.
 
 ---
 
@@ -93,8 +99,8 @@ The Editor was **shelved** at the 09-08 audit (`misc/reflection_log/2026-09-08.m
 
 The number behind this rule: **28 system/card commits against 17 learn, 2 sharpen, 2 drill since 06-01.** System-tinkering is the most sophisticated procrastination available here, because from the inside it is indistinguishable from progress. *(This rewrite is itself a system change — it's legitimate because the life it describes actually changed, and because it **subtracted** far more than it added. The next one waits for an audit.)*
 
-**Last `/audit`: 2026-09-08** (#1) — ceiling set, Editor decided, every habit graded, 5 cuts, 1 addition on probation.
-**Next `/audit`: 2026-09-15.** Weekly cadence holds through the transition. It reads three counters: **routes run (needs 5)**, brick nights, and whether Ian's row in `LEDGER.md` is still a question mark.
+**Last `/audit`: 2026-09-15** (#2) — route retired, build declares, §9 replaced with an output condition, 4 cuts, 1 addition, study given a pipe.
+**Next `/audit`: 2026-09-22.** Weekly cadence holds through the transition. It reads four things: **non-reserve blocks written (needs ≥8)**, brick nights, whether Ian's row in `LEDGER.md` is still a question mark, and — first item on the agenda — **the Home question this audit left open.**
 
 *A note on how audit #1 came about, kept honest: the nightly build was **built on 08-30 outside the Change Window** and ratified retroactively here. That's a real exception, it's recorded in `DECISIONS.md`, and the rule stands unchanged for everything else.*
 
@@ -102,24 +108,23 @@ The number behind this rule: **28 system/card commits against 17 learn, 2 sharpe
 
 ### 🧱 Builds (protect)
 
-- **🧱 The brick** — 10:25pm, phone on charger FIRST → book in hand. Survived a full vacation with zero scaffolding (07-13 → 07-19) and every collapse since April ended with it — **until this one.** ⬇️ **Installing** as of 09-08 after 12 dark nights. Re-anchor tonight; the backstop is the 10:25 phone alarm (set 07-06, present state unverified). **This is the one thing being installed this period. Nothing else gets added on top of it.**
-- **🏋️ Movement** — the 6am gym build was paused for a hamstring (07-27) and never re-installed; note honestly that it had only 1–3 days installed *before* the injury. **Phase 3 downgrades it from "6am gym" to "20 minutes of anything, before the hardest thing when possible"** — the cue was evicted by a life that no longer has a fixed morning. Re-graft it as a new build at an audit, not tonight.
-- **🪞 Shower affirmations** — notecard installed 07-28. ⚠️ **Second audit running with no verdict possible** (nothing recorded in 42 days). One more and it retires ungraded under the three-audit rule.
-- **🌙 The nightly build** — automated, running 9pm Sun–Thu. **The automation is installed; the human glance is not, deliberately.** It waits for the route and for the brick. One anchor at a time.
+- **🧱 The brick** — 10:25pm, phone on charger FIRST → book in hand. Survived a full vacation with zero scaffolding (07-13 → 07-19) and every collapse since April ended with it — **until this one.** 🔧 **Installing**, 19 dark nights. The backstop is the 10:25 phone alarm (set 07-06, **present state still unverified after two audits**). **This is the one habit being installed. Nothing else gets added on top of it.**
+- **🏋️ Movement** — the 6am gym build was paused for a hamstring (07-27) and never re-installed; it had only 1–3 days installed *before* the injury. **Phase 3 downgrades it to "20 minutes of anything, before the hardest thing when possible."** A recurring 8:00 Workout block sits on the calendar; whether it fires is unrecorded. Re-graft as a real build at an audit.
+- **🌙 The nightly build** — automated, 9pm Sun–Thu, **5/5 runs and never missed a night.** As of 09-15 it *declares* rather than proposes. **Its life now depends on output: ≥8 non-reserve blocks by 09-22.** The human half is one move — open the calendar, start the first block.
 
 **Streaks:** all restart today. No commentary, no archaeology.
 - 🧱 Brick: 0 — restarts tonight
-- ✅ **Routes run (`/today`): 0 of 5** — this counter now decides whether the nightly build lives. 5 before the next audit or it's retired.
+- 🌙 **Non-reserve blocks written: 0 of 8** — this counter now decides whether the build lives. It is a measure of *the machine*, not of you: it only moves if Notion has tasks in it.
 - 💼 Craft reps: 0 · 🛠 Business reps: 0 · 🧠 Depth reps: 0
 
-**Stopped at:** 09-08 — `/audit` #1. Nightly build adopted on probation; 5 things cut; Editor shelved; Business ceiling set at 8 hrs/wk; brick and route both downgraded on the tracker.
+**Stopped at:** 09-15 — `/audit` #2. The scheduler was found starved, not broken (5 runs, 0 work blocks, 1 February task in Notion). Route retired; the build declares; §9 now measures output; 4 cuts, 1 addition; 3 real tasks seeded for 09-16 including a standing Depth rep.
 
 **Next step, in this order — and it is deliberately short:**
-1. **Check the phone for the 10:25 alarm.** One tap. Do it before reading further.
-2. **Send the Editor lead the shelf message.** Five minutes, 29 days owed.
-3. **Run `/today`.** Whatever it declares — 🟥 is a complete day and costs nothing.
+1. **Check the phone for the 10:25 alarm.** One tap. Asked at two audits now.
+2. **Open Notion and set the Depth rep row to repeat on weekdays.** 60 seconds. That's the study lane's install.
+3. **Tomorrow morning: open the calendar and start the first block.** No command to run.
 
-*Nothing else is owed. Three dark lanes carry no debt; the audit already graded that period and it graded it as Home.*
+*Nothing else is owed. The dark lanes carry no debt — and the 🟥 rule is unchanged: a declared small day is a complete day.*
 
 ---
 

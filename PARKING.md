@@ -26,7 +26,9 @@ This costs one line to obey. It removes the only mechanism by which this system 
 
 <!-- add lines below; do not build them -->
 
-2026-09-08 — `/plan-tomorrow`: run the nightly build on demand instead of waiting for 9pm. (Appealing because the day changes after 9pm and the plan goes stale. **Parked at audit 1 of 3** — it is a second addition and the audit allows one; the nightly build was it. Revisit only once the nightly build has cleared its start condition, since an on-demand rerun of a task nobody reads is two ways of generating the same noise.)
+2026-09-15 — **Protected lunch carve-out** in the nightly build (never schedule over ~12:00–13:00). (Asked for directly at audit #2 as part of the energy curve. **Parked, audit 1 of 3** — on the current calendar the only Flow window is 10:40–14:00, so a hard lunch block would cut it roughly in half. Revisit at audit #3 with a week of real placed blocks showing whether lunch is actually getting eaten through.)
+
+2026-09-15 — **Raise the 3-block cap.** (Asked for at audit #2 — "a very very efficient schedule." **Parked, audit 1 of 3.** The cap is the Dalton & Spiller result and the nine-row Daily Protocol is the local body count: built 07-25, dark by 07-29. Revisit only after a full period where three blocks a day were actually worked.)
 
 ---
 
@@ -38,3 +40,5 @@ This costs one line to obey. It removes the only mechanism by which this system 
 |---|---|---|
 | 2026-08-27 | *(file created — nothing parked yet)* | — |
 | 2026-09-08 | **The nightly build** (automated 9pm scheduler → 3 cued calendar blocks) | ✅ **Built** — audit 1's one addition, on probation with a start condition. Never parked; built outside the Change Window on 08-30 and ratified retroactively at the audit. Paid for with 5 subtractions. See `SCHEDULER.md`, `DECISIONS.md` 2026-09-08. |
+| 2026-09-15 | `/plan-tomorrow` — run the nightly build on demand instead of waiting for 9pm | ❌ **Killed** at audit #2. Its own revisit trigger was *"once the nightly build has cleared its start condition"* — and that condition was retired at this audit as unfalsifiable. The trigger no longer exists, and the underlying complaint (plans go stale after 9pm) has never been observed, because until 09-16 the build had never written a plan. Re-propose it only if a real stale-plan problem shows up in evidence. |
+| 2026-09-15 | **The build declares the day type** (replacing `/today`'s ratification) | ✅ **Built** — audit 2's one addition, after 4 subtractions. See `DECISIONS.md` 2026-09-15. |

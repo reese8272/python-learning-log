@@ -87,14 +87,16 @@ The handoff listed "eat the frog, time blocking, spaced repetition" as candidate
 ### Step 1 — Compute the real shape of tomorrow
 Read Personal + Family + Hunter. Normalize to America/New_York. Waking window **06:30–22:00**. Subtract every commitment, then subtract transitions: **10 min after any meeting**, **30 min around Tay Dropoff** (07:45–08:00 is a 15-minute event and a 45-minute round trip). What remains is *free time*. Find contiguous gaps ≥ 25 min.
 
-### Step 2 — Propose a day type (do not declare it)
-| Largest contiguous gap | Proposal |
+### Step 2 — Declare the day type *(rewritten at `/audit` #2, 2026-09-15)*
+| Largest contiguous gap | Day type |
 |---|---|
 | ≥ 75 min | 🟩 Deep |
 | 30–74 min | 🟨 Split |
-| < 30 min, or ≥4 commitments | 🟥 Survival |
+| < 30 min | 🟥 Survival |
 
-Phrase it as `Tomorrow reads like a 🟨` — never as a verdict. **`/today` declares.** If tomorrow reads 🟥, schedule **nothing but the reserve** and say so in one line. Never negotiate a 🟥 upward.
+**This declares. It no longer proposes.** `/today` was retired at the 09-15 audit after 0 runs in 19 days; the ratifier it was waiting for does not exist, so the build owns the call. State it plainly: `Tomorrow is a 🟨.` If it is 🟥, schedule **nothing but the reserve**, say so in one line, and stop. Never negotiate a 🟥 upward — a declared small day is a complete day, and that rule is not yours to soften.
+
+**Commitment count does not override the gap.** The prior wording (`< 30 min, or ≥4 commitments → 🟥`) was ambiguous and, on this calendar, wrong in the dangerous direction: a standing weekday here carries **5–7 commitments and still yields a ~200-minute block** (verified against 2026-09-15). A count-based 🟥 clause marks every weekday Survival forever. Use count only as a downgrade: **≥6 commitments *and* largest gap < 120 min → drop one step** (🟩→🟨, 🟨→🟥). Otherwise the gap decides alone.
 
 ### Step 3 — Budget
 `budget = free_time × 0.6`. Blocks stop when the budget is spent, even if the cap in Step 6 has not been reached.
@@ -131,7 +133,7 @@ A single `⛑ Emergency Reserve` block, 30–45 min, in the day's second half. D
 > ✅ `If Verizon morning meeting ends → open pipeline.py, predict what _flush does before reading — desk`
 > ❌ `10:30 Deep Work — pipeline`
 
-The action must be a **start instruction**, not a topic, matching the `/today` Step 4 standard: specific enough that starting requires no further decision.
+The action must be a **start instruction**, not a topic: specific enough that starting requires no further decision. *(This standard was inherited from `/today` Step 4; the command is retired but the standard survives it.)*
 
 Every event this task creates carries `[auto:nightly-build]` in its description. **It may only ever delete or modify events carrying that tag.** Anything else on the calendar is untouchable.
 
@@ -241,12 +243,23 @@ lands it must cut something. `Moved the needle` (0 uses in 69 rows) and the
 
 **The audit rejected that wording as unfalsifiable.** On audit day `/today` had run **0 times in 12 days**, and a glance that has never happened cannot stop happening. A stop condition presumes a start. So:
 
-> ### The start condition
-> **If `/today` has not run at least 5 times before the next `/audit`, the nightly build is retired — not tuned, not re-scoped, and regardless of how good the plans were.**
->
-> The scheduler's entire output is an input to the route. A proposal with no ratifier is not a plan; it is calendar noise. If the ratifier isn't running, the correct move is to stop generating proposals, not to generate better ones.
+> ### The start condition *(retired at `/audit` #2, 2026-09-15)*
+> ~~**If `/today` has not run at least 5 times before the next `/audit`, the nightly build is retired — not tuned, not re-scoped, and regardless of how good the plans were.**~~
 
-**The kill condition survives underneath it**, for once the thing is actually running: if the morning glance stops for a week after a genuine start, it is retired at that audit.
+**It measured the wrong half of the machine, and it failed for the same reason its predecessor did.**
+
+The 09-08 rewrite caught that a *stop* condition presumes a start, and replaced it with a condition on the **ratifier**. But it silently assumed the **generator** was working. It wasn't. Between 09-09 and 09-15 the build ran **5 of 5 weekdays, flawlessly, and wrote 5 Emergency Reserves and zero work blocks** — because `My Task List` held exactly **one** incomplete row: `My Personal Laundry`, created 2026-02-27, tagged `Urgency: Habit`, which Step 4.4 excludes from ranking. Guardrail 6 fired correctly every night.
+
+So `/today` was never given a plan to ratify. **A condition on the ratifier could not be satisfied or falsified while the generator had no input** — unfalsifiable a second time, one revision after that exact flaw was named. Twice is a pattern: *measure the thing nearest the failure, not the thing furthest downstream.*
+
+> ### The output condition *(replaces it)*
+> **If the nightly build has not written at least 8 non-reserve blocks across the next audit period, it is retired.**
+>
+> This measures the generator, which is where both failures actually lived. It is satisfiable only if tasks exist in Notion, and it is falsifiable on day one. **Reserve-only nights count as zero** — a run that produces nothing is a run that did not happen, however cleanly it executed.
+>
+> **The ratification question is deferred, not answered.** It cannot be asked until there are plans to ratify. It returns at `/audit` #3, against real blocks.
+
+**The honest risk this creates, stated up front:** the build now *declares* rather than proposes, which removes the human check that stopped it becoming a grid. The cap of 3 and the 60% budget are now the only things holding that line. **If a future audit finds days routinely full of `[auto:nightly-build]` blocks that went unworked, that is the grid returning, and the correct response is to kill it — not to tune the placement.**
 
 **The honest prior, unchanged and not softened.** The Notion time-blocked day (2025-12-04) ran **once**. The nine-row Daily Protocol ran **four days**. This is the **third** attempt at giving the day a shape in advance, and the prior is that it fails. Two things make this attempt different, and only two: it runs whether or not Reese does, and the condition for calling it dead was written before the first run.
 
