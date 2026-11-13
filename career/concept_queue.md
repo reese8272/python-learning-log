@@ -21,6 +21,86 @@ Work top-down. Higher bars before lower unless a real project need jumps the lin
 
 ---
 
+## 🎯 The AI Engineer list — top of the queue (seeded 2026-11-13)
+
+*Twenty-two units in four passes. Seeded from three things: AI features shipped for a client (the code exists; the defense doesn't), an AI Engineer interview where two questions about how models are trained and measured went unanswered, and a check against what 2026 AI Engineer postings ask for. Ordered by one test: **does this rep pay off both in the client work and in an outside interview?***
+
+**How a unit runs — the existing rules, nothing new:**
+- **One unit, named before you sit down.** Re-ask last time's Tripped items cold → guess before being taught → 8-minute chunks with 2–4 checks each → a 5-minute build → write the Tripped list → one "Stopped at / Next step" line. `[A]` ≈ 30 min · `[B]` ≈ 15 min.
+- **A session may only mark `[~]`.** `[x]` needs a clean cold re-ask in a *later* session, or running code. Every `[A]` needs a `Breaks if wrong:` line **you** wrote.
+- **The "this over that" on each row is a question, not an answer.** Answer it cold first; the anchors and the grading key live in a private companion file kept with the client work (not in this repo — this repo is public).
+- **Passes are an order, not walls.** A live work need jumps the line, the flinch rule still picks within a pass, and `/drill` mixes across passes. Worst day: recall one unit's "this over that" out loud, three minutes. That's a rep.
+
+**Lookup key:** `§N` = that section of the paused catalog at `readings/ai-engineering-curriculum/summary.md` (a shelf, not a backlog). `§13` is new there as of today — the topics the catalog never had.
+
+### Pass 1 — Defend what you shipped *(run with `/sharpen`; the code already exists)*
+
+- [ ] `[A]` **1 · The model reads, code decides** — the model turns words into structured details; code checks them, decides what's missing and builds the answer; a person confirms. **This over that:** a reader with no tools vs an agent that acts on its own. *(lookup: §11, §3 · asked for: agents, human approval)*
+- [ ] `[A]` **2 · Structured output, checked twice** — a schema constrains the shape; code still checks ranges and whether the thing named exists. **This over that:** schema-enforced output vs "ask for JSON and parse it"; reject the whole output vs filter out the bad part. *(lookup: §2)*
+- [ ] `[A]` **3 · User text is data** — the prompt-injection posture: delimit it, sanitize it, send less, check the result in code, and test with hostile input. **This over that:** code-side checks vs instructing the model to behave. *(lookup: §9 · asked for: guardrails)*
+- [ ] `[B]` **4 · The model has no memory** — the whole conversation is re-sent every turn; state lives in code and merges without letting a blank erase a known value. **This over that:** state kept in code vs state kept on the model's side. *(lookup: §1 — also clears the fuzzy token face on "What an LLM call actually is")*
+- [ ] `[A]` **5 · Confirmation bound to what the person saw** — the confirm button carries the identity of the exact proposal on screen. **This over that:** "confirm this card" vs "confirm the latest". *(lookup: §4 human-in-the-loop)*
+- [ ] `[B]` **6 · When the model call fails** — timeout, retry, refusal, cut-off output, a non-AI fallback; and where the slow call sits relative to the database transaction. **This over that:** call outside the transaction with an edit counter vs holding the lock while the model thinks. *(lookup: §10)*
+- [ ] `[B]` **7 · Send the model as little as possible** — what goes into the prompt, what is deliberately left out, and where that data physically goes. **This over that:** let the model point at a record by number vs copy the record's values into the prompt. *(lookup: §9, Tier 2 privacy)*
+
+### Pass 2 — Measure it *(the biggest gap in the shipped code, and the skill postings ask for most)*
+
+- [ ] `[A]` **8 · Precision, recall, F-beta, the PR curve, the threshold** — **Build:** hand-label the correct answers for one partner in the field-matching scorer; compute precision and recall per confidence band; pick the review threshold off the curve. **This over that:** move the threshold vs change the scorer; which error costs more here, a wrong match accepted or a right one sent to review? *(lookup: §13 · the first interview question)*
+- [ ] `[B]` **9 · Calibration** — does a 0.95 mean right 95% of the time? **Build:** a reliability table from the same answer key. **This over that:** a score you can read as a probability vs a score that only ranks. *(lookup: §13)*
+- [ ] `[A]` **10 · A golden set and an eval harness for an LLM feature** — **Build:** 30 real phrasings run against the real model, with threshold assertions in the test runner. **This over that:** tests with a scripted fake model vs evals against the real one — what each can and cannot prove. *(lookup: §8 · asked for: evaluation, 56% of postings in one count)*
+- [ ] `[B]` **11 · LLM-as-judge** — when to trust a model grading a model. **Build:** grade one slice of unit 10 three ways (code check, judge model, you) and compare. **This over that:** judge model vs exact checks vs human labels. *(lookup: §8)*
+- [ ] `[B]` **12 · Tracing and cost per call** — **Build:** log tokens, latency, model and outcome for every call in one feature. **This over that:** a row in your own table vs a tracing product. *(lookup: §8 · asked for: observability)*
+- [ ] `[B]` **13 · Evaluate before a model swap** — a large model at low effort vs a small model for the same extraction job, decided by unit 10's numbers and unit 12's costs. **This over that:** swap on a hunch vs swap on an eval; which metric must not get worse? *(lookup: §8, §11)*
+
+### Pass 3 — How models learn *(the interview; one small public project — a query-complexity router)*
+
+- [ ] `[A]` **14 · Train a classifier end to end** — loss function, gradient descent, train / validation / test, overfitting. **Build:** router v0 — embeddings plus a linear head that labels a query simple / medium / hard. **This over that:** the loss the model is trained on vs the metric you judge it by (the exact blur from the interview). *(lookup: §13)*
+- [ ] `[A]` **15 · Class imbalance** — stratified splits, class weights, focal loss, resampling; judged per class, never on accuracy. **Build:** shrink one class to 3%, watch it vanish, then fix it three ways and compare per-class recall. **This over that:** reweight the loss vs resample the data vs move the threshold. *(lookup: §13 · the second interview question)*
+- [ ] `[B]` **16 · What an embedding is** — text as a vector, cosine similarity, why similar text lands close. **Build:** inspect nearest neighbours in the router's data and find one that surprises you. **This over that:** embeddings plus a small head vs fine-tuning a whole model vs asking an LLM to classify. *(lookup: §5)*
+- [ ] `[B]` **17 · Model routing** — by task type, cost and latency; measured figures vs advertised ones; what to do before there is any data. **Build:** route with the router and report cost saved against quality lost. **This over that:** route on measured results vs route on the model card. *(lookup: §13, §11 · asked for: multi-model use, routing by task type)*
+- [ ] `[B]` **18 · Prompt vs retrieval vs fine-tuning, and what LoRA changes** — **Build:** a one-page decision note for the router: which lever, and why not the other two. **This over that:** teach the model a behaviour vs hand it the facts. *(lookup: §13, §11 · asked for: fine-tuning)*
+
+### Pass 4 — Breadth *(pulled when the work needs it)*
+
+- [ ] `[B]` **19 · Retrieval: when exact match beats embeddings** — the RAG pipeline, chunking and hybrid search at decision level. **This over that:** an exact-match query vs nearest-neighbour similarity. *(lookup: §5 · asked for: RAG, vector databases)*
+- [ ] `[B]` **20 · Tool calling and MCP** — what to expose to outside agents and what to keep behind a screen. **This over that:** an MCP tool vs a web-only operation. *(lookup: §3, §6 — shipped before, never defended)*
+- [ ] `[B]` **21 · Open-weight and small models, quantization** — what you trade away, and when local beats hosted. **This over that:** a hosted frontier model vs a small model you run yourself. *(lookup: §12, §13)*
+- [ ] `[B]` **22 · LLM system design, out loud** — design one system end to end with token cost, latency, the human fallback and the guardrails made explicit. **This over that:** the simplest thing that works vs the architecture that sounds senior. *(lookup: §10, §11)*
+
+### Coverage — what postings ask for, and where it sits
+
+*Checked 2026-11-13 against six sources (keys below). Most of them sell courses or tools and their percentages disagree, so read the numbers as direction, not measurement.*
+
+| Skill area | Evidence | Where it sits |
+|---|---|---|
+| Python | 71% [D] [E] | Owned (`CAREER_LOG.md`: can teach it) |
+| LLM APIs | 66% [D] | Units 2, 4 · §1 (one `[x]`, two `[~]`) |
+| Evaluation of LLM systems | 56% [K] · 52% run offline evals [L] | Units 8–11, 13 |
+| Agents | 50% [K] | Units 1, 5, 20 · §3, §4, §7 |
+| Retrieval (RAG) | 13.6–40% [E] [K] [D] | Unit 19 · §5 |
+| Classical machine learning | 38% [D] | Units 8, 9, 14, 15 · §13 |
+| Cloud (AWS first) | 37% [D] | **Deferred on purpose** · Tier 2 catalog, the paused secure-API track |
+| Deep learning frameworks (PyTorch) | 23–38% [D] [E] | Used inside units 14–15; framework depth **deferred** |
+| Observability and tracing | 19% [D] · 89% in use [L] | Unit 12 |
+| Vector databases and embeddings | 12–18% [D] | Units 16, 19 |
+| SQL and data pipelines | 17–19% [D] [E] | **Deferred** · used daily in client work |
+| Docker, Kubernetes, CI/CD | 16–24% [D] [E] | **Deferred** · Tier 2 catalog |
+| Fine-tuning | 14.8% [E] · 57% of teams don't [L] | Unit 18 |
+| TypeScript | 13% [D] | Practised in the client work; no unit |
+| Prompt and context engineering | 7–9% [K] [E] | Owned / partial · §1 |
+| Model routing and cost control | 44% route by task type [A] | Units 13, 17 |
+| Guardrails and security | human approval is the top guardrail [A] | Units 3, 5, 7 · §9 |
+| Open-weight models, quantization | about half use open weights [A]; asked in interviews [X] | Unit 21 |
+| LLM system design | interview round [X] | Unit 22 |
+| Frameworks (LangChain, LangGraph) | 25% [D] | **Deferred** · §2, §4 (LangGraph-vs-ReAct already `[x]`) |
+| Inference serving (batching, GPUs) | interview round [X] | **Deferred** · named in §13 |
+
+`[K]` kdnuggets.com/the-ai-skills-that-actually-show-up-in-job-postings-right-now · `[D]` dev.to/gnana_6392e836fd500a957dc/ai-engineer-skills-companies-want-in-2026-3449-posting-analysis-5f9l · `[E]` 365datascience.com/career-advice/career-guides/ai-engineer-job-outlook-2025/ · `[A]` amplifypartners.com/blog-posts/the-2026-ai-engineering-report · `[L]` langchain.com/state-of-agent-engineering · `[X]` aced.io/blog/ai-engineer-interview-questions
+
+**One limit, written down:** none of these sources shows interviewers asking classification-metric questions. The evidence for Pass 3 is the interview itself, the 38% figure and one posting asking for LoRA. That is why it is third and not first.
+
+---
+
 ## Tier 1 — Foundational / agentic core (100% / teach-it)
 
 ### Agents & orchestration
@@ -59,7 +139,7 @@ Work top-down. Higher bars before lower unless a real project need jumps the lin
 - [ ] **Python data model** — `is` vs `==` + small-int cache, mutable-default evaluated-once, `__eq__`/`__hash__` contract + invariant, first-class functions *(acquired 2026-06-26 via /learn §1.1; build banked 2026-06-29 — GridCell value object. Ready to defend cold in /sharpen.)*
 - [ ] **Type hints in earnest** — hints inert at runtime; nullable (`| None`, the type) vs required (the default) as independent axes; Pydantic v2 makes `x: int|None` required → 422 (v1 implicit-None default removed); builtin generics `list[str]`/`dict[str,float]`; `Protocol` structural typing for shapes you don't own + `@runtime_checkable` gotcha *(acquired 2026-06-30 via /learn §1.2; build pending — four-corner ForecastQuery model. Defend cold once built.)*
 
-### Secure API on AWS *(roadmap: `career/secure-api-engineering/`)* — 🟢 **the ACTIVE track**
+### Secure API on AWS *(roadmap: `career/secure-api-engineering/`)* — ⏸ **paused 2026-08-27** *(was the active track; label repaired 2026-11-13)*
 
 *Seeded 2026-08-10 from a real posting's requirements; **de-timeboxed 2026-08-13** when that role closed. The clock is gone, the queue isn't — this is the production-API and security layer under the capstone. Build: `career/lesson_assignments/secure-api-lab`.*
 

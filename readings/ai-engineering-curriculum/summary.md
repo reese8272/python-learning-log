@@ -207,6 +207,19 @@ Re-verify before each unit — these move fast.
 - [ ] **Post-transformer architectures (awareness)** — state-space models (Mamba) and KANs as challengers; know they exist, not the math. `T2` · src: Vision Mamba / KAN papers
 - [ ] **Why models hallucinate & vary** — the mechanistic "why" behind the reliability work in §10; connects internals to production behavior. `T2` · src: live research
 
+## Section 13 — How Models Learn and Are Measured (reference — added 2026-11-13)
+
+*Added while this track is paused, as shelf material: an AI Engineer interview asked about a low-precision classifier head and about classes at 2–3% of the data, and nothing in Sections 1–12 covered either. These are **not** a backlog and nothing here is owed. The ranked, active version of these topics is the first section of `career/concept_queue.md` (units 8, 9, 14, 15, 17, 18, 21). Rows use the depth bars, not the legacy tiers.*
+
+- [ ] `[A]` **Classification metrics** — confusion matrix; precision, recall, F1 and F-beta; the precision–recall curve; why the decision threshold is a choice you make after training, and why accuracy misleads. · src: live research
+- [ ] `[B]` **Calibration** — whether a confidence score can be read as a probability; reliability tables; a score that ranks vs a score that means something. · src: live research
+- [ ] `[A]` **Training fundamentals** — loss function vs evaluation metric; gradient descent at altitude; train / validation / test splits; overfitting and how you see it. · src: live research (Karpathy "Zero to Hero" and the Chip Huyen interview book are in the Master Guide resource pool)
+- [ ] `[A]` **Class imbalance** — stratified splits; class-weighted loss; focal loss; over- and under-sampling; synthetic examples; judging per class with recall and macro-F1. · src: live research
+- [ ] `[B]` **Fine-tuning mechanics** — full fine-tuning vs LoRA / QLoRA adapters; supervised fine-tuning data; when it beats prompting or retrieval and when it doesn't. Extends §11 "Prompt vs. RAG vs. fine-tune vs. agentic". · src: live research
+- [ ] `[B]` **Model routing** — sending each request to the cheapest model that can do it; routing by task type, cost and latency; measured results vs advertised figures; the cold start. Extends §11 "Model & provider selection". · src: live research
+- [ ] `[B]` **Quantization and small models** — what precision you give up for size and speed; when a small local model is the right call. Extends §12 "The open-weight landscape". · src: live research
+- [ ] `[C]` **Inference serving** — batching, GPU scheduling, throughput vs latency; know the vocabulary and where it bites. · src: Master Guide "Inference & Explainability" links (vLLM)
+
 ---
 
 ## Tier 2 — Periphery (pulled when a build needs them)

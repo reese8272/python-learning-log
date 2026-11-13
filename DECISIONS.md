@@ -4,6 +4,43 @@ A log of explicit design decisions that change or deviate from what the planning
 
 ---
 
+## 2026-11-13 — The Depth queue is re-seeded: a 22-unit AI Engineer list, and the catalog gains the section it never had
+
+*Made outside an `/audit`, on Reese's direct instruction (`/issue-workflow learning-path ship`). It was shaped to stay inside the Change Window: no command was edited, no track was un-paused, and no new system file was added beyond the handoff file the workflow overlay names. Audit #3 should ratify it or cut it.*
+
+**What changed or was decided**
+
+1. **`career/concept_queue.md` opens with a new section, "The AI Engineer list"** — 22 units in four passes: *defend what you shipped* (7), *measure it* (6), *how models learn* (5), *breadth* (4). Each row has a depth bar, a build where one applies, and a "this over that" **question**. The answers are deliberately not in the queue.
+2. **`readings/ai-engineering-curriculum/summary.md` gains Section 13, "How Models Learn and Are Measured"** — 8 reference units (classification metrics, calibration, training fundamentals, class imbalance, fine-tuning mechanics, model routing, quantization, inference serving). The track stays paused; this is shelf material.
+3. **Client code references are kept out of this repo.** This repo is public. The file-and-line anchors and the grading key live in a private file alongside the client work. The queue uses generic wording only.
+4. **The training gap gets two builds, in order:** measure an existing field-matching scorer against a hand-labelled answer key (precision and recall per confidence band), then a small public project that trains a query-complexity router on imbalanced data.
+5. **Repair:** the queue's Secure API heading still read "🟢 the ACTIVE track", contradicting the 08-27 pause. Relabelled as paused.
+
+**Why**
+
+- An AI Engineer interview asked how to raise the precision of one head of a model router, and how to handle classes that are 2–3% of the data. Neither was answerable, and a search of the four paused roadmaps found **no unit** on loss functions, classification metrics, class imbalance or calibration. The catalog was all application-layer.
+- The client work shipped since September uses one pattern well (the model reads, code decides, a person confirms) and has no evaluation of model behaviour at all. Evaluation is also the standing gap in `CAREER_LOG.md` and the skill postings ask for most.
+- `/sharpen` reads only the concept queue and `/drill` reads only `CAREER_LOG.md`, so a standalone list would have been reachable by nothing. Three learning systems were already built and not run (17 path sessions with 0 finished; learn mode of the workflow with 0 runs; `/drill` last run 08-18). A fourth was the wrong answer.
+- The list is capped near 20 because every track before it stalled at unit 2 (08-27), and the queue's own note warns against turning a syllabus into a checklist.
+
+**Alternatives ruled out:** a standalone session-by-session path file; un-pausing and re-ranking all 99 catalog units; putting the client anchors in this repo.
+
+**Source or evidence** (all fetched 2026-11-13; most publishers sell courses or tools, and their percentages disagree — direction, not measurement)
+
+- https://kdnuggets.com/the-ai-skills-that-actually-show-up-in-job-postings-right-now — evaluation in 56%, agents in 50%, RAG in 26% of 390 AI Engineer postings.
+- https://dev.to/gnana_6392e836fd500a957dc/ai-engineer-skills-companies-want-in-2026-3449-posting-analysis-5f9l — Python 71%, LLMs 66%, RAG 40%, Machine Learning 38%, AWS 37%, PyTorch 23%, observability 19%, TypeScript 13% of 3,449 postings.
+- https://365datascience.com/career-advice/career-guides/ai-engineer-job-outlook-2025/ — fine-tuning 14.8%, PyTorch 37.7%, SQL 17%.
+- https://www.amplifypartners.com/blog-posts/the-2026-ai-engineering-report — 87% use several models together; 44% route by task type; human approval is the most common guardrail.
+- https://langchain.com/state-of-agent-engineering — 89% have observability, 52.4% run offline evaluations, 57% do not fine-tune.
+- https://www.aced.io/blog/ai-engineer-interview-questions — interview rounds and example questions (quantization; prompting vs retrieval vs fine-tuning; evaluating without a single right answer).
+- Dice job search, 2026-11-13: 1,125 full-time "AI Engineer" postings in seven days; one asks for supervised fine-tuning and LoRA, several for evaluation pipelines.
+- **Limit:** no source showed interviewers asking classification-metric questions. Pass 3 rests on the interview itself, the 38% figure and one posting. `roadmap.sh/ai-engineer` did not render and was not used.
+- Local evidence: the 08-27 entry below (4 of 233 banked); `.claude/commands/sharpen.md` and `drill.md` (what each command reads); `career/helpful_notes_and_guides/Learning Science Protocol.md` (the session rules the section restates).
+
+**Left for audit #3:** `.claude/commands/learn.md` still marks `api` as the active track against its own banner; the client work sits in no lane and has no `business/LEDGER.md` row; the Card has not had a `/checkin` since 09-15.
+
+---
+
 ## 2026-09-15 — `/audit` #2: the route is retired, the build declares, and the machine turns out to have been starved
 
 *Period covered: 2026-09-08 → 2026-09-15, 7 days.*

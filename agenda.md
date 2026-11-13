@@ -85,6 +85,8 @@ The build can only schedule what's in `My Task List`, and that list ran dry for 
 | **`/sharpen`** | Defend cold at the depth bar. Walks `career/concept_queue.md`, seeded now by Craft and Business reps. **Defense is the rep that converts** — the one time learning visibly moved his career (07-28 → 07-29) it was a defense rep under real stakes. |
 | **`/learn new <topic>`** | On-demand acquisition when a capture is big enough to need teaching. Driven by what work threw at him — never by a roadmap position. |
 
+**🎯 Top of the queue as of 2026-11-13:** *The AI Engineer list* — 22 units in four passes, first section of `career/concept_queue.md`. **First rep: `/sharpen` unit 1, "the model reads, code decides."** (Why and sources: `DECISIONS.md` 2026-11-13. The rest of this Card is still dated 09-15 — `/checkin` is the way back in.)
+
 **The capture cue:** anything you couldn't explain today → one line, immediately. That line *is* the curriculum.
 
 **⚠️ Standing calibration flag, carried forward:** *states the rule, not the reason* — four occurrences as of 08-18. Recall is good; **justification is the gap.** When asked "why," the first sentence may not contain the thing being explained. **Grade the second sentence.**
