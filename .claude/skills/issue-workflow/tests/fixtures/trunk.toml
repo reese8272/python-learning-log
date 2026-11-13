@@ -1,0 +1,14 @@
+project = "fixture-trunk"
+ship_model = "trunk-pr"
+base_branch = "main"
+protected_branches = ["main"]
+forbidden = ["nothing"]
+text_rules = ["ascii"]
+[ci]
+local_chain = ["true"]
+[[environments]]
+name = "prod"
+deployed_by = "auto-on-merge-to:main"
+verify = ["curl /health", "smoke"]
+[run_record]
+dir = "docs/issue-runs"

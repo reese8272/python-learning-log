@@ -1,0 +1,30 @@
+# /issue-workflow overlay for life-log: a markdown journal with no code, no CI, no deploy. The push to main IS the
+# ship step (the nightly scheduler reads raw main). secure-api-lab lives inside this repo and inherits this overlay.
+project = "life-log"
+ship_model = "direct-push"
+base_branch = "main"
+protected_branches = []
+commit_style = "imperative summary; body says why"
+text_rules = []
+state_doc = "SYSTEM.md"
+forbidden = [
+  "leaving a change unpushed at the end of a session (the scheduler reads origin/main, not the working tree)",
+]
+
+[tracker]
+kind = "markdown"
+path = "DECISIONS.md"
+id_format = "n"
+transitions = {start = "", shipped = "", accepted_by = ""}
+
+[decision_logs]
+root = {path = "DECISIONS.md", format = "what-why-source-date"}
+
+[handoff]
+kind = "single"
+file = "LEFT_OFF.md"
+commit = true
+
+[run_record]
+dir = "docs/issue-runs"
+commit = false

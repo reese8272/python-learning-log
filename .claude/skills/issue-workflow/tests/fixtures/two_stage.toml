@@ -1,0 +1,26 @@
+project = "fixture-two-stage"
+ship_model = "pr-then-promote"
+repo_dir = "worldcovers"
+base_branch = "staging"
+protected_branches = ["main", "staging"]
+forbidden = ["ssh to servers"]
+text_rules = ["ascii"]
+[ci]
+local_chain = ["true"]
+[migrations]
+check_cmd = "true"
+[[environments]]
+name = "woco.dev"
+deployed_by = "auto-on-merge-to:staging"
+verify = ["health", "bundle", "probe"]
+[[environments]]
+name = "hellowoco.app"
+deployed_by = "promotion-pr:main"
+verify = ["health", "bundle", "probe"]
+[tracker]
+kind = "trello"
+board = "X"
+t2_design_review = "post-and-proceed"
+[run_record]
+dir = "docs/issue-runs"
+commit = false

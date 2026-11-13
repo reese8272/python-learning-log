@@ -1,0 +1,68 @@
+# /issue-workflow overlay. Lives at <project>/.claude/issue-workflow.toml. Read in Phase 0.
+# Validate with: python3 ${CLAUDE_SKILL_DIR}/scripts/gate.py overlay .claude/issue-workflow.toml
+# Every key is documented in references/overlay-schema.md. Delete what does not apply; missing optional
+# tables mean "this project has no such stage" and the skill collapses the phase accordingly.
+
+project = "example"                            # label used in run records and summaries
+ship_model = "trunk-pr"                        # pr-then-promote | trunk-pr | direct-push | manual
+repo_dir = "."                                 # git repo relative to the project dir (use when the project dir is not the repo)
+base_branch = "main"                           # feature branches start here and PRs target it
+protected_branches = ["main"]                  # never commit on these directly
+branch_pattern = "<user>/<id>-<slug>"
+commit_style = "type(scope): imperative summary; body says why; Co-Authored-By trailer"
+text_rules = []                                # e.g. ["repo text and PR bodies are 7-bit ASCII only"]
+state_doc = "docs/PROJECT_STATE.md"            # the status / session-log doc the close phase updates
+toolchain = {node = "22", python = "3.12"}     # the versions CI uses; run the local chain under them
+
+audit_cmds = ["pip-audit", "npm audit --audit-level=moderate"]   # run when a manifest or lockfile changed
+
+forbidden = [
+  # "SSH to production", "run migrations by hand", ...
+]
+
+[ci]
+provider = "github-actions"
+local_chain = [                                # run before opening a PR, in order
+  "ruff check . && ruff format --check .",
+  "pytest -q",
+]
+required_checks = ["ci"]
+review_bot = {marker = "", trust = "triage every finding; never copy its scores"}
+
+[migrations]
+check_cmd = "alembic check"                    # or "python manage.py makemigrations --check"
+auto_apply_on_deploy = true
+rollback = "alembic downgrade -1"              # or "none" (then every data migration needs a named backup)
+backup_tool = "pg_dump before prod migrate"
+
+[[environments]]
+name = "prod"
+deployed_by = "auto-on-merge-to:main"          # auto-on-merge-to:<branch> | promotion-pr:<branch> | manual-dispatch:<workflow> | human:<name>
+verify = ["curl -fsS https://example.com/health", "smoke: open the changed page"]
+rollback = "revert the PR; redeploy runs automatically"
+watch_minutes = 15
+
+[tracker]
+kind = "markdown"                              # trello | markdown | github
+path = "docs/issues.md"                        # markdown: the file; trello: use board=; github: owner/repo in path
+id_format = "#nnn"
+# skill = "worldcovers-trello-update"          # when set, all tracker writes go through this skill
+t2_design_review = "post-and-proceed"          # post the T2 brief to the tracker before building; "wait" blocks on a reply
+transitions = {start = "open -> in-progress", shipped = "in-progress -> done", accepted_by = ""}
+evidence_comment = "environment + revision + what to check"
+
+[decision_logs]
+workspace = {path = "docs/DECISIONS.md", format = "what-why-source-date"}
+
+[handoff]
+kind = "single"                                # single (LEFT_OFF.md) | lane (per project CLAUDE.md lane table)
+file = "LEFT_OFF.md"
+commit = true
+
+[run_record]
+dir = "docs/issue-runs"
+commit = true
+
+[comms]
+audience = ""                                  # who hears about shipped changes, if anyone
+rule = ""

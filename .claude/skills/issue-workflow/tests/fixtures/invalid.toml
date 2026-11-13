@@ -1,0 +1,7 @@
+project = "bad"
+ship_model = "yolo"
+base_branch = "main"
+shipmodel = "typo-key"
+[[environments]]
+name = "prod"
+deployed_by = "auto-on-merge-to:main"
